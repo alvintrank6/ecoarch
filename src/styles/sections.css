@@ -47,7 +47,7 @@ html[data-motion='reduced'] .hero-media { transform: none !important; }
 .hero-page .hero-media { inset: 0; }
 .hero-page .hero-media .media.art, .hero-page .hero-media .media.diag { display: grid; align-items: center; }
 .scroll-cue { display: none; }
-.hero-grid.no-media { max-width: 52rem; }
+.hero-grid.no-media .hero-text { max-width: 52rem; }
 @media (min-width: 640px) { .hero-frame { aspect-ratio: 3 / 2; } }
 @media (min-width: 1024px) {
   .hero-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: center; gap: 3rem; }
