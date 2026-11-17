@@ -1,9 +1,36 @@
 ---
 import Hero from '../components/Hero.astro';
+import Rule from '../components/Rule.astro';
+import Plot from '../components/Plot.astro';
+import Packages from '../components/Packages.astro';
+import ProcessTeaser from '../components/ProcessTeaser.astro';
 import ConceptsTeaser from '../components/ConceptsTeaser.astro';
-import type { Lang } from '../i18n/routes';
+import ScopeTeaser from '../components/ScopeTeaser.astro';
+import Responsible from '../components/Responsible.astro';
+import Faq from '../components/Faq.astro';
+import FinalCta from '../components/FinalCta.astro';
+import { t } from '../i18n/t';
+import { path, type Lang } from '../i18n/routes';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 ---
 <Hero {lang} />
-<ConceptsTeaser {lang} />
+<Rule /><Plot {lang} />
+<Rule /><Packages {lang} />
+<Rule /><ProcessTeaser {lang} />
+<Rule /><ConceptsTeaser {lang} />
+<Rule /><ScopeTeaser {lang} />
+<Responsible {lang} />
+<Rule />
+<section class="section" aria-labelledby="faq-title">
+  <div class="container-eco">
+    <h2 id="faq-title" data-reveal="rise">{t(lang, 'home.faq.h2')}</h2>
+    <div class="faqwrap" data-reveal="rise"><Faq {lang} prefix="home.faq" count={5} idp="hfaq" /></div>
+    <p class="all" data-reveal="rise"><a class="link" href={path(lang, 'faq')}>{t(lang, 'home.faq.all')}</a></p>
+  </div>
+</section>
+<FinalCta {lang} />
+<style>
+  h2 { margin: 0 0 1.5rem; }
+  .all { margin-top: 1.5rem; }
+</style>

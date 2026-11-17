@@ -1,6 +1,6 @@
 # PROGRESS (overwrite, max 30 lines)
-Current: S3 done. Next S4.
-Done: S1 foundation; S2 Nav+Hero; S3 H-05 (Compare, ConceptCard, ConceptsTeaser, louver/compare/reveal motion).
+Current: S4 done. Next S5.
+Done: S1 foundation; S2 Nav+Hero; S3 H-05; S4 home complete (Plot, Packages, ProcessTeaser, ScopeTeaser, Responsible(H-07 hidden), Faq, BookingForm markup, FinalCta, Footer, draw/faq/toggle motion).
 Patterns:
 - Components: Astro, typed `interface Props { lang: Lang; ... }`, scoped <style> using CSS vars from global.css; strings via t(lang,'key') only. Views live in src/views/*.astro and are registered in the `views` map of src/pages/[lang]/[...slug].astro (else Generic = h1 only). Sections go in src/components, composed by the view.
 - i18n keys: common.*, nav.*, hero.*, compare.*, alt.exNNBefore/After, pages.<id>.{title,description,h1}, home.<section>.* . Add keys with a JSON patch merged into both locale files (keep identical sets; check-i18n enforces).
@@ -9,6 +9,6 @@ Patterns:
 - Motion module shape: `export function initX(): () => void` (returns kill), qs/qsa/show in src/motion/dom.ts, tokens in tokens.ts, eases 'eco-out'|'eco-inout'|'power3.out', gate by isReduced()/isMobile() from prefs.ts, register in src/motion/index.ts boot() (dynamic import when selector exists).
 - Louver: add data-louver to a positioned element; louver.ts inserts slats (max 2 playing). Compare: native range input, --pos var, labels TRƯỚC/SAU real text.
 Decisions: C2 hint uses --dur-draw (1000ms) not cine, because hero H1 already is the page's cinematic 1200ms. No-JS compare shows both images side by side.
-Next: S4 (home H-02,H-03,H-04,H-06,H-07,H-08,H-09, Footer, draw.ts). Footer should host the motion-reduce toggle (setReduced in prefs.ts).
+Next: S5. Reusable: PackageCard/PackageArt (inline SVG art, original), Faq.astro (prefix,count,idp), BookingForm.astro (variant short|full; JS states are S8), src/data/prices.ts (priceLabel), Rule.astro, data-rule/data-draw motifs, Footer has motion toggle. Copy keys: home.<section>.*, form.*. Process 10 steps NOT yet written (S7 must define them, consistent with home.process stages 1-2,3-5,6-8,9-10).
 Gotchas: `astro preview` daemon persists on :4399 (reused by scripts). verify:interact = slider keyboard + menu trap (scripts/check-interact.mjs). check-content price rule activates when src/views/Services.astro exists.
 OPEN: see docs/OPEN-ITEMS.md

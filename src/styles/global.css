@@ -115,6 +115,13 @@ html.reveal-failsafe [data-reveal], html[data-motion='reduced'] [data-reveal] { 
 html[data-motion='reduced'] *, html[data-motion='reduced'] *::before, html[data-motion='reduced'] *::after {
   animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
 html.menu-open { overflow: hidden; }
+
+/* R5 rule and R6 stroke drawing: hidden only when JS runs on a desktop-size viewport; text is never hidden. */
+html.js [data-rule] { transform: scaleX(0); transform-origin: left center; }
+@media (min-width: 768px) { html.js [data-draw] path[pathLength] { stroke-dasharray: 1; stroke-dashoffset: 1; } }
+@media (prefers-reduced-motion: reduce) { html.js [data-rule] { transform: none; } html.js [data-draw] path[pathLength] { stroke-dasharray: none; stroke-dashoffset: 0; } }
+html.reveal-failsafe [data-rule], html[data-motion='reduced'] [data-rule] { transform: none !important; }
+html.reveal-failsafe [data-draw] path[pathLength], html[data-motion='reduced'] [data-draw] path[pathLength] { stroke-dasharray: none !important; stroke-dashoffset: 0 !important; }
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .lift { transition: transform var(--dur-fast) var(--ease-out); }
   .lift:hover { transform: translateY(-4px) scale(1.01); }

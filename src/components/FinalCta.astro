@@ -1,0 +1,28 @@
+---
+// H-09: dark indigo closing section, form sits on a cream card (contrast safe).
+import BookingForm from './BookingForm.astro';
+import { t } from '../i18n/t';
+import { path, type Lang } from '../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+---
+<section class="cta on-dark" aria-labelledby="cta-title" id="dat-lich-nhanh">
+  <div class="container-eco grid">
+    <div class="copy">
+      <h2 id="cta-title" data-reveal="rise">{t(lang, 'home.cta.h2')}</h2>
+      <p class="text-lead" data-reveal="rise">{t(lang, 'home.cta.lead')}</p>
+      <p data-reveal="rise"><a class="btn btn-primary" href={path(lang, 'book')}>{t(lang, 'common.ctaPrimary')}</a></p>
+    </div>
+    <div class="card" data-reveal="rise"><BookingForm {lang} idp="cta" /></div>
+  </div>
+</section>
+<style>
+  .cta { background: var(--color-brand); color: var(--color-bg); padding-block: var(--section-y); }
+  .cta h2 { color: var(--color-bg); margin: 0; }
+  .grid { display: grid; gap: 2.5rem; }
+  .copy { display: grid; gap: 1rem; align-content: start; }
+  .copy p { margin: 0; }
+  .cta .btn-primary { border-color: var(--color-bg); }
+  .card { background: var(--color-bg); color: var(--color-text); padding: 24px; border-radius: var(--radius-md); }
+  @media (min-width: 1024px) { .grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 4rem; align-items: start; } }
+</style>

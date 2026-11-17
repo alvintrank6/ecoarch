@@ -16,7 +16,13 @@
     "mainNav": "Điều hướng chính",
     "tagline": "Tư vấn thiết kế kiến trúc và cải tạo nhà ở tại Hà Nội",
     "conceptNote": "Hình minh họa, concept của ECO ARCH, chưa phải công trình thực tế",
-    "scrollCue": "Cuộn xuống"
+    "scrollCue": "Cuộn xuống",
+    "learnMore": "Xem chi tiết",
+    "reduceMotion": "Giảm chuyển động",
+    "reduceMotionOn": "Đang giảm chuyển động",
+    "footerNote": "ECO ARCH tư vấn và thiết kế, không thi công.",
+    "footerNav": "Liên kết chân trang",
+    "copyright": "© ECO ARCH"
   },
   "notFoundPage": {
     "lead": "Trang này chưa tồn tại hoặc đã được chuyển.",
@@ -158,7 +164,11 @@
     "concepts": "Phương án",
     "process": "Quy trình",
     "insights": "Kiến thức",
-    "about": "Giới thiệu"
+    "about": "Giới thiệu",
+    "faq": "Hỏi đáp",
+    "contact": "Liên hệ",
+    "privacy": "Chính sách bảo mật",
+    "book": "Đặt lịch"
   },
   "hero": {
     "eyebrow": "Tư vấn thiết kế nhà ở tại Hà Nội",
@@ -185,6 +195,109 @@
         "villa": "Giữ cột và cửa gỗ, nội thất sáng màu và sàn terrazzo.",
         "apartment": "Bếp gỗ được bố trí lại với ghế dài có ngăn chứa, bàn ăn gấp và vách trượt."
       }
+    },
+    "plot": {
+      "h2": "Nhà dễ ở bắt đầu từ việc đọc đúng khu đất",
+      "lead": "Trước khi vẽ mặt bằng, ECO ARCH đọc nắng, gió và ánh sáng của khu đất. Phân tích nắng gió có trong cả ba gói.",
+      "p1t": "Nắng và gió",
+      "p1": "Hướng nắng, hướng gió và thông gió tự nhiên được đọc trước khi bố trí phòng.",
+      "p2t": "Ánh sáng tự nhiên",
+      "p2": "Chiếu sáng tự nhiên và chống nóng là cơ sở để chọn vị trí cửa, giếng trời và lam che.",
+      "p3t": "Vật liệu bền, dễ bảo trì",
+      "p3": "Vật liệu được chọn để bền và dễ bảo trì, kèm bảng giải thích vì sao chọn phương án đó.",
+      "diagLabel": "Sơ đồ minh họa cách đọc nắng và gió trên một mặt bằng nhà ống",
+      "sun": "Nắng chiều",
+      "wind": "Gió",
+      "well": "Giếng trời",
+      "front": "Mặt tiền",
+      "back": "Phía sau"
+    },
+    "packages": {
+      "h2": "Ba gói, mỗi gói nói rõ bạn nhận gì",
+      "lead": "Giá tính theo m² diện tích thiết kế. Tư vấn ban đầu miễn phí.",
+      "caption": "Ảnh minh họa cho từng gói, không phải công trình thực tế.",
+      "separate": "Thi công, vật tư và đồ nội thất báo giá riêng.",
+      "perM2": "đ/m²",
+      "prelim": "Một phương án mặt bằng 2D bố trí lại nhà hiện hữu, kèm ghi chú công năng, nắng và thông gió.",
+      "ideas": "Mặt bằng, mặt đứng, mặt cắt và phối cảnh kiến trúc giúp hình dung không gian sau cải tạo.",
+      "complete": "Kiến trúc và nội thất đồng bộ: bố trí, vật liệu, ánh sáng, phối cảnh và hồ sơ chi tiết theo hợp đồng.",
+      "artPrelim": "Hình minh họa mặt bằng 2D của một căn hộ nhỏ",
+      "artIdeas": "Hình minh họa mô hình 3D cắt lớp của một ngôi nhà hai tầng",
+      "artComplete": "Hình minh họa phòng khách và ăn với sofa cong, ghế đẩu gỗ và rèm mỏng"
+    },
+    "process": {
+      "h2": "Biết trước từng bước làm việc",
+      "lead": "Mười bước làm việc được gom thành bốn chặng.",
+      "all": "Xem quy trình 10 bước",
+      "steps": "Bước",
+      "s1t": "Gửi nhu cầu",
+      "s1": "Bạn gửi địa điểm, loại công trình và thời điểm. Buổi trao đổi đầu tiên miễn phí.",
+      "s2t": "Khảo sát và báo giá",
+      "s2": "ECO ARCH khảo sát hiện trạng, báo giá theo diện tích thiết kế và hai bên ký hợp đồng.",
+      "s3t": "Thiết kế",
+      "s3": "Đọc nắng gió, lập phương án, giải thích từng lựa chọn và hoàn thiện hồ sơ theo gói.",
+      "s4t": "Bàn giao",
+      "s4": "Bàn giao hồ sơ và nghiệm thu. Không mặc nhiên coi im lặng là đã nghiệm thu."
+    },
+    "scope": {
+      "h2": "Biết trước bạn nhận hồ sơ nào, và đâu là ranh giới",
+      "lead": "ECO ARCH là đơn vị tư vấn thiết kế. Phạm vi và hồ sơ được nói rõ trước khi ký hợp đồng.",
+      "getT": "Bạn nhận",
+      "get1": "Biên bản khảo sát hiện trạng",
+      "get2": "Bảng giải thích vì sao chọn phương án",
+      "get3": "Danh mục hồ sơ theo gói bạn chọn",
+      "limitT": "Ranh giới",
+      "limit1": "ECO ARCH không thi công.",
+      "limit2": "Thi công, vật tư và đồ nội thất báo giá riêng.",
+      "limit3": "Thay đổi trong quá trình làm việc được xử lý theo hợp đồng.",
+      "all": "Xem phạm vi và hồ sơ bàn giao"
+    },
+    "faq": {
+      "h2": "Câu hỏi thường gặp",
+      "all": "Xem tất cả hỏi đáp",
+      "q1": "ECO ARCH làm những gì?",
+      "a1": "ECO ARCH tư vấn thiết kế kiến trúc, nội thất và cải tạo nhà ở tại Hà Nội theo ba gói: thiết kế sơ bộ 2D, thiết kế ý tưởng 3D, và thiết kế kiến trúc và nội thất hoàn chỉnh.",
+      "q2": "ECO ARCH có thi công không?",
+      "a2": "Không. ECO ARCH chỉ tư vấn và thiết kế. Thi công, vật tư và đồ nội thất báo giá riêng.",
+      "q3": "Chi phí tính thế nào?",
+      "a3": "Phí thiết kế tính theo m² diện tích thiết kế ghi trong hợp đồng: Gói 1 là 100.000 đ/m², Gói 2 là 220.000 đ/m², Gói 3 là 340.000 đ/m². Tư vấn ban đầu miễn phí. Thi công, vật tư và đồ nội thất báo giá riêng.",
+      "q4": "Bao lâu thì tôi nhận được phản hồi?",
+      "a4": "Sau khi bạn gửi yêu cầu đặt lịch, ECO ARCH phản hồi trong 24 giờ để xếp lịch trao đổi.",
+      "q5": "Tôi cần chuẩn bị gì trước buổi trao đổi?",
+      "a5": "Địa điểm khu đất, loại công trình, thời điểm bạn muốn bắt đầu và vài ảnh hiện trạng nếu có. Bạn chưa cần có bản vẽ."
+    },
+    "cta": {
+      "h2": "Gửi khu đất, chúng tôi phản hồi trong 24 giờ",
+      "lead": "Chỉ cần địa điểm, loại công trình và cách liên hệ. Bạn chưa cần có bản vẽ."
     }
+  },
+  "form": {
+    "plot": "Địa điểm khu đất (quận, phường hoặc địa chỉ)",
+    "type": "Loại công trình",
+    "typePick": "Chọn loại công trình",
+    "t1": "Nhà phố",
+    "t2": "Nhà ống",
+    "t3": "Nhà mặt đất",
+    "t4": "Biệt thự",
+    "t5": "Căn hộ",
+    "t6": "Dãy trọ",
+    "t7": "Văn phòng nhỏ",
+    "t8": "Khác",
+    "timing": "Khi nào bạn muốn bắt đầu?",
+    "timingPick": "Chưa chọn",
+    "w1": "Trong 3 tháng tới",
+    "w2": "Từ 3 đến 6 tháng",
+    "w3": "Sau 6 tháng",
+    "w4": "Chưa xác định",
+    "name": "Họ và tên",
+    "contact": "Điện thoại hoặc email",
+    "note": "Điều bạn muốn chúng tôi biết",
+    "required": "bắt buộc",
+    "optional": "không bắt buộc",
+    "consentPre": "Tôi đã đọc",
+    "consentLink": "Chính sách bảo mật",
+    "submit": "Gửi yêu cầu",
+    "sending": "Đang gửi",
+    "reply24": "ECO ARCH phản hồi trong 24 giờ."
   }
 }

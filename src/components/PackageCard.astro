@@ -1,0 +1,25 @@
+---
+import PackageArt from './PackageArt.astro';
+import { t } from '../i18n/t';
+import { path, type Lang } from '../i18n/routes';
+import { priceLabel } from '../data/prices';
+interface Props { lang: Lang; id: 'prelim' | 'ideas' | 'complete'; art: 'plan' | 'cutaway' | 'interior' }
+const { lang, id, art } = Astro.props;
+const artKey = { plan: 'artPrelim', cutaway: 'artIdeas', interior: 'artComplete' }[art];
+---
+<a class="pkg lift" href={path(lang, id)} data-reveal>
+  <div class="art-wrap"><PackageArt kind={art} label={t(lang, `home.packages.${artKey}`)} /></div>
+  <h3>{t(lang, `pages.${id}.h1`)}</h3>
+  <p class="price"><strong>{priceLabel(id)}</strong></p>
+  <p class="blurb">{t(lang, `home.packages.${id}`)}</p>
+  <span class="more">{t(lang, 'common.learnMore')} <span aria-hidden="true">→</span></span>
+</a>
+<style>
+  .pkg { display: grid; gap: 10px; align-content: start; color: inherit; text-decoration: none; padding: 16px; background: rgba(255,255,255,.4); border: 1px solid var(--color-border); border-radius: var(--radius-md); }
+  .art-wrap { overflow: hidden; border-radius: var(--radius-sm); border: 1px solid var(--color-border); }
+  h3 { margin: 6px 0 0; font-size: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem); }
+  .price { margin: 0; font-family: var(--font-display); font-size: 1.5rem; color: var(--color-accent); }
+  .blurb { margin: 0; color: var(--color-text); }
+  .more { margin-top: 4px; font-weight: 600; color: var(--color-brand); text-decoration: underline; text-underline-offset: 4px; }
+  .pkg:hover .more, .pkg:focus-visible .more { color: var(--color-accent); }
+</style>

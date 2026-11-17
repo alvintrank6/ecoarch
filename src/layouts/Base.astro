@@ -3,6 +3,7 @@ import '../styles/fonts.css';
 import '../styles/global.css';
 import Seo from '../components/Seo.astro';
 import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
 import { t } from '../i18n/t';
 import type { Lang, PageId } from '../i18n/routes';
 interface Props { lang: Lang; id: PageId | 'notFound'; title: string; description: string; noindex?: boolean; jsonLd?: object[]; refresh?: string; bare?: boolean }
@@ -29,7 +30,7 @@ const { lang, id, title, description, noindex, jsonLd, refresh, bare = false } =
     <main id="main" tabindex="-1">
       <slot />
     </main>
-    <slot name="footer" />
+    {!bare && <Footer {lang} {id} />}
     <script>import '../motion/index';</script>
   </body>
 </html>

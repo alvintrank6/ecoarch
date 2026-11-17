@@ -1,0 +1,31 @@
+---
+// H-03
+import PackageCard from './PackageCard.astro';
+import { t } from '../i18n/t';
+import type { Lang } from '../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+---
+<section class="section" aria-labelledby="packages-title">
+  <div class="container-eco">
+    <header class="head">
+      <h2 id="packages-title" data-reveal="rise">{t(lang, 'home.packages.h2')}</h2>
+      <p class="text-lead" data-reveal="rise">{t(lang, 'home.packages.lead')}</p>
+    </header>
+    <div class="cards" data-reveal-group>
+      <PackageCard {lang} id="prelim" art="plan" />
+      <PackageCard {lang} id="ideas" art="cutaway" />
+      <PackageCard {lang} id="complete" art="interior" />
+    </div>
+    <p class="caption"><span class="illus-label">{t(lang, 'common.illustration')}</span> <span>{t(lang, 'home.packages.caption')}</span></p>
+    <p class="separate">{t(lang, 'home.packages.separate')}</p>
+  </div>
+</section>
+<style>
+  .head { display: grid; gap: 12px; margin-bottom: 2rem; max-width: 52rem; }
+  .head h2, .head p { margin: 0; }
+  .cards { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); }
+  .caption { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin: 1.25rem 0 0; color: var(--color-muted); font-size: 0.875rem; }
+  .separate { margin: 0.75rem 0 0; font-weight: 500; }
+  @media (min-width: 768px) { .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+</style>

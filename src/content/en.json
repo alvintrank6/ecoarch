@@ -16,7 +16,13 @@
     "mainNav": "Main navigation",
     "tagline": "Architecture and home renovation design consultancy in Hanoi",
     "conceptNote": "Illustration, an ECO ARCH concept, not a built project",
-    "scrollCue": "Scroll down"
+    "scrollCue": "Scroll down",
+    "learnMore": "See details",
+    "reduceMotion": "Reduce motion",
+    "reduceMotionOn": "Motion is reduced",
+    "footerNote": "ECO ARCH advises and designs. We do not build.",
+    "footerNav": "Footer links",
+    "copyright": "© ECO ARCH"
   },
   "notFoundPage": {
     "lead": "This page does not exist or has moved.",
@@ -158,7 +164,11 @@
     "concepts": "Concepts",
     "process": "Process",
     "insights": "Insights",
-    "about": "About"
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "privacy": "Privacy policy",
+    "book": "Book"
   },
   "hero": {
     "eyebrow": "Home design consultancy in Hanoi",
@@ -185,6 +195,109 @@
         "villa": "Keep the columns and timber doors; light interior and terrazzo floor.",
         "apartment": "A reworked timber kitchen with a bench with storage, a folding dining table and a sliding screen."
       }
+    },
+    "plot": {
+      "h2": "A comfortable home starts with reading the plot",
+      "lead": "Before drawing a plan, ECO ARCH reads the sun, wind and light of the plot. Sun and wind analysis is part of all three packages.",
+      "p1t": "Sun and wind",
+      "p1": "The direction of the sun and wind, and natural ventilation, are read before rooms are laid out.",
+      "p2t": "Natural light",
+      "p2": "Natural light and heat protection guide where openings, light wells and shading fins go.",
+      "p3t": "Durable, easy-care materials",
+      "p3": "Materials are chosen to last and to be easy to maintain, with a table that explains why each was chosen.",
+      "diagLabel": "Illustrative diagram of how sun and wind are read on a tube house plan",
+      "sun": "Afternoon sun",
+      "wind": "Wind",
+      "well": "Light well",
+      "front": "Street side",
+      "back": "Rear"
+    },
+    "packages": {
+      "h2": "Three packages, each clear on what you receive",
+      "lead": "Prices are per m² of design area. The first consultation is free.",
+      "caption": "Illustrations for each package, not built projects.",
+      "separate": "Construction, materials and furniture are quoted separately.",
+      "perM2": "đ/m²",
+      "prelim": "One 2D floor plan option reworking the existing home, with notes on use, sun and ventilation.",
+      "ideas": "Plans, elevations, sections and architectural renders to picture the renovated space.",
+      "complete": "Architecture and interiors designed together: layout, materials, lighting, renders and detailed documents as set in the contract.",
+      "artPrelim": "Illustration of a 2D floor plan of a small apartment",
+      "artIdeas": "Illustration of a 3D cutaway model of a two-storey house",
+      "artComplete": "Illustration of a living and dining room with a curved sofa, timber stools and sheer curtains"
+    },
+    "process": {
+      "h2": "Know each step before you start",
+      "lead": "Ten working steps, grouped into four stages.",
+      "all": "See the 10-step process",
+      "steps": "Steps",
+      "s1t": "Send your brief",
+      "s1": "You send the location, building type and timing. The first conversation is free.",
+      "s2t": "Survey and quote",
+      "s2": "ECO ARCH surveys the existing home, quotes by design area, and both sides sign the contract.",
+      "s3t": "Design",
+      "s3": "Reading sun and wind, drawing options, explaining each choice and completing the documents for your package.",
+      "s4t": "Handover",
+      "s4": "Documents are handed over and accepted. Silence is never treated as acceptance."
+    },
+    "scope": {
+      "h2": "Know which documents you receive, and where our scope ends",
+      "lead": "ECO ARCH is a design consultancy. Scope and documents are stated clearly before you sign.",
+      "getT": "You receive",
+      "get1": "A survey record of the existing home",
+      "get2": "A table explaining why each option was chosen",
+      "get3": "A list of documents for the package you choose",
+      "limitT": "Where our scope ends",
+      "limit1": "ECO ARCH does not build.",
+      "limit2": "Construction, materials and furniture are quoted separately.",
+      "limit3": "Changes during the work are handled under the contract.",
+      "all": "See scope and deliverables"
+    },
+    "faq": {
+      "h2": "Common questions",
+      "all": "See all questions",
+      "q1": "What does ECO ARCH do?",
+      "a1": "ECO ARCH is a design consultancy for architecture, interiors and home renovation in Hanoi, in three packages: 2D preliminary design, 3D concept design, and complete architecture and interior design.",
+      "q2": "Does ECO ARCH build?",
+      "a2": "No. ECO ARCH advises and designs only. Construction, materials and furniture are quoted separately.",
+      "q3": "How is the fee calculated?",
+      "a3": "The design fee is per m² of the design area stated in the contract: Package 1 is 100.000 đ/m², Package 2 is 220.000 đ/m², Package 3 is 340.000 đ/m². The first consultation is free. Construction, materials and furniture are quoted separately.",
+      "q4": "How soon will I hear back?",
+      "a4": "After you send a booking request, ECO ARCH replies within 24 hours to arrange a call.",
+      "q5": "What should I prepare before the first call?",
+      "a5": "The plot location, building type, when you want to start, and a few photos of the existing home if you have them. You do not need drawings yet."
+    },
+    "cta": {
+      "h2": "Send your plot, we reply within 24 hours",
+      "lead": "We only need the location, building type and how to reach you. You do not need drawings yet."
     }
+  },
+  "form": {
+    "plot": "Plot location (district, ward or address)",
+    "type": "Building type",
+    "typePick": "Choose a building type",
+    "t1": "Townhouse",
+    "t2": "Tube house",
+    "t3": "Detached house",
+    "t4": "Villa",
+    "t5": "Apartment",
+    "t6": "Boarding house",
+    "t7": "Small office",
+    "t8": "Other",
+    "timing": "When do you want to start?",
+    "timingPick": "Not chosen",
+    "w1": "Within 3 months",
+    "w2": "3 to 6 months",
+    "w3": "After 6 months",
+    "w4": "Not decided",
+    "name": "Full name",
+    "contact": "Phone or email",
+    "note": "Anything we should know",
+    "required": "required",
+    "optional": "optional",
+    "consentPre": "I have read the",
+    "consentLink": "Privacy policy",
+    "submit": "Send request",
+    "sending": "Sending",
+    "reply24": "ECO ARCH replies within 24 hours."
   }
 }
