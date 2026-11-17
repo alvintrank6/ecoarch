@@ -14,7 +14,9 @@
     "langEnName": "English",
     "homeLabel": "ECO ARCH, về trang chủ",
     "mainNav": "Điều hướng chính",
-    "tagline": "Tư vấn thiết kế kiến trúc và cải tạo nhà ở tại Hà Nội"
+    "tagline": "Tư vấn thiết kế kiến trúc và cải tạo nhà ở tại Hà Nội",
+    "conceptNote": "Hình minh họa, concept của ECO ARCH, chưa phải công trình thực tế",
+    "scrollCue": "Cuộn xuống"
   },
   "notFoundPage": {
     "lead": "Trang này chưa tồn tại hoặc đã được chuyển.",
@@ -133,5 +135,33 @@
       "description": "ECO ARCH tư vấn thiết kế kiến trúc và cải tạo nhà ở tại Hà Nội. Phương án giải thích rõ nắng gió, vật liệu, phạm vi hồ sơ. Đặt lịch trao đổi về khu đất.",
       "h1": "Thiết kế nhà ở Hà Nội, giải thích rõ từng lựa chọn"
     }
+  },
+  "alt": {
+    "ex01Before": "Hành lang nhà ống hiện trạng có vòm cổng, cầu thang cong và quạt trần cũ",
+    "ex01After": "Phương án minh họa nhà ống: giữ vòm cổng và cầu thang cong, trần gỗ ấm, sofa và thảm xanh",
+    "ex02Before": "Nhà ống hiện trạng tường ố, nền gạch đỏ, vòm và cầu thang gỗ",
+    "ex02After": "Phương án minh họa sảnh dài sáng ấm có đèn hắt trần, cầu thang gỗ và giếng trời",
+    "ex03Before": "Mặt tiền nhà phố Hà Nội màu vàng cũ, ban công sắt và cổng sắt",
+    "ex03After": "Phương án minh họa mặt tiền nhà phố: lam đứng màu gạch cho cây leo, cổng xanh chàm, giữ ban công cũ",
+    "ex04Before": "Phòng khách biệt thự cũ có cột, tủ gỗ tối, cửa kính chia ô và đèn chùm",
+    "ex04After": "Phương án minh họa phòng khách biệt thự: giữ cột và cửa kính, nội thất sáng, sàn terrazzo mở ra vườn",
+    "ex05Before": "Căn hộ hiện trạng với bếp gỗ cũ, phòng khách và bàn ăn chung một khối",
+    "ex05After": "Phương án minh họa căn hộ: bếp gỗ, ghế dài có ngăn chứa, bàn ăn gập và vách trượt",
+    "ex06Before": "Nhà ống nhỏ hiện trạng: tủ lạnh sát cầu thang, vòm cửa, phòng khách chật",
+    "ex06After": "Phương án minh họa: vòm gạch đỏ, cầu thang gỗ, ghế dài có ngăn chứa, đèn hắt",
+    "ex07Composite": "Mặt tiền nhà cấp 4 trước và sau cải tạo, ảnh ghép hai nửa",
+    "ex08Composite": "Phòng khách nhà ống trước và sau cải tạo, ảnh ghép hai nửa",
+    "ex09Before": "Nhà cấp 4 mái ngói có sân rộng và cây lớn, hiện trạng"
+  },
+  "nav": {
+    "services": "Dịch vụ",
+    "concepts": "Phương án",
+    "process": "Quy trình",
+    "insights": "Kiến thức",
+    "about": "Giới thiệu"
+  },
+  "hero": {
+    "eyebrow": "Tư vấn thiết kế nhà ở tại Hà Nội",
+    "body": "ECO ARCH tư vấn thiết kế kiến trúc, nội thất và cải tạo nhà ở. Chúng tôi đọc nắng, gió và khu đất trước khi vẽ mặt bằng, rồi giải thích từng lựa chọn bằng hồ sơ rõ phạm vi. Chúng tôi không thi công."
   }
 }

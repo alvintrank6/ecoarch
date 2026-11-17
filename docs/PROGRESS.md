@@ -1,5 +1,5 @@
 # PROGRESS (overwrite, max 30 lines)
-Current: S1 done. Next S2.
+Current: S2 done. Next S3.
 Done: S1 foundation (pinned deps, Tailwind4 tokens in src/styles/global.css, fonts.css, Base layout + Seo, i18n routes/t, all 44 routes built with h1 only via src/views/Generic.astro, 404, root meta-refresh, sitemap, robots).
 Patterns (filled after S3): component props style, data-reveal usage, motion init/kill shape, i18n key naming
 Decisions:
@@ -10,5 +10,7 @@ Decisions:
 - Playwright 1.63.0 works with preinstalled chromium, no CHROME_PATH needed.
 - Site URL defaults to https://eco-arch.example (override PUBLIC_SITE_URL); robots.txt Sitemap line hardcodes it, fix at deploy.
 - Reveal CSS: html.js [data-reveal] hidden; reduced motion/no-JS show. Prefs in src/motion/prefs.ts. Utilities: .btn .btn-primary .btn-secondary .link .nav-link .illus-label .section .container-eco .on-dark
-Next: S2
-Gotchas: 404 is vi-only with EN link.
+Next: S3
+Gotchas: 404 is vi-only with EN link. `astro preview` is a daemon (reuses http://localhost:4399, survives scripts); after rebuilding it serves the new dist. Ad-hoc browser tests: use UI_BASE/4399, don't spawn another preview.
+S2 notes: Nav (Base includes it unless `bare`), Hero uses ex-04-after as interim HERO-01 (logged). Motion entry src/motion/index.ts registers ScrollTrigger/SplitText/CustomEase ('eco-out','eco-inout'), boots nav + dynamic-imports hero when [data-hero] exists; src/motion/dom.ts show()/qs/qsa. Views map in src/pages/[lang]/[...slug].astro (add views there). ConceptImage.astro (stem, lang, sizes, eager, overlay, note, fill, noLabel) is THE way to render concept images; alt keys alt.ex03After etc.
+Failsafe: inline script adds html.reveal-failsafe after 3s if motionReady not set.

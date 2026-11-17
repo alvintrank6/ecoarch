@@ -14,7 +14,9 @@
     "langEnName": "English",
     "homeLabel": "ECO ARCH, back to home",
     "mainNav": "Main navigation",
-    "tagline": "Architecture and home renovation design consultancy in Hanoi"
+    "tagline": "Architecture and home renovation design consultancy in Hanoi",
+    "conceptNote": "Illustration, an ECO ARCH concept, not a built project",
+    "scrollCue": "Scroll down"
   },
   "notFoundPage": {
     "lead": "This page does not exist or has moved.",
@@ -133,5 +135,33 @@
       "description": "ECO ARCH designs and renovates homes in Hanoi. Every choice on sun, wind, materials and deliverables is explained first. Book a call about your plot.",
       "h1": "Home design in Hanoi, every choice explained"
     }
+  },
+  "alt": {
+    "ex01Before": "Existing tube house hallway with an arch, a curved stair and an old ceiling fan",
+    "ex01After": "Illustrative tube house concept: arch and curved stair kept, warm timber ceiling, sofa and green rug",
+    "ex02Before": "Existing tube house with stained walls, red tile floor, an arch and a timber stair",
+    "ex02After": "Illustrative long hall lit warmly with cove lighting, a timber stair and a light well",
+    "ex03Before": "Existing Hanoi townhouse facade in aged yellow with an iron balcony and gate",
+    "ex03After": "Illustrative townhouse facade: terracotta vertical fins for climbers, an indigo gate, old balcony kept",
+    "ex04Before": "Existing villa living room with columns, dark timber cabinets, glazed doors and a chandelier",
+    "ex04After": "Illustrative villa living room: columns and glazed doors kept, lighter furniture, terrazzo floor opening to the garden",
+    "ex05Before": "Existing apartment with an old timber kitchen, living and dining in one space",
+    "ex05After": "Illustrative apartment: timber kitchen, bench with storage, folding dining table and sliding screen",
+    "ex06Before": "Existing small tube house: a fridge by the stair, an arched doorway, a cramped living room",
+    "ex06After": "Illustrative concept: red-brick arch, timber stair, bench with storage and cove lighting",
+    "ex07Composite": "Single-storey house facade before and after renovation, a two-panel composite",
+    "ex08Composite": "Tube house living room before and after, a two-panel composite",
+    "ex09Before": "Existing single-storey tile-roof house with a courtyard and a large tree"
+  },
+  "nav": {
+    "services": "Services",
+    "concepts": "Concepts",
+    "process": "Process",
+    "insights": "Insights",
+    "about": "About"
+  },
+  "hero": {
+    "eyebrow": "Home design consultancy in Hanoi",
+    "body": "ECO ARCH is a design consultancy for architecture, interiors and home renovation. We read the sun, wind and plot before drawing a plan, then explain each choice in documents with a clear scope. We do not build."
   }
 }

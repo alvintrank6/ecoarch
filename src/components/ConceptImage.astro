@@ -1,0 +1,45 @@
+---
+// Concept image with the mandatory "Hình minh họa" / "Illustration" label (CLAUDE.md content rules).
+import { Image } from 'astro:assets';
+import { conceptImage, altKey } from '../assets/images';
+import { t } from '../i18n/t';
+import type { Lang } from '../i18n/routes';
+interface Props {
+  stem: string;            // e.g. 'ex-03-after'
+  lang: Lang;
+  sizes: string;
+  eager?: boolean;         // hero only: eager + fetchpriority high
+  overlay?: boolean;       // label inside the frame (bottom-left) instead of a caption below
+  note?: boolean;          // also show the fixed "concept, not a built project" sentence
+  fill?: boolean;          // image fills a sized parent (object-fit cover)
+  noLabel?: boolean;       // caller renders the label itself (hero: label sits on the static frame)
+  class?: string;
+}
+const { stem, lang, sizes, eager = false, overlay = false, note = false, fill = false, noLabel = false, class: cls = '' } = Astro.props;
+const src = conceptImage(stem);
+const alt = t(lang, `alt.${altKey(stem)}`);
+---
+<figure class:list={['concept-figure', { 'fig-fill': fill }, cls]} data-concept>
+  <div class:list={['frame', { fill }]}>
+    <Image {src} {alt} {sizes} widths={[480, 768, 1200, 1600]} format="webp" quality={78}
+      loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : 'auto'} decoding={eager ? 'sync' : 'async'} />
+    {overlay && <span class="illus-label overlay">{t(lang, 'common.illustration')}</span>}
+  </div>
+  {!overlay && !noLabel && (
+    <figcaption>
+      <span class="illus-label">{t(lang, 'common.illustration')}</span>
+      {note && <span class="note">{t(lang, 'common.conceptNote')}</span>}
+    </figcaption>
+  )}
+</figure>
+<style>
+  .concept-figure { margin: 0; }
+  .fig-fill { height: 100%; }
+  .frame { position: relative; overflow: hidden; border-radius: var(--radius-sm); background: var(--color-rose); }
+  .frame img { display: block; width: 100%; height: auto; }
+  .frame.fill { width: 100%; height: 100%; }
+  .frame.fill img { height: 100%; object-fit: cover; }
+  .overlay { position: absolute; left: 12px; bottom: 12px; }
+  figcaption { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 8px; }
+  .note { color: var(--color-muted); font-size: 0.875rem; }
+</style>

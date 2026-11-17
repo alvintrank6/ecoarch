@@ -5,3 +5,4 @@ OI-03 | docs/01 Brief | Gói 2 and 3 names differ between price image and busine
 OI-04 | docs/*.md | PDF-to-Markdown conversion: verify any suspicious diacritics against the PDF if a string looks odd
 OI-05 | astro.config.mjs, robots.txt | domain unknown, placeholder https://eco-arch.example; set PUBLIC_SITE_URL and robots.txt Sitemap line at deploy
 OI-06 | public/og-default.jpg | OG image not yet created (S10); Seo.astro already references /og-default.jpg
+OI-07 | Hero.astro | HERO-01 and HERO-01m not generated; ex-04-after (villa living room) used as interim hero image with 'Hình minh họa' label

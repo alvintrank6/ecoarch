@@ -10,11 +10,9 @@ export const dur = {
   pageIn: 0.32,
 } as const;
 
-export const ease = {
-  out: 'cubic-bezier(.22,1,.36,1)',
-  inOut: 'cubic-bezier(.65,0,.35,1)',
-  emphasis: 'power3.out',
-} as const;
+// GSAP ease names; 'eco-out' and 'eco-inout' are registered with CustomEase in index.ts from `bezier`.
+export const ease = { out: 'eco-out', inOut: 'eco-inout', emphasis: 'power3.out' } as const;
+export const bezier = { out: '.22,1,.36,1', inOut: '.65,0,.35,1' } as const;
 
 export const dist = { rise: 24, riseMobile: 12, lift: -4, liftScale: 1.01 } as const;
 export const stagger = { step: 0.08, maxItems: 5, maxTotal: 0.7 } as const;

@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Generic from '../../views/Generic.astro';
+import Home from '../../views/Home.astro';
 import { locales, pageIds, routes, noindexPages, type Lang, type PageId } from '../../i18n/routes';
 import { t } from '../../i18n/t';
 
@@ -10,7 +11,10 @@ export function getStaticPaths() {
   );
 }
 const { lang, id } = Astro.props;
+// Register real views here as slices land; everything else renders Generic (h1 only).
+const views: Partial<Record<PageId, any>> = { home: Home };
+const View = views[id] ?? Generic;
 ---
 <Base {lang} {id} title={t(lang, `pages.${id}.title`)} description={t(lang, `pages.${id}.description`)} noindex={noindexPages.includes(id)}>
-  <Generic {lang} {id} />
+  <View {lang} {id} />
 </Base>

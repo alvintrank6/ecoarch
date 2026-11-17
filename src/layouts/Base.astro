@@ -2,10 +2,11 @@
 import '../styles/fonts.css';
 import '../styles/global.css';
 import Seo from '../components/Seo.astro';
+import Nav from '../components/Nav.astro';
 import { t } from '../i18n/t';
 import type { Lang, PageId } from '../i18n/routes';
-interface Props { lang: Lang; id: PageId | 'notFound'; title: string; description: string; noindex?: boolean; jsonLd?: object[]; refresh?: string }
-const { lang, id, title, description, noindex, jsonLd, refresh } = Astro.props;
+interface Props { lang: Lang; id: PageId | 'notFound'; title: string; description: string; noindex?: boolean; jsonLd?: object[]; refresh?: string; bare?: boolean }
+const { lang, id, title, description, noindex, jsonLd, refresh, bare = false } = Astro.props;
 ---
 <!doctype html>
 <html lang={lang}>
@@ -17,15 +18,18 @@ const { lang, id, title, description, noindex, jsonLd, refresh } = Astro.props;
     <script is:inline>
       document.documentElement.classList.add('js');
       try { var m = localStorage.getItem('eco-motion'); if (m === 'reduced') document.documentElement.dataset.motion = 'reduced'; } catch (e) {}
+      // Failsafe: if the motion script never signals ready, show every [data-reveal] element.
+      setTimeout(function () { if (!document.documentElement.dataset.motionReady) document.documentElement.classList.add('reveal-failsafe'); }, 3000);
     </script>
     <Seo {lang} {id} {title} {description} {noindex} {jsonLd} {refresh} />
   </head>
   <body>
     <a class="skip-link" href="#main">{t(lang, 'common.skip')}</a>
-    <slot name="header" />
+    {!bare && <Nav {lang} {id} />}
     <main id="main" tabindex="-1">
       <slot />
     </main>
     <slot name="footer" />
+    <script>import '../motion/index';</script>
   </body>
 </html>

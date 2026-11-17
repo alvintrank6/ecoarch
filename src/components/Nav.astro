@@ -1,0 +1,104 @@
+---
+import { t } from '../i18n/t';
+import { path, altPath, routes, type Lang, type PageId } from '../i18n/routes';
+interface Props { lang: Lang; id: PageId | 'notFound' }
+const { lang, id } = Astro.props;
+const items: PageId[] = ['services', 'concepts', 'process', 'insights', 'about'];
+const seg = (i: PageId) => routes[i][lang].split('/')[0];
+const here = id === 'notFound' ? '' : routes[id][lang].split('/')[0];
+const other: Lang = lang === 'vi' ? 'en' : 'vi';
+const switchHref = id === 'notFound' ? `/${other}/` : altPath(lang, id);
+---
+<header class="site-header" data-nav>
+  <div class="container-eco bar">
+    <a class="logo" href={path(lang, 'home')} aria-label={t(lang, 'common.homeLabel')}>
+      <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="4" fill="#22395B"/><path d="M6 25V13l10-7 10 7v12h-6v-8h-8v8z" fill="#F4EBDD"/></svg>
+      <span>ECO ARCH</span>
+    </a>
+    <nav class="desktop-nav" aria-label={t(lang, 'common.mainNav')}>
+      <ul>
+        {items.map((i) => (
+          <li><a class="nav-link" href={path(lang, i)} aria-current={id === i ? 'page' : undefined} data-section={id !== i && here === seg(i) ? 'true' : undefined}>{t(lang, `nav.${i}`)}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <div class="lang" role="group" aria-label={t(lang, 'common.langSwitch')}>
+      {(['vi', 'en'] as Lang[]).map((l) => l === lang
+        ? <span aria-current="true" lang={l}>{t(lang, l === 'vi' ? 'common.langVi' : 'common.langEn')}</span>
+        : <a href={switchHref} hreflang={l} lang={l} title={t(l, l === 'vi' ? 'common.langViName' : 'common.langEnName')}>{t(lang, l === 'vi' ? 'common.langVi' : 'common.langEn')}</a>)}
+    </div>
+    <a class="btn btn-primary cta" href={path(lang, 'book')}>{t(lang, 'common.ctaPrimary')}</a>
+    <button type="button" class="menu-btn" data-menu-btn aria-expanded="false" aria-controls="mobile-nav">
+      <span class="visually-hidden">{t(lang, 'common.menu')}</span>
+      <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+<div id="mobile-nav" class="mobile-panel" data-menu-panel role="dialog" aria-modal="true" aria-label={t(lang, 'common.menu')}>
+  <div class="container-eco panel-inner">
+    <div class="panel-top">
+      <span class="logo-text">ECO ARCH</span>
+      <button type="button" class="close-btn" data-menu-close><span class="visually-hidden">{t(lang, 'common.close')}</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+    </div>
+    <nav aria-label={t(lang, 'common.mainNav')}>
+      <ul>
+        {items.map((i) => (
+          <li data-menu-item><a class="panel-link" href={path(lang, i)} aria-current={id === i ? 'page' : undefined}>{t(lang, `nav.${i}`)}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <div class="panel-foot" data-menu-item>
+      <div class="lang" role="group" aria-label={t(lang, 'common.langSwitch')}>
+        {(['vi', 'en'] as Lang[]).map((l) => l === lang
+          ? <span aria-current="true" lang={l}>{t(lang, l === 'vi' ? 'common.langVi' : 'common.langEn')}</span>
+          : <a href={switchHref} hreflang={l} lang={l}>{t(lang, l === 'vi' ? 'common.langVi' : 'common.langEn')}</a>)}
+      </div>
+      <a class="btn btn-primary" href={path(lang, 'book')}>{t(lang, 'common.ctaPrimary')}</a>
+    </div>
+  </div>
+</div>
+<style>
+  .site-header { position: sticky; top: 0; z-index: var(--z-nav); min-height: var(--nav-h); }
+  .site-header::before, .site-header::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity 260ms var(--ease-out); }
+  .site-header::before { background: rgba(244, 235, 221, 0.92); }
+  .site-header::after { inset: auto 0 0 0; height: 1px; background: var(--color-border); }
+  .site-header[data-scrolled]::before, .site-header[data-scrolled]::after { opacity: 1; }
+  .bar { position: relative; z-index: 1; display: flex; align-items: center; gap: 16px; min-height: var(--nav-h); }
+  .logo { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; color: var(--color-brand); text-decoration: none; letter-spacing: 0.02em; }
+  .desktop-nav, .cta { display: none; }
+  .desktop-nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
+  .desktop-nav .nav-link { font-size: 0.9375rem; font-weight: 500; color: var(--color-text); }
+  .nav-link[data-section='true']::after { transform: scaleX(1); }
+  .lang { display: inline-flex; align-items: center; gap: 4px; margin-left: auto; font-size: 0.875rem; font-weight: 600; }
+  .lang > * { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; border-radius: var(--radius-sm); text-decoration: none; color: var(--color-muted); }
+  .lang a:hover { color: var(--color-accent); text-decoration: underline; text-underline-offset: 4px; }
+  .lang [aria-current='true'] { color: var(--color-brand); background: rgba(34, 57, 91, 0.08); }
+  .cta { padding: 10px 18px; font-size: 0.9375rem; min-height: 44px; white-space: nowrap; }
+  .menu-btn { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; background: none; border: 0; color: var(--color-brand); cursor: pointer; border-radius: var(--radius-sm); }
+  .bars { display: grid; gap: 5px; width: 22px; }
+  .bars i { display: block; height: 2px; background: currentColor; }
+  html.js .menu-btn { display: inline-flex; }
+  .mobile-panel { background: var(--color-bg); }
+  .panel-inner { display: grid; gap: 24px; padding-block: 16px 32px; }
+  .panel-top { display: none; align-items: center; justify-content: space-between; min-height: 48px; }
+  .logo-text { font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; color: var(--color-brand); }
+  .close-btn { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; background: none; border: 0; color: var(--color-brand); cursor: pointer; }
+  .mobile-panel ul { list-style: none; margin: 0; padding: 0; display: grid; }
+  .panel-link { display: flex; align-items: center; min-height: 56px; font-family: var(--font-display); font-size: 1.5rem; color: var(--color-brand); text-decoration: none; border-bottom: 1px solid var(--color-border); }
+  .panel-link[aria-current='page'] { color: var(--color-accent); }
+  .panel-foot { display: grid; gap: 16px; justify-items: start; }
+  .panel-foot .lang { margin-left: 0; }
+  /* JS on: off-canvas panel; JS off: panel is a plain list under the bar. */
+  html.js .mobile-panel { position: fixed; inset: 0; z-index: var(--z-overlay); overflow-y: auto; visibility: hidden; }
+  html.js .mobile-panel[data-open] { visibility: visible; }
+  html.js .panel-top { display: flex; }
+  @media (min-width: 1024px) {
+    .desktop-nav, .cta { display: block; }
+    .cta { display: inline-flex; }
+    .lang { margin-left: 0; }
+    .bar { gap: 24px; }
+    .desktop-nav { margin-left: auto; }
+    .menu-btn, html.js .menu-btn, .mobile-panel, html.js .mobile-panel { display: none; }
+  }
+</style>
