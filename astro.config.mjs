@@ -13,7 +13,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       i18n: { defaultLocale: 'vi', locales: { vi: 'vi', en: 'en' } },
-      filter: (p) => !/\/(cam-on|thank-you)\/$/.test(p),
+      filter: (p) => !/\/(cam-on|thank-you)\/$/.test(p) && new URL(p).pathname !== '/',
     }),
   ],
   vite: { plugins: [tailwindcss()] },

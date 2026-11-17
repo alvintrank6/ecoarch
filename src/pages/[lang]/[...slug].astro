@@ -18,6 +18,8 @@ import Privacy from '../../views/Privacy.astro';
 import Thanks from '../../views/Thanks.astro';
 import { locales, pageIds, routes, noindexPages, type Lang, type PageId } from '../../i18n/routes';
 import { t } from '../../i18n/t';
+import { path } from '../../i18n/routes';
+import { parents } from '../../i18n/breadcrumb';
 
 export function getStaticPaths() {
   return locales.flatMap((lang) =>
@@ -29,7 +31,16 @@ const { lang, id } = Astro.props;
 const views: Partial<Record<PageId, any>> = { home: Home, services: Services, prelim: Package, ideas: Package, complete: Package, concepts: Concepts, tubeHouse: Concept, townhouse: Concept, villa: Concept, apartment: Concept,
   about: About, process: Process, scope: ScopePage, insights: Insights, readSunWind: Article, prepareCall: Article, faq: FaqPage, book: Book, contact: Contact, privacy: Privacy, thanks: Thanks };
 const View = views[id] ?? Generic;
+// JSON-LD: Organization (name and url only, no address or phone: none verified) on home; BreadcrumbList elsewhere.
+const site = Astro.site!.toString().replace(/\/$/, '');
+const name = (i: PageId) => t(lang, `pages.${i}.h1`).split(' / ')[0];
+const crumbs: PageId[] = id === 'home' ? [] : ['home', ...(parents[id] ?? []), id];
+const jsonLd: object[] = id === 'home'
+  ? [{ '@context': 'https://schema.org', '@type': 'Organization', name: 'ECO ARCH', url: `${site}/vi/`, logo: `${site}/favicon.svg` }]
+  : crumbs.length && id !== 'thanks'
+    ? [{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c === 'home' ? 'ECO ARCH' : name(c), item: site + path(lang, c) })) }]
+    : [];
 ---
-<Base {lang} {id} title={t(lang, `pages.${id}.title`)} description={t(lang, `pages.${id}.description`)} noindex={noindexPages.includes(id)}>
+<Base {lang} {id} title={t(lang, `pages.${id}.title`)} description={t(lang, `pages.${id}.description`)} noindex={noindexPages.includes(id)} {jsonLd}>
   <View {lang} {id} />
 </Base>

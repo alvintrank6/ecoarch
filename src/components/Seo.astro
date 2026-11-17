@@ -20,6 +20,9 @@ const alt = id === 'notFound' ? null : locales.map((l) => [l, abs(path(l, id))] 
 <meta property="og:url" content={abs(self)} />
 <meta property="og:locale" content={lang === 'vi' ? 'vi_VN' : 'en_US'} />
 <meta property="og:image" content={abs(ogImage)} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content={abs(ogImage)} />
 {refresh && <meta http-equiv="refresh" content={`0; url=${refresh}`} />}
 {jsonLd.map((o) => <script type="application/ld+json" set:html={JSON.stringify(o)} />)}
