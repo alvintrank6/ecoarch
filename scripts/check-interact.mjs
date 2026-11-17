@@ -134,6 +134,26 @@ for (const [lang, before, after] of [['vi', 'TRƯỚC', 'SAU'], ['en', 'BEFORE',
   await nj.close();
 }
 
+{ // page transitions: wipe into booking, back/forward leave no overlay
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  const p = await ctx.newPage();
+  await p.goto(`${BASE}/vi/`);
+  await p.waitForTimeout(800);
+  await p.click('.cta[data-wipe]');
+  await p.waitForURL(/dat-lich/, { timeout: 5000 }).catch(() => {});
+  ok(/dat-lich/.test(p.url()), 'wipe: did not reach booking page');
+  await p.waitForTimeout(1500);
+  ok(await p.locator('[data-wipe-plate]').count() === 0, 'wipe: plate left in DOM after arrival');
+  ok(!(await p.evaluate(() => document.documentElement.classList.contains('wipe-in'))), 'wipe: placeholder cover not cleared');
+  await p.goBack(); await p.waitForTimeout(1200);
+  ok(await p.locator('[data-wipe-plate]').count() === 0, 'wipe: overlay after back');
+  ok(!(await p.evaluate(() => document.documentElement.classList.contains('wipe-in'))), 'wipe: cover after back');
+  await p.goForward(); await p.waitForTimeout(1500);
+  ok(await p.locator('[data-wipe-plate]').count() === 0, 'wipe: overlay after forward');
+  ok(await p.locator('h1').first().isVisible(), 'wipe: h1 not visible after forward');
+  await ctx.close();
+}
+
 await browser.close();
 server?.kill();
 report('interact', fails, n);

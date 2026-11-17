@@ -9,6 +9,7 @@ import { initReveal } from './reveal';
 import { initDraw } from './draw';
 import { initFaq } from './faq';
 import { initToggle } from './toggle';
+import { initPageWipe } from './page-wipe';
 
 gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 CustomEase.create('eco-out', bezier.out);
@@ -28,7 +29,7 @@ async function boot() {
     const { initHero } = await import('./hero');
     kills.push(initHero());
   }
-  kills.push(initReveal(), initDraw(), initFaq(), initToggle());
+  kills.push(initReveal(), initDraw(), initFaq(), initToggle(), initPageWipe());
   if (document.querySelector('[data-louver]')) kills.push((await import('./louver')).initLouver());
   if (document.querySelector('[data-compare]')) kills.push((await import('./compare')).initCompare());
   if (document.querySelector('[data-process]')) kills.push((await import('./process')).initProcess());

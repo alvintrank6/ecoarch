@@ -11,7 +11,7 @@ const { lang } = Astro.props;
     <div class="copy">
       <h2 id="cta-title" data-reveal="rise">{t(lang, 'home.cta.h2')}</h2>
       <p class="text-lead" data-reveal="rise">{t(lang, 'home.cta.lead')}</p>
-      <p data-reveal="rise"><a class="btn btn-primary" href={path(lang, 'book')}>{t(lang, 'common.ctaPrimary')}</a></p>
+      <p data-reveal="rise"><a class="btn btn-primary" href={path(lang, 'book')} data-wipe>{t(lang, 'common.ctaPrimary')}</a></p>
     </div>
     <div class="card" data-reveal="rise"><BookingForm {lang} idp="cta" /></div>
   </div>

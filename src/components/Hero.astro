@@ -13,7 +13,7 @@ const { lang } = Astro.props;
       <h1 id="hero-title" data-reveal data-hero-title>{t(lang, 'pages.home.h1')}</h1>
       <p class="hero-body text-lead" data-reveal data-hero-body>{t(lang, 'hero.body')}</p>
       <div class="hero-cta" data-reveal data-hero-cta>
-        <a class="btn btn-primary" href={path(lang, 'book')}>{t(lang, 'common.ctaPrimary')}</a>
+        <a class="btn btn-primary" href={path(lang, 'book')} data-wipe>{t(lang, 'common.ctaPrimary')}</a>
         <a class="btn btn-secondary" href={path(lang, 'services')}>{t(lang, 'common.ctaSecondary')}</a>
       </div>
     </div>

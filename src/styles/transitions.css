@@ -1,0 +1,23 @@
+/* P1: cross-document View Transitions as progressive enhancement (no overlay element, so nothing can stick on back/forward).
+   Unsupported browsers navigate normally. Off under reduced motion (media query and the html[data-motion] toggle). */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+}
+/* The header stays put while the page body cross-fades. */
+.site-header { view-transition-name: site-header; }
+::view-transition-group(site-header) { animation-duration: 0s; }
+
+@keyframes eco-vt-out { to { opacity: 0; transform: translateY(-8px); } }
+@keyframes eco-vt-in { from { opacity: 0; transform: translateY(8px); } }
+::view-transition-old(root) { animation: eco-vt-out var(--dur-page-out) var(--ease-inout) both; }
+::view-transition-new(root) { animation: eco-vt-in var(--dur-page-in) var(--ease-out) both; }
+
+html[data-motion='reduced']::view-transition-group(*),
+html[data-motion='reduced']::view-transition-old(*),
+html[data-motion='reduced']::view-transition-new(*) { animation: none !important; }
+
+/* P2: indigo plate on arrival after the booking wipe. The static cover is only a no-flash placeholder:
+   page-wipe.ts replaces it with the animated plate; the CSS animation is the failsafe if JS never runs. */
+html.wipe-in::after { content: ''; position: fixed; inset: 0; z-index: 100; background: var(--color-brand); transform-origin: top center;
+  animation: eco-wipe-failsafe 0.55s var(--ease-inout) 2.5s forwards; pointer-events: none; }
+@keyframes eco-wipe-failsafe { to { transform: scaleY(0); } }

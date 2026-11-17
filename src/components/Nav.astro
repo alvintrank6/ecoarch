@@ -27,7 +27,7 @@ const switchHref = id === 'notFound' ? `/${other}/` : altPath(lang, id);
         ? <span aria-current="true" lang={l}>{t(lang, l === 'vi' ? 'common.langVi' : 'common.langEn')}</span>
         : <a href={switchHref} hreflang={l} lang={l} title={t(l, l === 'vi' ? 'common.langViName' : 'common.langEnName')}>{t(lang, l === 'vi' ? 'common.langVi' : 'common.langEn')}</a>)}
     </div>
-    <a class="btn btn-primary cta" href={path(lang, 'book')}>{t(lang, 'common.ctaPrimary')}</a>
+    <a class="btn btn-primary cta" href={path(lang, 'book')} data-wipe>{t(lang, 'common.ctaPrimary')}</a>
     <button type="button" class="menu-btn" data-menu-btn aria-expanded="false" aria-controls="mobile-nav">
       <span class="visually-hidden">{t(lang, 'common.menu')}</span>
       <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
