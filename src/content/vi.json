@@ -163,5 +163,28 @@
   "hero": {
     "eyebrow": "Tư vấn thiết kế nhà ở tại Hà Nội",
     "body": "ECO ARCH tư vấn thiết kế kiến trúc, nội thất và cải tạo nhà ở. Chúng tôi đọc nắng, gió và khu đất trước khi vẽ mặt bằng, rồi giải thích từng lựa chọn bằng hồ sơ rõ phạm vi. Chúng tôi không thi công."
+  },
+  "compare": {
+    "before": "TRƯỚC",
+    "after": "SAU",
+    "aria": "So sánh hiện trạng và phương án minh họa. Dùng phím mũi tên trái phải để chọn phần hiển thị.",
+    "valueText": "Ảnh SAU hiển thị {n}%",
+    "showBefore": "Xem TRƯỚC",
+    "showAfter": "Xem SAU",
+    "drag": "Kéo"
+  },
+  "home": {
+    "concepts": {
+      "h2": "Xem cách một ngôi nhà thay đổi (hình minh họa)",
+      "lead": "Bốn phương án minh họa do ECO ARCH dựng làm concept. Kéo thanh trượt để so sánh hiện trạng với hướng thiết kế.",
+      "all": "Xem tất cả phương án",
+      "pairLabel": "Nhà phố, mặt tiền: hiện trạng và phương án minh họa",
+      "card": {
+        "tubeHouse": "Giữ vòm cổng và cầu thang cong, đổi trần gỗ ấm và ánh sáng.",
+        "townhouse": "Lam đứng màu gạch cho cây leo, cổng xanh chàm, giữ ban công cũ.",
+        "villa": "Giữ cột và cửa gỗ, nội thất sáng màu và sàn terrazzo.",
+        "apartment": "Bếp gỗ được bố trí lại với ghế dài có ngăn chứa, bàn ăn gấp và vách trượt."
+      }
+    }
   }
 }

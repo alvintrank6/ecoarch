@@ -12,7 +12,8 @@
     "preview": "astro preview",
     "check": "astro check",
     "verify": "astro check && astro build && node scripts/check-i18n.mjs && node scripts/check-content.mjs && node scripts/check-seo.mjs",
-    "verify:ui": "node scripts/check-ui.mjs"
+    "verify:ui": "node scripts/check-ui.mjs",
+    "verify:interact": "node scripts/check-interact.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.5",

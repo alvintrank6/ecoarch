@@ -1,0 +1,21 @@
+---
+import ConceptImage from './ConceptImage.astro';
+import { t } from '../i18n/t';
+import { path, type Lang, type PageId } from '../i18n/routes';
+interface Props { lang: Lang; id: PageId; stem: string; blurbKey: string; sizes: string }
+const { lang, id, stem, blurbKey, sizes } = Astro.props;
+---
+<a class="card lift" href={path(lang, id)} data-reveal>
+  <div class="thumb"><ConceptImage {stem} {lang} {sizes} fill /></div>
+  <h3>{t(lang, `pages.${id}.h1`)}</h3>
+  <p>{t(lang, blurbKey)}</p>
+</a>
+<style>
+  .card { display: grid; gap: 8px; align-content: start; color: inherit; text-decoration: none; padding: 12px; background: rgba(255,255,255,.35); border: 1px solid var(--color-border); border-radius: var(--radius-md); }
+  .card:hover h3 { text-decoration: underline; text-underline-offset: 4px; }
+  .thumb { aspect-ratio: 3 / 2; }
+  .thumb :global(.concept-figure) { height: 100%; display: flex; flex-direction: column; }
+  .thumb :global(.frame) { flex: 1; min-height: 0; }
+  h3 { font-size: clamp(1.125rem, 1.05rem + 0.3vw, 1.3125rem); margin: 4px 0 0; }
+  p { margin: 0; color: var(--color-muted); font-size: 0.9375rem; }
+</style>

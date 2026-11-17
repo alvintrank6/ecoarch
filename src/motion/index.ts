@@ -5,6 +5,7 @@ import { SplitText } from 'gsap/SplitText';
 import { CustomEase } from 'gsap/CustomEase';
 import { bezier } from './tokens';
 import { initNav } from './nav';
+import { initReveal } from './reveal';
 
 gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 CustomEase.create('eco-out', bezier.out);
@@ -24,6 +25,9 @@ async function boot() {
     const { initHero } = await import('./hero');
     kills.push(initHero());
   }
+  kills.push(initReveal());
+  if (document.querySelector('[data-louver]')) kills.push((await import('./louver')).initLouver());
+  if (document.querySelector('[data-compare]')) kills.push((await import('./compare')).initCompare());
   document.documentElement.dataset.motionReady = '1';
   document.fonts?.ready.then(() => ScrollTrigger.refresh());
 }

@@ -1,16 +1,14 @@
 # PROGRESS (overwrite, max 30 lines)
-Current: S2 done. Next S3.
-Done: S1 foundation (pinned deps, Tailwind4 tokens in src/styles/global.css, fonts.css, Base layout + Seo, i18n routes/t, all 44 routes built with h1 only via src/views/Generic.astro, 404, root meta-refresh, sitemap, robots).
-Patterns (filled after S3): component props style, data-reveal usage, motion init/kill shape, i18n key naming
-Decisions:
-- Locale JSON: common.*, notFoundPage.*, pages.<id>.{title,description,h1} (ids in src/i18n/routes.ts, seeded from docs/04 tables incl. SEO). Add sections as nav.*, home.*, etc.
-- Page views: register in src/views/index.ts? NOT used yet; [...slug].astro renders Generic. S2+ should switch it to render views[id] when present.
-- t(lang,key) throws on missing key. scripts/check-i18n.mjs compares vi/en key sets (part of npm run verify).
-- check-content REQUIRE_ON (3 prices on services) activates when src/views/Services.astro exists.
-- Playwright 1.63.0 works with preinstalled chromium, no CHROME_PATH needed.
-- Site URL defaults to https://eco-arch.example (override PUBLIC_SITE_URL); robots.txt Sitemap line hardcodes it, fix at deploy.
-- Reveal CSS: html.js [data-reveal] hidden; reduced motion/no-JS show. Prefs in src/motion/prefs.ts. Utilities: .btn .btn-primary .btn-secondary .link .nav-link .illus-label .section .container-eco .on-dark
-Next: S3
-Gotchas: 404 is vi-only with EN link. `astro preview` is a daemon (reuses http://localhost:4399, survives scripts); after rebuilding it serves the new dist. Ad-hoc browser tests: use UI_BASE/4399, don't spawn another preview.
-S2 notes: Nav (Base includes it unless `bare`), Hero uses ex-04-after as interim HERO-01 (logged). Motion entry src/motion/index.ts registers ScrollTrigger/SplitText/CustomEase ('eco-out','eco-inout'), boots nav + dynamic-imports hero when [data-hero] exists; src/motion/dom.ts show()/qs/qsa. Views map in src/pages/[lang]/[...slug].astro (add views there). ConceptImage.astro (stem, lang, sizes, eager, overlay, note, fill, noLabel) is THE way to render concept images; alt keys alt.ex03After etc.
-Failsafe: inline script adds html.reveal-failsafe after 3s if motionReady not set.
+Current: S3 done. Next S4.
+Done: S1 foundation; S2 Nav+Hero; S3 H-05 (Compare, ConceptCard, ConceptsTeaser, louver/compare/reveal motion).
+Patterns:
+- Components: Astro, typed `interface Props { lang: Lang; ... }`, scoped <style> using CSS vars from global.css; strings via t(lang,'key') only. Views live in src/views/*.astro and are registered in the `views` map of src/pages/[lang]/[...slug].astro (else Generic = h1 only). Sections go in src/components, composed by the view.
+- i18n keys: common.*, nav.*, hero.*, compare.*, alt.exNNBefore/After, pages.<id>.{title,description,h1}, home.<section>.* . Add keys with a JSON patch merged into both locale files (keep identical sets; check-i18n enforces).
+- Images: ONLY via ConceptImage.astro (stem,lang,sizes,eager,overlay,note,fill,noLabel) or Compare.astro (pair,louver). Both add the "Hình minh họa" label. Alt text from alt.* keys.
+- Reveal: bare data-reveal = CSS-hidden under html.js (hero uses it, hero.ts reveals). data-reveal="rise" single element (R1); container with data-reveal-group + children data-reveal (R2). reveal.ts handles both; reduced/no-JS shows all. Never hide inline.
+- Motion module shape: `export function initX(): () => void` (returns kill), qs/qsa/show in src/motion/dom.ts, tokens in tokens.ts, eases 'eco-out'|'eco-inout'|'power3.out', gate by isReduced()/isMobile() from prefs.ts, register in src/motion/index.ts boot() (dynamic import when selector exists).
+- Louver: add data-louver to a positioned element; louver.ts inserts slats (max 2 playing). Compare: native range input, --pos var, labels TRƯỚC/SAU real text.
+Decisions: C2 hint uses --dur-draw (1000ms) not cine, because hero H1 already is the page's cinematic 1200ms. No-JS compare shows both images side by side.
+Next: S4 (home H-02,H-03,H-04,H-06,H-07,H-08,H-09, Footer, draw.ts). Footer should host the motion-reduce toggle (setReduced in prefs.ts).
+Gotchas: `astro preview` daemon persists on :4399 (reused by scripts). verify:interact = slider keyboard + menu trap (scripts/check-interact.mjs). check-content price rule activates when src/views/Services.astro exists.
+OPEN: see docs/OPEN-ITEMS.md

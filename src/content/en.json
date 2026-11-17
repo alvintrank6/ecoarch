@@ -163,5 +163,28 @@
   "hero": {
     "eyebrow": "Home design consultancy in Hanoi",
     "body": "ECO ARCH is a design consultancy for architecture, interiors and home renovation. We read the sun, wind and plot before drawing a plan, then explain each choice in documents with a clear scope. We do not build."
+  },
+  "compare": {
+    "before": "BEFORE",
+    "after": "AFTER",
+    "aria": "Compare the existing home with the illustrative concept. Use the left and right arrow keys to choose what is shown.",
+    "valueText": "AFTER image showing {n}%",
+    "showBefore": "Show BEFORE",
+    "showAfter": "Show AFTER",
+    "drag": "Drag"
+  },
+  "home": {
+    "concepts": {
+      "h2": "See how a home can change (illustrative)",
+      "lead": "Four illustrative concepts made by ECO ARCH. Drag the slider to compare the existing home with the design direction.",
+      "all": "See all concepts",
+      "pairLabel": "Townhouse facade: existing home and illustrative concept",
+      "card": {
+        "tubeHouse": "Keep the arch and curved stair, change the timber ceiling and the light.",
+        "townhouse": "Terracotta vertical fins for climbers, an indigo gate, the old balcony kept.",
+        "villa": "Keep the columns and timber doors; light interior and terrazzo floor.",
+        "apartment": "A reworked timber kitchen with a bench with storage, a folding dining table and a sliding screen."
+      }
+    }
   }
 }
