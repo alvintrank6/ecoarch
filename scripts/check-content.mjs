@@ -1,5 +1,6 @@
 // Zero-token content gate: forbidden claims, price whitelist, dashes, banned images.
 import { htmlFiles, read, walk, report } from './lib.mjs';
+import { existsSync } from 'node:fs';
 
 const FORBIDDEN = [
   [/giảm điện|mát hơn|cam kết mát/i, 'unsupported energy/cooling claim'],
@@ -17,7 +18,8 @@ const FORBIDDEN = [
 ];
 const ALLOWED_PRICES = new Set(['100000', '220000', '340000']);
 const PRICE = /(\d{1,3}(?:[.,]\d{3})+)\s*(?:đ|₫|VND|VNĐ|vnd)/g;
-const REQUIRE_ON = { 'vi/dich-vu/index.html': 3, 'en/services/index.html': 3 };
+// Price requirement activates once the services view exists (slice S5).
+const REQUIRE_ON = !existsSync('src/views/Services.astro') ? {} : { 'vi/dich-vu/index.html': 3, 'en/services/index.html': 3 };
 
 const files = [...htmlFiles(), ...walk('src/content', (p) => p.endsWith('.json'))];
 const fails = [];

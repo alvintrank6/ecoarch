@@ -1,0 +1,31 @@
+---
+import '../styles/fonts.css';
+import '../styles/global.css';
+import Seo from '../components/Seo.astro';
+import { t } from '../i18n/t';
+import type { Lang, PageId } from '../i18n/routes';
+interface Props { lang: Lang; id: PageId | 'notFound'; title: string; description: string; noindex?: boolean; jsonLd?: object[]; refresh?: string }
+const { lang, id, title, description, noindex, jsonLd, refresh } = Astro.props;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F4EBDD" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script is:inline>
+      document.documentElement.classList.add('js');
+      try { var m = localStorage.getItem('eco-motion'); if (m === 'reduced') document.documentElement.dataset.motion = 'reduced'; } catch (e) {}
+    </script>
+    <Seo {lang} {id} {title} {description} {noindex} {jsonLd} {refresh} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{t(lang, 'common.skip')}</a>
+    <slot name="header" />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <slot name="footer" />
+  </body>
+</html>

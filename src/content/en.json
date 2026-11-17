@@ -1,0 +1,137 @@
+{
+  "common": {
+    "siteName": "ECO ARCH",
+    "skip": "Skip to main content",
+    "ctaPrimary": "Book a call about your plot",
+    "ctaSecondary": "See the 3 packages",
+    "illustration": "Illustration",
+    "menu": "Menu",
+    "close": "Close",
+    "langSwitch": "Switch language",
+    "langVi": "VI",
+    "langEn": "EN",
+    "langViName": "Tiếng Việt",
+    "langEnName": "English",
+    "homeLabel": "ECO ARCH, back to home",
+    "mainNav": "Main navigation",
+    "tagline": "Architecture and home renovation design consultancy in Hanoi"
+  },
+  "notFoundPage": {
+    "lead": "This page does not exist or has moved.",
+    "home": "Back to home",
+    "services": "See the 3 packages",
+    "book": "Book a call about your plot"
+  },
+  "pages": {
+    "services": {
+      "h1": "Three home design packages",
+      "title": "Three clear home design packages | ECO ARCH",
+      "description": "Choose 2D preliminary design, 3D concept design or complete architecture and interior design. See what each includes, then book a call with ECO ARCH."
+    },
+    "prelim": {
+      "h1": "Preliminary Design (2D)",
+      "title": "2D preliminary design for existing homes | ECO ARCH",
+      "description": "Preliminary design package: one 2D plan option for your existing home, with notes on function, sun and ventilation. For before you need 3D views."
+    },
+    "ideas": {
+      "h1": "Concept Design (3D)",
+      "title": "3D concept design for renovations | ECO ARCH",
+      "description": "Concept design package: plan, elevations, sections and architectural perspectives to picture your home after renovation. AI-assisted, architect-checked."
+    },
+    "complete": {
+      "h1": "Complete Architecture & Interior Design",
+      "title": "Complete architecture and interior design | ECO ARCH",
+      "description": "Complete package: a full design, architectural and interior perspectives and detailed documents per contract, for construction preparation. Book a call."
+    },
+    "concepts": {
+      "h1": "Design concepts (illustrative)",
+      "title": "Hanoi home design concepts (illustrative) | ECO ARCH",
+      "description": "Illustrative design concepts for tube houses, townhouses, villas and apartments in Hanoi, with before and after views. Concepts, not built projects."
+    },
+    "tubeHouse": {
+      "h1": "Tube house: keep the arch, change the light",
+      "title": "Hanoi tube house: keep the arch, change the light | ECO ARCH",
+      "description": "Illustrative concept for a Hanoi tube house: keep the arch and curved stair, rework layout and lighting. An ECO ARCH concept, not a built project."
+    },
+    "townhouse": {
+      "h1": "Townhouse: vertical fins and indigo gate",
+      "title": "Hanoi townhouse: vertical fins and indigo gate | ECO ARCH",
+      "description": "Illustrative concept for a Hanoi townhouse facade: terracotta vertical fins for climbers, an indigo gate, the old balcony kept. An ECO ARCH concept."
+    },
+    "villa": {
+      "h1": "Villa living room opening to the garden",
+      "title": "Villa living room opening to the garden | ECO ARCH",
+      "description": "Illustrative concept for a villa living room: keep the columns and glazed doors, rework furniture, curtains and terrazzo floor to open to the garden."
+    },
+    "apartment": {
+      "h1": "Apartment: warm timber, reworked layout",
+      "title": "Apartment: warm timber, reworked layout | ECO ARCH",
+      "description": "Illustrative concept for an apartment: timber kitchen, bench with storage, folding dining table and sliding screen for flexible use. An ECO ARCH concept."
+    },
+    "about": {
+      "h1": "Why every design choice is explained",
+      "title": "About ECO ARCH | Home design in Hanoi",
+      "description": "ECO ARCH advises on architectural design and renovation for homes in Hanoi. Learn how we work and who is responsible for the design."
+    },
+    "process": {
+      "h1": "Ten steps from brief to handover",
+      "title": "10-step home design process | ECO ARCH",
+      "description": "From your brief, survey and quote to acceptance and handover: the 10 steps of working with ECO ARCH, and what you do and receive at each."
+    },
+    "scope": {
+      "h1": "Know the scope and deliverables in advance",
+      "title": "Scope and deliverables | ECO ARCH",
+      "description": "Know in advance which survey record, choice explanation sheet and handover list you receive, and how changes and acceptance are handled."
+    },
+    "insights": {
+      "h1": "Home design insights",
+      "title": "Hanoi home design insights | ECO ARCH",
+      "description": "Articles explaining home design decisions: sun, wind, layout and documents. Written so owners can understand and prepare before working with a designer."
+    },
+    "readSunWind": {
+      "h1": "Read sun and wind before planning layout",
+      "title": "Read sun and wind before planning layout | ECO ARCH",
+      "description": "Hot, stuffy or dark Hanoi homes often start with the layout. How to read your plot's sun and wind before deciding how rooms are arranged."
+    },
+    "prepareCall": {
+      "h1": "What to prepare before your first design call",
+      "title": "What to prepare before your first design call",
+      "description": "A checklist of the details and photos to prepare before talking to a design firm, so the first call goes straight to your plot and your needs."
+    },
+    "faq": {
+      "h1": "Home design FAQ",
+      "title": "Home design FAQ | ECO ARCH",
+      "description": "Answers on scope, documents, cost, construction and how to work with ECO ARCH. One place to check before you book a call."
+    },
+    "book": {
+      "h1": "Book a call about your plot",
+      "title": "Book a call about your plot | ECO ARCH",
+      "description": "Send the location, building type and expected timing. ECO ARCH replies within 24 hours to arrange a call. You do not need drawings yet."
+    },
+    "contact": {
+      "h1": "Contact ECO ARCH",
+      "title": "Contact ECO ARCH | Home design in Hanoi",
+      "description": "ECO ARCH contact details. The fastest way is to send a booking request, and we reply within 24 hours."
+    },
+    "privacy": {
+      "h1": "Privacy policy",
+      "title": "Privacy policy | ECO ARCH",
+      "description": "How ECO ARCH collects, uses and protects personal data when you send a booking request, and your rights over that data."
+    },
+    "thanks": {
+      "h1": "Thank you for your request",
+      "title": "Thank you for your request | ECO ARCH",
+      "description": "Thank you for your request"
+    },
+    "notFound": {
+      "h1": "Page not found",
+      "title": "Page not found | ECO ARCH",
+      "description": "Page not found"
+    },
+    "home": {
+      "title": "ECO ARCH | Home design and renovation in Hanoi",
+      "description": "ECO ARCH designs and renovates homes in Hanoi. Every choice on sun, wind, materials and deliverables is explained first. Book a call about your plot.",
+      "h1": "Home design in Hanoi, every choice explained"
+    }
+  }
+}

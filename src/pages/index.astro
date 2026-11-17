@@ -1,0 +1,11 @@
+---
+// Root: hosting should 301 / to /vi/ (docs/08); this page is the meta-refresh fallback.
+import Base from '../layouts/Base.astro';
+import { t } from '../i18n/t';
+---
+<Base lang="vi" id="home" title={t('vi', 'pages.home.title')} description={t('vi', 'pages.home.description')} refresh="/vi/">
+  <section class="section container-eco">
+    <h1>ECO ARCH</h1>
+    <p><a class="link" href="/vi/">{t('vi', 'common.homeLabel')}</a> · <a class="link" href="/en/">English</a></p>
+  </section>
+</Base>

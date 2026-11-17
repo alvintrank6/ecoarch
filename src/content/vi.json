@@ -1,0 +1,137 @@
+{
+  "common": {
+    "siteName": "ECO ARCH",
+    "skip": "Bỏ qua đến nội dung chính",
+    "ctaPrimary": "Đặt lịch trao đổi về khu đất",
+    "ctaSecondary": "Xem 3 gói dịch vụ",
+    "illustration": "Hình minh họa",
+    "menu": "Menu",
+    "close": "Đóng",
+    "langSwitch": "Chuyển ngôn ngữ",
+    "langVi": "VI",
+    "langEn": "EN",
+    "langViName": "Tiếng Việt",
+    "langEnName": "English",
+    "homeLabel": "ECO ARCH, về trang chủ",
+    "mainNav": "Điều hướng chính",
+    "tagline": "Tư vấn thiết kế kiến trúc và cải tạo nhà ở tại Hà Nội"
+  },
+  "notFoundPage": {
+    "lead": "Trang này chưa tồn tại hoặc đã được chuyển.",
+    "home": "Về trang chủ",
+    "services": "Xem 3 gói dịch vụ",
+    "book": "Đặt lịch trao đổi về khu đất"
+  },
+  "pages": {
+    "services": {
+      "h1": "Ba gói thiết kế nhà ở",
+      "title": "Ba gói thiết kế nhà ở rõ phạm vi | ECO ARCH",
+      "description": "Chọn giữa thiết kế sơ bộ 2D, thiết kế ý tưởng 3D và thiết kế kiến trúc, nội thất hoàn chỉnh. Xem từng gói gồm gì rồi đặt lịch trao đổi với ECO ARCH."
+    },
+    "prelim": {
+      "h1": "Thiết kế sơ bộ (2D)",
+      "title": "Thiết kế sơ bộ 2D cho nhà hiện hữu | ECO ARCH",
+      "description": "Gói thiết kế sơ bộ: một phương án mặt bằng 2D cho nhà hiện hữu, kèm ghi chú công năng, nắng và thông gió. Phù hợp khi chưa cần phối cảnh."
+    },
+    "ideas": {
+      "h1": "Thiết kế ý tưởng (3D)",
+      "title": "Thiết kế ý tưởng 3D cho nhà cải tạo | ECO ARCH",
+      "description": "Gói thiết kế ý tưởng: mặt bằng, mặt đứng, mặt cắt và phối cảnh kiến trúc để hình dung nhà sau cải tạo. AI hỗ trợ hình ảnh, kiến trúc sư kiểm tra."
+    },
+    "complete": {
+      "h1": "Thiết kế kiến trúc và nội thất hoàn chỉnh",
+      "title": "Thiết kế kiến trúc và nội thất hoàn chỉnh | ECO ARCH",
+      "description": "Gói hoàn chỉnh: phương án thiết kế, phối cảnh kiến trúc và nội thất cùng hồ sơ chi tiết theo hợp đồng, phục vụ chuẩn bị thi công. Đặt lịch trao đổi."
+    },
+    "concepts": {
+      "h1": "Phương án thiết kế (hình minh họa)",
+      "title": "Phương án thiết kế nhà Hà Nội (minh họa) | ECO ARCH",
+      "description": "Các phương án minh họa cho nhà ống, nhà phố, biệt thự và căn hộ tại Hà Nội, có ảnh trước và sau. Là concept của ECO ARCH, chưa phải công trình thực tế."
+    },
+    "tubeHouse": {
+      "h1": "Nhà ống: giữ vòm, đổi ánh sáng",
+      "title": "Nhà ống Hà Nội: giữ vòm, đổi ánh sáng | ECO ARCH",
+      "description": "Phương án minh họa cho nhà ống Hà Nội: giữ vòm cổng và cầu thang cong, thay cách bố trí và ánh sáng. Concept của ECO ARCH, chưa phải công trình thực tế."
+    },
+    "townhouse": {
+      "h1": "Nhà phố: lam đứng và cửa xanh chàm",
+      "title": "Nhà phố Hà Nội: lam đứng và cửa xanh chàm | ECO ARCH",
+      "description": "Phương án minh họa cho mặt tiền nhà phố Hà Nội: lam đứng màu gạch cho cây leo, cổng xanh chàm, giữ ban công cũ. Concept của ECO ARCH."
+    },
+    "villa": {
+      "h1": "Biệt thự: phòng khách mở ra vườn",
+      "title": "Biệt thự: phòng khách mở ra vườn | ECO ARCH",
+      "description": "Phương án minh họa cho phòng khách biệt thự: giữ cột và cửa kính chia ô, đổi nội thất, rèm và sàn terrazzo để đón vườn. Concept của ECO ARCH."
+    },
+    "apartment": {
+      "h1": "Căn hộ: gỗ ấm, bố trí lại",
+      "title": "Căn hộ: gỗ ấm, bố trí lại | ECO ARCH",
+      "description": "Phương án minh họa cho căn hộ: bếp gỗ, ghế dài có ngăn chứa, bàn ăn gấp và vách trượt dùng linh hoạt. Concept của ECO ARCH, chưa phải công trình thực tế."
+    },
+    "about": {
+      "h1": "Vì sao mỗi lựa chọn thiết kế đều được giải thích",
+      "title": "Giới thiệu ECO ARCH | Thiết kế nhà ở tại Hà Nội",
+      "description": "ECO ARCH là đơn vị tư vấn thiết kế kiến trúc và cải tạo nhà ở tại Hà Nội. Tìm hiểu cách chúng tôi làm việc và người phụ trách chuyên môn."
+    },
+    "process": {
+      "h1": "Mười bước từ nhu cầu đến bàn giao",
+      "title": "Quy trình thiết kế nhà 10 bước | ECO ARCH",
+      "description": "Từ gửi nhu cầu, khảo sát, báo giá đến nghiệm thu và bàn giao: 10 bước làm việc với ECO ARCH, mỗi bước ghi rõ bạn làm gì và nhận gì."
+    },
+    "scope": {
+      "h1": "Biết trước phạm vi và hồ sơ bàn giao",
+      "title": "Phạm vi và hồ sơ bàn giao | ECO ARCH",
+      "description": "Biết trước bạn nhận biên bản khảo sát, bảng giải thích lựa chọn và danh mục hồ sơ nào, cùng cách xử lý thay đổi và nghiệm thu."
+    },
+    "insights": {
+      "h1": "Kiến thức thiết kế nhà ở",
+      "title": "Kiến thức thiết kế nhà ở Hà Nội | ECO ARCH",
+      "description": "Bài viết giải thích các quyết định thiết kế nhà ở: nắng, gió, bố trí, hồ sơ. Viết để chủ nhà hiểu và chuẩn bị trước khi làm việc với đơn vị thiết kế."
+    },
+    "readSunWind": {
+      "h1": "Đọc hướng nắng, gió trước khi vẽ mặt bằng",
+      "title": "Đọc hướng nắng, gió trước khi vẽ mặt bằng | ECO ARCH",
+      "description": "Nhà Hà Nội nóng, bí hay thiếu sáng thường bắt đầu từ mặt bằng. Cách đọc nắng và gió của khu đất trước khi quyết định bố trí không gian."
+    },
+    "prepareCall": {
+      "h1": "Chuẩn bị gì trước buổi trao đổi đầu tiên",
+      "title": "Chuẩn bị gì trước buổi trao đổi thiết kế đầu tiên",
+      "description": "Danh sách những thông tin và hình ảnh nên chuẩn bị trước khi trao đổi với đơn vị thiết kế, để buổi đầu tiên đi thẳng vào khu đất và nhu cầu của bạn."
+    },
+    "faq": {
+      "h1": "Hỏi đáp về thiết kế nhà ở",
+      "title": "Hỏi đáp về thiết kế nhà ở | ECO ARCH",
+      "description": "Câu trả lời về phạm vi, hồ sơ, chi phí, thi công và cách làm việc với ECO ARCH. Một nơi duy nhất để bạn kiểm tra trước khi đặt lịch trao đổi."
+    },
+    "book": {
+      "h1": "Đặt lịch trao đổi về khu đất",
+      "title": "Đặt lịch trao đổi về khu đất | ECO ARCH",
+      "description": "Gửi địa điểm, loại công trình và thời điểm dự kiến. ECO ARCH phản hồi trong vòng 24 giờ để xếp lịch trao đổi. Bạn chưa cần có bản vẽ."
+    },
+    "contact": {
+      "h1": "Liên hệ ECO ARCH",
+      "title": "Liên hệ ECO ARCH | Thiết kế nhà ở Hà Nội",
+      "description": "Thông tin liên hệ ECO ARCH. Cách nhanh nhất là gửi yêu cầu đặt lịch trao đổi, chúng tôi phản hồi trong vòng 24 giờ."
+    },
+    "privacy": {
+      "h1": "Chính sách bảo mật",
+      "title": "Chính sách bảo mật | ECO ARCH",
+      "description": "Cách ECO ARCH thu thập, sử dụng và bảo vệ dữ liệu cá nhân khi bạn gửi yêu cầu đặt lịch, và các quyền của bạn đối với dữ liệu."
+    },
+    "thanks": {
+      "h1": "Cảm ơn bạn đã gửi yêu cầu",
+      "title": "Cảm ơn bạn đã gửi yêu cầu | ECO ARCH",
+      "description": "Cảm ơn bạn đã gửi yêu cầu"
+    },
+    "notFound": {
+      "h1": "Không tìm thấy trang",
+      "title": "Không tìm thấy trang | ECO ARCH",
+      "description": "Không tìm thấy trang"
+    },
+    "home": {
+      "title": "ECO ARCH | Thiết kế và cải tạo nhà ở tại Hà Nội",
+      "description": "ECO ARCH tư vấn thiết kế kiến trúc và cải tạo nhà ở tại Hà Nội. Phương án giải thích rõ nắng gió, vật liệu, phạm vi hồ sơ. Đặt lịch trao đổi về khu đất.",
+      "h1": "Thiết kế nhà ở Hà Nội, giải thích rõ từng lựa chọn"
+    }
+  }
+}

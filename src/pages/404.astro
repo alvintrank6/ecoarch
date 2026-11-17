@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import { t } from '../i18n/t';
+import { path } from '../i18n/routes';
+const lang = 'vi';
+---
+<Base {lang} id="notFound" title={t(lang, 'pages.notFound.title')} description={t(lang, 'pages.notFound.description')} noindex>
+  <section class="section container-eco">
+    <h1>{t(lang, 'pages.notFound.h1')}</h1>
+    <p class="text-lead mt-4">{t(lang, 'notFoundPage.lead')}</p>
+    <ul class="mt-6 flex flex-col gap-2">
+      <li><a class="link" href={path(lang, 'home')}>{t(lang, 'notFoundPage.home')}</a></li>
+      <li><a class="link" href={path(lang, 'services')}>{t(lang, 'notFoundPage.services')}</a></li>
+      <li><a class="link" href={path(lang, 'book')}>{t(lang, 'notFoundPage.book')}</a></li>
+    </ul>
+    <p class="mt-6 text-muted"><a class="link" href="/en/" hreflang="en" lang="en">{t('en', 'notFoundPage.home')}</a></p>
+  </section>
+</Base>

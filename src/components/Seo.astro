@@ -1,0 +1,25 @@
+---
+import { path, locales, type Lang, type PageId } from '../i18n/routes';
+interface Props { lang: Lang; id: PageId | 'notFound'; title: string; description: string; noindex?: boolean; jsonLd?: object[]; ogImage?: string; refresh?: string }
+const { lang, id, title, description, noindex = false, jsonLd = [], ogImage = '/og-default.jpg', refresh } = Astro.props;
+const site = Astro.site!.toString().replace(/\/$/, '');
+const abs = (p: string) => site + p;
+const self = id === 'notFound' ? `/${lang}/` : path(lang, id);
+const alt = id === 'notFound' ? null : locales.map((l) => [l, abs(path(l, id))] as const);
+---
+<title>{title}</title>
+<meta name="description" content={description} />
+{noindex ? <meta name="robots" content="noindex, follow" /> : <meta name="robots" content="index, follow" />}
+<link rel="canonical" href={abs(self)} />
+{alt && alt.map(([l, href]) => <link rel="alternate" hreflang={l} href={href} />)}
+{alt && <link rel="alternate" hreflang="x-default" href={abs(path('vi', id as PageId))} />}
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ECO ARCH" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={abs(self)} />
+<meta property="og:locale" content={lang === 'vi' ? 'vi_VN' : 'en_US'} />
+<meta property="og:image" content={abs(ogImage)} />
+<meta name="twitter:card" content="summary_large_image" />
+{refresh && <meta http-equiv="refresh" content={`0; url=${refresh}`} />}
+{jsonLd.map((o) => <script type="application/ld+json" set:html={JSON.stringify(o)} />)}

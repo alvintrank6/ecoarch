@@ -1,13 +1,14 @@
 # PROGRESS (overwrite, max 30 lines)
-Current: P0 done (repo prepared, plan approved pending). S1 not started.
-Done: repo scaffold of docs/scripts/CLAUDE.md; docs split to 11 files (NFC); concept images in src/assets/concept; manifest in docs/.
+Current: S1 done. Next S2.
+Done: S1 foundation (pinned deps, Tailwind4 tokens in src/styles/global.css, fonts.css, Base layout + Seo, i18n routes/t, all 44 routes built with h1 only via src/views/Generic.astro, 404, root meta-refresh, sitemap, robots).
 Patterns (filled after S3): component props style, data-reveal usage, motion init/kill shape, i18n key naming
 Decisions:
-- Slices S1..S11 as in docs/08 table (dependencies OK, no change).
-- Files named per Prompt (03-ASSETS, 04-CONTENT, 09-ACCEPTANCE, 10-CLAUDE-HANDOVER), not per docs/00 table.
-- CLAUDE.md here supersedes docs/10 (docs/10 has broken combining diacritics from the PDF; use only its "Gói bàn giao" table).
-- Images live in src/assets (astro:assets); docs/08 mentions public/assets, ignore.
-- typescript pinned to 6.x (@astrojs/check 0.9.12 peer is ^5||^6; latest is 7.0.2).
-- Playwright: global 1.63.0 + chromium at /opt/pw-browsers. Install playwright@1.63.0 and run with CHROME_PATH=/opt/pw-browsers/chromium/chrome-linux/chrome (verify path); do not run `playwright install`.
-Next: S1
-Gotchas: check-ui expects routes cam-on, thank-you, dich-vu, services; scripts untested on real Astro dist.
+- Locale JSON: common.*, notFoundPage.*, pages.<id>.{title,description,h1} (ids in src/i18n/routes.ts, seeded from docs/04 tables incl. SEO). Add sections as nav.*, home.*, etc.
+- Page views: register in src/views/index.ts? NOT used yet; [...slug].astro renders Generic. S2+ should switch it to render views[id] when present.
+- t(lang,key) throws on missing key. scripts/check-i18n.mjs compares vi/en key sets (part of npm run verify).
+- check-content REQUIRE_ON (3 prices on services) activates when src/views/Services.astro exists.
+- Playwright 1.63.0 works with preinstalled chromium, no CHROME_PATH needed.
+- Site URL defaults to https://eco-arch.example (override PUBLIC_SITE_URL); robots.txt Sitemap line hardcodes it, fix at deploy.
+- Reveal CSS: html.js [data-reveal] hidden; reduced motion/no-JS show. Prefs in src/motion/prefs.ts. Utilities: .btn .btn-primary .btn-secondary .link .nav-link .illus-label .section .container-eco .on-dark
+Next: S2
+Gotchas: 404 is vi-only with EN link.
