@@ -72,6 +72,25 @@ for (const [lang, before, after] of [['vi', 'TRƯỚC', 'SAU'], ['en', 'BEFORE',
   await ctx.close();
 }
 
+{ // FAQ accordion + process plan
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  const p = await ctx.newPage();
+  await p.goto(`${BASE}/vi/hoi-dap/`);
+  await p.waitForTimeout(500);
+  const q = p.locator('[data-faq-btn]').first();
+  ok((await q.getAttribute('aria-expanded')) === 'false', 'faq: should start collapsed');
+  await q.click();
+  await p.waitForTimeout(500);
+  ok((await q.getAttribute('aria-expanded')) === 'true', 'faq: did not expand');
+  ok(await p.locator('#fp-scope-a1').evaluate((e) => getComputedStyle(e).visibility === 'visible'), 'faq: answer not visible');
+  await p.goto(`${BASE}/vi/quy-trinh/`);
+  await p.waitForTimeout(500);
+  await p.evaluate(() => window.scrollTo(0, 1500));
+  await p.waitForTimeout(1200);
+  ok(await p.locator('[data-step-item][aria-current=step]').count() === 1, 'process: no current step while scrolling');
+  await ctx.close();
+}
+
 await browser.close();
 server?.kill();
 report('interact', fails, n);

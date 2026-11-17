@@ -1,0 +1,54 @@
+---
+// P12 /quy-trinh: ten steps; desktop sticky plan drawn as you read (R7), mobile one column with numbered steps.
+import Breadcrumb from '../components/Breadcrumb.astro';
+import ProcessPlan from '../components/ProcessPlan.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { t } from '../i18n/t';
+import type { Lang } from '../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const p = (k: string) => t(lang, `process.${k}`);
+const steps = Array.from({ length: 10 }, (_, i) => i + 1);
+---
+<section class="head container-eco">
+  <Breadcrumb {lang} trail={[]} current={t(lang, 'pages.process.h1')} />
+  <h1>{t(lang, 'pages.process.h1')}</h1>
+  <p class="text-lead">{p('lead')}</p>
+</section>
+<section class="section container-eco wrap" data-process aria-label={t(lang, 'pages.process.h1')}>
+  <div class="sticky"><ProcessPlan {lang} /></div>
+  <ol class="steps" data-steps>
+    {steps.map((n) => (
+      <li data-step-item>
+        <span class="num" aria-hidden="true">{n}</span>
+        <h2><span class="visually-hidden">{p('step')} {n}: </span>{p(`s${n}t`)}</h2>
+        <dl>
+          <div><dt>{p('youDo')}</dt><dd>{p(`s${n}d`)}</dd></div>
+          <div><dt>{p('youGet')}</dt><dd>{p(`s${n}g`)}</dd></div>
+        </dl>
+      </li>
+    ))}
+  </ol>
+</section>
+<CtaBand {lang} />
+<style>
+  .head { padding-top: 12px; display: grid; gap: 12px; padding-bottom: 8px; }
+  .head h1, .head p { margin: 0; }
+  .wrap { display: grid; gap: 2rem; }
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
+  .steps li { position: relative; padding: 4px 0 20px 56px; border-bottom: 1px solid var(--color-border); transition: border-color 180ms var(--ease-out); }
+  .steps li[aria-current='step'] { border-bottom-color: var(--color-accent); }
+  .num { position: absolute; left: 0; top: 0; width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: var(--color-brand); color: var(--color-bg); font-family: var(--font-display); transition: background-color 180ms var(--ease-out); }
+  li[aria-current='step'] .num { background: var(--color-accent); }
+  h2 { margin: 0 0 8px; font-size: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem); }
+  dl { margin: 0; display: grid; gap: 8px; }
+  dt { font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-muted); }
+  dd { margin: 0; }
+  @media (min-width: 1024px) {
+    .wrap { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 4rem; align-items: start; }
+    .sticky { position: sticky; top: calc(var(--nav-h) + 24px); }
+    .steps { gap: 40px; padding-block: 8px 24vh; }
+    .steps li { padding-bottom: 28px; }
+  }
+  @media (max-width: 1023px) { .sticky { max-width: 28rem; } }
+</style>

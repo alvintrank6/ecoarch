@@ -1,0 +1,28 @@
+---
+// R7 figure: a floor plan whose strokes are drawn step by step (data-step 1..10, pathLength=1 on every path).
+import { t } from '../i18n/t';
+import type { Lang } from '../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+---
+<figure class="plan" data-plan>
+  <svg viewBox="0 0 400 480" role="img" aria-label={t(lang, 'process.planLabel')} xmlns="http://www.w3.org/2000/svg">
+    <rect width="400" height="480" fill="#F8F1E6" />
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <g data-step="1" stroke="#6B5648"><path pathLength="1" d="M60 50h280v380H60z" /></g>
+      <g data-step="2" stroke="#9C4530"><path pathLength="1" d="M355 40a14 14 0 1 0 0.1 0M355 66v-14M349 58l6-6 6 6" /></g>
+      <g data-step="3" stroke="#22395B" stroke-width="5"><path pathLength="1" d="M72 62h256v356H72z" /></g>
+      <g data-step="4" stroke="#9C4530" stroke-width="1.5"><path pathLength="1" d="M60 448h280M60 442v12M340 442v12M36 50v380M30 50h12M30 430h12" /></g>
+      <g data-step="5" stroke="#22395B" stroke-width="1.5"><path pathLength="1" d="M300 452c10 0 14-10 22-10s6 14 18 8M300 462h40" /></g>
+      <g data-step="6" stroke="#9C4530"><path pathLength="1" d="M20 100l40 24M20 100l6-2M20 100l3 7M380 330c-16-8-32-22-48-30M344 296l-12 4 8 10" /></g>
+      <g data-step="7" stroke="#22395B" stroke-width="4"><path pathLength="1" d="M72 190h110M222 190h106M72 320h130M242 320h86M200 190v60" /></g>
+      <g data-step="8" stroke="#6B5648" stroke-width="1.5"><path pathLength="1" d="M150 130l-30-24M120 106h-30M260 250l34-30M294 220h26M200 370l-20 30M180 400h-26" /></g>
+      <g data-step="9" stroke="#22395B" stroke-width="2"><path pathLength="1" d="M90 80h70v46H90zM96 100h58M244 80h70v50h-70zM88 210h100v46H88zM240 210a24 24 0 1 0 0.1 0M90 340h90v50H90zM250 340h60v60h-60z" /></g>
+      <g data-step="10" stroke="#5D6B45" stroke-width="3"><path pathLength="1" d="M330 408l16 16 30-34" /></g>
+    </g>
+  </svg>
+</figure>
+<style>
+  .plan { margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; background: #F8F1E6; }
+  svg { display: block; width: 100%; height: auto; }
+</style>

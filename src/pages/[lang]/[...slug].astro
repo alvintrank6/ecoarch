@@ -6,6 +6,12 @@ import Services from '../../views/Services.astro';
 import Package from '../../views/Package.astro';
 import Concepts from '../../views/Concepts.astro';
 import Concept from '../../views/Concept.astro';
+import About from '../../views/About.astro';
+import Process from '../../views/Process.astro';
+import ScopePage from '../../views/ScopePage.astro';
+import Insights from '../../views/Insights.astro';
+import Article from '../../views/Article.astro';
+import FaqPage from '../../views/FaqPage.astro';
 import { locales, pageIds, routes, noindexPages, type Lang, type PageId } from '../../i18n/routes';
 import { t } from '../../i18n/t';
 
@@ -16,7 +22,8 @@ export function getStaticPaths() {
 }
 const { lang, id } = Astro.props;
 // Register real views here as slices land; everything else renders Generic (h1 only).
-const views: Partial<Record<PageId, any>> = { home: Home, services: Services, prelim: Package, ideas: Package, complete: Package, concepts: Concepts, tubeHouse: Concept, townhouse: Concept, villa: Concept, apartment: Concept };
+const views: Partial<Record<PageId, any>> = { home: Home, services: Services, prelim: Package, ideas: Package, complete: Package, concepts: Concepts, tubeHouse: Concept, townhouse: Concept, villa: Concept, apartment: Concept,
+  about: About, process: Process, scope: ScopePage, insights: Insights, readSunWind: Article, prepareCall: Article, faq: FaqPage };
 const View = views[id] ?? Generic;
 ---
 <Base {lang} {id} title={t(lang, `pages.${id}.title`)} description={t(lang, `pages.${id}.description`)} noindex={noindexPages.includes(id)}>

@@ -1,0 +1,46 @@
+---
+// P11 /gioi-thieu: no named credentials, no team claims; H-07 stays hidden until real data exists.
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Responsible from '../components/Responsible.astro';
+import Rule from '../components/Rule.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { t } from '../i18n/t';
+import type { Lang } from '../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const a = (k: string) => t(lang, `about.${k}`);
+---
+<section class="head container-eco">
+  <Breadcrumb {lang} trail={[]} current={t(lang, 'pages.about.h1')} />
+  <h1>{t(lang, 'pages.about.h1')}</h1>
+  <p class="text-lead">{a('lead')}</p>
+</section>
+<Rule />
+<section class="section container-eco" aria-labelledby="do-title">
+  <h2 id="do-title" data-reveal="rise">{a('doT')}</h2>
+  <p data-reveal="rise">{a('doP')}</p>
+</section>
+<Rule />
+<section class="section container-eco" aria-labelledby="how-title">
+  <h2 id="how-title" data-reveal="rise">{a('howT')}</h2>
+  <div class="grid" data-reveal-group>
+    {[1, 2, 3, 4].map((n) => <div class="card" data-reveal><h3>{a(`h${n}t`)}</h3><p>{a(`h${n}`)}</p></div>)}
+  </div>
+</section>
+<Responsible {lang} />
+<section class="section container-eco" aria-labelledby="lim-title">
+  <div class="limit" data-reveal="rise"><h2 id="lim-title">{a('limitT')}</h2><p>{a('limitP')}</p></div>
+</section>
+<CtaBand {lang} />
+<style>
+  .head { padding-top: 12px; display: grid; gap: 12px; padding-bottom: 8px; }
+  .head h1, .head p { margin: 0; }
+  h2 { margin: 0 0 1rem; }
+  .grid { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+  .card { padding: 20px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: rgba(255,255,255,.4); }
+  .card h3 { margin: 0 0 8px; font-size: 1.25rem; } .card p { margin: 0; color: var(--color-muted); }
+  .limit { padding: 24px; background: var(--color-rose); border-radius: var(--radius-md); max-width: 52rem; }
+  .limit h2 { font-size: 1.5rem; margin: 0 0 8px; color: var(--color-text); } .limit p { margin: 0; }
+  @media (min-width: 768px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1024px) { .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+</style>
