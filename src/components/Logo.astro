@@ -5,7 +5,7 @@ interface Props { tone?: 'light' | 'dark'; size?: 'sm' | 'lg'; tagline?: boolean
 const { tone = 'light', size = 'sm', tagline = false } = Astro.props;
 ---
 <span class:list={['logo', size, tone]}>
-  <LogoMark size={size === 'lg' ? 64 : 40} {tone} />
+  <LogoMark size={size === 'lg' ? 72 : 44} {tone} />
   <span class="words">
     <span class="wm"><span class="eco">ECO</span> <span class="arch">ARCH</span></span>
     {tagline && <span class="tag" aria-hidden="true">ARCHITECTURE &amp; INTERIOR DESIGN</span>}

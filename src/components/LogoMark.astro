@@ -1,16 +1,11 @@
 ---
-// ECO ARCH mark (direction 02): house outline, leaf and airflow. Olive on light, sand and sage on dark.
+// ECO ARCH mark (direction 03): E and A monogram forming a house, with a leaf.
 interface Props { size?: number; tone?: 'light' | 'dark' }
 const { size = 40, tone = 'light' } = Astro.props;
-const roof = tone === 'dark' ? '#F7F4EE' : '#6E7F52';
-const leaf = tone === 'dark' ? '#A8B39E' : '#6E7F52';
-const air = tone === 'dark' ? '#A8B39E' : '#6E7F52';
-const vein = tone === 'dark' ? '#36432A' : '#F7F4EE';
+const r = tone === 'dark' ? '#F7F4EE' : '#6E7F52';
+const l = tone === 'dark' ? '#A8B39E' : '#A8B39E';
+const v = tone === 'dark' ? '#36432A' : '#F7F4EE';
 ---
-<svg width={size} height={size * 0.89} viewBox="0 0 72 64" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-  <path d="M8 31 36 7l28 24" fill="none" stroke={roof} stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M17 27v28" fill="none" stroke={roof} stroke-width="5" stroke-linecap="round" />
-  <path d="M24 56C23 41 32 32 47 31c0 15-9 25-23 25z" fill={leaf} />
-  <path d="M27 53c5-8 11-14 17-18" fill="none" stroke={vein} stroke-width="1.8" stroke-linecap="round" />
-  <path d="M47 41c4-5 8-5 12 0s8 5 12 0M47 50c4-5 8-5 12 0s8 5 12 0" fill="none" stroke={air} stroke-width="3" stroke-linecap="round" />
+<svg width={size} height={size * 0.86} viewBox="0 0 98 82" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6 8h46v13H19v13h22v11H19v13h33v13H6z" fill={r}/><path d="M40 8h12l40 29v37H79V43L52 23z" fill={r}/><path d="M42 72C41 56 52 46 70 44c0 17-11 28-28 28z" fill={l}/><path d="M45 69c6-9 13-16 21-21" fill="none" stroke={v} stroke-width="1.6" stroke-linecap="round"/>
 </svg>

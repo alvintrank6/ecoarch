@@ -16,8 +16,8 @@
   --color-error: #8F4A2C;       /* terracotta-derived, 6.0:1 on bg, always with icon and text */
   --color-gray: #D9D9D9;        /* Soft Gray: decorative */
   --color-border: rgba(47, 47, 47, 0.18);
-  --font-display: 'Montserrat Variable', 'Montserrat', system-ui, sans-serif;
-  --font-body: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-pill: 999px;
