@@ -13,7 +13,8 @@
     "check": "astro check",
     "verify": "astro check && astro build && node scripts/check-i18n.mjs && node scripts/check-seo-table.mjs && node scripts/check-content.mjs && node scripts/check-seo.mjs && node scripts/check-images.mjs",
     "verify:ui": "node scripts/check-ui.mjs",
-    "verify:interact": "node scripts/check-interact.mjs"
+    "verify:interact": "node scripts/check-interact.mjs",
+    "verify:a11y": "node scripts/check-a11y.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.5",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.12",
+    "@axe-core/playwright": "4.14.0",
     "playwright": "1.63.0",
     "typescript": "6.0.3"
   }

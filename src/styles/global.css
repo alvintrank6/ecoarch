@@ -66,6 +66,7 @@
   main ul { list-style: disc; } main ol { list-style: decimal; }
   :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
   .on-dark :focus-visible { outline-color: var(--color-bg); }
+  .on-dark .on-light :focus-visible { outline-color: var(--color-accent); } /* cream card inside an indigo section */
   ::selection { background: var(--color-rose); color: var(--color-text); }
 }
 

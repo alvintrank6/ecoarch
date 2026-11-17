@@ -154,6 +154,24 @@ for (const [lang, before, after] of [['vi', 'TRƯỚC', 'SAU'], ['en', 'BEFORE',
   await ctx.close();
 }
 
+{ // reduced-motion toggle: sets html[data-motion], persists across reload, keeps every [data-reveal] visible
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  const p = await ctx.newPage();
+  await p.goto(`${BASE}/vi/`);
+  await p.waitForTimeout(500);
+  const btn = p.locator('[data-motion-toggle]');
+  await btn.scrollIntoViewIfNeeded();
+  ok((await btn.getAttribute('aria-pressed')) === 'false', 'toggle: should start unpressed');
+  await btn.click();
+  ok((await p.evaluate(() => document.documentElement.dataset.motion)) === 'reduced', 'toggle: html[data-motion] not set');
+  ok((await btn.getAttribute('aria-pressed')) === 'true', 'toggle: aria-pressed not updated');
+  await p.reload(); await p.waitForTimeout(600);
+  ok((await p.evaluate(() => document.documentElement.dataset.motion)) === 'reduced', 'toggle: choice not persisted');
+  const hidden = await p.evaluate(() => [...document.querySelectorAll('[data-reveal]')].filter((e) => getComputedStyle(e).opacity < 0.99).length);
+  ok(hidden === 0, `toggle: ${hidden} [data-reveal] hidden under reduced motion`);
+  await ctx.close();
+}
+
 await browser.close();
 server?.kill();
 report('interact', fails, n);

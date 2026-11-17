@@ -9,6 +9,9 @@ for (const f of htmlFiles()) {
   const isHome = /\/(vi|en)\/index\.html$/.test(p);
   if (high.length > 1) fails.push(`${p}: ${high.length} fetchpriority=high images`);
   if (high.length && !isHome) fails.push(`${p}: fetchpriority=high outside home hero`);
+  const concept = imgs.filter((i) => /\/_astro\/ex-/.test(i) && !/data-lb-img/.test(i)).length;
+  const labels = (h.match(/class="[^"]*illus-label/g) || []).length;
+  if (concept && (labels < 1 || concept > 2 * labels)) fails.push(`${p}: ${concept} concept images but ${labels} "Hình minh họa" labels`);
   for (const i of eager) if (!/fetchpriority="high"/.test(i) && !/data-lb-img/.test(i)) fails.push(`${p}: non-lazy image that is not the hero`);
   for (const i of imgs) {
     const src = (i.match(/\bsrc="([^"]+)"/) || [])[1] || '';
