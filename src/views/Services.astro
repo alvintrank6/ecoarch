@@ -1,0 +1,102 @@
+---
+// P02 /dich-vu: three packages, price table, fee explanation, comparison, choosing help, short FAQ.
+import Breadcrumb from '../components/Breadcrumb.astro';
+import PackageCard from '../components/PackageCard.astro';
+import Faq from '../components/Faq.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Rule from '../components/Rule.astro';
+import { t } from '../i18n/t';
+import { path, type Lang } from '../i18n/routes';
+import { priceLabel } from '../data/prices';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const pk = [{ id: 'prelim', n: 1 }, { id: 'ideas', n: 2 }, { id: 'complete', n: 3 }] as const;
+const s = (k: string) => t(lang, `services.${k}`);
+// Rows: feature key, then the value key for packages 1..3.
+const rows: [string, string, string, string][] = [
+  ['f1', 'yes', 'yes', 'yes'], ['f2', 'one', 'yes', 'yes'], ['f3', 'no', 'yes', 'yes'], ['f4', 'no', 'yes', 'yes'],
+  ['f5', 'no', 'no', 'yes'], ['f6', 'no', 'no', 'yes'], ['f7', 'no', 'no', 'custom'], ['f8', 'quote', 'quote', 'quote'],
+];
+---
+<section class="head container-eco">
+  <Breadcrumb {lang} trail={[]} current={t(lang, 'pages.services.h1')} />
+  <h1>{t(lang, 'pages.services.h1')}</h1>
+  <p class="text-lead">{s('lead')}</p>
+</section>
+<section class="section container-eco" aria-label={s('tableT')}>
+  <div class="cards" data-reveal-group>
+    <PackageCard {lang} id="prelim" art="plan" />
+    <PackageCard {lang} id="ideas" art="cutaway" />
+    <PackageCard {lang} id="complete" art="interior" />
+  </div>
+  <p class="caption"><span class="illus-label">{t(lang, 'common.illustration')}</span> <span>{t(lang, 'home.packages.caption')}</span></p>
+</section>
+<Rule />
+<section class="section container-eco" aria-labelledby="price-title">
+  <h2 id="price-title" data-reveal="rise">{s('tableT')}</h2>
+  <div class="scroll" tabindex="0" role="region" aria-labelledby="price-title">
+    <table>
+      <thead><tr><th scope="col">{s('colPkg')}</th><th scope="col">{s('colPrice')}</th><th scope="col">{s('colGets')}</th></tr></thead>
+      <tbody>
+        {pk.map((p) => (
+          <tr><th scope="row"><a class="link" href={path(lang, p.id)}>{s('pkgLabel')} {p.n}: {t(lang, `pages.${p.id}.h1`)}</a></th><td class="price">{priceLabel(p.id)}</td><td>{s(`g${p.n}`)}</td></tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <div class="fee" data-reveal="rise">
+    <h3>{s('feeT')}</h3>
+    <ul><li>{s('fee1')}</li><li>{s('fee2')}</li><li>{s('fee3')}</li></ul>
+  </div>
+</section>
+<Rule />
+<section class="section container-eco" aria-labelledby="cmp-title">
+  <h2 id="cmp-title" data-reveal="rise">{s('compareT')}</h2>
+  <div class="scroll" tabindex="0" role="region" aria-labelledby="cmp-title">
+    <table class="cmp">
+      <thead><tr><th scope="col">{s('colFeature')}</th>{pk.map((p) => <th scope="col">{s('pkgLabel')} {p.n}</th>)}</tr></thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr><th scope="row">{s(r[0])}</th>{[r[1], r[2], r[3]].map((v) => <td data-v={v}><span class="mark" aria-hidden="true">{v === 'no' || v === 'quote' ? '×' : '✓'}</span> {s(`v.${v}`)}</td>)}</tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>
+<Rule />
+<section class="section container-eco" aria-labelledby="choose-title">
+  <h2 id="choose-title" data-reveal="rise">{s('chooseT')}</h2>
+  <div class="choose" data-reveal-group>
+    {[1, 2, 3].map((n) => <div class="pick" data-reveal><h3>{s(`c${n}q`)}</h3><p>{s(`c${n}a`)}</p></div>)}
+  </div>
+</section>
+<Rule />
+<section class="section container-eco" aria-labelledby="sfaq-title">
+  <h2 id="sfaq-title" data-reveal="rise">{s('faqT')}</h2>
+  <Faq {lang} prefix="services.faq" count={3} idp="sfaq" />
+</section>
+<CtaBand {lang} />
+<style>
+  .head { padding-top: 12px; display: grid; gap: 12px; padding-bottom: 8px; }
+  .head h1, .head p { margin: 0; }
+  .cards { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); }
+  .caption { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin: 1.25rem 0 0; color: var(--color-muted); font-size: 0.875rem; }
+  h2 { margin: 0 0 1.5rem; }
+  .scroll { overflow-x: auto; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: rgba(255,255,255,.35); }
+  .scroll:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  table { width: 100%; min-width: 34rem; border-collapse: collapse; font-size: 0.9375rem; }
+  th, td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--color-border); }
+  thead th { font-size: 0.8125rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-muted); background: rgba(46,29,21,.04); }
+  tbody tr:last-child > * { border-bottom: 0; }
+  tbody th { font-weight: 600; }
+  .price { font-family: var(--font-display); font-size: 1.25rem; color: var(--color-accent); white-space: nowrap; }
+  .cmp td[data-v='no'], .cmp td[data-v='quote'] { color: var(--color-muted); }
+  .mark { display: inline-block; width: 1.2em; font-weight: 700; }
+  .fee { margin-top: 2rem; padding: 24px; background: var(--color-rose); border-radius: var(--radius-md); max-width: 52rem; }
+  .fee h3 { margin: 0 0 8px; font-size: 1.375rem; }
+  .fee ul { margin: 0; padding-left: 1.25rem; display: grid; gap: 6px; }
+  .choose { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+  .pick { padding: 20px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: rgba(255,255,255,.4); }
+  .pick h3 { margin: 0 0 8px; font-size: 1.25rem; } .pick p { margin: 0; color: var(--color-muted); }
+  @media (min-width: 768px) { .cards, .choose { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+</style>

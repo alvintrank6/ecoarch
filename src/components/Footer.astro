@@ -1,6 +1,6 @@
 ---
 import { t } from '../i18n/t';
-import { path, altPath, type Lang, type PageId } from '../i18n/routes';
+import { path, type Lang, type PageId } from '../i18n/routes';
 interface Props { lang: Lang; id: PageId | 'notFound' }
 const { lang, id } = Astro.props;
 const links: PageId[] = ['services', 'concepts', 'process', 'insights', 'about', 'faq', 'contact', 'privacy'];
