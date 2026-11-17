@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(./node_modules/**)",
+      "Read(./dist/**)",
+      "Read(./.astro/**)",
+      "Read(./package-lock.json)",
+      "Read(./src/assets/**)",
+      "Read(./.env*)"
+    ]
+  }
+}
