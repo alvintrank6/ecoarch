@@ -14,3 +14,4 @@ OI-12 | home.faq.a4 | 24h reply counts weekends or office hours not confirmed; s
 OI-13 | form.timing options | timing choices (3 months / 3-6 / after 6 / undecided) are assumed
 OI-14 | pkg.ideas.ai | Package 2: "người có chuyên môn kiểm tra" kept without naming who (docs: ai kiểm tra [CẦN XÁC NHẬN]); AI mention default per docs/02
 OI-15 | pkg.*, services.* | Package 3 "hồ sơ chi tiết cho chuẩn bị thi công" and Gói 1 "pham vi quy trình" kept per docs defaults; price table conditions (VAT, min area, multi-storey, survey fee) not published
+OI-16 | concept images | EX-07 (baked Vietnamese TRƯỚC/SAU labels) and EX-09 (no after image) not used; EX-08 split into halves for slider

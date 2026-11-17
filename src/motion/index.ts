@@ -31,6 +31,7 @@ async function boot() {
   kills.push(initReveal(), initDraw(), initFaq(), initToggle());
   if (document.querySelector('[data-louver]')) kills.push((await import('./louver')).initLouver());
   if (document.querySelector('[data-compare]')) kills.push((await import('./compare')).initCompare());
+  if (document.querySelector('[data-lightbox]')) kills.push((await import('./lightbox')).initLightbox());
   document.documentElement.dataset.motionReady = '1';
   document.fonts?.ready.then(() => ScrollTrigger.refresh());
 }

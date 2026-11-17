@@ -157,7 +157,9 @@
     "ex06After": "Phương án minh họa: vòm gạch đỏ, cầu thang gỗ, ghế dài có ngăn chứa, đèn hắt",
     "ex07Composite": "Mặt tiền nhà cấp 4 trước và sau cải tạo, ảnh ghép hai nửa",
     "ex08Composite": "Phòng khách nhà ống trước và sau cải tạo, ảnh ghép hai nửa",
-    "ex09Before": "Nhà cấp 4 mái ngói có sân rộng và cây lớn, hiện trạng"
+    "ex09Before": "Nhà cấp 4 mái ngói có sân rộng và cây lớn, hiện trạng",
+    "ex08Before": "Phòng khách nhà ống hiện trạng: tường ố, sàn gạch hoa, cầu thang và bộ bàn ghế cũ",
+    "ex08After": "Phương án minh họa phòng khách nhà ống: tường sáng, đèn âm trần, vách lam gỗ, ghế dài có ngăn chứa"
   },
   "nav": {
     "services": "Dịch vụ",
@@ -416,6 +418,56 @@
       "a2": "Kết cấu, điện, cấp thoát nước nằm trong hồ sơ chi tiết của Gói 3. MEP chuyên sâu nhận theo yêu cầu riêng.",
       "q3": "Giá Gói 3 tính thế nào?",
       "a3": "340.000 đ/m² diện tích thiết kế ghi trong hợp đồng. Tư vấn ban đầu miễn phí."
+    }
+  },
+  "concepts": {
+    "lead": "Bốn loại nhà, mỗi loại có cặp hình trước và sau. Đây là phương án minh họa do ECO ARCH dựng làm concept để bạn hình dung hướng thiết kế.",
+    "noteT": "Khác biệt giữa phương án và công trình thực tế",
+    "note": "Các hình thể hiện hướng thiết kế, không phải công trình đã thi công. ECO ARCH không thi công.",
+    "typesT": "Bốn loại nhà",
+    "galleryT": "Thư viện hình minh họa",
+    "open": "Xem ảnh lớn",
+    "lbLabel": "Xem ảnh minh họa",
+    "lbClose": "Đóng",
+    "lbPrev": "Ảnh trước",
+    "lbNext": "Ảnh kế tiếp",
+    "lbCount": "{n} trên {total}"
+  },
+  "concept": {
+    "pairsT": "Hình trước và sau",
+    "pairLabel": "Cặp ảnh {n}: hiện trạng và phương án minh họa",
+    "keepT": "Giữ gì",
+    "changeT": "Đổi gì",
+    "whyT": "Vì sao",
+    "fitT": "Gói phù hợp",
+    "moreT": "Phương án khác",
+    "tubeHouse": {
+      "lead": "Nhà ống thường dài, hẹp và dễ thiếu sáng ở giữa nhà. Phương án giữ vòm cổng và cầu thang cong, đổi trần gỗ ấm, đồ nội thất và ánh sáng.",
+      "keep": "Vòm cổng, cầu thang và bố cục dài của nhà ống.",
+      "change": "Trần gỗ ấm, đèn hắt trần, sofa và thảm; ở một phương án có thêm giếng trời.",
+      "why": "Để giữ nét quen thuộc của ngôi nhà, đồng thời đưa ánh sáng tự nhiên và cảm giác ấm vào không gian ở.",
+      "fit": "Gói 2 để xem phương án trước khi quyết định. Gói 3 khi cần nội thất đồng bộ và hồ sơ chi tiết theo hợp đồng."
+    },
+    "townhouse": {
+      "lead": "Mặt tiền nhà phố hiện trạng màu vàng cũ. Phương án dùng lam đứng màu gạch cho cây leo, cổng xanh chàm và giữ ban công cũ.",
+      "keep": "Ban công cũ và bố cục mặt tiền.",
+      "change": "Lam đứng màu gạch cho cây leo và cổng xanh chàm.",
+      "why": "Để mặt tiền có lớp che nắng và cây xanh, đổi diện mạo trong khi vẫn giữ ban công cũ.",
+      "fit": "Gói 2 để xem phương án trước khi quyết định. Gói 3 khi cần nội thất đồng bộ và hồ sơ chi tiết theo hợp đồng."
+    },
+    "villa": {
+      "lead": "Phòng khách biệt thự có cột, tủ gỗ tối và đèn chùm. Phương án giữ cột và cửa, đổi sang nội thất sáng màu và sàn terrazzo, mở phòng khách ra vườn.",
+      "keep": "Cột và cửa gỗ.",
+      "change": "Nội thất sáng màu, sàn terrazzo và bố cục mở ra vườn.",
+      "why": "Để phòng khách sáng hơn và nhìn ra vườn rõ hơn.",
+      "fit": "Gói 2 để xem phương án trước khi quyết định. Gói 3 khi cần nội thất đồng bộ và hồ sơ chi tiết theo hợp đồng."
+    },
+    "apartment": {
+      "lead": "Căn hộ có bếp gỗ cũ và tủ lạnh đặt sát lối đi. Phương án bố trí lại với ghế dài có ngăn chứa, bàn ăn gấp và vách trượt.",
+      "keep": "Gỗ ấm của bếp và tủ.",
+      "change": "Bố trí lại với ghế dài có ngăn chứa, bàn ăn gấp và vách trượt.",
+      "why": "Để căn hộ nhỏ có thêm chỗ chứa đồ và dùng linh hoạt hơn.",
+      "fit": "Gói 2 để xem phương án trước khi quyết định. Gói 3 khi cần nội thất đồng bộ và hồ sơ chi tiết theo hợp đồng."
     }
   }
 }

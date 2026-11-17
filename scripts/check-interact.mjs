@@ -51,6 +51,27 @@ for (const [lang, before, after] of [['vi', 'TRƯỚC', 'SAU'], ['en', 'BEFORE',
   await ctx.close();
 }
 
+{ // lightbox: open, arrows, Esc, focus returns to the thumbnail
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  const p = await ctx.newPage();
+  await p.goto(`${BASE}/vi/phuong-an/`);
+  await p.waitForTimeout(800);
+  const first = p.locator('[data-lb-item]').first();
+  await first.scrollIntoViewIfNeeded();
+  await first.focus();
+  await p.keyboard.press('Enter');
+  await p.waitForTimeout(300);
+  ok(await p.locator('dialog[open]').count() === 1, 'lightbox: did not open');
+  const c0 = await p.locator('[data-lb-count]').innerText();
+  await p.keyboard.press('ArrowRight');
+  ok((await p.locator('[data-lb-count]').innerText()) !== c0, 'lightbox: ArrowRight did not advance');
+  await p.keyboard.press('Escape');
+  await p.waitForTimeout(200);
+  ok(await p.locator('dialog[open]').count() === 0, 'lightbox: Esc did not close');
+  ok(await p.evaluate(() => document.activeElement?.hasAttribute('data-lb-item')), 'lightbox: focus not returned to thumbnail');
+  await ctx.close();
+}
+
 await browser.close();
 server?.kill();
 report('interact', fails, n);

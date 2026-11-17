@@ -157,7 +157,9 @@
     "ex06After": "Illustrative concept: red-brick arch, timber stair, bench with storage and cove lighting",
     "ex07Composite": "Single-storey house facade before and after renovation, a two-panel composite",
     "ex08Composite": "Tube house living room before and after, a two-panel composite",
-    "ex09Before": "Existing single-storey tile-roof house with a courtyard and a large tree"
+    "ex09Before": "Existing single-storey tile-roof house with a courtyard and a large tree",
+    "ex08Before": "Existing tube house living room: stained walls, patterned tile floor, a stair and old furniture",
+    "ex08After": "Illustrative tube house living room: light walls, recessed lights, a timber lattice screen and a bench with storage"
   },
   "nav": {
     "services": "Services",
@@ -416,6 +418,56 @@
       "a2": "Structure, electrical and plumbing are part of the detailed documents in Package 3. In-depth MEP is taken on separate request.",
       "q3": "How is Package 3 priced?",
       "a3": "340.000 đ/m² of the design area stated in the contract. The first consultation is free."
+    }
+  },
+  "concepts": {
+    "lead": "Four home types, each with a before and after pair. These are illustrative concepts made by ECO ARCH so you can picture a design direction.",
+    "noteT": "Concept versus built project",
+    "note": "The images show a design direction, not a built project. ECO ARCH does not build.",
+    "typesT": "Four home types",
+    "galleryT": "Gallery of illustrations",
+    "open": "View larger",
+    "lbLabel": "Illustration viewer",
+    "lbClose": "Close",
+    "lbPrev": "Previous image",
+    "lbNext": "Next image",
+    "lbCount": "{n} of {total}"
+  },
+  "concept": {
+    "pairsT": "Before and after",
+    "pairLabel": "Pair {n}: existing home and illustrative concept",
+    "keepT": "What we keep",
+    "changeT": "What we change",
+    "whyT": "Why",
+    "fitT": "Fitting packages",
+    "moreT": "Other concepts",
+    "tubeHouse": {
+      "lead": "Tube houses are often long, narrow and short of light in the middle. The concept keeps the arch and curved stair and changes the warm timber ceiling, furniture and light.",
+      "keep": "The arch, the stair and the long layout of the tube house.",
+      "change": "A warm timber ceiling, cove lighting, sofa and rug; one concept adds a light well.",
+      "why": "To keep what is familiar about the house while bringing natural light and warmth into the living space.",
+      "fit": "Package 2 to see the concept before you decide. Package 3 when you need integrated interiors and detailed documents per contract."
+    },
+    "townhouse": {
+      "lead": "The existing townhouse facade is an aged yellow. The concept adds terracotta vertical fins for climbers and an indigo gate, and keeps the old balcony.",
+      "keep": "The old balcony and the layout of the facade.",
+      "change": "Terracotta vertical fins for climbers and an indigo gate.",
+      "why": "So the facade gains shading and greenery and a new look while the old balcony stays.",
+      "fit": "Package 2 to see the concept before you decide. Package 3 when you need integrated interiors and detailed documents per contract."
+    },
+    "villa": {
+      "lead": "The villa living room has columns, dark timber cabinets and a chandelier. The concept keeps the columns and doors, moves to light interiors and a terrazzo floor, and opens the room to the garden.",
+      "keep": "The columns and timber doors.",
+      "change": "Light interiors, a terrazzo floor and a layout that opens to the garden.",
+      "why": "To make the living room lighter and give a clearer view of the garden.",
+      "fit": "Package 2 to see the concept before you decide. Package 3 when you need integrated interiors and detailed documents per contract."
+    },
+    "apartment": {
+      "lead": "The apartment has an old timber kitchen and a fridge close to the walkway. The concept reworks it with a bench with storage, a folding dining table and a sliding screen.",
+      "keep": "The warm timber of the kitchen and cabinets.",
+      "change": "A reworked layout with a bench with storage, a folding dining table and a sliding screen.",
+      "why": "So a small apartment gains storage and can be used more flexibly.",
+      "fit": "Package 2 to see the concept before you decide. Package 3 when you need integrated interiors and detailed documents per contract."
     }
   }
 }

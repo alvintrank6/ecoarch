@@ -1,0 +1,44 @@
+---
+// P06 /phuong-an: four home types, concept-vs-built note, illustration gallery with lightbox.
+import Breadcrumb from '../components/Breadcrumb.astro';
+import ConceptCard from '../components/ConceptCard.astro';
+import Gallery from '../components/Gallery.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { t } from '../i18n/t';
+import type { Lang } from '../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const cards = [
+  { id: 'tubeHouse', stem: 'ex-01-after', key: 'tubeHouse' }, { id: 'townhouse', stem: 'ex-03-after', key: 'townhouse' },
+  { id: 'villa', stem: 'ex-04-after', key: 'villa' }, { id: 'apartment', stem: 'ex-05-after', key: 'apartment' },
+] as const;
+const gallery = ['ex-01-after', 'ex-02-after', 'ex-03-after', 'ex-04-after', 'ex-05-after', 'ex-06-after', 'ex-08-after'];
+---
+<section class="head container-eco">
+  <Breadcrumb {lang} trail={[]} current={t(lang, 'pages.concepts.h1')} />
+  <h1>{t(lang, 'pages.concepts.h1')}</h1>
+  <p class="text-lead">{t(lang, 'concepts.lead')}</p>
+  <div class="note"><h2>{t(lang, 'concepts.noteT')}</h2><p>{t(lang, 'concepts.note')}</p></div>
+</section>
+<section class="section container-eco" aria-labelledby="types-title">
+  <h2 id="types-title" data-reveal="rise">{t(lang, 'concepts.typesT')}</h2>
+  <div class="cards" data-reveal-group>
+    {cards.map((c) => <ConceptCard {lang} id={c.id} stem={c.stem} blurbKey={`home.concepts.card.${c.key}`} sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 100vw" />)}
+  </div>
+</section>
+<section class="section container-eco" aria-labelledby="gal-title">
+  <h2 id="gal-title" data-reveal="rise">{t(lang, 'concepts.galleryT')}</h2>
+  <Gallery {lang} stems={gallery} />
+</section>
+<CtaBand {lang} />
+<style>
+  .head { padding-top: 12px; display: grid; gap: 12px; padding-bottom: 8px; }
+  .head h1, .head p { margin: 0; }
+  .note { margin-top: 8px; padding: 20px 24px; background: var(--color-rose); border-radius: var(--radius-md); max-width: 52rem; }
+  .note h2 { margin: 0 0 6px; font-size: 1.25rem; color: var(--color-text); font-family: var(--font-body); font-weight: 600; }
+  .note p { margin: 0; }
+  h2 { margin: 0 0 1.5rem; }
+  .cards { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 640px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1024px) { .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+</style>

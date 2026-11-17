@@ -1,0 +1,48 @@
+---
+// Illustration gallery. Without JS each thumbnail is a plain link to the large image.
+// With JS (src/motion/lightbox.ts) a native <dialog> opens: focus trap, Esc, arrows, focus returns to the thumbnail.
+import { getImage } from 'astro:assets';
+import ConceptImage from './ConceptImage.astro';
+import { conceptImage, altKey } from '../assets/images';
+import { t } from '../i18n/t';
+import type { Lang } from '../i18n/routes';
+interface Props { lang: Lang; stems: string[] }
+const { lang, stems } = Astro.props;
+const items = await Promise.all(stems.map(async (stem) => {
+  const full = await getImage({ src: conceptImage(stem), width: 1600, format: 'webp', quality: 80 });
+  return { stem, href: full.src, w: full.attributes.width, h: full.attributes.height, alt: t(lang, `alt.${altKey(stem)}`) };
+}));
+---
+<div class="gallery" data-lightbox data-count-tpl={t(lang, 'concepts.lbCount')} data-reveal-group>
+  {items.map((it) => (
+    <a class="thumb lift" href={it.href} data-lb-item data-alt={it.alt} aria-label={`${t(lang, 'concepts.open')}: ${it.alt}`} data-reveal>
+      <ConceptImage stem={it.stem} {lang} sizes="(min-width: 1024px) 22vw, (min-width: 640px) 30vw, 46vw" overlay fill />
+    </a>
+  ))}
+  <dialog class="lb" data-lb-dialog aria-label={t(lang, 'concepts.lbLabel')}>
+    <div class="lb-inner">
+      <figure><img alt="" width="1600" height="1067" data-lb-img /><figcaption><span class="illus-label">{t(lang, 'common.illustration')}</span> <span class="cap" data-lb-cap></span> <span class="count" data-lb-count></span></figcaption></figure>
+      <button type="button" class="lb-btn lb-close" data-lb-close>{t(lang, 'concepts.lbClose')}</button>
+      <button type="button" class="lb-btn lb-prev" data-lb-prev>{t(lang, 'concepts.lbPrev')}</button>
+      <button type="button" class="lb-btn lb-next" data-lb-next>{t(lang, 'concepts.lbNext')}</button>
+    </div>
+  </dialog>
+</div>
+<style>
+  .gallery { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .thumb { display: block; aspect-ratio: 3 / 2; border-radius: var(--radius-sm); }
+  .thumb :global(.concept-figure), .thumb :global(.frame) { height: 100%; }
+  .lb { border: 0; padding: 0; width: min(96vw, 1200px); max-height: 94vh; background: var(--color-text); color: var(--color-bg); border-radius: var(--radius-md); }
+  .lb::backdrop { background: rgba(46, 29, 21, 0.82); }
+  .lb-inner { position: relative; display: grid; gap: 12px; padding: 12px 12px 72px; }
+  .lb figure { margin: 0; display: grid; gap: 10px; }
+  .lb img { display: block; width: 100%; max-height: 74vh; object-fit: contain; background: #1d120c; border-radius: var(--radius-sm); }
+  .lb figcaption { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; font-size: 0.9375rem; }
+  .count { margin-left: auto; opacity: 0.85; }
+  .lb-btn { position: absolute; bottom: 12px; min-height: 48px; padding: 8px 18px; background: var(--color-bg); color: var(--color-text); border: 0; border-radius: var(--radius-sm); font: inherit; font-weight: 600; cursor: pointer; }
+  .lb-btn:focus-visible { outline: 2px solid var(--color-bg); outline-offset: 3px; box-shadow: 0 0 0 5px var(--color-accent); }
+  .lb-close { right: 12px; } .lb-prev { left: 12px; } .lb-next { left: 150px; }
+  html:not(.js) .lb { display: none; }
+  @media (min-width: 640px) { .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (min-width: 1024px) { .gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+</style>
