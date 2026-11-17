@@ -1,0 +1,8 @@
+---
+// Section button. Booking links are primary (magnetic, plate wipe); everything else is secondary. Arrow nudges on hover (B4).
+interface Props { href: string; label: string; primary?: boolean; wipe?: boolean; class?: string }
+const { href, label, primary = false, wipe = false, class: cls = '' } = Astro.props;
+---
+<a class:list={['btn', primary ? 'btn-primary' : 'btn-secondary', 'has-arrow', cls]} href={href} data-wipe={wipe ? '' : undefined} data-magnetic={primary ? '' : undefined}>
+  <span>{label}</span><span class="arr" aria-hidden="true">→</span>
+</a>

@@ -20,3 +20,11 @@ OI-18 | faqPage.scope.a3 | new-build scope stated as "book a call"; price list s
 OI-19 | privacy page | legal review required before publishing (A16); text built from docs/04 note, cites 91/2025/QH15 and 356/2025/NĐ-CP as written there; data recipient, retention period, controller details unknown
 OI-20 | contact page | phone, email, address, hours hidden (add contact.* keys in vi.json/en.json when known)
 OI-21 | BookingForm | without PUBLIC_FORM_ENDPOINT the JS flow logs a warning and goes to thank-you WITHOUT sending data: must set endpoint before launch
+OI-22 | docs v2 vs brand | the new CLAUDE.md and docs/06 still say indigo, Brick, Fraunces; the owner's later brand board (olive, Montserrat, Inter) is kept and noted in docs/06 "Brand update"
+OI-23 | section images | missing originals: HERO-01(m) (ex-04-after stands in), SVC-01 to 03 (SVG art stands in), NEW-01 to 04, BR-01 and 02, OF-01 and 02, ABOUT-01, ART1-01, ART2-01, TEX-01 and 02, BOOK-01: those slots render text only; EX-07 skipped (Vietnamese labels baked in)
+OI-24 | P01.4, P10.2 | sliders show only pairs that exist: P01 has Nhà phố, Nhà ống, Căn hộ (no "Xây mới"); P10 has Căn hộ only (no Dãy trọ, Văn phòng nhỏ)
+OI-25 | P04 copy | "kiến trúc sư kiểm tra" is in the final copy (P04.1 to P04.3, SEO text) although docs/02 says the reviewer is unconfirmed; kept as written, owner to confirm
+OI-26 | P19.2 | contact items (address, phone, email, hours) have no data: items hidden, section keeps its intro and button
+OI-27 | P20 | final copy says the policy "needs legal review before publishing"; shown as written; legal review still required (A16)
+OI-28 | motion v3 | partial: A2 has no light crossfade layer; T6 relies on the View Transition crossfade (scroll position not preserved); T2 morph is Chromium only; Safari and Firefox untested
+OI-29 | P20 and law numbers | the v2 privacy copy no longer cites law numbers (the v1 page did); add them only after legal review

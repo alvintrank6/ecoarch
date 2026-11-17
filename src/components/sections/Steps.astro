@@ -1,0 +1,40 @@
+---
+// STEPS. Ten steps (P12): sticky line plan drawn per step (R7), in-page step list (A10), rolling numerals (A12).
+// Three steps (P16, P18): numbered rows.
+import Section from './Section.astro';
+import SecHead from './SecHead.astro';
+import Diagram from '../Diagram.astro';
+import Btn from './Btn.astro';
+import { t } from '../../i18n/t';
+import { clean, splitN, type SectionData } from '../../content/pages';
+import type { Lang } from '../../i18n/routes';
+interface Props { lang: Lang; pid: string; sec: SectionData; href: string | null; isBook?: boolean }
+const { lang, pid, sec, href, isBook = false } = Astro.props;
+const c = sec[lang];
+const steps = c.items.map((it) => { const [num, title, desc] = splitN(it, 2); return { num, title, desc: clean(desc) }; });
+const big = steps.length > 5;
+---
+<Section {pid} n={sec.n} type={sec.type} fx={sec.effects}>
+  <div class="container-eco">
+    <SecHead cell={c} {pid} n={sec.n} />
+    <div class:list={['steps-wrap', { big }]} data-process={big ? '' : undefined}>
+      {big && (
+        <div class="steps-side">
+          <div class="steps-plan" data-reveal data-s="media"><Diagram name="plan-line" {lang} /></div>
+          <nav class="toc" aria-label={t(lang, 'sec.stepsNav')}>
+            <ol>{steps.map((s, i) => <li data-toc={i + 1}><a href={`#step-${i + 1}`}><span class="toc-n">{s.num}</span><span>{s.title}</span></a></li>)}</ol>
+          </nav>
+        </div>
+      )}
+      <ol class="steps" data-steps data-reveal-group={big ? undefined : ''}>
+        {steps.map((s, i) => (
+          <li id={big ? `step-${i + 1}` : undefined} data-step-item data-reveal={big ? undefined : ''}>
+            <span class="numeral" aria-hidden="true"><span data-numeral>{s.num}</span></span>
+            <div><h3><span class="visually-hidden">{t(lang, 'sec.step')} {s.num}: </span>{s.title}</h3><p>{s.desc}</p></div>
+          </li>
+        ))}
+      </ol>
+    </div>
+    {href && <p class="s-actions"><Btn {href} label={c.button ?? ''} primary={isBook} wipe={isBook} /></p>}
+  </div>
+</Section>

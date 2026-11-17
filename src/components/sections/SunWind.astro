@@ -1,0 +1,23 @@
+---
+// SUNWIND: text with three points beside the sun and wind diagram (A1 A2 A3 R6 R5).
+import Section from './Section.astro';
+import SecHead from './SecHead.astro';
+import Diagram from '../Diagram.astro';
+import Btn from './Btn.astro';
+import { clean, type SectionData } from '../../content/pages';
+import type { Lang } from '../../i18n/routes';
+interface Props { lang: Lang; pid: string; sec: SectionData; href: string | null }
+const { lang, pid, sec, href } = Astro.props;
+const c = sec[lang];
+const focus = pid === 'P15' ? (sec.n === 2 ? 'sun' : 'wind') : 'both';
+---
+<Section {pid} n={sec.n} type={sec.type} fx={sec.effects}>
+  <div class="container-eco cols-2">
+    <div>
+      <SecHead cell={c} {pid} n={sec.n} />
+      <ul class="points" data-reveal-group>{c.items.map((i, k) => <li data-reveal><span class="pt-n" aria-hidden="true">{String(k + 1).padStart(2, '0')}</span><span>{clean(i)}</span></li>)}</ul>
+      {href && <p class="s-actions"><Btn {href} label={c.button ?? ''} /></p>}
+    </div>
+    <div class="media diag" data-s="media" data-reveal><Diagram name="sun-wind" {lang} {focus} /></div>
+  </div>
+</Section>

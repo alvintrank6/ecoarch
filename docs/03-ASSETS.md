@@ -1,9 +1,11 @@
 ## 03 Asset Manifest và Image Prompts
 
-31 hạng mục ảnh: 9 nhóm đã có (EX-01 đến EX-09, 15 file) và 22 hạng mục mới. Tất cả ảnh có sẵn do chủ dự án tự tạo, dùng làm concept. Bộ file đã đóng gói trong eco-arch-images.zip (45 dòng trong asset-manifest.csv, gồm cả ảnh tham khảo); file gốc không bị chỉnh, đã kiểm bằng hash. Ảnh đã có: cặp trước và sau
+31 hạng mục ảnh: 9 nhóm đã có (EX-01 đến EX-09, 15 file) và 22 hạng mục mới. Tất cả ảnh có sẵn do chủ dự án tự tạo, dùng làm concept. Bộ file đã đóng gói trong `eco-arch-images.zip` (45 dòng trong `asset-manifest.csv`, gồm cả ảnh tham khảo); file gốc không bị chỉnh, đã kiểm bằng hash.
+
+**Ảnh đã có: cặp trước và sau**
 
 | Mã | File (trong concept/) | Pixel | Dùng cho | Alt text VI (rút gọn) |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | EX-01 | ex-01-before.jpg, ex-01-after.jpg | 940x1673 | Nhà ống A, trang /phuong-an nhà ống | Hành lang có vòm và cầu thang cong; sau: giữ vòm, trần gỗ ấm |
 | EX-02 | ex-02-before.jpg, ex-02-after.jpg | 1085x1450 | Nhà ống B | Tường ố, gạch đỏ; sau: sảnh dài, đèn hắt trần, giếng trời |
 | EX-03 | ex-03-before.png, ex-03-after.png | 1122x1402 | Nhà phố (mặt tiền) | Mặt tiền vàng cũ; sau: lam đứng màu gạch, cổng xanh chàm |
@@ -14,10 +16,14 @@
 | EX-08 | ex-08-composite.jpg | 1774x887 | Phòng khách nhà ống, ảnh ghép | Cắt đôi theo trục dọc cho slider trước/sau |
 | EX-09 | ex-09-before.png | 1536x1024 | Nhà cấp 4 mái ngói có sân | Thiếu ảnh sau: tạo bằng cách chỉnh ảnh này, giữ góc máy |
 
-Mỗi cặp cùng pixel nên dùng được cho slider trước/sau (motif M3). Alt text VI đầy đủ và bản EN nằm trong CSV. Ảnh chỉ để tham khảo (reference/, không đưa lên website): 3 ảnh có watermark SDC studio, 1 ảnh có watermark MOCAN, mockup website cũ tông xanh ô liễu, sơ đồ trang cũ, bảng concept thương hiệu (3 hướng logo), ảnh chụp 3 thẻ gói. Logo chưa chốt: [CẦN BỔ SUNG]. Hạng mục mới (22)
+Mỗi cặp cùng pixel nên dùng được cho slider trước/sau (motif M3). Alt text VI đầy đủ và bản EN nằm trong CSV.
+
+**Ảnh chỉ để tham khảo (reference/, không đưa lên website):** 3 ảnh có watermark SDC studio, 1 ảnh có watermark MOCAN, mockup website cũ tông xanh ô liễu, sơ đồ trang cũ, bảng concept thương hiệu (3 hướng logo), ảnh chụp 3 thẻ gói. Logo chưa chốt: [CẦN BỔ SUNG].
+
+**Hạng mục mới (22)**
 
 | Mã | File đích | Tỷ lệ và kích thước sinh | Vai trò | Trạng thái |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | HERO-01 | hero-main.webp | Sinh 3:2 1536x1024, cắt 16:9 = 1536x864 | Hero desktop, chừa vùng trống bên trái cho H1 | Cần tạo |
 | HERO-01m | hero-main-m.webp | Sinh 2:3 1024x1536, cắt 4:5 = 1024x1280 | Hero mobile | Cần tạo |
 | NEW-01 | new-01-before.webp | 3:2 | Xây mới: lô đất trống, làm trước | Cần tạo |
@@ -36,33 +42,29 @@ Mỗi cặp cùng pixel nên dùng được cho slider trước/sau (motif M3). 
 | DIAG-01 | diag-sun-wind.svg | vector | Sơ đồ nắng gió, chữ thật VI và EN | Vẽ bằng SVG, không dùng AI |
 | DOC-01 | doc-sample.webp | theo nguồn | Ví dụ hồ sơ bàn giao | Chỉ dùng tài liệu thật, [CẦN BỔ SUNG] |
 
-### Quy tắc ảnh
+**Quy tắc ảnh**
 
-Tên file {mã}-{vai trò}.{đuôi}, chữ thường, không dấu. Không để chủ thể sát mép ở hero. Mọi ảnh concept phải có chú thích cố định: "Hình minh họa, chưa phải công trình thực tế của ECO ARCH." Ảnh 3 gói dùng dòng: "Hình tham khảo minh họa mức độ chi tiết của sản phẩm, không phải thiết kế đã hoàn thành của ECO ARCH." Quy trình tạo cặp: làm ảnh "trước" trước, rồi chỉnh chính ảnh đó thành "sau" để khóa góc máy. Pipeline: WebP (và AVIF nếu đủ thời gian) bằng sharp; chiều rộng 480, 768, 1200, 1600; có width và height; chỉ hero được preload. Những PNG 2 đến 3 MB trong concept/ phải nén trước khi lên. Ghi chú "tạo bằng AI" trong chú thích ảnh: [CẦN XÁC NHẬN]. Prompt ảnh (tiếng Anh). Dán MASTER STYLE BLOCK ở đầu, STD-NEG ở cuối mỗi prompt. Bản đầy đủ nằm trong image-prompts.md của gói zip.
+- Tên file `{mã}-{vai trò}.{đuôi}`, chữ thường, không dấu. Không để chủ thể sát mép ở hero.
+- Mọi ảnh concept phải có chú thích cố định: "Hình minh họa, chưa phải công trình thực tế của ECO ARCH." Ảnh 3 gói dùng dòng: "Hình tham khảo minh họa mức độ chi tiết của sản phẩm, không phải thiết kế đã hoàn thành của ECO ARCH."
+- Quy trình tạo cặp: làm ảnh "trước" trước, rồi chỉnh chính ảnh đó thành "sau" để khóa góc máy.
+- Pipeline: WebP (và AVIF nếu đủ thời gian) bằng sharp; chiều rộng 480, 768, 1200, 1600; có width và height; chỉ hero được preload. Những PNG 2 đến 3 MB trong concept/ phải nén trước khi lên.
+- Ghi chú "tạo bằng AI" trong chú thích ảnh: [CẦN XÁC NHẬN].
+
+**Prompt ảnh (tiếng Anh).** Dán MASTER STYLE BLOCK ở đầu, STD-NEG ở cuối mỗi prompt. Bản đầy đủ nằm trong `image-prompts.md` của gói zip.
 
 ```
 MASTER STYLE BLOCK
-Photorealistic architectural photograph of a Hanoi, Vietnam residential
-space, shot with a 24 to 35 mm lens at eye height, straight vertical lines,
-natural daylight with a soft warm colour grade. Palette: cream lime plaster,
-walnut timber, terracotta brick accents, indigo painted metal, pale terrazzo.
-Calm, uncluttered, lived-in but tidy. Realistic materials and plausible
-proportions. No people, no text, no logos.
+Photorealistic architectural photograph of a Hanoi, Vietnam residential space, shot with a 24 to 35 mm lens at eye height, straight vertical lines, natural daylight with a soft warm colour grade. Palette: cream lime plaster, walnut timber, terracotta brick accents, indigo painted metal, pale terrazzo. Calm, uncluttered, lived-in but tidy. Realistic materials and plausible proportions. No people, no text, no logos.
+
 STD-NEG
-Avoid: text, letters, numbers, logos, watermarks, signatures, people, faces,
-hands, fisheye distortion, warped or leaning verticals, extra or floating
-windows, impossible stairs, plastic CGI look, oversaturated colours, HDR
-halos, heavy vignette, clutter, brand names, neon colours.
+Avoid: text, letters, numbers, logos, watermarks, signatures, people, faces, hands, fisheye distortion, warped or leaning verticals, extra or floating windows, impossible stairs, plastic CGI look, oversaturated colours, HDR halos, heavy vignette, clutter, brand names, neon colours.
+
 HB-01 HOUSE BIBLE (NEW-01 to NEW-04)
-The same house in every image: a narrow three-storey Hanoi row house on a
-deep plot. Cream lime-plaster facade, a vertical terracotta fin screen on the
-upper floors, an indigo painted steel gate, a timber front door, a small
-balcony with planters, a roof light above the stair, pale terrazzo floors,
-walnut joinery. [concept parameters only, not a real project]
+The same house in every image: a narrow three-storey Hanoi row house on a deep plot. Cream lime-plaster facade, a vertical terracotta fin screen on the upper floors, an indigo painted steel gate, a timber front door, a small balcony with planters, a roof light above the stair, pale terrazzo floors, walnut joinery. [concept parameters only, not a real project]
 ```
 
 | Mã | Phần chủ đề của prompt |
-|---|---|
+| --- | --- |
 | HERO-01 | A Hanoi street-side facade of a renovated row house in early morning light, terracotta vertical fins with climbing plants, indigo gate, a leafy street tree at the frame edge. Subject away from left and right edges. Calm sky or wall on the left third for the headline. |
 | HERO-01m | The same facade as HERO-01, portrait framing, subject centred, sky above for the headline. |
 | NEW-01 | HB-01 context: a narrow empty plot between two older row houses in a Hanoi alley, bare ground, temporary fence, overcast soft light. |

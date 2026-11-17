@@ -11,14 +11,14 @@ export function initDraw(): () => void {
   const triggers: ScrollTrigger[] = [];
   const tweens: gsap.core.Animation[] = [];
 
-  qsa('[data-rule]').forEach((el) => {
+  qsa('[data-rule]').filter((el) => !el.closest('[data-scene]')).forEach((el) => { // rules inside sections belong to scene()
     triggers.push(ScrollTrigger.create({ trigger: el, start: 'top 90%', once: true,
       onEnter: () => tweens.push(gsap.to(el, { scaleX: 1, duration: 0.6, ease: ease.out, clearProps: 'willChange' })) }));
   });
 
   if (!isMobile()) {
     qsa('[data-draw]').forEach((box) => {
-      const paths = qsa<SVGPathElement>('path[pathLength]', box);
+      const paths = qsa<SVGGeometryElement>('[pathLength]', box);
       triggers.push(ScrollTrigger.create({ trigger: box, start: 'top 78%', once: true,
         onEnter: () => tweens.push(gsap.to(paths, { strokeDashoffset: 0, duration: dur.draw, ease: ease.inOut, stagger: 0.08 })) }));
     });
@@ -26,6 +26,6 @@ export function initDraw(): () => void {
   return () => {
     triggers.forEach((t) => t.kill());
     tweens.forEach((t) => t.kill());
-    gsap.set([...qsa('[data-rule]'), ...qsa('[data-draw] path')], { clearProps: 'all' });
+    gsap.set([...qsa('[data-rule]').filter((el) => !el.closest('[data-scene]')), ...qsa('[data-draw] [pathLength]')], { clearProps: 'all' });
   };
 }

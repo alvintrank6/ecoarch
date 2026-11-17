@@ -11,8 +11,8 @@ function initForm(form: HTMLFormElement) {
   const status = form.querySelector<HTMLElement>('[data-form-status]')!;
   const submit = form.querySelector<HTMLButtonElement>('[data-form-submit]')!;
   const label = submit.textContent ?? '';
-  const fields = ['plot', 'type', 'name', 'contact', 'consent'] as const;
-  const el = (n: string) => form.elements.namedItem(n) as HTMLInputElement | HTMLSelectElement | null;
+  type Ctl = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+  const controls = () => [...form.querySelectorAll<Ctl>('input:not([type=hidden]):not([name=website]), select, textarea')];
 
   const setStatus = (state: '' | 'sending' | 'error' | 'success', text: string) => {
     status.dataset.state = state;
@@ -20,10 +20,9 @@ function initForm(form: HTMLFormElement) {
   };
   const clearErrors = () => {
     form.querySelectorAll('.err').forEach((e) => e.remove());
-    fields.forEach((n) => { const f = el(n); if (f) { f.removeAttribute('aria-invalid'); f.removeAttribute('aria-describedby'); } });
+    controls().forEach((f) => { f.removeAttribute('aria-invalid'); f.removeAttribute('aria-describedby'); });
   };
-  const addError = (name: string, text: string) => {
-    const f = el(name); if (!f) return;
+  const addError = (f: Ctl, text: string) => {
     const id = `${f.id}-err`;
     const p = document.createElement('p');
     p.className = 'err'; p.id = id;
@@ -32,16 +31,16 @@ function initForm(form: HTMLFormElement) {
     f.setAttribute('aria-invalid', 'true'); f.setAttribute('aria-describedby', id);
   };
   const validContact = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) || /^\+?[0-9][0-9\s().-]{6,17}$/.test(v);
-  function validate(): string[] {
-    const bad: string[] = [];
+  function validate(): Ctl[] {
+    const bad: Ctl[] = [];
     clearErrors();
-    const plot = el('plot')!.value.trim(), type = el('type')!.value, name = el('name')!.value.trim(), contact = el('contact')!.value.trim();
-    if (!plot) { addError('plot', msg.errRequired); bad.push('plot'); }
-    if (!type) { addError('type', msg.errType); bad.push('type'); }
-    if (!name) { addError('name', msg.errRequired); bad.push('name'); }
-    if (!contact) { addError('contact', msg.errRequired); bad.push('contact'); }
-    else if (!validContact(contact)) { addError('contact', msg.errContact); bad.push('contact'); }
-    if (!(el('consent') as HTMLInputElement).checked) { addError('consent', msg.errConsent); bad.push('consent'); }
+    for (const f of controls().filter((c) => c.required)) {
+      const v = f.value.trim();
+      if (f instanceof HTMLInputElement && f.type === 'checkbox') { if (!f.checked) { addError(f, msg.errConsent); bad.push(f); } }
+      else if (f instanceof HTMLSelectElement) { if (!v) { addError(f, msg.errType); bad.push(f); } }
+      else if (!v) { addError(f, msg.errRequired); bad.push(f); }
+      else if (f.name === 'contact' && !validContact(v)) { addError(f, msg.errContact); bad.push(f); }
+    }
     return bad;
   }
 
@@ -56,7 +55,7 @@ function initForm(form: HTMLFormElement) {
     const bad = validate();
     if (bad.length) {
       setStatus('error', (msg.errSummary ?? '').replace('{n}', String(bad.length)));
-      el(bad[0])?.focus();
+      bad[0].focus();
       return;
     }
     setStatus('', '');

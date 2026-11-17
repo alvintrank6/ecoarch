@@ -1,24 +1,21 @@
 ---
-// H-08 and P17: accordion = button + aria-expanded. No JS: every answer is open.
-import { t } from '../i18n/t';
-import type { Lang } from '../i18n/routes';
-interface Props { lang: Lang; prefix: string; count: number; idp?: string }
-const { lang, prefix, count, idp = 'faq' } = Astro.props;
-const items = Array.from({ length: count }, (_, i) => i + 1);
+// Accordion = button + aria-expanded. No JS: every answer is open. Items are {q, a}.
+interface Props { items: { q: string; a: string }[]; idp: string }
+const { items, idp } = Astro.props;
 ---
 <div class="faq" data-faq>
-  {items.map((n) => (
+  {items.map((it, i) => (
     <div class="item">
-      <h3><button type="button" class="q" aria-expanded="false" aria-controls={`${idp}-a${n}`} id={`${idp}-q${n}`} data-faq-btn>
-        <span>{t(lang, `${prefix}.q${n}`)}</span><span class="ico" aria-hidden="true"></span></button></h3>
-      <div class="a" id={`${idp}-a${n}`} role="region" aria-labelledby={`${idp}-q${n}`}><div class="in"><p>{t(lang, `${prefix}.a${n}`)}</p></div></div>
+      <h3><button type="button" class="q" aria-expanded="false" aria-controls={`${idp}-a${i}`} id={`${idp}-q${i}`} data-faq-btn>
+        <span>{it.q}</span><span class="ico" aria-hidden="true"></span></button></h3>
+      <div class="a" id={`${idp}-a${i}`} role="region" aria-labelledby={`${idp}-q${i}`}><div class="in"><p>{it.a}</p></div></div>
     </div>
   ))}
 </div>
 <style>
   .faq { border-top: 1px solid var(--color-border); max-width: 52rem; }
   .item { border-bottom: 1px solid var(--color-border); }
-  h3 { margin: 0; font-family: var(--font-body); font-size: 1.0625rem; font-weight: 600; color: var(--color-text); }
+  h3 { margin: 0; font-family: var(--font-body); font-size: 1.0625rem; font-weight: 600; color: var(--color-text); letter-spacing: 0; }
   .q { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; padding: 12px 0; text-align: left; background: none; border: 0; cursor: pointer; font: inherit; color: inherit; }
   .q:hover { color: var(--color-accent); }
   .ico { position: relative; flex: none; width: 20px; height: 20px; }
@@ -29,6 +26,5 @@ const items = Array.from({ length: count }, (_, i) => i + 1);
   .in { overflow: hidden; min-height: 0; }
   .in p { margin: 0 0 16px; }
   html.js .a { grid-template-rows: 0fr; visibility: hidden; transition: grid-template-rows var(--dur-fast) var(--ease-out), visibility 0s linear var(--dur-fast); }
-  html.js .q[aria-expanded='true'] + .a, html.js .item:has(.q[aria-expanded='true']) .a { grid-template-rows: 1fr; visibility: visible; transition-delay: 0s; }
-  html.js .q { }
+  html.js .item:has(.q[aria-expanded='true']) .a { grid-template-rows: 1fr; visibility: visible; transition-delay: 0s; }
 </style>

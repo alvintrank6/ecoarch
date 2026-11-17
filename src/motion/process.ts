@@ -1,5 +1,6 @@
-// R7: one ScrollTrigger tracks reading progress through the ten steps; the sticky plan draws groups up to the
-// current step. Position is CSS `sticky` (no pin). Mobile (<1024px) and reduced motion: whole plan shown, no trigger.
+// R7 + A10 + A12 on the ten-step process (P12). One ScrollTrigger follows reading progress through the steps (CSS `sticky` holds the plan, no pin).
+// Strokes of the line plan are drawn as their step is reached (R7); the in-page step list marks the current step (A10).
+// Below 1024px or under reduced motion the whole plan is shown and nothing is tracked.
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { dur, ease } from './tokens';
@@ -11,32 +12,33 @@ export function initProcess(): () => void {
   if (!root) return () => {};
   const list = qs('[data-steps]', root)!;
   const items = qsa('[data-step-item]', root);
-  const groups = qsa<SVGGElement>('g[data-step]', root);
+  const toc = qsa('[data-toc]', root);
+  const strokes = qsa<SVGGeometryElement>('[data-plan] .draw', root);
   const mq = window.matchMedia('(min-width: 1024px)');
   let st: ScrollTrigger | null = null;
   let cur = 0;
 
-  const paths = (g: SVGGElement) => qsa<SVGPathElement>('path', g);
-  const setGroup = (g: SVGGElement, on: boolean) => {
-    gsap.killTweensOf(paths(g));
-    if (on) gsap.to(paths(g), { strokeDashoffset: 0, duration: dur.slow, ease: ease.inOut, overwrite: true });
-    else gsap.to(paths(g), { strokeDashoffset: 1, duration: 0.3, ease: ease.out, overwrite: true });
-  };
-  const showAll = () => groups.forEach((g) => { gsap.killTweensOf(paths(g)); gsap.set(paths(g), { strokeDasharray: 'none', strokeDashoffset: 0 }); });
+  const showAll = () => { gsap.killTweensOf(strokes); gsap.set(strokes, { strokeDasharray: 'none', strokeDashoffset: 0 }); };
   const mark = (n: number) => {
     cur = n;
     items.forEach((li, i) => (i + 1 === n ? li.setAttribute('aria-current', 'step') : li.removeAttribute('aria-current')));
-    groups.forEach((g) => { const on = Number(g.dataset.step) <= n; if (g.classList.contains('on') !== on) { g.classList.toggle('on', on); setGroup(g, on); } });
+    toc.forEach((li, i) => li.classList.toggle('on', i + 1 === n));
+    strokes.forEach((el) => {
+      const on = Number((el as unknown as HTMLElement).dataset.stepFrom) <= n;
+      if ((el as unknown as HTMLElement).dataset.on === String(on)) return;
+      (el as unknown as HTMLElement).dataset.on = String(on);
+      gsap.killTweensOf(el);
+      gsap.to(el, { strokeDashoffset: on ? 0 : 1, duration: on ? dur.slow : 0.3, ease: on ? ease.inOut : ease.out });
+    });
   };
   const apply = () => {
-    st?.kill(); st = null;
-    items.forEach((li) => li.removeAttribute('aria-current'));
+    st?.kill(); st = null; cur = 0;
+    items.forEach((li) => li.removeAttribute('aria-current')); toc.forEach((li) => li.classList.remove('on'));
     if (isReduced() || !mq.matches) { showAll(); return; }
-    groups.forEach((g) => { g.classList.remove('on'); gsap.set(paths(g), { strokeDasharray: 1, strokeDashoffset: 1 }); });
-    cur = 0;
+    strokes.forEach((el) => { delete (el as unknown as HTMLElement).dataset.on; gsap.set(el, { strokeDasharray: 1, strokeDashoffset: 1 }); });
     st = ScrollTrigger.create({ trigger: list, start: 'top 55%', end: 'bottom 55%',
       onUpdate: (self) => { const n = Math.min(items.length, Math.floor(self.progress * items.length) + 1); if (n !== cur) mark(n); },
-      onEnter: () => mark(1), onLeaveBack: () => { cur = 0; groups.forEach((g) => { g.classList.remove('on'); setGroup(g, false); }); items.forEach((li) => li.removeAttribute('aria-current')); } });
+      onEnter: () => mark(1), onLeaveBack: () => { cur = 0; strokes.forEach((el) => { delete (el as unknown as HTMLElement).dataset.on; gsap.to(el, { strokeDashoffset: 1, duration: 0.3 }); }); items.forEach((li) => li.removeAttribute('aria-current')); toc.forEach((li) => li.classList.remove('on')); } });
   };
   apply();
   mq.addEventListener('change', apply);

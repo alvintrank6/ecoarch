@@ -13,6 +13,8 @@ export function initLouver(): () => void {
   const created: HTMLElement[] = [];
   const tweens: gsap.core.Animation[] = [];
   let playing = 0;
+  const tier = document.body.dataset.tier ?? 'B';
+  const maxPlaying = tier === 'S' ? 3 : tier === 'A' ? 2 : 1; // docs/12 12.5: louver images per viewport
 
   qsa('[data-louver]').forEach((el) => {
     const img = el.querySelector('img');
@@ -31,7 +33,7 @@ export function initLouver(): () => void {
     triggers.push(ScrollTrigger.create({ trigger: el, start: 'top 86%', once: true, onEnter: () => {
       const done = () => { wrap.remove(); playing = Math.max(0, playing - 1); };
       playing++;
-      if (playing > 2) { // viewport budget: extra louvers just fade
+      if (playing > maxPlaying) { // viewport budget: extra louvers just fade
         tweens.push(gsap.to(wrap, { opacity: 0, duration: 0.35, onComplete: done }));
         return;
       }
@@ -42,5 +44,19 @@ export function initLouver(): () => void {
     } }));
   });
 
-  return () => { triggers.forEach((t) => t.kill()); tweens.forEach((t) => t.kill()); created.forEach((w) => w.remove()); };
+  // R4: frame opens with a clip-path and the image settles from 1.04 (mobile: simple fade, 350 ms).
+  const frames = qsa('[data-frame-open]');
+  const mobile = isMobile();
+  frames.forEach((fr) => {
+    const img = fr.querySelector('img');
+    if (mobile) gsap.set(fr, { opacity: 0 }); else gsap.set(fr, { clipPath: 'inset(8% 8% 8% 8% round 4px)', opacity: 0 });
+    triggers.push(ScrollTrigger.create({ trigger: fr, start: 'top 86%', once: true, onEnter: () => {
+      if (mobile) tweens.push(gsap.to(fr, { opacity: 1, duration: 0.35 }));
+      else {
+        tweens.push(gsap.to(fr, { clipPath: 'inset(0% 0% 0% 0% round 4px)', opacity: 1, duration: 0.8, ease: 'power3.out', clearProps: 'clipPath' }));
+        if (img) tweens.push(gsap.fromTo(img, { scale: 1.04 }, { scale: 1, duration: 1.0, ease: 'power3.out', clearProps: 'transform' }));
+      }
+    } }));
+  });
+  return () => { gsap.set(frames, { clearProps: 'clipPath,opacity' }); triggers.forEach((t) => t.kill()); tweens.forEach((t) => t.kill()); created.forEach((w) => w.remove()); };
 }

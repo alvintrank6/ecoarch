@@ -15,7 +15,7 @@ const b = img(`${pair}-before`, before), a = img(`${pair}-after`, after);
 const uid = `cmp-${pair}`;
 ---
 <figure class="compare" data-compare data-start={start} data-drag-label={t(lang, 'compare.drag')} data-value-text={t(lang, 'compare.valueText')}>
-  <div class="stage" style={`--w:${before.width};--h:${before.height};--pos:${start}%`} data-louver={louver ? '' : undefined}>
+  <div class="stage" data-cursor={t(lang, "compare.drag")} style={`--w:${before.width};--h:${before.height};--pos:${start}%`} data-louver={louver ? '' : undefined}>
     <div class="pane base">
       <Image src={b.src} alt={b.alt} {sizes} widths={[480, 768, 1200]} format="webp" quality={78} loading="lazy" decoding="async" />
       <span class="tag tag-before">{t(lang, 'compare.before')}</span>

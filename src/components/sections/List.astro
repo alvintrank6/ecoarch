@@ -1,0 +1,31 @@
+---
+// LIST: items with self-drawing ticks (B2, R9), optional image beside (R4).
+import Section from './Section.astro';
+import SecHead from './SecHead.astro';
+import Media from './Media.astro';
+import Btn from './Btn.astro';
+import { path, type Lang } from '../../i18n/routes';
+import { mediaOf } from '../../data/images';
+import { clean, type SectionData } from '../../content/pages';
+interface Props { lang: Lang; pid: string; sec: SectionData; href: string | null }
+const { lang, pid, sec, href } = Astro.props;
+const c = sec[lang];
+const m = mediaOf(sec.imagesNote)[0];
+const isBook = href === path(lang, 'book');
+const tick = '<svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" data-tick><path pathLength="1" d="M4 10.5l4 4L16 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const numbered = pid === 'P16';
+---
+<Section {pid} n={sec.n} type={sec.type} fx={sec.effects}>
+  <div class:list={['container-eco', 'cols-2', { 'no-media': !m }]}>
+    <div>
+      <SecHead cell={c} {pid} n={sec.n} />
+      <ul class:list={['tick-list', 'big', { numbered }]} data-reveal-group>
+        {c.items.map((x, i) => { const s = clean(x); const k = s.indexOf(': '); return (
+          <li data-reveal>{numbered ? <span class="numeral sm" aria-hidden="true"><span data-numeral>{String(i + 1).padStart(2, '0')}</span></span> : <Fragment set:html={tick} />}{k > 0 && k < 60 ? <span><strong>{s.slice(0, k)}</strong>{s.slice(k)}</span> : s}</li>
+        ); })}
+      </ul>
+      {href && <p class="s-actions"><Btn {href} label={c.button ?? ''} primary={isBook} wipe={isBook} /></p>}
+    </div>
+    {m && <Media {m} {lang} frame="open" parallax sizes="(min-width: 1024px) 44vw, 100vw" />}
+  </div>
+</Section>

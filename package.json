@@ -11,10 +11,11 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "verify": "astro check && astro build && node scripts/check-i18n.mjs && node scripts/check-seo-table.mjs && node scripts/check-content.mjs && node scripts/check-seo.mjs && node scripts/check-images.mjs",
+    "verify": "astro check && astro build && node scripts/check-i18n.mjs && node scripts/check-seo-table.mjs && node scripts/check-content.mjs && node scripts/check-seo.mjs && node scripts/check-structure.mjs && node scripts/check-images.mjs && node scripts/check-motion-budget.mjs",
     "verify:ui": "node scripts/check-ui.mjs",
     "verify:interact": "node scripts/check-interact.mjs",
-    "verify:a11y": "node scripts/check-a11y.mjs"
+    "verify:a11y": "node scripts/check-a11y.mjs",
+    "verify:motion": "node scripts/check-motion.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.5",

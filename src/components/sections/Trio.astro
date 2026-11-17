@@ -1,0 +1,22 @@
+---
+// TRIO: three principles or documents with step numerals (A12).
+import Section from './Section.astro';
+import SecHead from './SecHead.astro';
+import Btn from './Btn.astro';
+import { clean, splitN, type SectionData } from '../../content/pages';
+import type { Lang } from '../../i18n/routes';
+interface Props { lang: Lang; pid: string; sec: SectionData; href: string | null }
+const { lang, pid, sec, href } = Astro.props;
+const c = sec[lang];
+---
+<Section {pid} n={sec.n} type={sec.type} fx={sec.effects}>
+  <div class="container-eco">
+    <SecHead cell={c} {pid} n={sec.n} />
+    <ol class="trio" data-reveal-group>
+      {c.items.map((it, i) => { const [title, desc] = splitN(it, 1); return (
+        <li data-reveal><span class="numeral" aria-hidden="true"><span data-numeral>{String(i + 1).padStart(2, '0')}</span></span><h3>{title}</h3><p>{clean(desc)}</p></li>
+      ); })}
+    </ol>
+    {href && <p class="s-actions"><Btn {href} label={c.button ?? ''} /></p>}
+  </div>
+</Section>

@@ -130,14 +130,14 @@ html.menu-open { overflow: hidden; }
 
 /* R5 rule and R6 stroke drawing: hidden only when JS runs on a desktop-size viewport; text is never hidden. */
 html.js [data-rule] { transform: scaleX(0); transform-origin: left center; }
-@media (min-width: 768px) { html.js [data-draw] path[pathLength] { stroke-dasharray: 1; stroke-dashoffset: 1; } }
-@media (prefers-reduced-motion: reduce) { html.js [data-rule] { transform: none; } html.js [data-draw] path[pathLength] { stroke-dasharray: none; stroke-dashoffset: 0; } }
+@media (min-width: 768px) { html.js [data-draw] [pathLength] { stroke-dasharray: 1; stroke-dashoffset: 1; } }
+@media (prefers-reduced-motion: reduce) { html.js [data-rule] { transform: none; } html.js [data-draw] [pathLength] { stroke-dasharray: none; stroke-dashoffset: 0; } }
 /* R7 plan: strokes hidden only with JS; process.ts tweens them in (all shown on mobile and reduced motion). */
-html.js [data-plan] path[pathLength] { stroke-dasharray: 1; stroke-dashoffset: 1; }
-html.reveal-failsafe [data-plan] path[pathLength], html[data-motion='reduced'] [data-plan] path[pathLength] { stroke-dasharray: none !important; stroke-dashoffset: 0 !important; transition: none !important; }
-@media (prefers-reduced-motion: reduce) { html.js [data-plan] path[pathLength] { stroke-dasharray: none; stroke-dashoffset: 0; transition: none; } }
+html.js [data-plan] [pathLength] { stroke-dasharray: 1; stroke-dashoffset: 1; }
+html.reveal-failsafe [data-plan] [pathLength], html[data-motion='reduced'] [data-plan] [pathLength] { stroke-dasharray: none !important; stroke-dashoffset: 0 !important; transition: none !important; }
+@media (prefers-reduced-motion: reduce) { html.js [data-plan] [pathLength] { stroke-dasharray: none; stroke-dashoffset: 0; transition: none; } }
 html.reveal-failsafe [data-rule], html[data-motion='reduced'] [data-rule] { transform: none !important; }
-html.reveal-failsafe [data-draw] path[pathLength], html[data-motion='reduced'] [data-draw] path[pathLength] { stroke-dasharray: none !important; stroke-dashoffset: 0 !important; }
+html.reveal-failsafe [data-draw] [pathLength], html[data-motion='reduced'] [data-draw] [pathLength] { stroke-dasharray: none !important; stroke-dashoffset: 0 !important; }
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .lift { transition: transform var(--dur-fast) var(--ease-out); }
   .lift:hover { transform: translateY(-4px) scale(1.01); }

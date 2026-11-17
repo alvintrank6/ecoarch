@@ -1,0 +1,44 @@
+---
+// LADDER (P02): each package adds a layer. Desktop: sticky art that changes with the card in view (A4) and stacked sticky cards (A11).
+import Section from './Section.astro';
+import SecHead from './SecHead.astro';
+import PackageArt from '../PackageArt.astro';
+import Btn from './Btn.astro';
+import { t } from '../../i18n/t';
+import { path, type Lang, type PageId } from '../../i18n/routes';
+import { type SectionData } from '../../content/pages';
+interface Props { lang: Lang; pid: string; sec: SectionData; href: string | null }
+const { lang, pid, sec, href } = Astro.props;
+const c = sec[lang];
+const targets: PageId[] = ['prelim', 'architectural', 'integrated'];
+const arts = ['plan', 'cutaway', 'interior'] as const;
+const artKeys = ['artPlan', 'artCutaway', 'artInterior'] as const;
+const rows = c.items.map((it) => {
+  const m = it.match(/^(.+?) · (.+?\/m²), (.+?), (.*)$/);
+  if (!m) throw new Error(`LADDER item not parsed: ${it}`);
+  return { label: m[1], price: m[2], name: m[3], parts: m[4].replace(/\.$/, '').split(', ').map((x) => x.charAt(0).toUpperCase() + x.slice(1)) };
+});
+---
+<Section {pid} n={sec.n} type={sec.type} fx={sec.effects}>
+  <div class="container-eco">
+    <SecHead cell={c} {pid} n={sec.n} />
+    <div class="ladder" data-ladder>
+      <div class="ladder-media" data-s="media" data-reveal>
+        {arts.map((a, i) => <div class="ladder-art" data-ladder-art={i}><PackageArt kind={a} label={t(lang, `alt.${artKeys[i]}`)} /></div>)}
+        <span class="illus-label media-label" data-caption>{t(lang, 'common.illustration')}</span>
+      </div>
+      <ol class="ladder-cards">
+        {rows.map((r, i) => (
+          <li class="ladder-card" data-ladder-card={i} style={`--i:${i}`}>
+            <div class="ladder-inline-art"><PackageArt kind={arts[i]} label={t(lang, `alt.${artKeys[i]}`)} /></div>
+            <p class="card-label">{r.label}</p>
+            <h3><a href={path(lang, targets[i])} class="card-link">{r.name}</a></h3>
+            <p class="price"><span class="mask" data-price><strong>{r.price}</strong></span></p>
+            <ul class="tick-list">{r.parts.map((p) => <li><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" data-tick><path pathLength="1" d="M4 10.5l4 4L16 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{p}</li>)}</ul>
+          </li>
+        ))}
+      </ol>
+    </div>
+    {href && <p class="s-actions"><Btn {href} label={c.button ?? ''} /></p>}
+  </div>
+</Section>

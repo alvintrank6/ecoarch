@@ -1,0 +1,25 @@
+---
+// Resolves a Media (src/data/images.ts) to markup. Concept photos always carry the "Hình minh họa" label; art is an illustration too.
+import ConceptImage from '../ConceptImage.astro';
+import PackageArt from '../PackageArt.astro';
+import Diagram from '../Diagram.astro';
+import { t } from '../../i18n/t';
+import type { Media } from '../../data/images';
+import type { Lang } from '../../i18n/routes';
+interface Props { m: Media; lang: Lang; sizes?: string; eager?: boolean; frame?: 'louver' | 'open' | 'none'; parallax?: boolean; focus?: 'sun' | 'wind' | 'both'; vt?: string; ratio?: string; zoom?: boolean; noLabel?: boolean }
+const { m, lang, sizes = '(min-width: 1024px) 50vw, 100vw', eager = false, frame = 'none', parallax = false, focus = 'both', vt, ratio, zoom = false, noLabel = false } = Astro.props;
+const artKey = m.kind === 'art' ? { plan: 'artPlan', cutaway: 'artCutaway', interior: 'artInterior' }[m.art] : '';
+---
+{m.kind === 'photo' && (
+  <div class="media" data-s="media" data-reveal={eager ? undefined : ''} data-louver={frame === 'louver' ? '' : undefined} data-frame-open={frame === 'open' ? '' : undefined} data-parallax={parallax ? '' : undefined} style={vt ? `view-transition-name:${vt}; ${ratio ? `aspect-ratio:${ratio}` : ''}` : ratio ? `aspect-ratio:${ratio}` : undefined} data-cursor={zoom ? t(lang, 'sec.open') : undefined}>
+    <ConceptImage stem={m.stem} {lang} {sizes} {eager} fill noLabel />
+    {!noLabel && <span class="illus-label media-label" data-caption>{t(lang, 'common.illustration')}</span>}
+  </div>
+)}
+{m.kind === 'art' && (
+  <div class="media art" data-s="media" data-reveal data-louver={frame === 'louver' ? '' : undefined} style={vt ? `view-transition-name:${vt}` : undefined}>
+    <PackageArt kind={m.art} label={t(lang, `alt.${artKey}`)} />
+    {!noLabel && <span class="illus-label media-label" data-caption>{t(lang, 'common.illustration')}</span>}
+  </div>
+)}
+{m.kind === 'diagram' && <div class="media diag" data-s="media" data-reveal><Diagram name={m.name} {lang} {focus} plain /></div>}

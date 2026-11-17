@@ -1,14 +1,15 @@
 ---
 import '../styles/fonts.css';
 import '../styles/global.css';
+import '../styles/sections.css';
 import '../styles/transitions.css';
 import Seo from '../components/Seo.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import { t } from '../i18n/t';
 import type { Lang, PageId } from '../i18n/routes';
-interface Props { lang: Lang; id: PageId | 'notFound'; title: string; description: string; noindex?: boolean; jsonLd?: object[]; refresh?: string; bare?: boolean }
-const { lang, id, title, description, noindex, jsonLd, refresh, bare = false } = Astro.props;
+interface Props { lang: Lang; id: PageId | 'notFound'; title: string; description: string; noindex?: boolean; jsonLd?: object[]; refresh?: string; bare?: boolean; tier?: string }
+const { lang, id, title, description, noindex, jsonLd, refresh, bare = false, tier = 'B' } = Astro.props;
 ---
 <!doctype html>
 <html lang={lang}>
@@ -21,14 +22,16 @@ const { lang, id, title, description, noindex, jsonLd, refresh, bare = false } =
     <script is:inline>
       document.documentElement.classList.add('js');
       try { var m = localStorage.getItem('eco-motion'); if (m === 'reduced') document.documentElement.dataset.motion = 'reduced'; } catch (e) {}
-      // Arriving after the booking wipe: cover the page at first paint (cleared by page-wipe.ts).
-      try { if (sessionStorage.getItem('eco-wipe') && !matchMedia('(prefers-reduced-motion: reduce)').matches && innerWidth > 767 && document.documentElement.dataset.motion !== 'reduced') document.documentElement.classList.add('wipe-in'); else sessionStorage.removeItem('eco-wipe'); } catch (e) {}
+      // Arriving after a plate wipe or louver curtain: cover the page at first paint (cleared by page-wipe.ts).
+      try { var w = sessionStorage.getItem('eco-wipe'); if (w && !matchMedia('(prefers-reduced-motion: reduce)').matches && innerWidth > 767 && document.documentElement.dataset.motion !== 'reduced') document.documentElement.classList.add(w === 'curtain' ? 'curtain-in' : 'wipe-in'); else sessionStorage.removeItem('eco-wipe'); } catch (e) {}
+      try { if (!sessionStorage.getItem('eco-nav-intro')) document.documentElement.classList.add('nav-intro'); } catch (e) {}
       // Failsafe: if the motion script never signals ready, show every [data-reveal] element.
       setTimeout(function () { if (!document.documentElement.dataset.motionReady) document.documentElement.classList.add('reveal-failsafe'); }, 3000);
     </script>
     <Seo {lang} {id} {title} {description} {noindex} {jsonLd} {refresh} />
   </head>
-  <body>
+  <body data-tier={tier}>
+    <div class="read-progress" data-progress aria-hidden="true"></div>
     <a class="skip-link" href="#main">{t(lang, 'common.skip')}</a>
     {!bare && <Nav {lang} {id} />}
     <main id="main" tabindex="-1">

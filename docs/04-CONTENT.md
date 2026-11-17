@@ -1,9 +1,13 @@
 ## 04 Content Blueprint
 
-Mỗi trang đi theo hành trình Attention, Relevance, Trust, Desire, Objections, Action (SOP 5.1); bằng chứng và thông tin ra quyết định đứng trước CTA mạnh. CTA chính xuyên suốt: Đặt lịch trao đổi về khu đất (EN: Book a call about your plot). CTA phụ duy nhất trên trang chủ: Xem 3 gói dịch vụ (See the 3 packages). Tiêu đề và đoạn mẫu dưới đây là bản đề xuất cần chủ dự án duyệt; không chứa số liệu hay cam kết không có nguồn. Trang chủ (P01): các section
+**Cập nhật 18/11/2026.** Cấu trúc section (H-01 đến H-09 của trang chủ và bảng P02 đến P22) được thay bằng mục 11: trang chủ 5 section, mỗi trang nội dung P02 đến P20 4 section, và bản sao Việt và Anh đầy đủ. Tiêu đề H1 và bảng mục tiêu trang ở mục này và mục 05 vẫn dùng được. Nếu hai nơi khác nhau, mục 11 thắng.
+
+Mỗi trang đi theo hành trình Attention, Relevance, Trust, Desire, Objections, Action (SOP 5.1); bằng chứng và thông tin ra quyết định đứng trước CTA mạnh. CTA chính xuyên suốt: **Đặt lịch trao đổi về khu đất** (EN: Book a call about your plot). CTA phụ duy nhất trên trang chủ: **Xem 3 gói dịch vụ** (See the 3 packages). Tiêu đề và đoạn mẫu dưới đây là bản đề xuất cần chủ dự án duyệt; không chứa số liệu hay cam kết không có nguồn.
+
+**Trang chủ (P01): các section**
 
 | ID | Tầng | Vai trò và nội dung | Tiêu đề VI / EN | Asset | Motion intent |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | H-01 | Attention | Hero: nêu đúng ECO ARCH làm gì. CTA chính, CTA phụ | Thiết kế nhà ở Hà Nội, giải thích rõ từng lựa chọn / Home design in Hanoi, every choice explained | HERO-01, HERO-01m | Thận trọng, đón ánh sáng sáng |
 | H-02 | Relevance | Nắng, gió, ánh sáng được đọc trước khi vẽ mặt bằng (có trong cả 3 gói); vật liệu bền, dễ bảo trì; bảng giải thích lựa chọn | Nhà dễ ở bắt đầu từ việc đọc đúng khu đất / A comfortable home starts with reading the plot | DIAG-01 | Vẽ nét từng lớp (line-draw) |
 | H-03 | Relevance | 3 thẻ gói: tên, giá đ/m², một dòng mô tả, liên kết; chú thích chung dưới ảnh | Ba gói, mỗi gói nói rõ bạn nhận gì / Three packages, each clear on what you receive | SVC-01 đến 03 | Rise, thẻ xếp lớp nhẹ |
@@ -14,14 +18,14 @@ Mỗi trang đi theo hành trình Attention, Relevance, Trust, Desire, Objection
 | H-08 | Objections | 5 câu FAQ đầu: phạm vi, thi công, chi phí, thời gian phản hồi, chuẩn bị | Câu hỏi thường gặp / Common questions | (không ảnh) | Accordion 220ms |
 | H-09 | Action | CTA cuối + form rút gọn: địa điểm, loại công trình, thời điểm, liên hệ. Phản hồi trong 24 giờ | Gửi khu đất, chúng tôi phản hồi trong 24 giờ / Send your plot, we reply within 24 hours | BOOK-01 | Rise nhẹ |
 
-### Các trang còn lại
+**Các trang còn lại**
 
 | ID | Trang (VI) | Tầng chính | Section theo thứ tự | Tiêu đề H1 VI / EN | CTA | Asset |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | P02 | /vi/dich-vu | Relevance | Tổng quan 3 gói; bảng giá theo m² (100.000, 220.000, 340.000 đ/m²) và cách tính phí; bảng so sánh gồm / không gồm; câu hỏi chọn gói; FAQ ngắn | Ba gói thiết kế nhà ở / Three home design packages | Đặt lịch | SVC-01 đến 03 |
 | P03 | /vi/dich-vu/thiet-ke-so-bo-2d | Relevance, Objections | Khách nhận gì (một phương án mặt bằng 2D bố trí lại nhà hiện hữu, ghi chú công năng, nắng và thông gió); giá 100.000 đ/m²; phù hợp khi chưa cần phối cảnh 3D; không gồm; cách làm việc; FAQ | Thiết kế sơ bộ (2D) / Preliminary Design (2D) | Đặt lịch | SVC-01, EX-06 |
-| P04 | /vi/dich-vu/thiet-ke-y-tuong-3d | Relevance, Objections | Mặt bằng, mặt đứng, mặt cắt và phối cảnh kiến trúc giúp hình dung không gian sau cải tạo; giá 220.000 đ/m²; AI hỗ trợ hình ý tưởng, người có chuyên môn kiểm tra tính hợp lý [CẦN XÁC NHẬN ai kiểm tra]; không gồm; FAQ | Thiết kế ý tưởng (3D) / Concept Design (3D) | Đặt lịch | SVC-02, EX-05 |
-| P05 | /vi/dich-vu/thiet-ke-hoan-chinh | Desire, Objections | Kiến trúc và nội thất đồng bộ; bố trí, vật liệu, ánh sáng và phối cảnh; hồ sơ chi tiết theo hợp đồng cho chuẩn bị thi công (bảng giá không nêu mục này, cần xác nhận); giá 340.000 đ/m²; gồm trọn Gói 1 và 2; kết cấu, điện, cấp thoát nước trong hồ sơ chi tiết; MEP chuyên sâu theo yêu cầu riêng; ECO ARCH không thi công | Thiết kế kiến trúc và nội thất hoàn chỉnh / Complete Architecture & Interior Design | Đặt lịch | SVC-03, EX-04 |
+| P04 | /vi/dich-vu/thiet-ke-kien-truc | Relevance, Objections | Mặt bằng, mặt đứng, mặt cắt và phối cảnh kiến trúc giúp hình dung không gian sau cải tạo; giá 220.000 đ/m²; AI hỗ trợ hình ý tưởng, người có chuyên môn kiểm tra tính hợp lý [CẦN XÁC NHẬN ai kiểm tra]; không gồm; FAQ | Thiết kế kiến trúc / Architectural Design | Đặt lịch | SVC-02, EX-05 |
+| P05 | /vi/dich-vu/thiet-ke-kien-truc-noi-that | Desire, Objections | Kiến trúc và nội thất đồng bộ; bố trí, vật liệu, ánh sáng và phối cảnh; hồ sơ chi tiết theo hợp đồng cho chuẩn bị thi công (bảng giá không nêu mục này, cần xác nhận); giá 340.000 đ/m²; gồm trọn Gói 1 và 2; kết cấu, điện, cấp thoát nước trong hồ sơ chi tiết; MEP chuyên sâu theo yêu cầu riêng; ECO ARCH không thi công | Thiết kế kiến trúc và nội thất đồng bộ / Integrated Architectural and Interior Design | Đặt lịch | SVC-03, EX-04 |
 | P06 | /vi/phuong-an | Desire | Tổng quan 4 loại; chú thích concept; khác biệt giữa phương án và công trình thực tế | Phương án thiết kế (hình minh họa) / Design concepts (illustrative) | Đặt lịch | EX-01 đến EX-08 |
 | P07 | /vi/phuong-an/nha-ong | Desire | Slider trước/sau, giữ gì, đổi gì, vì sao, gói phù hợp | Nhà ống: giữ vòm, đổi ánh sáng / Tube house: keep the arch, change the light | Đặt lịch | EX-01, EX-02, EX-06 |
 | P08 | /vi/phuong-an/nha-pho | Desire | như trên | Nhà phố: lam đứng và cửa xanh chàm / Townhouse: vertical fins and indigo gate | Đặt lịch | EX-03 |
@@ -40,15 +44,17 @@ Mỗi trang đi theo hành trình Attention, Relevance, Trust, Desire, Objection
 | P21 | /vi/cam-on | Action | Xác nhận đã nhận yêu cầu, nêu 24 giờ, nên chuẩn bị gì; noindex | Cảm ơn bạn đã gửi yêu cầu / Thank you for your request | Xem Kiến thức | (không ảnh) |
 | P22 | 404 | Action | Thông báo và 3 liên kết hữu ích; noindex | Không tìm thấy trang / Page not found | Về trang chủ | (không ảnh) |
 
-Slug EN (bảng ánh xạ nằm trong routes.ts, mục 08): gioi-thieu → about; dich-vu → services; phuong-an → concepts (nha-ong → tube-house, nha-pho → townhouse, biet-thu → villa, can-ho → apartment); quy-trinh → process; pham-vi-ban-giao → scope; kien-thuc → insights (doc-huong-nang-gio → read-sun-and-wind, chuan-bi-buoi-trao-doi → prepare-first-call); hoi-dap → faq; dat-lich → book; lien-he → contact; chinh-sach-bao-mat → privacy; cam-on → thank-you. Các slug ngoài 3 slug gói là [GIẢ ĐỊNH], cần chủ dự án duyệt. SEO: title (≤60 ký tự) và meta (≤155 ký tự), đã đếm bằng code, 0 dòng vượt
+**Slug EN** (bảng ánh xạ nằm trong `routes.ts`, mục 08): gioi-thieu → about; dich-vu → services; phuong-an → concepts (nha-ong → tube-house, nha-pho → townhouse, biet-thu → villa, can-ho → apartment); quy-trinh → process; pham-vi-ban-giao → scope; kien-thuc → insights (doc-huong-nang-gio → read-sun-and-wind, chuan-bi-buoi-trao-doi → prepare-first-call); hoi-dap → faq; dat-lich → book; lien-he → contact; chinh-sach-bao-mat → privacy; cam-on → thank-you. Các slug ngoài 3 slug gói là [GIẢ ĐỊNH], cần chủ dự án duyệt.
+
+**SEO: title (≤60 ký tự) và meta (≤155 ký tự), đã đếm bằng code, 0 dòng vượt**
 
 | Trang | Title VI | Meta VI | Title EN | Meta EN |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | P01 | ECO ARCH \| Thiết kế và cải tạo nhà ở tại Hà Nội | ECO ARCH tư vấn thiết kế kiến trúc và cải tạo nhà ở tại Hà Nội. Phương án giải thích rõ nắng gió, vật liệu, phạm vi hồ sơ. Đặt lịch trao đổi về khu đất. | ECO ARCH \| Home design and renovation in Hanoi | ECO ARCH designs and renovates homes in Hanoi. Every choice on sun, wind, materials and deliverables is explained first. Book a call about your plot. |
-| P02 | Ba gói thiết kế nhà ở rõ phạm vi \| ECO ARCH | Chọn giữa thiết kế sơ bộ 2D, thiết kế ý tưởng 3D và thiết kế kiến trúc, nội thất hoàn chỉnh. Xem từng gói gồm gì rồi đặt lịch trao đổi với ECO ARCH. | Three clear home design packages \| ECO ARCH | Choose 2D preliminary design, 3D concept design or complete architecture and interior design. See what each includes, then book a call with ECO ARCH. |
+| P02 | Ba gói thiết kế nhà ở rõ phạm vi \| ECO ARCH | Chọn giữa thiết kế sơ bộ 2D, thiết kế kiến trúc và thiết kế kiến trúc, nội thất đồng bộ. Xem từng gói gồm gì rồi đặt lịch trao đổi với ECO ARCH. | Three clear home design packages \| ECO ARCH | Choose 2D preliminary design, architectural design or integrated architectural and interior design. See what each includes, then book a call with ECO ARCH. |
 | P03 | Thiết kế sơ bộ 2D cho nhà hiện hữu \| ECO ARCH | Gói thiết kế sơ bộ: một phương án mặt bằng 2D cho nhà hiện hữu, kèm ghi chú công năng, nắng và thông gió. Phù hợp khi chưa cần phối cảnh. | 2D preliminary design for existing homes \| ECO ARCH | Preliminary design package: one 2D plan option for your existing home, with notes on function, sun and ventilation. For before you need 3D views. |
-| P04 | Thiết kế ý tưởng 3D cho nhà cải tạo \| ECO ARCH | Gói thiết kế ý tưởng: mặt bằng, mặt đứng, mặt cắt và phối cảnh kiến trúc để hình dung nhà sau cải tạo. AI hỗ trợ hình ảnh, kiến trúc sư kiểm tra. | 3D concept design for renovations \| ECO ARCH | Concept design package: plan, elevations, sections and architectural perspectives to picture your home after renovation. AI-assisted, architect-checked. |
-| P05 | Thiết kế kiến trúc và nội thất hoàn chỉnh \| ECO ARCH | Gói hoàn chỉnh: phương án thiết kế, phối cảnh kiến trúc và nội thất cùng hồ sơ chi tiết theo hợp đồng, phục vụ chuẩn bị thi công. Đặt lịch trao đổi. | Complete architecture and interior design \| ECO ARCH | Complete package: a full design, architectural and interior perspectives and detailed documents per contract, for construction preparation. Book a call. |
+| P04 | Thiết kế kiến trúc cho nhà cải tạo \| ECO ARCH | Gói thiết kế kiến trúc: mặt bằng, mặt đứng, mặt cắt và phối cảnh kiến trúc để hình dung nhà sau cải tạo. AI hỗ trợ hình ảnh, kiến trúc sư kiểm tra. | Architectural design for renovations \| ECO ARCH | Architectural design package: plan, elevations, sections and perspectives to picture your home after renovation. AI-assisted, architect-checked. |
+| P05 | Thiết kế kiến trúc và nội thất đồng bộ \| ECO ARCH | Gói đồng bộ: phương án thiết kế, phối cảnh kiến trúc và nội thất cùng hồ sơ chi tiết theo hợp đồng, phục vụ chuẩn bị thi công. Đặt lịch trao đổi. | Integrated architectural and interior design \| ECO ARCH | Integrated package: a full design, architectural and interior perspectives and detailed documents per contract, for construction preparation. Book a call. |
 | P06 | Phương án thiết kế nhà Hà Nội (minh họa) \| ECO ARCH | Các phương án minh họa cho nhà ống, nhà phố, biệt thự và căn hộ tại Hà Nội, có ảnh trước và sau. Là concept của ECO ARCH, chưa phải công trình thực tế. | Hanoi home design concepts (illustrative) \| ECO ARCH | Illustrative design concepts for tube houses, townhouses, villas and apartments in Hanoi, with before and after views. Concepts, not built projects. |
 | P07 | Nhà ống Hà Nội: giữ vòm, đổi ánh sáng \| ECO ARCH | Phương án minh họa cho nhà ống Hà Nội: giữ vòm cổng và cầu thang cong, thay cách bố trí và ánh sáng. Concept của ECO ARCH, chưa phải công trình thực tế. | Hanoi tube house: keep the arch, change the light \| ECO ARCH | Illustrative concept for a Hanoi tube house: keep the arch and curved stair, rework layout and lighting. An ECO ARCH concept, not a built project. |
 | P08 | Nhà phố Hà Nội: lam đứng và cửa xanh chàm \| ECO ARCH | Phương án minh họa cho mặt tiền nhà phố Hà Nội: lam đứng màu gạch cho cây leo, cổng xanh chàm, giữ ban công cũ. Concept của ECO ARCH. | Hanoi townhouse: vertical fins and indigo gate \| ECO ARCH | Illustrative concept for a Hanoi townhouse facade: terracotta vertical fins for climbers, an indigo gate, the old balcony kept. An ECO ARCH concept. |
@@ -65,14 +71,12 @@ Slug EN (bảng ánh xạ nằm trong routes.ts, mục 08): gioi-thieu → about
 | P19 | Liên hệ ECO ARCH \| Thiết kế nhà ở Hà Nội | Thông tin liên hệ ECO ARCH. Cách nhanh nhất là gửi yêu cầu đặt lịch trao đổi, chúng tôi phản hồi trong vòng 24 giờ. | Contact ECO ARCH \| Home design in Hanoi | ECO ARCH contact details. The fastest way is to send a booking request, and we reply within 24 hours. |
 | P20 | Chính sách bảo mật \| ECO ARCH | Cách ECO ARCH thu thập, sử dụng và bảo vệ dữ liệu cá nhân khi bạn gửi yêu cầu đặt lịch, và các quyền của bạn đối với dữ liệu. | Privacy policy \| ECO ARCH | How ECO ARCH collects, uses and protects personal data when you send a booking request, and your rights over that data. |
 
-```
-P21 (cảm ơn) và P22 (404): <meta name="robots" content="noindex">, không chặn
-```
+P21 (cảm ơn) và P22 (404): `<meta name="robots" content="noindex">`, không chặn bằng robots.txt. Canonical, hreflang vi, en và x-default trỏ về /vi; Open Graph dùng OG-01; JSON-LD: Organization và BreadcrumbList. FAQPage là tùy chọn vì Google đã ngừng FAQ rich results từ 07/05/2026 ([Search Engine Journal](https://www.searchenginejournal.com/google-drops-faq-rich-results/574429/)).
 
-bằng robots.txt. Canonical, hreflang vi, en và x-default trỏ về /vi; Open Graph dùng OG-01; JSON-LD: Organization và BreadcrumbList. FAQPage là tùy chọn vì Google đã ngừng FAQ rich results từ 07/05/2026 (Search Engine Journal). Form đặt lịch (P18 và H-09)
+**Form đặt lịch (P18 và H-09)**
 
 | Trường | Nhãn VI / EN | Bắt buộc | Ghi chú |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Địa điểm khu đất | Địa điểm khu đất (quận, phường hoặc địa chỉ) / Plot location | Có | Không đòi địa chỉ đầy đủ |
 | Loại công trình | Nhà phố, nhà ống, nhà mặt đất, biệt thự, căn hộ, dãy trọ, văn phòng nhỏ, khác / Building type | Có | Danh sách chọn, không phải ô gõ tự do |
 | Thời điểm dự kiến | Khi nào bạn muốn bắt đầu? / Expected timing | Không | Danh sách chọn |

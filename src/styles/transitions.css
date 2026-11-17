@@ -7,6 +7,9 @@
 .site-header { view-transition-name: site-header; }
 ::view-transition-group(site-header) { animation-duration: 0s; }
 
+/* T2: shared-element morphs (cards and heroes named vt-<page>) take 420 ms. */
+::view-transition-group(*) { animation-duration: 420ms; animation-timing-function: var(--ease-inout); }
+::view-transition-group(site-header) { animation-duration: 0s; }
 @keyframes eco-vt-out { to { opacity: 0; transform: translateY(-8px); } }
 @keyframes eco-vt-in { from { opacity: 0; transform: translateY(8px); } }
 ::view-transition-old(root) { animation: eco-vt-out var(--dur-page-out) var(--ease-inout) both; }
@@ -18,6 +21,10 @@ html[data-motion='reduced']::view-transition-new(*) { animation: none !important
 
 /* P2: indigo plate on arrival after the booking wipe. The static cover is only a no-flash placeholder:
    page-wipe.ts replaces it with the animated plate; the CSS animation is the failsafe if JS never runs. */
-html.wipe-in::after { content: ''; position: fixed; inset: 0; z-index: 100; background: var(--color-brand); transform-origin: top center;
+html.wipe-in::after { content: ''; position: fixed; inset: 0; z-index: 100; background: var(--color-ink); transform-origin: top center;
   animation: eco-wipe-failsafe 0.55s var(--ease-inout) 2.5s forwards; pointer-events: none; }
 @keyframes eco-wipe-failsafe { to { transform: scaleY(0); } }
+
+/* T1 arrival placeholder (louver curtain): sand cover until page-wipe.ts replaces it with the animated slats. */
+html.curtain-in::after { content: ''; position: fixed; inset: 0; z-index: 100; background: var(--color-sand); transform-origin: right center; animation: eco-curtain-failsafe 0.36s var(--ease-inout) 2.5s forwards; pointer-events: none; }
+@keyframes eco-curtain-failsafe { to { transform: scaleX(0); } }

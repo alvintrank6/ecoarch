@@ -1,0 +1,37 @@
+---
+// RAIL (P06): four home types as a horizontal scroll-snap gallery (A8) with cursor labels (A7), card lift (K1) and shared-element morph (T2).
+import Section from './Section.astro';
+import SecHead from './SecHead.astro';
+import ConceptImage from '../ConceptImage.astro';
+import Btn from './Btn.astro';
+import { t } from '../../i18n/t';
+import { path, type Lang, type PageId } from '../../i18n/routes';
+import { clean, splitN, type SectionData } from '../../content/pages';
+interface Props { lang: Lang; pid: string; sec: SectionData; href: string | null }
+const { lang, pid, sec, href } = Astro.props;
+const c = sec[lang];
+const targets: PageId[] = ['tubeHouse', 'townhouse', 'villa', 'apartment'];
+const stems = ['ex-01-after', 'ex-03-after', 'ex-04-after', 'ex-05-after'];
+---
+<Section {pid} n={sec.n} type={sec.type} fx={sec.effects}>
+  <div class="container-eco"><SecHead cell={c} {pid} n={sec.n} /></div>
+  <div class="container-eco rail-wrap" data-rail>
+    <ul class="rail-track" data-rail-track tabindex="-1">
+      {c.items.map((it, i) => {
+        const [name, blurb] = splitN(it, 1);
+        return (
+          <li class="rail-card">
+            <a class="card lift" href={path(lang, targets[i])} data-cursor={t(lang, 'sec.view')}>
+              <div class="rail-img" style={`view-transition-name:vt-${targets[i]}`}><ConceptImage stem={stems[i]} {lang} sizes="(min-width: 1024px) 26vw, 78vw" fill noLabel /><span class="illus-label media-label">{t(lang, 'common.illustration')}</span></div>
+              <h3>{name}</h3>
+              <p class="card-desc">{clean(blurb)}</p>
+              <span class="has-arrow card-more">{t(lang, 'common.learnMore')} <span aria-hidden="true" class="arr">→</span></span>
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+    <div class="rail-bar" aria-hidden="true"><span data-rail-bar></span></div>
+  </div>
+  {href && <div class="container-eco"><p class="s-actions"><Btn {href} label={c.button ?? ''} /></p></div>}
+</Section>

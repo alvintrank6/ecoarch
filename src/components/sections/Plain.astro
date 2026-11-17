@@ -1,0 +1,20 @@
+---
+// CONTACT, NOTE and LEGAL: text sections (A1, R9 or R5). Contact details stay hidden until real data exists.
+import Section from './Section.astro';
+import SecHead from './SecHead.astro';
+import Btn from './Btn.astro';
+import { clean, type SectionData } from '../../content/pages';
+import type { Lang } from '../../i18n/routes';
+interface Props { lang: Lang; pid: string; sec: SectionData; href: string | null }
+const { lang, pid, sec, href } = Astro.props;
+const c = sec[lang];
+const legal = sec.type === 'LEGAL';
+const showItems = !(sec.type === 'CONTACT') && c.items.length > 0; // CONTACT items are labels without data: hidden
+---
+<Section {pid} n={sec.n} type={sec.type} fx={sec.effects} class:list={{ 'note-panel': sec.type === 'NOTE' }}>
+  <div class="container-eco narrow">
+    <SecHead cell={c} {pid} n={sec.n} level={legal && sec.n === 1 ? 1 : 2} />
+    {showItems && <ul class="tick-list" data-reveal-group>{c.items.map((x) => <li data-reveal>{clean(x)}</li>)}</ul>}
+    {href && <p class="s-actions"><Btn {href} label={c.button ?? ''} /></p>}
+  </div>
+</Section>

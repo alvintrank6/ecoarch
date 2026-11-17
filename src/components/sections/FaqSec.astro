@@ -1,0 +1,20 @@
+---
+// FAQ: accordion (F1) with items "question?, answer".
+import Section from './Section.astro';
+import SecHead from './SecHead.astro';
+import Faq from '../Faq.astro';
+import Btn from './Btn.astro';
+import { sentence, type SectionData } from '../../content/pages';
+import type { Lang } from '../../i18n/routes';
+interface Props { lang: Lang; pid: string; sec: SectionData; href: string | null }
+const { lang, pid, sec, href } = Astro.props;
+const c = sec[lang];
+const items = c.items.map((it) => { const k = it.indexOf('?, '); if (k < 0) throw new Error(`FAQ item not parsed: ${it}`); return { q: it.slice(0, k + 1), a: sentence(it.slice(k + 3)) }; });
+---
+<Section {pid} n={sec.n} type={sec.type} fx={sec.effects}>
+  <div class="container-eco">
+    <SecHead cell={c} {pid} n={sec.n} body={false} />
+    <div data-reveal data-s="media"><Faq items={items} idp={`faq-${pid}-${sec.n}`} /></div>
+    {href && <p class="s-actions"><Btn {href} label={c.button ?? ''} /></p>}
+  </div>
+</Section>

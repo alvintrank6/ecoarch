@@ -21,6 +21,7 @@ const labelOf = (i: PageId) => (['services', 'concepts', 'process', 'insights', 
       <button type="button" class="motion" data-motion-toggle aria-pressed="false" data-label-off={t(lang, 'common.reduceMotion')} data-label-on={t(lang, 'common.reduceMotionOn')}>{t(lang, 'common.reduceMotion')}</button>
     </div>
   </div>
+  <p class="foot-mark" aria-hidden="true" data-footmark></p>
   <div class="container-eco legal"><p>{t(lang, 'common.copyright')}</p></div>
 </footer>
 <style>
@@ -34,6 +35,12 @@ const labelOf = (i: PageId) => (['services', 'concepts', 'process', 'insights', 
   .motion { display: none; min-height: 44px; padding: 8px 16px; background: transparent; color: var(--color-bg); border: 1px solid var(--color-bg); border-radius: var(--radius-sm); font: inherit; cursor: pointer; }
   html.js .motion { display: inline-flex; align-items: center; }
   .motion[aria-pressed='true'] { background: var(--color-bg); color: var(--color-brand); }
+  .foot-mark::before { content: 'ECO ARCH'; } /* decorative wordmark lives in CSS so it is not page text */
+  .foot-mark { margin: 24px 0 0; padding-inline: var(--gutter); font-family: var(--font-display); font-weight: 800; font-size: clamp(3rem, 14vw, 11rem); line-height: 1; letter-spacing: -0.02em; color: rgba(168, 179, 158, 0.28); white-space: nowrap; overflow: hidden; }
+  html.js .foot-mark { clip-path: inset(0 100% 0 0); }
+  html.reveal-failsafe .foot-mark { clip-path: none; }
+  @media (prefers-reduced-motion: reduce) { html.js .foot-mark { clip-path: none; } }
+  html[data-motion='reduced'] .foot-mark { clip-path: none !important; }
   .legal { margin-top: 32px; padding-top: 16px; border-top: 1px solid rgba(247,244,238,.25); font-size: 0.875rem; }
   @media (min-width: 768px) { .inner { grid-template-columns: 1.4fr 1.2fr auto; align-items: start; } }
 </style>

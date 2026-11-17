@@ -1,0 +1,40 @@
+---
+// COMPARE: one slider per before/after pair that exists (C1 C2 C3 R3), in a scroll-snap row when there are several (A8, A7).
+import Section from './Section.astro';
+import SecHead from './SecHead.astro';
+import Compare from '../Compare.astro';
+import Btn from './Btn.astro';
+import { t } from '../../i18n/t';
+import { idsIn, resolve } from '../../data/images';
+import { clean, type SectionData } from '../../content/pages';
+import type { Lang } from '../../i18n/routes';
+interface Props { lang: Lang; pid: string; sec: SectionData; href: string | null }
+const { lang, pid, sec, href } = Astro.props;
+const c = sec[lang];
+// Group image IDs: each EX id is a group; consecutive NEW, BR or OF ids form one before/after group.
+const groups: string[][] = [];
+for (const id of idsIn(sec.imagesNote)) {
+  const fam = id.split('-')[0];
+  const last = groups[groups.length - 1];
+  if (fam !== 'EX' && last && last[0].split('-')[0] === fam) last.push(id); else groups.push([id]);
+}
+const labels = c.items.length === groups.length ? c.items.map(clean) : [];
+const slides = groups.map((g, i) => ({ m: g.length === 1 ? resolve(g[0]) : null, label: labels[i] })).filter((s) => s.m && s.m.kind === 'photo' && s.m.pair && s.m.stem.endsWith('-after'));
+---
+<Section {pid} n={sec.n} type={sec.type} fx={sec.effects}>
+  <div class="container-eco">
+    <SecHead cell={c} {pid} n={sec.n} />
+    <div class:list={['compare-row', { single: slides.length === 1 }]} data-rail={slides.length > 1 ? '' : undefined}>
+      <ul class="rail-track" data-rail-track>
+        {slides.map((s, i) => (
+          <li class="compare-slide">
+            <Compare pair={s.m!.kind === 'photo' ? s.m!.pair! : ''} {lang} louver={i === 0} sizes="(min-width: 1024px) 44vw, 90vw" label={t(lang, 'sec.pairN').replace('{n}', String(i + 1))} />
+            {s.label && <p class="slide-label">{s.label}</p>}
+          </li>
+        ))}
+      </ul>
+      {slides.length > 1 && <div class="rail-bar" aria-hidden="true"><span data-rail-bar></span></div>}
+    </div>
+    {href && <p class="s-actions"><Btn {href} label={c.button ?? ''} /></p>}
+  </div>
+</Section>

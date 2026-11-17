@@ -13,10 +13,11 @@ const switchHref = id === 'notFound' ? `/${other}/` : altPath(lang, id);
 <header class="site-header" data-nav>
   <div class="container-eco bar">
     <a class="logo-link" href={path(lang, 'home')} aria-label={t(lang, 'common.homeLabel')}><Logo /></a>
-    <nav class="desktop-nav" aria-label={t(lang, 'common.mainNav')}>
+    <nav class="desktop-nav" aria-label={t(lang, 'common.mainNav')} data-nav-links>
+      <span class="nav-indicator" aria-hidden="true" data-nav-indicator></span>
       <ul>
         {items.map((i) => (
-          <li><a class="nav-link" href={path(lang, i)} aria-current={id === i ? 'page' : undefined} data-section={id !== i && here === seg(i) ? 'true' : undefined}>{t(lang, `nav.${i}`)}</a></li>
+          <li><a class="nav-link" data-curtain href={path(lang, i)} aria-current={id === i ? 'page' : undefined} data-parent={id !== i && here === seg(i) ? 'true' : undefined}>{t(lang, `nav.${i}`)}</a></li>
         ))}
       </ul>
     </nav>
@@ -65,9 +66,10 @@ const switchHref = id === 'notFound' ? `/${other}/` : altPath(lang, id);
   .bar { position: relative; z-index: 1; display: flex; align-items: center; gap: 16px; min-height: var(--nav-h); }
   .logo-link { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
   .desktop-nav, .cta { display: none; }
+  .desktop-nav { position: relative; }
   .desktop-nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
   .desktop-nav .nav-link { font-size: 0.9375rem; font-weight: 500; color: var(--color-text); }
-  .nav-link[data-section='true']::after { transform: scaleX(1); }
+  .desktop-nav .nav-link::after { display: none; } /* T3: the sliding indicator replaces per-link underlines */
   .lang { display: inline-flex; align-items: center; gap: 4px; margin-left: auto; font-size: 0.875rem; font-weight: 600; }
   .lang > * { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; border-radius: var(--radius-sm); text-decoration: none; color: var(--color-muted); }
   .lang a:hover { color: var(--color-accent); text-decoration: underline; text-underline-offset: 4px; }

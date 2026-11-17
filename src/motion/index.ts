@@ -6,10 +6,15 @@ import { CustomEase } from 'gsap/CustomEase';
 import { bezier } from './tokens';
 import { initNav } from './nav';
 import { initReveal } from './reveal';
+import { initScenes } from './scene';
 import { initDraw } from './draw';
 import { initFaq } from './faq';
 import { initToggle } from './toggle';
 import { initPageWipe } from './page-wipe';
+import { initChrome } from './chrome';
+import { initCursor } from './cursor';
+import { initRails } from './rail';
+import { initParallax } from './parallax';
 
 gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 CustomEase.create('eco-out', bezier.out);
@@ -22,18 +27,18 @@ function killAll() {
   kills = [];
 }
 
+const has = (sel: string) => !!document.querySelector(sel);
+
 async function boot() {
   killAll();
-  kills.push(initNav());
-  if (document.querySelector('[data-hero]')) {
-    const { initHero } = await import('./hero');
-    kills.push(initHero());
-  }
-  kills.push(initReveal(), initDraw(), initFaq(), initToggle(), initPageWipe());
-  if (document.querySelector('[data-louver]')) kills.push((await import('./louver')).initLouver());
-  if (document.querySelector('[data-compare]')) kills.push((await import('./compare')).initCompare());
-  if (document.querySelector('[data-process]')) kills.push((await import('./process')).initProcess());
-  if (document.querySelector('[data-lightbox]')) kills.push((await import('./lightbox')).initLightbox());
+  kills.push(initNav(), initChrome(), initScenes(), initReveal(), initDraw(), initFaq(), initToggle(), initPageWipe(), initRails(), initParallax(), initCursor());
+  if (has('[data-hero]')) kills.push((await import('./hero')).initHero());
+  if (has('[data-process]')) kills.push((await import('./process')).initProcess());
+  if (has('[data-ladder]')) kills.push((await import('./ladder')).initLadder());
+  if (has('[data-sunwind]')) kills.push((await import('./sunwind')).initSunWind());
+  if (has('[data-louver],[data-frame-open]')) kills.push((await import('./louver')).initLouver());
+  if (has('[data-compare]')) kills.push((await import('./compare')).initCompare());
+  if (has('[data-lightbox]')) kills.push((await import('./lightbox')).initLightbox());
   document.documentElement.dataset.motionReady = '1';
   document.fonts?.ready.then(() => ScrollTrigger.refresh());
 }

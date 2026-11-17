@@ -17,6 +17,7 @@ npm run check          # astro check (types)
 npm run verify         # check + build + i18n + SEO table + content + SEO + images gates
 npm run verify:ui      # overflow, console errors, one h1, no-JS and reduced-motion visibility (add -- --quick for 2 viewports)
 npm run verify:interact  # slider keyboard, menu trap, lightbox, FAQ, process, booking form, page wipe, motion toggle
+npm run verify:motion  # scroll every page with motion on: nothing stays hidden, no errors
 npm run verify:a11y    # axe-core, 0 serious or critical
 ```
 Playwright uses the preinstalled Chromium; if none is present run `npx playwright install chromium`.
@@ -28,8 +29,8 @@ Playwright uses the preinstalled Chromium; if none is present run `npx playwrigh
 | `PUBLIC_FORM_ENDPOINT` | URL that receives the booking form POST (FormData, `Accept: application/json`). Without it the form does NOT send data. |
 
 ## Structure
-`src/content/vi.json, en.json` all text by key · `src/i18n/routes.ts` slug map · `src/views` page views (registered in `src/pages/[lang]/[...slug].astro`) ·
-`src/components` sections · `src/motion` GSAP modules (each `initX()` returns `kill()`) · `src/scripts/form.ts` form enhancement ·
+`src/content/pages.json` page copy (from docs/11-PAGES) · `src/content/vi.json, en.json` shared UI strings · `src/i18n/routes.ts` slug map · `src/views/Page.astro` renders any page from pages.json ·
+`src/components/sections` one component per section type · `src/motion` GSAP modules (each `initX()` returns `kill()`) · `src/scripts/form.ts` form enhancement ·
 `src/assets/concept` illustration images (processed by astro:assets) · `scripts/` zero-token gates.
 
 See `HANDOVER.md` for content, assets, motion, integrations, known limits and release steps. QA status: `docs/QA-REPORT.md`. Open decisions: `docs/OPEN-ITEMS.md`.

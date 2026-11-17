@@ -1,0 +1,13 @@
+---
+// eyebrow + heading + body. Level 1 only for the first section of a page (hero) and the privacy page opener.
+import type { Cell } from '../../content/pages';
+interface Props { cell: Cell; pid: string; n: number; level?: 1 | 2; rule?: boolean; body?: boolean; class?: string }
+const { cell, pid, n, level = 2, rule = true, body = true, class: cls = '' } = Astro.props;
+const H = level === 1 ? 'h1' : 'h2';
+---
+<header class:list={['s-head', cls]}>
+  {rule && <span class="s-rule" data-rule aria-hidden="true"></span>}
+  {cell.eyebrow && <p class="eyebrow" data-reveal data-s="eyebrow">{cell.eyebrow}</p>}
+  <H id={`h-${pid}-${n}`} data-reveal data-s="title" data-a1>{cell.title}</H>
+  {body && cell.body && <p class="s-body text-lead" data-reveal data-s="body">{cell.body}</p>}
+</header>

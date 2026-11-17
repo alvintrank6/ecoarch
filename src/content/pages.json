@@ -1,0 +1,2575 @@
+{
+ "P01": {
+  "vi": "/vi",
+  "en": "/en",
+  "tier": "S",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-HOME",
+    "vi": {
+     "eyebrow": "ECO ARCH · Thiết kế nhà ở tại Hà Nội",
+     "title": "Thiết kế nhà ở Hà Nội, giải thích rõ từng lựa chọn",
+     "body": "Chúng tôi đọc nắng, gió và nếp sống của gia đình bạn trước khi vẽ mặt bằng, rồi giải thích vì sao mỗi lựa chọn được đưa ra. ECO ARCH chỉ thiết kế, không thi công.",
+     "items": [
+      "Tư vấn ban đầu miễn phí",
+      "Phản hồi trong 24 giờ",
+      "3 gói, giá rõ theo m²."
+     ],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "ECO ARCH · Home design in Hanoi",
+     "title": "Home design in Hanoi, every choice explained",
+     "body": "We read the sun, wind and daily life of your household before drawing a plan, then explain why each choice was made. ECO ARCH designs only; we do not build.",
+     "items": [
+      "Free first consultation",
+      "Reply within 24 hours",
+      "3 packages, clear price per m²."
+     ],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "HERO-01, HERO-01m.",
+    "effects": [
+     "H1",
+     "H2",
+     "H3",
+     "H4",
+     "H5",
+     "H6",
+     "N1",
+     "A9",
+     "B1"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "SUNWIND",
+    "vi": {
+     "eyebrow": "Đọc khu đất trước",
+     "title": "Nhà dễ ở bắt đầu từ việc đọc đúng khu đất",
+     "body": "Hướng nắng, đường gió và ánh sáng vào nhà được xem trước khi bố trí phòng. Phần này có trong cả ba gói.",
+     "items": [
+      "Nắng sáng và nắng chiều rơi vào phòng nào",
+      "Gió đi vào và đi ra bằng lối nào",
+      "Vật liệu bền, dễ bảo trì."
+     ],
+     "button": "Đọc bài về hướng nắng và gió"
+    },
+    "en": {
+     "eyebrow": "Read the plot first",
+     "title": "A comfortable home starts with reading the plot",
+     "body": "Sun direction, wind paths and daylight are studied before rooms are arranged. This is included in all three packages.",
+     "items": [
+      "Which rooms catch morning and afternoon sun",
+      "Where the breeze enters and leaves",
+      "Durable materials that are easy to maintain."
+     ],
+     "button": "Read the article on sun and wind"
+    },
+    "imagesNote": "DIAG-01.",
+    "effects": [
+     "A1",
+     "A2",
+     "A3",
+     "R6",
+     "R5"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "CARDS",
+    "vi": {
+     "eyebrow": "Ba gói dịch vụ",
+     "title": "Ba gói, mỗi gói nói rõ bạn nhận gì",
+     "body": "Phí tính theo diện tích thiết kế ghi trong hợp đồng. Thi công, vật tư và đồ nội thất được báo giá riêng.",
+     "items": [
+      "Gói 1, Thiết kế sơ bộ (2D), 100.000 đ/m², một phương án mặt bằng 2D, ghi chú công năng, nắng và thông gió",
+      "Gói 2, Thiết kế kiến trúc, 220.000 đ/m², mặt bằng, mặt đứng, mặt cắt và phối cảnh kiến trúc",
+      "Gói 3, Thiết kế kiến trúc và nội thất đồng bộ, 340.000 đ/m², kiến trúc và nội thất đồng bộ: bố trí, vật liệu, ánh sáng và phối cảnh."
+     ],
+     "button": "Xem chi tiết 3 gói"
+    },
+    "en": {
+     "eyebrow": "Three packages",
+     "title": "Three packages, each clear on what you receive",
+     "body": "The fee is based on the design area stated in the contract. Construction, materials and furniture are quoted separately.",
+     "items": [
+      "Package 1, Preliminary Design (2D), 100,000 VND/m², one 2D plan option with notes on function, sun and ventilation",
+      "Package 2, Architectural Design, 220,000 VND/m², plan, elevations, sections and architectural perspectives",
+      "Package 3, Integrated Architectural and Interior Design, 340,000 VND/m², architecture and interior as one design: layout, materials, lighting and perspectives."
+     ],
+     "button": "See the 3 packages in detail"
+    },
+    "imagesNote": "SVC-01, SVC-02, SVC-03 (ảnh gói do chủ dự án tạo).",
+    "effects": [
+     "A1",
+     "R2",
+     "K1",
+     "T2",
+     "B1"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "COMPARE",
+    "vi": {
+     "eyebrow": "Hình minh họa trước và sau",
+     "title": "Xem cách một ngôi nhà có thể thay đổi",
+     "body": "Bốn ví dụ cho nhà phố, nhà ống, nhà xây mới và căn hộ. Kéo thanh trượt để so sánh cùng một góc nhìn.",
+     "items": [
+      "Nhà phố",
+      "Nhà ống",
+      "Xây mới",
+      "Căn hộ."
+     ],
+     "button": "Xem thêm phương án"
+    },
+    "en": {
+     "eyebrow": "Illustrative before and after",
+     "title": "See how a home can change",
+     "body": "Four examples: a townhouse, a tube house, a new build and an apartment. Drag the slider to compare the same view.",
+     "items": [
+      "Townhouse",
+      "Tube house",
+      "New build",
+      "Apartment."
+     ],
+     "button": "See more concepts"
+    },
+    "imagesNote": "EX-03, EX-01, NEW-01, NEW-02, EX-05 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "R3",
+     "C1",
+     "C2",
+     "C3",
+     "A7",
+     "A8"
+    ]
+   },
+   {
+    "n": 5,
+    "type": "CTA-FORM",
+    "vi": {
+     "eyebrow": "Bắt đầu",
+     "title": "Gửi khu đất, chúng tôi phản hồi trong 24 giờ",
+     "body": "Bốn chặng rõ ràng: trao đổi, thỏa thuận, thiết kế, bàn giao. Bạn không cần có sẵn bản vẽ để bắt đầu.",
+     "items": [
+      "1 Trao đổi, nhu cầu, hiện trạng, ngân sách",
+      "2 Thỏa thuận, báo giá và hợp đồng",
+      "3 Thiết kế, khảo sát, phương án, góp ý",
+      "4 Bàn giao, hồ sơ, biên bản, danh mục."
+     ],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Get started",
+     "title": "Send your plot, we reply within 24 hours",
+     "body": "Four clear stages: discuss, agree, design, hand over. You do not need drawings to begin.",
+     "items": [
+      "1 Discuss, needs, current condition, budget",
+      "2 Agree, quotation and contract",
+      "3 Design, survey, options, feedback",
+      "4 Hand over, documents, record, checklist."
+     ],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "BOOK-01.",
+    "effects": [
+     "A1",
+     "A12",
+     "A6",
+     "T4",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P02": {
+  "vi": "/vi/dich-vu",
+  "en": "/en/services",
+  "tier": "S",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Dịch vụ",
+     "title": "Ba gói thiết kế nhà ở",
+     "body": "Chọn theo mức độ chi tiết bạn cần, từ một phương án mặt bằng đến kiến trúc và nội thất đồng bộ. Gói 3 gồm trọn nội dung Gói 1 và Gói 2.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Services",
+     "title": "Three home design packages",
+     "body": "Choose by the level of detail you need, from a single plan option to architecture and interior designed together. Package 3 includes everything in Packages 1 and 2.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "SVC-02 (ảnh gói do chủ dự án tạo).",
+    "effects": [
+     "A1",
+     "R3",
+     "A5",
+     "R5",
+     "A9"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "LADDER",
+    "vi": {
+     "eyebrow": "Từng gói",
+     "title": "Mỗi gói thêm một lớp chi tiết",
+     "body": "Cuộn để xem sản phẩm đi từ mặt bằng 2D, đến phối cảnh kiến trúc, đến nội thất hoàn chỉnh.",
+     "items": [
+      "Gói 1 · 100.000 đ/m², Thiết kế sơ bộ (2D), một phương án mặt bằng 2D, ghi chú công năng, ghi chú nắng và thông gió",
+      "Gói 2 · 220.000 đ/m², Thiết kế kiến trúc, mặt bằng, mặt đứng, mặt cắt, phối cảnh kiến trúc, AI hỗ trợ hình ảnh, kiến trúc sư kiểm tra tính hợp lý",
+      "Gói 3 · 340.000 đ/m², Thiết kế kiến trúc và nội thất đồng bộ, kiến trúc và nội thất đồng bộ, bố trí, vật liệu, ánh sáng và phối cảnh, gồm trọn Gói 1 và Gói 2."
+     ],
+     "button": "Xem chi tiết từng gói"
+    },
+    "en": {
+     "eyebrow": "Each package",
+     "title": "Each package adds a layer of detail",
+     "body": "Scroll to see the work move from a 2D plan, to architectural perspectives, to a complete interior.",
+     "items": [
+      "Package 1 · 100,000 VND/m², Preliminary Design (2D), one 2D plan option, notes on function, notes on sun and ventilation",
+      "Package 2 · 220,000 VND/m², Architectural Design, plan, elevations, sections, architectural perspectives, AI-assisted images checked by an architect for soundness",
+      "Package 3 · 340,000 VND/m², Integrated Architectural and Interior Design, architecture and interior designed together, layout, materials, lighting and perspectives, includes all of Packages 1 and 2."
+     ],
+     "button": "See each package in detail"
+    },
+    "imagesNote": "SVC-01, SVC-02, SVC-03 (ảnh gói do chủ dự án tạo).",
+    "effects": [
+     "A4",
+     "A11",
+     "K1",
+     "T2"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "FEE",
+    "vi": {
+     "eyebrow": "Cách tính phí",
+     "title": "Phí theo diện tích thiết kế, thi công báo giá riêng",
+     "body": "Tư vấn ban đầu miễn phí. Phí tính theo diện tích thiết kế ghi trong hợp đồng. Thi công, vật tư và đồ nội thất được báo giá riêng. Bảng giá dành cho thiết kế cải tạo nhà ở; với nhà xây mới và văn phòng nhỏ, chúng tôi báo giá sau buổi trao đổi.",
+     "items": [
+      "Gói 1, 100.000 đ/m²",
+      "Gói 2, 220.000 đ/m²",
+      "Gói 3, 340.000 đ/m²."
+     ],
+     "button": "Xem hỏi đáp về chi phí"
+    },
+    "en": {
+     "eyebrow": "How fees work",
+     "title": "Fees follow the design area; construction is quoted separately",
+     "body": "The first consultation is free. The fee is based on the design area stated in the contract. Construction, materials and furniture are quoted separately. This price list covers home renovation design; for new builds and small offices we quote after the first call.",
+     "items": [
+      "Package 1, 100,000 VND/m²",
+      "Package 2, 220,000 VND/m²",
+      "Package 3, 340,000 VND/m²."
+     ],
+     "button": "Read the cost FAQ"
+    },
+    "imagesNote": "TEX-01.",
+    "effects": [
+     "R5",
+     "R9",
+     "B3",
+     "A1"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Chưa biết chọn gói nào",
+     "title": "Ba câu hỏi giúp bạn chọn gói",
+     "body": "Không chắc? Gửi khu đất, chúng tôi gợi ý gói phù hợp ngay trong buổi trao đổi miễn phí.",
+     "items": [
+      "Bạn mới cần biết nhà có bố trí lại được không? Gói 1",
+      "Bạn cần hình dung không gian trước khi quyết định? Gói 2",
+      "Bạn muốn kiến trúc và nội thất đồng bộ để chuẩn bị thi công? Gói 3."
+     ],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Not sure which package",
+     "title": "Three questions to help you choose",
+     "body": "Not sure? Send your plot and we will suggest a package during the free first call.",
+     "items": [
+      "Do you only need to know whether the home can be re-planned? Package 1",
+      "Do you need to picture the space before deciding? Package 2",
+      "Do you want architecture and interior designed together, ready to prepare for construction? Package 3."
+     ],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "EX-09 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R9",
+     "A6",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P03": {
+  "vi": "/vi/dich-vu/thiet-ke-so-bo-2d",
+  "en": "/en/services/preliminary-design-2d",
+  "tier": "A",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Gói 1 · 100.000 đ/m²",
+     "title": "Thiết kế sơ bộ (2D)",
+     "body": "Một phương án mặt bằng 2D cho ngôi nhà hiện hữu, kèm ghi chú về công năng, nắng và thông gió. Phù hợp khi bạn cần biết nhà có bố trí lại được không.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Package 1 · 100,000 VND/m²",
+     "title": "Preliminary Design (2D)",
+     "body": "One 2D plan option for your existing home, with notes on function, sun and ventilation. A good fit when you need to know whether the home can be re-planned.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "SVC-01 (ảnh gói do chủ dự án tạo).",
+    "effects": [
+     "A1",
+     "R4",
+     "A5",
+     "R5",
+     "A9"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "LIST",
+    "vi": {
+     "eyebrow": "Bạn nhận gì",
+     "title": "Một phương án mặt bằng, đọc được ngay",
+     "body": "Gói này trả lời một câu hỏi: ngôi nhà hiện tại có thể bố trí lại thế nào để dễ ở hơn.",
+     "items": [
+      "Một phương án mặt bằng 2D",
+      "Ghi chú công năng cho từng khu",
+      "Ghi chú hướng nắng và thông gió."
+     ],
+     "button": "Xem Gói 2"
+    },
+    "en": {
+     "eyebrow": "What you receive",
+     "title": "One plan option, readable at a glance",
+     "body": "This package answers one question: how could your current home be re-planned to be easier to live in.",
+     "items": [
+      "One 2D plan option",
+      "Notes on the function of each area",
+      "Notes on sun direction and ventilation."
+     ],
+     "button": "See Package 2"
+    },
+    "imagesNote": "EX-06 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R9",
+     "B2",
+     "R4"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "SPLIT",
+    "vi": {
+     "eyebrow": "Phù hợp khi, và chưa gồm",
+     "title": "Biết trước gói này dừng ở đâu",
+     "body": "Gói 1 gọn và nhanh để bắt đầu. Khi cần hình ảnh hoặc nội thất, bạn chuyển sang gói cao hơn.",
+     "items": [
+      "Phù hợp khi, bạn đang cân nhắc cải tạo và muốn xem hướng bố trí, bạn chưa cần phối cảnh 3D, bạn cần cơ sở để trao đổi với người thân",
+      "Chưa gồm, mặt đứng, mặt cắt, phối cảnh (Gói 2), thiết kế nội thất (Gói 3), thi công, vật tư, đồ nội thất."
+     ],
+     "button": "So sánh 3 gói"
+    },
+    "en": {
+     "eyebrow": "Good fit, and not included",
+     "title": "Know where this package stops",
+     "body": "Package 1 is a light, quick way to begin. When you need images or interiors, you move to a higher package.",
+     "items": [
+      "A good fit when, you are weighing a renovation and want to see a layout direction, you do not need 3D perspectives yet, you need something to discuss with your family",
+      "Not included, elevations, sections, perspectives (Package 2), interior design (Package 3), construction, materials, furniture."
+     ],
+     "button": "Compare the 3 packages"
+    },
+    "imagesNote": "TEX-02.",
+    "effects": [
+     "A1",
+     "R2",
+     "R5"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Bắt đầu",
+     "title": "Bắt đầu bằng một buổi trao đổi miễn phí",
+     "body": "Gửi địa điểm, diện tích và vài ảnh hiện trạng. Chúng tôi phản hồi trong 24 giờ. Phí Gói 1: 100.000 đ/m² diện tích thiết kế.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Get started",
+     "title": "Start with a free first call",
+     "body": "Send the address, area and a few photos of the current state. We reply within 24 hours. Package 1 fee: 100,000 VND per m² of design area.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "BOOK-01.",
+    "effects": [
+     "A1",
+     "A6",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P04": {
+  "vi": "/vi/dich-vu/thiet-ke-kien-truc",
+  "en": "/en/services/architectural-design",
+  "tier": "A",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Gói 2 · 220.000 đ/m²",
+     "title": "Thiết kế kiến trúc",
+     "body": "Mặt bằng, mặt đứng, mặt cắt và phối cảnh kiến trúc để bạn hình dung ngôi nhà sau cải tạo trước khi quyết định.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Package 2 · 220,000 VND/m²",
+     "title": "Architectural Design",
+     "body": "Plan, elevations, sections and architectural perspectives, so you can picture your home after renovation before you decide.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "SVC-02 (ảnh gói do chủ dự án tạo).",
+    "effects": [
+     "A1",
+     "R4",
+     "A5",
+     "R5",
+     "A9"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "LIST",
+    "vi": {
+     "eyebrow": "Bạn nhận gì",
+     "title": "Nhìn thấy ngôi nhà trước khi quyết định",
+     "body": "Hình ảnh giúp cả gia đình cùng đọc một phương án, thay vì mỗi người hình dung một kiểu.",
+     "items": [
+      "Mặt bằng",
+      "Mặt đứng",
+      "Mặt cắt",
+      "Phối cảnh kiến trúc."
+     ],
+     "button": "Xem Gói 3"
+    },
+    "en": {
+     "eyebrow": "What you receive",
+     "title": "See the home before you decide",
+     "body": "Images let the whole family read the same option, instead of each person imagining something different.",
+     "items": [
+      "Plan",
+      "Elevations",
+      "Sections",
+      "Architectural perspectives."
+     ],
+     "button": "See Package 3"
+    },
+    "imagesNote": "EX-05 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R9",
+     "B2",
+     "R4"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "SPLIT",
+    "vi": {
+     "eyebrow": "Cách làm",
+     "title": "AI hỗ trợ hình ảnh, kiến trúc sư kiểm tra",
+     "body": "Chúng tôi dùng AI để tạo nhanh hình ảnh ý tưởng, sau đó kiến trúc sư kiểm tra tính hợp lý của phương án. Hình ảnh giúp bạn hình dung, chưa phải hồ sơ thi công.",
+     "items": [
+      "Hình ảnh để hình dung",
+      "Kiểm tra tính hợp lý",
+      "Chưa phải hồ sơ thi công."
+     ],
+     "button": "Xem hỏi đáp"
+    },
+    "en": {
+     "eyebrow": "How it is made",
+     "title": "AI-assisted images, checked by an architect",
+     "body": "We use AI to produce concept images quickly, then an architect checks that the option is sound. The images help you picture the home; they are not construction documents.",
+     "items": [
+      "Images to picture the home",
+      "Checked for soundness",
+      "Not construction documents."
+     ],
+     "button": "Read the FAQ"
+    },
+    "imagesNote": "EX-04 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R3",
+     "A5",
+     "R9"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Bước tiếp theo",
+     "title": "Cần thêm nội thất và hồ sơ chi tiết? Xem Gói 3",
+     "body": "Phí Gói 2: 220.000 đ/m² diện tích thiết kế. Gửi khu đất, chúng tôi phản hồi trong 24 giờ.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Next step",
+     "title": "Need interiors and detailed documents? See Package 3",
+     "body": "Package 2 fee: 220,000 VND per m² of design area. Send your plot and we reply within 24 hours.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "BOOK-01.",
+    "effects": [
+     "A1",
+     "A6",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P05": {
+  "vi": "/vi/dich-vu/thiet-ke-kien-truc-noi-that",
+  "en": "/en/services/integrated-design",
+  "tier": "A",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Gói 3 · 340.000 đ/m²",
+     "title": "Thiết kế kiến trúc và nội thất đồng bộ",
+     "body": "Kiến trúc và nội thất đồng bộ trong một phương án: bố trí, vật liệu, ánh sáng và phối cảnh. Gói 3 gồm trọn nội dung Gói 1 và Gói 2.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Package 3 · 340,000 VND/m²",
+     "title": "Integrated Architectural and Interior Design",
+     "body": "Architecture and interior designed together as one option: layout, materials, lighting and perspectives. Package 3 includes everything in Packages 1 and 2.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "SVC-03 (ảnh gói do chủ dự án tạo).",
+    "effects": [
+     "A1",
+     "R3",
+     "A5",
+     "R5",
+     "A9"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "LIST",
+    "vi": {
+     "eyebrow": "Bạn nhận gì",
+     "title": "Từ bố trí đến vật liệu và ánh sáng",
+     "body": "Nội thất không được thêm vào sau cùng. Nó được thiết kế cùng kiến trúc để không gian, vật liệu và ánh sáng khớp nhau.",
+     "items": [
+      "Kiến trúc và nội thất đồng bộ",
+      "Bố trí không gian",
+      "Vật liệu dễ bảo trì",
+      "Ánh sáng",
+      "Phối cảnh."
+     ],
+     "button": "Xem phạm vi bàn giao"
+    },
+    "en": {
+     "eyebrow": "What you receive",
+     "title": "From layout to materials and light",
+     "body": "Interior is not added at the end. It is designed with the architecture so space, materials and light fit together.",
+     "items": [
+      "Architecture and interior designed together",
+      "Space layout",
+      "Materials that are easy to maintain",
+      "Lighting",
+      "Perspectives."
+     ],
+     "button": "See what is delivered"
+    },
+    "imagesNote": "NEW-03, NEW-04 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R9",
+     "B2",
+     "R3",
+     "A5"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "SPLIT",
+    "vi": {
+     "eyebrow": "Hồ sơ và chuyên môn",
+     "title": "Hồ sơ theo hợp đồng, chuyên môn sâu theo yêu cầu",
+     "body": "Phạm vi hồ sơ của Gói 3 được ghi rõ trong hợp đồng trước khi bắt đầu. Phần chuyên môn kỹ thuật chuyên sâu như kết cấu, điện, cấp thoát nước nhận theo yêu cầu riêng. ECO ARCH không thi công.",
+     "items": [
+      "Phạm vi hồ sơ ghi trong hợp đồng",
+      "Chuyên môn chuyên sâu theo yêu cầu riêng",
+      "Không bao gồm thi công."
+     ],
+     "button": "Xem phạm vi bàn giao"
+    },
+    "en": {
+     "eyebrow": "Documents and specialist input",
+     "title": "Documents set by contract, specialist input on request",
+     "body": "The scope of Package 3 documents is stated in the contract before work begins. Specialist engineering such as structure, electrical and water supply and drainage is available on request. ECO ARCH does not build.",
+     "items": [
+      "Document scope stated in the contract",
+      "Specialist input on request",
+      "Construction is not included."
+     ],
+     "button": "See what is delivered"
+    },
+    "imagesNote": "DIAG-02.",
+    "effects": [
+     "A1",
+     "R6",
+     "R9",
+     "B2"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Bắt đầu",
+     "title": "Kể cho chúng tôi nghe về ngôi nhà bạn muốn",
+     "body": "Phí Gói 3: 340.000 đ/m² diện tích thiết kế. Vật tư, thi công và đồ nội thất được báo giá riêng. Gửi khu đất, chúng tôi phản hồi trong 24 giờ.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Get started",
+     "title": "Tell us about the home you want",
+     "body": "Package 3 fee: 340,000 VND per m² of design area. Materials, construction and furniture are quoted separately. Send your plot and we reply within 24 hours.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "BOOK-01.",
+    "effects": [
+     "A1",
+     "A6",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P06": {
+  "vi": "/vi/phuong-an",
+  "en": "/en/concepts",
+  "tier": "S",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Phương án",
+     "title": "Phương án thiết kế (hình minh họa)",
+     "body": "Những ví dụ cho thấy một ngôi nhà có thể đổi như thế nào: giữ gì, đổi gì và vì sao. Đây là hình minh họa ý tưởng, chưa phải công trình ECO ARCH đã hoàn thành.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Concepts",
+     "title": "Design concepts (illustrative)",
+     "body": "Examples of how a home can change: what stays, what changes and why. These are illustrative concepts, not completed ECO ARCH projects.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "EX-08 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R3",
+     "A5",
+     "R5",
+     "A9"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "RAIL",
+    "vi": {
+     "eyebrow": "Bốn loại nhà",
+     "title": "Bốn loại nhà, bốn cách nhìn lại",
+     "body": "Chọn một loại nhà để xem so sánh trước và sau cùng một góc nhìn.",
+     "items": [
+      "Nhà ống, Giữ vòm, đổi ánh sáng",
+      "Nhà phố, Lam đứng và cửa xanh chàm",
+      "Biệt thự, Phòng khách mở ra vườn",
+      "Căn hộ, Gỗ ấm, bố trí lại."
+     ],
+     "button": "Xem phương án"
+    },
+    "en": {
+     "eyebrow": "Four home types",
+     "title": "Four home types, four ways of looking again",
+     "body": "Pick a home type to compare before and after from the same viewpoint.",
+     "items": [
+      "Tube house, Keep the arch, change the light",
+      "Townhouse, Vertical fins and an indigo gate",
+      "Villa, A living room opening to the garden",
+      "Apartment, Warm timber, reworked layout."
+     ],
+     "button": "See the concept"
+    },
+    "imagesNote": "EX-01, EX-03, EX-04, EX-05 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A8",
+     "A7",
+     "K1",
+     "T2",
+     "R2"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "SPLIT",
+    "vi": {
+     "eyebrow": "Cách đọc",
+     "title": "Hình minh họa, không phải công trình thực tế",
+     "body": "Mỗi cặp ảnh cùng một góc nhìn để bạn so sánh trước và sau. Chúng cho thấy hướng thiết kế, không phải kết quả đã bàn giao và không phải cam kết cho ngôi nhà của bạn.",
+     "items": [
+      "Cùng góc nhìn, dễ so sánh",
+      "Giữ gì, đổi gì, vì sao",
+      "Mỗi ngôi nhà một phương án riêng."
+     ],
+     "button": "Xem hỏi đáp"
+    },
+    "en": {
+     "eyebrow": "How to read them",
+     "title": "Illustrations, not completed projects",
+     "body": "Each pair uses the same viewpoint so you can compare before and after. They show a design direction, not a delivered result and not a promise for your home.",
+     "items": [
+      "Same viewpoint, easy to compare",
+      "What stays, what changes, why",
+      "Every home gets its own option."
+     ],
+     "button": "Read the FAQ"
+    },
+    "imagesNote": "EX-02 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R3",
+     "A5",
+     "R9"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Nhà của bạn",
+     "title": "Nhà của bạn cần một phương án riêng",
+     "body": "Dãy trọ, văn phòng nhỏ hay một ngôi nhà ít gặp hơn: gửi khu đất, chúng tôi trao đổi riêng với bạn.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Your home",
+     "title": "Your home needs its own option",
+     "body": "A rental block, a small office or a less common type of home: send your plot and we will talk it through with you.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "BR-02, OF-02 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "A6",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P07": {
+  "vi": "/vi/phuong-an/nha-ong",
+  "en": "/en/concepts/tube-house",
+  "tier": "A",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Phương án · Nhà ống",
+     "title": "Nhà ống: giữ vòm, đổi ánh sáng",
+     "body": "Nhà ống dài và hẹp thường tối ở giữa nhà. Ví dụ này giữ lại vòm quen thuộc và tỷ lệ dài hẹp của nhà, rồi đổi cách ánh sáng đi vào.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Concept · Tube house",
+     "title": "Tube house: keep the arch, change the light",
+     "body": "Tube houses are long and narrow and often dark in the middle. This example keeps the familiar arch and the long, narrow proportions, then changes how light enters.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "EX-01 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R3",
+     "A5",
+     "R5",
+     "A9",
+     "T2"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "COMPARE",
+    "vi": {
+     "eyebrow": "Trước và sau",
+     "title": "Kéo để so sánh hành lang trước và sau",
+     "body": "Ba ví dụ nhà ống: hành lang có vòm, sảnh dài có giếng trời và một không gian vòm gạch đỏ có ghế dài. Mỗi cặp ảnh cùng một góc nhìn.",
+     "items": [],
+     "button": "Xem các phương án khác"
+    },
+    "en": {
+     "eyebrow": "Before and after",
+     "title": "Drag to compare the corridor before and after",
+     "body": "Three tube house examples: an arched corridor, a long entrance hall with a skylight and a red-brick arched space with a long bench. Each pair shares one viewpoint.",
+     "items": [],
+     "button": "See other concepts"
+    },
+    "imagesNote": "EX-01, EX-02, EX-06 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "C1",
+     "C2",
+     "C3",
+     "A7",
+     "R3"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "SPLIT",
+    "vi": {
+     "eyebrow": "Giữ gì, đổi gì, vì sao",
+     "title": "Ý đồ thiết kế của ví dụ này",
+     "body": "Ba ví dụ minh họa cho cùng một ý: ánh sáng và vật liệu ấm làm hành lang dài bớt nặng nề.",
+     "items": [
+      "Giữ: vòm và tỷ lệ dài hẹp của nhà",
+      "Đổi: trần gỗ ấm, đèn hắt trần, giếng trời",
+      "Vì sao: để hành lang dài sáng hơn mà vẫn nhận ra ngôi nhà cũ."
+     ],
+     "button": "Xem hỏi đáp"
+    },
+    "en": {
+     "eyebrow": "What stays, what changes, why",
+     "title": "The design intent of this example",
+     "body": "Three illustrations of one idea: light and warm materials make a long corridor feel less heavy.",
+     "items": [
+      "Keep: the arch and the long, narrow proportions",
+      "Change: warm timber ceiling, cove lighting, a skylight",
+      "Why: so a long corridor feels brighter while the old house stays recognisable."
+     ],
+     "button": "Read the FAQ"
+    },
+    "imagesNote": "EX-02 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R9",
+     "B2",
+     "A5",
+     "R4"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Gói phù hợp",
+     "title": "Gói nào phù hợp với ngôi nhà này",
+     "body": "Với nhà ống, nhiều gia đình bắt đầu từ câu hỏi: nên bố trí lại thế nào để thêm ánh sáng. Gói 1 trả lời câu hỏi đó trước khi bạn đầu tư thêm.",
+     "items": [
+      "Gói 1: xem hướng bố trí lại",
+      "Gói 2: hình dung không gian sau cải tạo",
+      "Gói 3: kiến trúc và nội thất đồng bộ."
+     ],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Which package",
+     "title": "Which package fits a home like this",
+     "body": "With tube houses, many families start from one question: how to re-plan to bring in more light. Package 1 answers that before you invest further.",
+     "items": [
+      "Package 1: see a re-planning direction",
+      "Package 2: picture the space after renovation",
+      "Package 3: architecture and interior designed together."
+     ],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "EX-06 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R9",
+     "A6",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P08": {
+  "vi": "/vi/phuong-an/nha-pho",
+  "en": "/en/concepts/townhouse",
+  "tier": "A",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Phương án · Nhà phố",
+     "title": "Nhà phố: lam đứng và cửa xanh chàm",
+     "body": "Mặt tiến nhà phố cũ thường nhiều chi tiết rời rạc. Ví dụ này gom lại bằng lam đứng màu gạch và cổng xanh chàm.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Concept · Townhouse",
+     "title": "Townhouse: vertical fins and an indigo gate",
+     "body": "Older townhouse facades often carry many unrelated details. This example pulls them together with terracotta vertical fins and an indigo gate.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "EX-03 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R3",
+     "A5",
+     "R5",
+     "A9",
+     "T2"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "COMPARE",
+    "vi": {
+     "eyebrow": "Trước và sau",
+     "title": "Kéo để so sánh mặt tiền trước và sau",
+     "body": "Hai ví dụ mặt tiền: nhà phố nhiều tầng có lam đứng, và nhà cấp 4 với cổng sắt cũ được thay bằng cổng khung đen và hiên trần gỗ. Mỗi cặp ảnh cùng một góc nhìn.",
+     "items": [],
+     "button": "Xem các phương án khác"
+    },
+    "en": {
+     "eyebrow": "Before and after",
+     "title": "Drag to compare the facade before and after",
+     "body": "Two facade examples: a multi-storey townhouse with vertical fins, and a single-storey house whose old iron gate is replaced by a black-framed gate and a timber-ceiling porch. Each pair shares one viewpoint.",
+     "items": [],
+     "button": "See other concepts"
+    },
+    "imagesNote": "EX-03, EX-07 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "C1",
+     "C2",
+     "C3",
+     "A7",
+     "R3"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "SPLIT",
+    "vi": {
+     "eyebrow": "Giữ gì, đổi gì, vì sao",
+     "title": "Ý đồ thiết kế của ví dụ này",
+     "body": "Mặt tiền là phần cả phố nhìn thấy, nên ví dụ này đổi ít chi tiết nhưng đổi có chủ đích.",
+     "items": [
+      "Giữ: bố cục và chiều cao mặt tiền",
+      "Đổi: màu tường, lam đứng màu gạch, cổng xanh chàm",
+      "Vì sao: lam đứng tạo lớp che nắng nhẹ và nhịp đều cho mặt tiền."
+     ],
+     "button": "Xem hỏi đáp"
+    },
+    "en": {
+     "eyebrow": "What stays, what changes, why",
+     "title": "The design intent of this example",
+     "body": "The facade is what the whole street sees, so this example changes fewer details, with intent.",
+     "items": [
+      "Keep: the facade layout and height",
+      "Change: wall colour, terracotta vertical fins, an indigo gate",
+      "Why: vertical fins add a light sun screen and an even rhythm to the facade."
+     ],
+     "button": "Read the FAQ"
+    },
+    "imagesNote": "EX-03 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R9",
+     "B2",
+     "A5",
+     "R4"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Gói phù hợp",
+     "title": "Gói nào phù hợp với ngôi nhà này",
+     "body": "Mặt tiền thường là điểm bắt đầu của nhiều chủ nhà. Gói 2 cho bạn mặt đứng và phối cảnh để xem mặt tiền mới trước khi quyết định.",
+     "items": [
+      "Gói 1: xem hướng bố trí lại",
+      "Gói 2: hình dung không gian sau cải tạo",
+      "Gói 3: kiến trúc và nội thất đồng bộ."
+     ],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Which package",
+     "title": "Which package fits a home like this",
+     "body": "For many owners the facade is where it starts. Package 2 gives you elevations and perspectives to see the new facade before you decide.",
+     "items": [
+      "Package 1: see a re-planning direction",
+      "Package 2: picture the space after renovation",
+      "Package 3: architecture and interior designed together."
+     ],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "BOOK-01 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R9",
+     "A6",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P09": {
+  "vi": "/vi/phuong-an/biet-thu",
+  "en": "/en/concepts/villa",
+  "tier": "A",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Phương án · Biệt thự",
+     "title": "Biệt thự: phòng khách mở ra vườn",
+     "body": "Phòng khách biệt thự thường rộng nhưng nặng và tối. Ví dụ này sáng hơn, dùng vật liệu bền và mở tầm nhìn ra vườn.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Concept · Villa",
+     "title": "Villa: a living room opening to the garden",
+     "body": "Villa living rooms are often large but heavy and dark. This example is brighter, uses durable materials and opens the view to the garden.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "EX-04 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R3",
+     "A5",
+     "R5",
+     "A9",
+     "T2"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "COMPARE",
+    "vi": {
+     "eyebrow": "Trước và sau",
+     "title": "Kéo để so sánh phòng khách trước và sau",
+     "body": "Một ví dụ phòng khách: đồ gỗ tối, rèm sẫm và đèn chùm trước; đồ nội thất sáng, rèm mỏng và đèn hắt trần sau.",
+     "items": [],
+     "button": "Xem các phương án khác"
+    },
+    "en": {
+     "eyebrow": "Before and after",
+     "title": "Drag to compare the living room before and after",
+     "body": "One living room example: dark furniture, dark curtains and a chandelier before; lighter furnishings, sheer curtains and cove lighting after.",
+     "items": [],
+     "button": "See other concepts"
+    },
+    "imagesNote": "EX-04 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "C1",
+     "C2",
+     "C3",
+     "A7",
+     "R3"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "SPLIT",
+    "vi": {
+     "eyebrow": "Giữ gì, đổi gì, vì sao",
+     "title": "Ý đồ thiết kế của ví dụ này",
+     "body": "Ví dụ này giữ cột, tủ sách và sàn, đổi tông nội thất và cách ánh sáng đi vào.",
+     "items": [
+      "Giữ: cột, tủ sách, sàn terrazzo, cửa mở ra vườn",
+      "Đổi: tông nội thất sáng, rèm mỏng, đèn hắt trần",
+      "Vì sao: để căn phòng rộng bớt nặng nề và dễ bảo trì hơn."
+     ],
+     "button": "Xem hỏi đáp"
+    },
+    "en": {
+     "eyebrow": "What stays, what changes, why",
+     "title": "The design intent of this example",
+     "body": "This example keeps the columns, bookcase and floor, and changes the furnishing palette and how light enters.",
+     "items": [
+      "Keep: the columns, the bookcase, the terrazzo floor, the doors to the garden",
+      "Change: a lighter palette, sheer curtains, cove lighting",
+      "Why: so a large room feels less heavy and is easier to maintain."
+     ],
+     "button": "Read the FAQ"
+    },
+    "imagesNote": "NEW-03 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R9",
+     "B2",
+     "A5",
+     "R4"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Gói phù hợp",
+     "title": "Gói nào phù hợp với ngôi nhà này",
+     "body": "Với biệt thự, nội thất và kiến trúc cần khớp nhau. Gói 3 thiết kế cả hai trong một phương án.",
+     "items": [
+      "Gói 1: xem hướng bố trí lại",
+      "Gói 2: hình dung không gian sau cải tạo",
+      "Gói 3: kiến trúc và nội thất đồng bộ."
+     ],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Which package",
+     "title": "Which package fits a home like this",
+     "body": "In a villa, interior and architecture need to match. Package 3 designs both as one option.",
+     "items": [
+      "Package 1: see a re-planning direction",
+      "Package 2: picture the space after renovation",
+      "Package 3: architecture and interior designed together."
+     ],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "BOOK-01 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R3",
+     "A5",
+     "R9"
+    ]
+   }
+  ]
+ },
+ "P10": {
+  "vi": "/vi/phuong-an/can-ho",
+  "en": "/en/concepts/apartment",
+  "tier": "A",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Phương án · Căn hộ",
+     "title": "Căn hộ: gỗ ấm, bố trí lại",
+     "body": "Không gian nhỏ cần mỗi mét vuông làm được nhiều việc. Ví dụ này dùng gỗ ấm, ghế dài có ngăn chứa và vách trượt để bố trí lại.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Concept · Apartment",
+     "title": "Apartment: warm timber, reworked layout",
+     "body": "Small spaces need every square metre to do more. This example uses warm timber, a bench with storage and sliding screens to re-plan.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "EX-05 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R3",
+     "A5",
+     "R5",
+     "A9",
+     "T2"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "COMPARE",
+    "vi": {
+     "eyebrow": "Trước và sau",
+     "title": "Kéo để so sánh căn hộ trước và sau",
+     "body": "Một ví dụ căn hộ, cùng hai ví dụ cho dãy trọ và văn phòng nhỏ.",
+     "items": [
+      "Căn hộ",
+      "Dãy trọ",
+      "Văn phòng nhỏ."
+     ],
+     "button": "Xem các phương án khác"
+    },
+    "en": {
+     "eyebrow": "Before and after",
+     "title": "Drag to compare the apartment before and after",
+     "body": "One apartment example, plus two for a rental block and a small office.",
+     "items": [
+      "Apartment",
+      "Rental block",
+      "Small office."
+     ],
+     "button": "See other concepts"
+    },
+    "imagesNote": "EX-05, BR-01, BR-02, OF-01, OF-02 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "C1",
+     "C2",
+     "C3",
+     "A7",
+     "R3"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "SPLIT",
+    "vi": {
+     "eyebrow": "Giữ gì, đổi gì, vì sao",
+     "title": "Ý đồ thiết kế của ví dụ này",
+     "body": "Không gian nhỏ không cần nhiều thứ hơn, mà cần mỗi thứ làm được nhiều việc hơn.",
+     "items": [
+      "Giữ: diện tích sử dụng hiện có",
+      "Đổi: ghế dài có ngăn chứa, bàn ăn gấp, vách trượt",
+      "Vì sao: để cùng một diện tích dùng được linh hoạt hơn."
+     ],
+     "button": "Xem hỏi đáp"
+    },
+    "en": {
+     "eyebrow": "What stays, what changes, why",
+     "title": "The design intent of this example",
+     "body": "Small spaces do not need more things; they need each thing to do more.",
+     "items": [
+      "Keep: the existing usable area",
+      "Change: a bench with storage, a folding dining table, sliding screens",
+      "Why: so the same area can be used more flexibly."
+     ],
+     "button": "Read the FAQ"
+    },
+    "imagesNote": "BR-02 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R9",
+     "B2",
+     "A5",
+     "R4"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Gói phù hợp",
+     "title": "Gói nào phù hợp với ngôi nhà này",
+     "body": "Căn hộ, dãy trọ và văn phòng nhỏ đều bắt đầu từ cùng một việc: xem diện tích hiện có làm được gì. Gói 1 là cách gọn nhất để thấy hướng bố trí.",
+     "items": [
+      "Gói 1: xem hướng bố trí lại",
+      "Gói 2: hình dung không gian sau cải tạo",
+      "Gói 3: kiến trúc và nội thất đồng bộ."
+     ],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Which package",
+     "title": "Which package fits a home like this",
+     "body": "Apartments, rental blocks and small offices all start the same way: see what the existing area can do. Package 1 is the lightest way to see a layout direction.",
+     "items": [
+      "Package 1: see a re-planning direction",
+      "Package 2: picture the space after renovation",
+      "Package 3: architecture and interior designed together."
+     ],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "OF-02 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R9",
+     "A6",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P11": {
+  "vi": "/vi/gioi-thieu",
+  "en": "/en/about",
+  "tier": "A",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Giới thiệu",
+     "title": "Vì sao mỗi lựa chọn thiết kế đều được giải thích",
+     "body": "ECO ARCH là đơn vị tư vấn thiết kế kiến trúc và cải tạo nhà ở tại Hà Nội. Chúng tôi chỉ thiết kế, không thi công, nên không bán vật tư hay nhận công trình.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "About",
+     "title": "Why every design choice is explained",
+     "body": "ECO ARCH is a design consultancy for architecture and home renovation in Hanoi. We design only and do not build, so we neither sell materials nor take on construction.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "ABOUT-01.",
+    "effects": [
+     "A1",
+     "R3",
+     "A5",
+     "R5",
+     "A9"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "TRIO",
+    "vi": {
+     "eyebrow": "Cách làm việc",
+     "title": "Ba nguyên tắc chúng tôi giữ",
+     "body": "Chủ nhà thường khó đánh giá bản vẽ và những phát sinh về sau. Chúng tôi làm việc để điều đó dễ hiểu hơn.",
+     "items": [
+      "Đọc khu đất trước, Nắng, gió, ánh sáng và nếp sống của gia đình được xem trước khi vẽ",
+      "Giải thích lựa chọn, Mỗi quyết định thiết kế đều có lý do bạn đọc được",
+      "Ghi rõ phạm vi, Bạn biết trước mình nhận hồ sơ nào và đâu là ranh giới."
+     ],
+     "button": "Xem quy trình"
+    },
+    "en": {
+     "eyebrow": "How we work",
+     "title": "Three principles we keep",
+     "body": "Owners often find it hard to judge drawings and what may come up later. We work to make that easier to understand.",
+     "items": [
+      "Read the plot first, Sun, wind, light and your household's routines are studied before drawing",
+      "Explain the choices, Every design decision comes with a reason you can read",
+      "State the scope, You know in advance which documents you receive and where our scope ends."
+     ],
+     "button": "See the process"
+    },
+    "imagesNote": "TEX-01.",
+    "effects": [
+     "A1",
+     "R2",
+     "A12",
+     "R5"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "TRIO",
+    "vi": {
+     "eyebrow": "Bạn có thể mong đợi",
+     "title": "Ba tài liệu đi cùng mỗi dự án",
+     "body": "Ngoài bản vẽ theo gói, mỗi dự án có ba tài liệu để bạn kiểm tra và quyết định.",
+     "items": [
+      "Biên bản khảo sát, Ghi lại hiện trạng khu đất hoặc ngôi nhà",
+      "Bảng giải thích lựa chọn, Nêu các lựa chọn, lý do và đánh đổi",
+      "Danh mục bàn giao, Liệt kê đầy đủ hồ sơ bạn nhận."
+     ],
+     "button": "Xem phạm vi bàn giao"
+    },
+    "en": {
+     "eyebrow": "What to expect",
+     "title": "Three documents with every project",
+     "body": "Beyond the drawings in your package, each project comes with three documents so you can check and decide.",
+     "items": [
+      "Survey record, Records the condition of the plot or the home",
+      "Choice explanation sheet, Sets out the options, the reasons and the trade-offs",
+      "Handover checklist, Lists every document you receive."
+     ],
+     "button": "See the scope"
+    },
+    "imagesNote": "TEX-02.",
+    "effects": [
+     "A1",
+     "R2",
+     "A12"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Người phụ trách",
+     "title": "Trao đổi trực tiếp với người phụ trách chuyên môn",
+     "body": "Người phụ trách chuyên môn của ECO ARCH là Nguyễn Thị Thu. Hãy gửi khu đất để bắt đầu.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Who is responsible",
+     "title": "Speak directly with the person responsible for design",
+     "body": "The person responsible for design at ECO ARCH is Nguyễn Thị Thu. Send your plot to begin.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "ABOUT-01.",
+    "effects": [
+     "A1",
+     "A6",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P12": {
+  "vi": "/vi/quy-trinh",
+  "en": "/en/process",
+  "tier": "S",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Quy trình",
+     "title": "Mười bước từ nhu cầu đến bàn giao",
+     "body": "Bạn biết trước từng bước: bạn làm gì, bạn nhận gì. Mười bước chia thành bốn chặng: trao đổi, thỏa thuận, thiết kế, bàn giao.",
+     "items": [
+      "Trao đổi",
+      "Thỏa thuận",
+      "Thiết kế",
+      "Bàn giao."
+     ],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Process",
+     "title": "Ten steps from brief to handover",
+     "body": "You know each step in advance: what you do and what you receive. The ten steps fall into four stages: discuss, agree, design, hand over.",
+     "items": [
+      "Discuss",
+      "Agree",
+      "Design",
+      "Hand over."
+     ],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "DIAG-03.",
+    "effects": [
+     "A1",
+     "R4",
+     "A5",
+     "R5",
+     "A9"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "STEPS",
+    "vi": {
+     "eyebrow": "Từng bước",
+     "title": "Mặt bằng được vẽ dần theo từng bước",
+     "body": "Cuộn để đọc. Mặt bằng bên cạnh sẽ được vẽ thêm khi bạn đi qua từng bước.",
+     "items": [
+      "01, Gửi nhu cầu, Bạn gửi địa điểm, diện tích, ngân sách dự kiến và ảnh hiện trạng. Chúng tôi phản hồi trong 24 giờ",
+      "02, Đánh giá phạm vi, Chúng tôi xem yêu cầu pháp lý và phần việc cần chuyên môn thêm, rồi xác nhận phạm vi với bạn",
+      "03, Báo giá, Bạn nhận báo giá theo gói và diện tích thiết kế",
+      "04, Ký hợp đồng, Hợp đồng ghi rõ phạm vi. Bạn xác nhận hợp đồng và điều khoản thanh toán",
+      "05, Khảo sát và lập phương án, Bạn nhận biên bản khảo sát và phương án. Góp ý của bạn được ghi lại",
+      "06, Xác nhận phương án, Bạn xác nhận phương án để chuyển sang triển khai hồ sơ",
+      "07, Triển khai hồ sơ, Hồ sơ kỹ thuật được kiểm tra cùng đối tác chuyên môn",
+      "08, Nghiệm thu, Bạn nhận hồ sơ nghiệm thu. Lỗi thuộc trách nhiệm của ECO ARCH được sửa",
+      "09, Bàn giao, Bạn nhận đủ danh mục hồ sơ và biên bản bàn giao",
+      "10, Lưu trữ, Bản vẽ được lưu theo mã dự án và phiên bản để tra cứu khi cần."
+     ],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Step by step",
+     "title": "The plan is drawn step by step",
+     "body": "Scroll to read. The plan beside the text is drawn further as you pass each step.",
+     "items": [
+      "01, Send your brief, You send the address, area, expected budget and photos of the current state. We reply within 24 hours",
+      "02, Assess the scope, We review legal requirements and any work that needs extra expertise, then confirm the scope with you",
+      "03, Quotation, You receive a quotation by package and design area",
+      "04, Sign the contract, The contract states the scope. You confirm it and the payment terms",
+      "05, Survey and options, You receive a survey record and an option. Your feedback is recorded",
+      "06, Confirm the option, You confirm the option so we can move on to documents",
+      "07, Prepare documents, Technical documents are checked with specialist partners",
+      "08, Acceptance, You receive the acceptance documents. Errors that are ECO ARCH's responsibility are corrected",
+      "09, Handover, You receive the full checklist of documents and a handover record",
+      "10, Archive, Drawings are filed by project code and version so they can be retrieved when needed."
+     ],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "DIAG-03.",
+    "effects": [
+     "R7",
+     "A12",
+     "A10",
+     "R6",
+     "R1"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "LIST",
+    "vi": {
+     "eyebrow": "Ghi rõ bằng văn bản",
+     "title": "Ba điều được ghi rõ trong hợp đồng",
+     "body": "Những chỗ dễ phát sinh hiểu nhầm nhất được viết ra trước khi bắt đầu.",
+     "items": [
+      "Phạm vi và hồ sơ bạn nhận",
+      "Thay đổi và phát sinh: có báo giá, điều chỉnh tiến độ và bạn chấp thuận trước khi làm",
+      "Nghiệm thu: sự im lặng không mặc nhiên được coi là đã nghiệm thu."
+     ],
+     "button": "Xem phạm vi bàn giao"
+    },
+    "en": {
+     "eyebrow": "Put in writing",
+     "title": "Three things the contract states clearly",
+     "body": "The points most likely to cause misunderstanding are written down before work begins.",
+     "items": [
+      "The scope and the documents you receive",
+      "Changes and extra work: quoted, rescheduled and approved by you before work starts",
+      "Acceptance: silence is not automatically treated as acceptance."
+     ],
+     "button": "See the scope"
+    },
+    "imagesNote": "TEX-01.",
+    "effects": [
+     "A1",
+     "R9",
+     "B2",
+     "R5"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Bắt đầu",
+     "title": "Bước đầu tiên chỉ mất vài phút",
+     "body": "Bạn không cần có sẵn bản vẽ. Chỉ cần địa điểm, diện tích và vài ảnh hiện trạng.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Get started",
+     "title": "The first step takes a few minutes",
+     "body": "You do not need drawings. The address, area and a few photos of the current state are enough.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "BOOK-01.",
+    "effects": [
+     "A1",
+     "A6",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P13": {
+  "vi": "/vi/pham-vi-ban-giao",
+  "en": "/en/scope",
+  "tier": "A",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Phạm vi bàn giao",
+     "title": "Biết trước phạm vi và hồ sơ bàn giao",
+     "body": "Điều chủ nhà lo nhất thường là hồ sơ, chi phí và giới hạn trách nhiệm. Trang này nói rõ bạn nhận gì và đâu là ranh giới của ECO ARCH.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Scope and handover",
+     "title": "Know the scope and deliverables in advance",
+     "body": "What owners worry about most is documents, cost and where responsibility ends. This page states what you receive and where ECO ARCH's scope ends.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "DIAG-02.",
+    "effects": [
+     "A1",
+     "R6",
+     "A5",
+     "R5",
+     "A9"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "TRIO",
+    "vi": {
+     "eyebrow": "Bạn nhận gì",
+     "title": "Ba tài liệu cốt lõi và bản vẽ theo gói",
+     "body": "Mỗi dự án có ba tài liệu cốt lõi. Bản vẽ và hình ảnh đi theo gói bạn chọn.",
+     "items": [
+      "Biên bản khảo sát, Ghi lại hiện trạng",
+      "Bảng giải thích lựa chọn, Nêu các lựa chọn, lý do và đánh đổi",
+      "Danh mục bàn giao, Liệt kê đầy đủ hồ sơ."
+     ],
+     "button": "Xem 3 gói dịch vụ"
+    },
+    "en": {
+     "eyebrow": "What you receive",
+     "title": "Three core documents and the drawings of your package",
+     "body": "Every project has three core documents. Drawings and images follow the package you choose.",
+     "items": [
+      "Survey record, Records the current condition",
+      "Choice explanation sheet, Sets out options, reasons and trade-offs",
+      "Handover checklist, Lists every document."
+     ],
+     "button": "See the 3 packages"
+    },
+    "imagesNote": "DIAG-02.",
+    "effects": [
+     "A1",
+     "R2",
+     "A12",
+     "R6"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "SPLIT",
+    "vi": {
+     "eyebrow": "Ranh giới",
+     "title": "ECO ARCH không thi công",
+     "body": "Chúng tôi dừng ở thiết kế. Những phần dưới đây không nằm trong phí thiết kế và được báo giá riêng.",
+     "items": [
+      "Thi công",
+      "Vật tư",
+      "Đồ nội thất",
+      "Chuyên môn kỹ thuật chuyên sâu, nhận theo yêu cầu riêng."
+     ],
+     "button": "Xem hỏi đáp"
+    },
+    "en": {
+     "eyebrow": "The boundary",
+     "title": "ECO ARCH does not build",
+     "body": "We stop at design. The items below are not part of the design fee and are quoted separately.",
+     "items": [
+      "Construction",
+      "Materials",
+      "Furniture",
+      "Specialist engineering, available on request."
+     ],
+     "button": "Read the FAQ"
+    },
+    "imagesNote": "TEX-02.",
+    "effects": [
+     "A1",
+     "R9",
+     "B2",
+     "R5"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Thay đổi và nghiệm thu",
+     "title": "Thay đổi có báo giá, nghiệm thu có biên bản",
+     "body": "Khi có thay đổi, bạn nhận báo giá và điều chỉnh tiến độ, và bạn chấp thuận trước khi chúng tôi làm. Nghiệm thu dựa trên danh mục hồ sơ đã gửi, không dựa trên sự im lặng.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Changes and acceptance",
+     "title": "Changes are quoted, acceptance is recorded",
+     "body": "When something changes, you receive a quotation and a revised schedule and you approve before we proceed. Acceptance rests on the checklist of documents sent, not on silence.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "BOOK-01.",
+    "effects": [
+     "A1",
+     "A6",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P14": {
+  "vi": "/vi/kien-thuc",
+  "en": "/en/insights",
+  "tier": "A",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Kiến thức",
+     "title": "Kiến thức cho chủ nhà trước khi thiết kế",
+     "body": "Những điều nên biết trước khi trao đổi với đơn vị thiết kế: đọc nắng gió, chuẩn bị thông tin, hiểu phạm vi hồ sơ.",
+     "items": [],
+     "button": "Đọc bài về nắng và gió"
+    },
+    "en": {
+     "eyebrow": "Knowledge",
+     "title": "What owners should know before design begins",
+     "body": "What to know before talking to a design firm: reading sun and wind, preparing information, understanding the scope of documents.",
+     "items": [],
+     "button": "Read the article on sun and wind"
+    },
+    "imagesNote": "ART1-01 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R3",
+     "A5",
+     "R5",
+     "A9"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "CARDS",
+    "vi": {
+     "eyebrow": "Bài viết",
+     "title": "Hai bài để bắt đầu",
+     "body": "Mỗi bài ngắn, đọc trong vài phút, dùng được ngay khi bạn chuẩn bị gặp kiến trúc sư.",
+     "items": [
+      "Đọc hướng nắng và gió trước khi thiết kế, Nắng sáng, nắng chiều và đường gió quyết định phòng nào dễ ở",
+      "Chuẩn bị gì cho buổi trao đổi đầu tiên, Danh sách thông tin và ảnh giúp buổi trao đổi hiệu quả hơn."
+     ],
+     "button": "Đọc bài"
+    },
+    "en": {
+     "eyebrow": "Articles",
+     "title": "Two articles to start with",
+     "body": "Each is short, a few minutes to read, and useful as you prepare to meet an architect.",
+     "items": [
+      "Reading sun and wind before design, Morning sun, afternoon sun and airflow decide which rooms are easy to live in",
+      "What to prepare for the first call, A checklist of information and photos that makes the first call more useful."
+     ],
+     "button": "Read the article"
+    },
+    "imagesNote": "ART1-01, ART2-01 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "R2",
+     "K1",
+     "T2",
+     "B1"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "LIST",
+    "vi": {
+     "eyebrow": "Hiểu lầm thường gặp",
+     "title": "Ba hiểu lầm thường gặp của chủ nhà",
+     "body": "Những điều này dễ làm kế hoạch lệch ngay từ đầu.",
+     "items": [
+      "Chỉ cần ảnh phối cảnh đẹp là đủ: phối cảnh giúp hình dung, hồ sơ mới là thứ để chuẩn bị thi công",
+      "Phạm vi hồ sơ nào cũng như nhau: mỗi gói có phạm vi khác nhau, nên đọc kỹ trước khi ký",
+      "Thiết kế xong là có giá thi công: thi công, vật tư và nội thất được báo giá riêng."
+     ],
+     "button": "Xem hỏi đáp"
+    },
+    "en": {
+     "eyebrow": "Common misunderstandings",
+     "title": "Three common misunderstandings",
+     "body": "These can throw a plan off from the start.",
+     "items": [
+      "A nice perspective is enough: perspectives help you picture the home, documents are what you prepare construction from",
+      "All document scopes are the same: each package has its own scope, so read it before signing",
+      "Design comes with a construction price: construction, materials and furniture are quoted separately."
+     ],
+     "button": "Read the FAQ"
+    },
+    "imagesNote": "TEX-01.",
+    "effects": [
+     "A1",
+     "R9",
+     "B2"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Bắt đầu",
+     "title": "Sẵn sàng trao đổi về ngôi nhà của bạn",
+     "body": "Chuẩn bị theo danh sách rồi gửi cho chúng tôi. Chúng tôi phản hồi trong 24 giờ.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Get started",
+     "title": "Ready to talk about your home",
+     "body": "Prepare using the checklist and send it to us. We reply within 24 hours.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "BOOK-01.",
+    "effects": [
+     "A1",
+     "A6",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P15": {
+  "vi": "/vi/kien-thuc/doc-huong-nang-gio",
+  "en": "/en/insights/read-sun-and-wind",
+  "tier": "A",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Bài viết",
+     "title": "Đọc hướng nắng và gió trước khi thiết kế",
+     "body": "Hai điều quyết định ngôi nhà có dễ ở hay không: ánh nắng đi vào phòng nào, và gió đi qua nhà bằng lối nào.",
+     "items": [],
+     "button": "Chuẩn bị cho buổi trao đổi"
+    },
+    "en": {
+     "eyebrow": "Article",
+     "title": "Reading sun and wind before design",
+     "body": "Two things decide whether a home is comfortable: which rooms the sun reaches, and the path the breeze takes through the house.",
+     "items": [],
+     "button": "Prepare for the first call"
+    },
+    "imagesNote": "ART1-01 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R3",
+     "A5",
+     "R5",
+     "A9"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "SUNWIND",
+    "vi": {
+     "eyebrow": "Nắng",
+     "title": "Nắng đi theo một đường cung trong ngày",
+     "body": "Ở Hà Nội, nắng sáng và nắng chiều đến từ hai phía khác nhau, và nắng chiều thường gây nóng hơn. Hãy ghi lại phòng nào nhận nắng vào giờ nào trước khi bố trí lại.",
+     "items": [
+      "Ghi phòng nhận nắng sáng",
+      "Ghi phòng nhận nắng chiều",
+      "Xem chỗ nào cần che nắng."
+     ],
+     "button": "Xem phạm vi bàn giao"
+    },
+    "en": {
+     "eyebrow": "Sun",
+     "title": "The sun follows an arc through the day",
+     "body": "In Hanoi, morning and afternoon sun arrive from different sides, and afternoon sun tends to be hotter. Note which rooms get sun at which hours before re-planning.",
+     "items": [
+      "Note rooms with morning sun",
+      "Note rooms with afternoon sun",
+      "See where shading is needed."
+     ],
+     "button": "See the scope"
+    },
+    "imagesNote": "DIAG-01.",
+    "effects": [
+     "A2",
+     "A1",
+     "R6"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "SUNWIND",
+    "vi": {
+     "eyebrow": "Gió",
+     "title": "Gió cần một lối vào và một lối ra",
+     "body": "Nhà thông thoáng khi gió có đường đi xuyên qua. Với nhà ống, giếng trời và cửa ở hai đầu nhà thường là những chỗ nên xem trước.",
+     "items": [
+      "Tìm lối gió vào",
+      "Tìm lối gió ra",
+      "Kiểm tra vật cản như vách, tủ, cửa đóng kín."
+     ],
+     "button": "Xem hỏi đáp"
+    },
+    "en": {
+     "eyebrow": "Wind",
+     "title": "Wind needs a way in and a way out",
+     "body": "A home feels airy when the breeze has a path through it. In a tube house, a skylight and openings at both ends are usually the first places to look.",
+     "items": [
+      "Find where the breeze enters",
+      "Find where it leaves",
+      "Check for blockages such as partitions, cabinets and closed doors."
+     ],
+     "button": "Read the FAQ"
+    },
+    "imagesNote": "DIAG-01.",
+    "effects": [
+     "A3",
+     "A1",
+     "R6"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Áp dụng cho nhà bạn",
+     "title": "Gửi khu đất, chúng tôi đọc nắng gió cùng bạn",
+     "body": "Phần ghi chú nắng và thông gió có trong cả ba gói dịch vụ.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Apply it to your home",
+     "title": "Send your plot and we read the sun and wind with you",
+     "body": "Notes on sun and ventilation are included in all three packages.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "BOOK-01.",
+    "effects": [
+     "A1",
+     "A6",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P16": {
+  "vi": "/vi/kien-thuc/chuan-bi-buoi-trao-doi",
+  "en": "/en/insights/prepare-first-call",
+  "tier": "A",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Bài viết",
+     "title": "Chuẩn bị gì cho buổi trao đổi đầu tiên",
+     "body": "Bạn không cần có sẵn bản vẽ. Chỉ cần vài thông tin cơ bản để buổi trao đổi đi thẳng vào vấn đề.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Article",
+     "title": "What to prepare for the first call",
+     "body": "You do not need drawings. A few basics are enough for the call to get to the point.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "ART2-01 (chú thích: Hình minh họa, chưa phải công trình thực tế của ECO ARCH.).",
+    "effects": [
+     "A1",
+     "R4",
+     "A5",
+     "R5",
+     "A9"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "LIST",
+    "vi": {
+     "eyebrow": "Danh sách",
+     "title": "Năm thông tin nên có",
+     "body": "Thiếu mục nào cũng không sao. Chúng tôi sẽ hỏi thêm.",
+     "items": [
+      "Địa điểm và diện tích khu đất hoặc ngôi nhà",
+      "Hiện trạng: vài ảnh các phòng và mặt tiền",
+      "Nhu cầu: số người ở, số phòng, thói quen sinh hoạt",
+      "Ngân sách dự kiến cho thi công, nếu đã có",
+      "Hồ sơ đang có: sổ đất, bản vẽ cũ, nếu có."
+     ],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Checklist",
+     "title": "Five pieces of information to have",
+     "body": "If something is missing, that is fine. We will ask.",
+     "items": [
+      "The address and the area of the plot or the home",
+      "Current state: a few photos of the rooms and the facade",
+      "Needs: number of people, rooms, daily routines",
+      "Expected construction budget, if you have one",
+      "Existing documents: land title, old drawings, if any."
+     ],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "TEX-02.",
+    "effects": [
+     "A1",
+     "R9",
+     "B2",
+     "A12"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "STEPS",
+    "vi": {
+     "eyebrow": "Sau khi bạn gửi",
+     "title": "Điều gì xảy ra sau khi bạn gửi thông tin",
+     "body": "Ba bước đầu rất ngắn, để bạn biết trước điều sắp đến.",
+     "items": [
+      "1, Phản hồi, Chúng tôi phản hồi trong 24 giờ",
+      "2, Trao đổi, Chúng tôi hỏi thêm về nhu cầu và hiện trạng, rồi gợi ý gói phù hợp",
+      "3, Báo giá, Bạn nhận báo giá theo gói và diện tích thiết kế."
+     ],
+     "button": "Xem quy trình"
+    },
+    "en": {
+     "eyebrow": "After you send it",
+     "title": "What happens after you send your information",
+     "body": "The first three steps are short, so you know what is coming.",
+     "items": [
+      "1, Reply, We reply within 24 hours",
+      "2, Discuss, We ask more about your needs and the current state, then suggest a suitable package",
+      "3, Quotation, You receive a quotation by package and design area."
+     ],
+     "button": "See the process"
+    },
+    "imagesNote": "DIAG-03.",
+    "effects": [
+     "R7",
+     "A12",
+     "R1"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Bắt đầu",
+     "title": "Gửi thông tin trong vài phút",
+     "body": "Tư vấn ban đầu miễn phí.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Get started",
+     "title": "Send your information in a few minutes",
+     "body": "The first consultation is free.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "BOOK-01.",
+    "effects": [
+     "A1",
+     "A6",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P17": {
+  "vi": "/vi/hoi-dap",
+  "en": "/en/faq",
+  "tier": "B",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Hỏi đáp",
+     "title": "Hỏi đáp trước khi bắt đầu",
+     "body": "Những câu chủ nhà hỏi nhiều nhất về gói, giá, phạm vi và cách làm việc.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "FAQ",
+     "title": "Questions before you begin",
+     "body": "The questions owners ask most about packages, price, scope and how we work.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "TEX-01.",
+    "effects": [
+     "A1",
+     "R4",
+     "R5",
+     "A9"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "FAQ",
+    "vi": {
+     "eyebrow": "Gói và giá",
+     "title": "Về gói và chi phí",
+     "body": "",
+     "items": [
+      "Tư vấn ban đầu có mất phí không?, Không. Tư vấn ban đầu miễn phí",
+      "Phí thiết kế tính thế nào?, Phí tính theo diện tích thiết kế ghi trong hợp đồng: Gói 1 là 100.000 đ/m², Gói 2 là 220.000 đ/m², Gói 3 là 340.000 đ/m²",
+      "Giá đã gồm thi công chưa?, Chưa. Thi công, vật tư và đồ nội thất được báo giá riêng. ECO ARCH không thi công",
+      "Nhà xây mới có dùng bảng giá này không?, Bảng giá dành cho thiết kế cải tạo nhà ở. Với nhà xây mới, chúng tôi báo giá sau buổi trao đổi."
+     ],
+     "button": "Xem 3 gói dịch vụ"
+    },
+    "en": {
+     "eyebrow": "Packages and price",
+     "title": "About packages and cost",
+     "body": "",
+     "items": [
+      "Does the first consultation cost anything?, No. The first consultation is free",
+      "How is the design fee calculated?, The fee follows the design area stated in the contract: Package 1 is 100,000 VND/m², Package 2 is 220,000 VND/m², Package 3 is 340,000 VND/m²",
+      "Does the price include construction?, No. Construction, materials and furniture are quoted separately. ECO ARCH does not build",
+      "Does the price list apply to new builds?, The price list covers home renovation design. For new builds we quote after the first call."
+     ],
+     "button": "See the 3 packages"
+    },
+    "imagesNote": "không ảnh.",
+    "effects": [
+     "F1",
+     "R9"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "FAQ",
+    "vi": {
+     "eyebrow": "Phạm vi và hồ sơ",
+     "title": "Về phạm vi và hồ sơ",
+     "body": "",
+     "items": [
+      "Tôi nhận được những hồ sơ nào?, Bản vẽ và hình ảnh theo gói bạn chọn, cùng biên bản khảo sát, bảng giải thích lựa chọn và danh mục bàn giao",
+      "Hình ảnh 3D có phải hồ sơ thi công không?, Không. Hình ảnh giúp bạn hình dung. Gói 2 do AI hỗ trợ hình ảnh và kiến trúc sư kiểm tra tính hợp lý",
+      "Nếu tôi muốn thay đổi giữa chừng thì sao?, Thay đổi có báo giá, điều chỉnh tiến độ và bạn chấp thuận trước khi chúng tôi làm",
+      "Nghiệm thu được xác nhận thế nào?, Dựa trên danh mục hồ sơ đã gửi. Sự im lặng không mặc nhiên được coi là đã nghiệm thu."
+     ],
+     "button": "Xem phạm vi bàn giao"
+    },
+    "en": {
+     "eyebrow": "Scope and documents",
+     "title": "About scope and documents",
+     "body": "",
+     "items": [
+      "Which documents do I receive?, Drawings and images for your package, plus a survey record, a choice explanation sheet and a handover checklist",
+      "Are 3D images construction documents?, No. Images help you picture the home. In Package 2 the images are AI-assisted and an architect checks them for soundness",
+      "What if I want to change something midway?, Changes are quoted and rescheduled, and you approve before we proceed",
+      "How is acceptance confirmed?, Against the checklist of documents sent. Silence is not automatically treated as acceptance."
+     ],
+     "button": "See the scope"
+    },
+    "imagesNote": "không ảnh.",
+    "effects": [
+     "F1",
+     "R9"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Chưa thấy câu hỏi của bạn",
+     "title": "Hỏi chúng tôi trực tiếp",
+     "body": "Gửi câu hỏi kèm khu đất, chúng tôi phản hồi trong 24 giờ.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Your question is not here",
+     "title": "Ask us directly",
+     "body": "Send your question with your plot and we reply within 24 hours.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "BOOK-01.",
+    "effects": [
+     "A1",
+     "A6",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P18": {
+  "vi": "/vi/dat-lich",
+  "en": "/en/book",
+  "tier": "A",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Đặt lịch",
+     "title": "Đặt lịch trao đổi về khu đất",
+     "body": "Tư vấn ban đầu miễn phí. Chúng tôi phản hồi trong 24 giờ.",
+     "items": [],
+     "button": "Điền biểu mẫu"
+    },
+    "en": {
+     "eyebrow": "Book",
+     "title": "Book a call about your plot",
+     "body": "The first consultation is free. We reply within 24 hours.",
+     "items": [],
+     "button": "Fill in the form"
+    },
+    "imagesNote": "BOOK-01.",
+    "effects": [
+     "A1",
+     "R4",
+     "R5",
+     "A9",
+     "P2"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "FORM",
+    "vi": {
+     "eyebrow": "Biểu mẫu",
+     "title": "Cho chúng tôi biết về khu đất",
+     "body": "Chỉ những mục ghi bắt buộc là cần điền.",
+     "items": [
+      "Họ tên (bắt buộc)",
+      "Số điện thoại hoặc email (bắt buộc)",
+      "Địa điểm khu đất hoặc ngôi nhà (bắt buộc)",
+      "Diện tích gần đúng",
+      "Loại nhà: nhà ống, nhà phố, biệt thự, căn hộ, khác",
+      "Gói quan tâm: chưa chắc, Gói 1, Gói 2, Gói 3",
+      "Mô tả ngắn về nhu cầu",
+      "Đồng ý để ECO ARCH liên hệ lại (bắt buộc)."
+     ],
+     "button": "Gửi thông tin"
+    },
+    "en": {
+     "eyebrow": "Form",
+     "title": "Tell us about your plot",
+     "body": "Only fields marked required need to be filled in.",
+     "items": [
+      "Full name (required)",
+      "Phone number or email (required)",
+      "Location of the plot or home (required)",
+      "Approximate area",
+      "Home type: tube house, townhouse, villa, apartment, other",
+      "Package of interest: not sure, Package 1, Package 2, Package 3",
+      "A short description of your needs",
+      "I agree that ECO ARCH may contact me (required)."
+     ],
+     "button": "Send"
+    },
+    "imagesNote": "không ảnh.",
+    "effects": [
+     "F2",
+     "F3",
+     "B1"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "STEPS",
+    "vi": {
+     "eyebrow": "Sau khi gửi",
+     "title": "Ba điều sẽ xảy ra tiếp theo",
+     "body": "Bạn biết trước để không phải chờ đợi mơ hồ.",
+     "items": [
+      "1, Phản hồi, Trong 24 giờ",
+      "2, Trao đổi, Về nhu cầu, hiện trạng và gói phù hợp",
+      "3, Báo giá, Theo gói và diện tích thiết kế."
+     ],
+     "button": "Xem quy trình"
+    },
+    "en": {
+     "eyebrow": "After you send",
+     "title": "Three things happen next",
+     "body": "You know in advance, so the wait is not vague.",
+     "items": [
+      "1, Reply, Within 24 hours",
+      "2, Discuss, Your needs, the current state and a suitable package",
+      "3, Quotation, By package and design area."
+     ],
+     "button": "See the process"
+    },
+    "imagesNote": "DIAG-03.",
+    "effects": [
+     "R7",
+     "A12",
+     "R1"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "NOTE",
+    "vi": {
+     "eyebrow": "Bảo mật",
+     "title": "Hồ sơ của bạn được giữ kín",
+     "body": "Thông tin và hồ sơ bạn gửi chỉ dùng để tư vấn và thiết kế. Hình ảnh công trình chỉ dùng để quảng bá khi bạn cho phép.",
+     "items": [],
+     "button": "Đọc chính sách bảo mật"
+    },
+    "en": {
+     "eyebrow": "Privacy",
+     "title": "Your information stays confidential",
+     "body": "The information and documents you send are used only for consultation and design. Project images are used for promotion only with your permission.",
+     "items": [],
+     "button": "Read the privacy policy"
+    },
+    "imagesNote": "TEX-02.",
+    "effects": [
+     "A1",
+     "R5"
+    ]
+   }
+  ]
+ },
+ "P19": {
+  "vi": "/vi/lien-he",
+  "en": "/en/contact",
+  "tier": "B",
+  "sections": [
+   {
+    "n": 1,
+    "type": "HERO-PAGE",
+    "vi": {
+     "eyebrow": "Liên hệ",
+     "title": "Liên hệ ECO ARCH",
+     "body": "Cách nhanh nhất là đặt lịch trao đổi. Chúng tôi phản hồi trong 24 giờ.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Contact",
+     "title": "Contact ECO ARCH",
+     "body": "The quickest way is to book a call. We reply within 24 hours.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "ABOUT-01.",
+    "effects": [
+     "A1",
+     "R4",
+     "R5"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "CONTACT",
+    "vi": {
+     "eyebrow": "Thông tin liên hệ",
+     "title": "Địa chỉ, điện thoại và email",
+     "body": "Thông tin chính thức sẽ được cập nhật khi ECO ARCH cung cấp.",
+     "items": [
+      "Địa chỉ văn phòng",
+      "Điện thoại",
+      "Email",
+      "Giờ làm việc."
+     ],
+     "button": "Đặt lịch trao đổi"
+    },
+    "en": {
+     "eyebrow": "Contact details",
+     "title": "Address, phone and email",
+     "body": "Official details will be added once ECO ARCH provides them.",
+     "items": [
+      "Office address",
+      "Phone",
+      "Email",
+      "Working hours."
+     ],
+     "button": "Book a call"
+    },
+    "imagesNote": "không ảnh.",
+    "effects": [
+     "A1",
+     "R9"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "SPLIT",
+    "vi": {
+     "eyebrow": "Trước khi liên hệ",
+     "title": "Có thể bạn đã tìm thấy câu trả lời",
+     "body": "Giá, phạm vi và cách làm việc được nói rõ trong phần hỏi đáp.",
+     "items": [
+      "Giá và gói dịch vụ",
+      "Phạm vi bàn giao",
+      "Quy trình."
+     ],
+     "button": "Xem hỏi đáp"
+    },
+    "en": {
+     "eyebrow": "Before you get in touch",
+     "title": "You may already find the answer",
+     "body": "Price, scope and how we work are set out in the FAQ.",
+     "items": [
+      "Price and packages",
+      "Scope and handover",
+      "Process."
+     ],
+     "button": "Read the FAQ"
+    },
+    "imagesNote": "TEX-01.",
+    "effects": [
+     "A1",
+     "R2"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "CTA",
+    "vi": {
+     "eyebrow": "Bắt đầu",
+     "title": "Gửi khu đất của bạn",
+     "body": "Tư vấn ban đầu miễn phí.",
+     "items": [],
+     "button": "Đặt lịch trao đổi về khu đất"
+    },
+    "en": {
+     "eyebrow": "Get started",
+     "title": "Send your plot",
+     "body": "The first consultation is free.",
+     "items": [],
+     "button": "Book a call about your plot"
+    },
+    "imagesNote": "BOOK-01.",
+    "effects": [
+     "A1",
+     "A6",
+     "R4"
+    ]
+   }
+  ]
+ },
+ "P20": {
+  "vi": "/vi/chinh-sach-bao-mat",
+  "en": "/en/privacy",
+  "tier": "B",
+  "sections": [
+   {
+    "n": 1,
+    "type": "LEGAL",
+    "vi": {
+     "eyebrow": "Pháp lý",
+     "title": "Chính sách bảo mật",
+     "body": "Chính sách này nói rõ ECO ARCH thu thập thông tin nào, dùng vào việc gì và bạn có quyền gì. Nội dung chính thức cần rà soát pháp lý trước khi đăng.",
+     "items": [],
+     "button": "Liên hệ"
+    },
+    "en": {
+     "eyebrow": "Legal",
+     "title": "Privacy policy",
+     "body": "This policy states what information ECO ARCH collects, what it is used for and what rights you have. The official text needs legal review before publication.",
+     "items": [],
+     "button": "Contact"
+    },
+    "imagesNote": "không ảnh.",
+    "effects": [
+     "A1",
+     "R5"
+    ]
+   },
+   {
+    "n": 2,
+    "type": "LEGAL",
+    "vi": {
+     "eyebrow": "Thu thập và sử dụng",
+     "title": "Chúng tôi thu thập và dùng thông tin nào",
+     "body": "Chúng tôi thu thập thông tin bạn điền trong biểu mẫu và hồ sơ bạn gửi, để phản hồi, tư vấn, báo giá và thiết kế.",
+     "items": [
+      "Họ tên và cách liên hệ",
+      "Địa điểm, diện tích, hiện trạng",
+      "Hồ sơ bạn chủ động gửi."
+     ],
+     "button": null
+    },
+    "en": {
+     "eyebrow": "Collection and use",
+     "title": "What we collect and use",
+     "body": "We collect what you enter in the form and the documents you send, to reply, advise, quote and design.",
+     "items": [
+      "Name and contact details",
+      "Location, area, current condition",
+      "Documents you choose to send."
+     ],
+     "button": null
+    },
+    "imagesNote": "không ảnh.",
+    "effects": [
+     "A1",
+     "R9"
+    ]
+   },
+   {
+    "n": 3,
+    "type": "LEGAL",
+    "vi": {
+     "eyebrow": "Bảo mật và hình ảnh",
+     "title": "Hồ sơ được giữ kín, ảnh chỉ dùng khi bạn cho phép",
+     "body": "Hồ sơ khách hàng được bảo mật. Hình ảnh công trình chỉ dùng để quảng bá khi có sự cho phép của bạn.",
+     "items": [],
+     "button": null
+    },
+    "en": {
+     "eyebrow": "Confidentiality and images",
+     "title": "Records stay confidential, images only with permission",
+     "body": "Client records are kept confidential. Project images are used for promotion only with your permission.",
+     "items": [],
+     "button": null
+    },
+    "imagesNote": "không ảnh.",
+    "effects": [
+     "A1",
+     "R5"
+    ]
+   },
+   {
+    "n": 4,
+    "type": "LEGAL",
+    "vi": {
+     "eyebrow": "Quyền của bạn",
+     "title": "Quyền của bạn và cách liên hệ",
+     "body": "Bạn có thể yêu cầu xem, sửa hoặc xóa thông tin của mình. Thông tin đơn vị chịu trách nhiệm xử lý dữ liệu sẽ được bổ sung khi ECO ARCH cung cấp.",
+     "items": [],
+     "button": "Liên hệ"
+    },
+    "en": {
+     "eyebrow": "Your rights",
+     "title": "Your rights and how to reach us",
+     "body": "You may ask to view, correct or delete your information. The details of the entity responsible for processing data will be added once ECO ARCH provides them.",
+     "items": [],
+     "button": "Contact"
+    },
+    "imagesNote": "không ảnh.",
+    "effects": [
+     "A1",
+     "R5"
+    ]
+   }
+  ]
+ }
+}

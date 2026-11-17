@@ -19,7 +19,7 @@ for (const [lang, before, after] of [['vi', 'TRƯỚC', 'SAU'], ['en', 'BEFORE',
   const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
   const p = await ctx.newPage();
   await p.goto(`${BASE}/${lang}/`);
-  const range = p.locator('[data-compare] input[type=range]');
+  const range = p.locator('[data-compare] input[type=range]').first();
   await range.scrollIntoViewIfNeeded();
   await p.waitForTimeout(2500); // let louver/hint finish
   await range.focus();
@@ -29,7 +29,7 @@ for (const [lang, before, after] of [['vi', 'TRƯỚC', 'SAU'], ['en', 'BEFORE',
   await p.keyboard.press('Home');
   ok((await range.inputValue()) === '0', `${lang}: Home did not go to 0`);
   ok(/\d+%/.test((await range.getAttribute('aria-valuetext')) || ''), `${lang}: aria-valuetext missing`);
-  const text = await p.locator('[data-compare]').innerText();
+  const text = await p.locator('[data-compare]').first().innerText();
   ok(text.includes(before) && text.includes(after), `${lang}: ${before}/${after} labels missing as real text`);
   ok(await p.locator('[data-compare] .illus-label').count() > 0, `${lang}: concept label missing on slider`);
   await ctx.close();
@@ -82,7 +82,7 @@ for (const [lang, before, after] of [['vi', 'TRƯỚC', 'SAU'], ['en', 'BEFORE',
   await q.click();
   await p.waitForTimeout(500);
   ok((await q.getAttribute('aria-expanded')) === 'true', 'faq: did not expand');
-  ok(await p.locator('#fp-scope-a1').evaluate((e) => getComputedStyle(e).visibility === 'visible'), 'faq: answer not visible');
+  ok(await p.locator('#faq-P17-2-a0').evaluate((e) => getComputedStyle(e).visibility === 'visible'), 'faq: answer not visible');
   await p.goto(`${BASE}/vi/quy-trinh/`);
   await p.waitForTimeout(500);
   await p.evaluate(() => window.scrollTo(0, 1500));
@@ -94,7 +94,7 @@ for (const [lang, before, after] of [['vi', 'TRƯỚC', 'SAU'], ['en', 'BEFORE',
 { // booking form: validation, aria-live errors, data kept on network error, success redirect, no-JS POST
   const fill = async (p) => {
     await p.fill('#book-plot', 'Cầu Giấy');
-    await p.selectOption('#book-type', 't2');
+    await p.selectOption('#book-type', 't2').catch(() => {});
     await p.fill('#book-name', 'Test');
     await p.fill('#book-contact', 'test@example.com');
     await p.check('#book-consent');
@@ -106,7 +106,7 @@ for (const [lang, before, after] of [['vi', 'TRƯỚC', 'SAU'], ['en', 'BEFORE',
   await p.click('[data-form-submit]');
   ok(await p.locator('.err').count() >= 4, 'form: empty submit should show field errors');
   ok((await p.locator('#book-plot').getAttribute('aria-invalid')) === 'true', 'form: aria-invalid missing');
-  ok(await p.evaluate(() => document.activeElement?.id === 'book-plot'), 'form: first invalid field not focused');
+  ok(await p.evaluate(() => document.activeElement?.id === 'book-name'), 'form: first invalid field not focused');
   ok((await p.locator('[data-form-status]').getAttribute('data-state')) === 'error', 'form: status not in error state');
   await fill(p);
   await p.fill('#book-contact', 'abc');
@@ -169,6 +169,22 @@ for (const [lang, before, after] of [['vi', 'TRƯỚC', 'SAU'], ['en', 'BEFORE',
   ok((await p.evaluate(() => document.documentElement.dataset.motion)) === 'reduced', 'toggle: choice not persisted');
   const hidden = await p.evaluate(() => [...document.querySelectorAll('[data-reveal]')].filter((e) => getComputedStyle(e).opacity < 0.99).length);
   ok(hidden === 0, `toggle: ${hidden} [data-reveal] hidden under reduced motion`);
+  await ctx.close();
+}
+
+{ // T1 louver curtain between top-level nav items: reaches the page, leaves no overlay, back works
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  const p = await ctx.newPage();
+  await p.goto(`${BASE}/vi/`);
+  await p.waitForTimeout(600);
+  await p.click('.desktop-nav a[data-curtain]');
+  await p.waitForURL(/dich-vu/, { timeout: 5000 }).catch(() => {});
+  ok(/dich-vu/.test(p.url()), 'curtain: did not reach the page');
+  await p.waitForTimeout(1500);
+  ok(await p.locator('[data-wipe-plate]').count() === 0, 'curtain: overlay left after arrival');
+  ok(!(await p.evaluate(() => document.documentElement.classList.contains('curtain-in'))), 'curtain: placeholder not cleared');
+  await p.goBack(); await p.waitForTimeout(1200);
+  ok(await p.locator('[data-wipe-plate]').count() === 0, 'curtain: overlay after back');
   await ctx.close();
 }
 

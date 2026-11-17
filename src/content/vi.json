@@ -24,123 +24,28 @@
     "footerNav": "Liên kết chân trang",
     "copyright": "© ECO ARCH"
   },
-  "notFoundPage": {
-    "lead": "Trang này chưa tồn tại hoặc đã được chuyển.",
-    "home": "Về trang chủ",
-    "services": "Xem 3 gói dịch vụ",
-    "book": "Đặt lịch trao đổi về khu đất"
+  "nav": {
+    "services": "Dịch vụ",
+    "concepts": "Phương án",
+    "process": "Quy trình",
+    "insights": "Kiến thức",
+    "about": "Giới thiệu",
+    "faq": "Hỏi đáp",
+    "contact": "Liên hệ",
+    "privacy": "Chính sách bảo mật",
+    "book": "Đặt lịch"
   },
-  "pages": {
-    "services": {
-      "h1": "Ba gói thiết kế nhà ở",
-      "title": "Ba gói thiết kế nhà ở rõ phạm vi | ECO ARCH",
-      "description": "Chọn giữa thiết kế sơ bộ 2D, thiết kế ý tưởng 3D và thiết kế kiến trúc, nội thất hoàn chỉnh. Xem từng gói gồm gì rồi đặt lịch trao đổi với ECO ARCH."
-    },
-    "prelim": {
-      "h1": "Thiết kế sơ bộ (2D)",
-      "title": "Thiết kế sơ bộ 2D cho nhà hiện hữu | ECO ARCH",
-      "description": "Gói thiết kế sơ bộ: một phương án mặt bằng 2D cho nhà hiện hữu, kèm ghi chú công năng, nắng và thông gió. Phù hợp khi chưa cần phối cảnh."
-    },
-    "ideas": {
-      "h1": "Thiết kế ý tưởng (3D)",
-      "title": "Thiết kế ý tưởng 3D cho nhà cải tạo | ECO ARCH",
-      "description": "Gói thiết kế ý tưởng: mặt bằng, mặt đứng, mặt cắt và phối cảnh kiến trúc để hình dung nhà sau cải tạo. AI hỗ trợ hình ảnh, kiến trúc sư kiểm tra."
-    },
-    "complete": {
-      "h1": "Thiết kế kiến trúc và nội thất hoàn chỉnh",
-      "title": "Thiết kế kiến trúc và nội thất hoàn chỉnh | ECO ARCH",
-      "description": "Gói hoàn chỉnh: phương án thiết kế, phối cảnh kiến trúc và nội thất cùng hồ sơ chi tiết theo hợp đồng, phục vụ chuẩn bị thi công. Đặt lịch trao đổi."
-    },
-    "concepts": {
-      "h1": "Phương án thiết kế (hình minh họa)",
-      "title": "Phương án thiết kế nhà Hà Nội (minh họa) | ECO ARCH",
-      "description": "Các phương án minh họa cho nhà ống, nhà phố, biệt thự và căn hộ tại Hà Nội, có ảnh trước và sau. Là concept của ECO ARCH, chưa phải công trình thực tế."
-    },
-    "tubeHouse": {
-      "h1": "Nhà ống: giữ vòm, đổi ánh sáng",
-      "title": "Nhà ống Hà Nội: giữ vòm, đổi ánh sáng | ECO ARCH",
-      "description": "Phương án minh họa cho nhà ống Hà Nội: giữ vòm cổng và cầu thang cong, thay cách bố trí và ánh sáng. Concept của ECO ARCH, chưa phải công trình thực tế."
-    },
-    "townhouse": {
-      "h1": "Nhà phố: lam đứng và cửa xanh chàm",
-      "title": "Nhà phố Hà Nội: lam đứng và cửa xanh chàm | ECO ARCH",
-      "description": "Phương án minh họa cho mặt tiền nhà phố Hà Nội: lam đứng màu gạch cho cây leo, cổng xanh chàm, giữ ban công cũ. Concept của ECO ARCH."
-    },
-    "villa": {
-      "h1": "Biệt thự: phòng khách mở ra vườn",
-      "title": "Biệt thự: phòng khách mở ra vườn | ECO ARCH",
-      "description": "Phương án minh họa cho phòng khách biệt thự: giữ cột và cửa kính chia ô, đổi nội thất, rèm và sàn terrazzo để đón vườn. Concept của ECO ARCH."
-    },
-    "apartment": {
-      "h1": "Căn hộ: gỗ ấm, bố trí lại",
-      "title": "Căn hộ: gỗ ấm, bố trí lại | ECO ARCH",
-      "description": "Phương án minh họa cho căn hộ: bếp gỗ, ghế dài có ngăn chứa, bàn ăn gấp và vách trượt dùng linh hoạt. Concept của ECO ARCH, chưa phải công trình thực tế."
-    },
-    "about": {
-      "h1": "Vì sao mỗi lựa chọn thiết kế đều được giải thích",
-      "title": "Giới thiệu ECO ARCH | Thiết kế nhà ở tại Hà Nội",
-      "description": "ECO ARCH là đơn vị tư vấn thiết kế kiến trúc và cải tạo nhà ở tại Hà Nội. Tìm hiểu cách chúng tôi làm việc và người phụ trách chuyên môn."
-    },
-    "process": {
-      "h1": "Mười bước từ nhu cầu đến bàn giao",
-      "title": "Quy trình thiết kế nhà 10 bước | ECO ARCH",
-      "description": "Từ gửi nhu cầu, khảo sát, báo giá đến nghiệm thu và bàn giao: 10 bước làm việc với ECO ARCH, mỗi bước ghi rõ bạn làm gì và nhận gì."
-    },
-    "scope": {
-      "h1": "Biết trước phạm vi và hồ sơ bàn giao",
-      "title": "Phạm vi và hồ sơ bàn giao | ECO ARCH",
-      "description": "Biết trước bạn nhận biên bản khảo sát, bảng giải thích lựa chọn và danh mục hồ sơ nào, cùng cách xử lý thay đổi và nghiệm thu."
-    },
-    "insights": {
-      "h1": "Kiến thức thiết kế nhà ở",
-      "title": "Kiến thức thiết kế nhà ở Hà Nội | ECO ARCH",
-      "description": "Bài viết giải thích các quyết định thiết kế nhà ở: nắng, gió, bố trí, hồ sơ. Viết để chủ nhà hiểu và chuẩn bị trước khi làm việc với đơn vị thiết kế."
-    },
-    "readSunWind": {
-      "h1": "Đọc hướng nắng, gió trước khi vẽ mặt bằng",
-      "title": "Đọc hướng nắng, gió trước khi vẽ mặt bằng | ECO ARCH",
-      "description": "Nhà Hà Nội nóng, bí hay thiếu sáng thường bắt đầu từ mặt bằng. Cách đọc nắng và gió của khu đất trước khi quyết định bố trí không gian."
-    },
-    "prepareCall": {
-      "h1": "Chuẩn bị gì trước buổi trao đổi đầu tiên",
-      "title": "Chuẩn bị gì trước buổi trao đổi thiết kế đầu tiên",
-      "description": "Danh sách những thông tin và hình ảnh nên chuẩn bị trước khi trao đổi với đơn vị thiết kế, để buổi đầu tiên đi thẳng vào khu đất và nhu cầu của bạn."
-    },
-    "faq": {
-      "h1": "Hỏi đáp về thiết kế nhà ở",
-      "title": "Hỏi đáp về thiết kế nhà ở | ECO ARCH",
-      "description": "Câu trả lời về phạm vi, hồ sơ, chi phí, thi công và cách làm việc với ECO ARCH. Một nơi duy nhất để bạn kiểm tra trước khi đặt lịch trao đổi."
-    },
-    "book": {
-      "h1": "Đặt lịch trao đổi về khu đất",
-      "title": "Đặt lịch trao đổi về khu đất | ECO ARCH",
-      "description": "Gửi địa điểm, loại công trình và thời điểm dự kiến. ECO ARCH phản hồi trong vòng 24 giờ để xếp lịch trao đổi. Bạn chưa cần có bản vẽ."
-    },
-    "contact": {
-      "h1": "Liên hệ ECO ARCH",
-      "title": "Liên hệ ECO ARCH | Thiết kế nhà ở Hà Nội",
-      "description": "Thông tin liên hệ ECO ARCH. Cách nhanh nhất là gửi yêu cầu đặt lịch trao đổi, chúng tôi phản hồi trong vòng 24 giờ."
-    },
-    "privacy": {
-      "h1": "Chính sách bảo mật",
-      "title": "Chính sách bảo mật | ECO ARCH",
-      "description": "Cách ECO ARCH thu thập, sử dụng và bảo vệ dữ liệu cá nhân khi bạn gửi yêu cầu đặt lịch, và các quyền của bạn đối với dữ liệu."
-    },
-    "thanks": {
-      "h1": "Cảm ơn bạn đã gửi yêu cầu",
-      "title": "Cảm ơn bạn đã gửi yêu cầu | ECO ARCH",
-      "description": "Cảm ơn bạn đã gửi yêu cầu"
-    },
-    "notFound": {
-      "h1": "Không tìm thấy trang",
-      "title": "Không tìm thấy trang | ECO ARCH",
-      "description": "Không tìm thấy trang"
-    },
-    "home": {
-      "title": "ECO ARCH | Thiết kế và cải tạo nhà ở tại Hà Nội",
-      "description": "ECO ARCH tư vấn thiết kế kiến trúc và cải tạo nhà ở tại Hà Nội. Phương án giải thích rõ nắng gió, vật liệu, phạm vi hồ sơ. Đặt lịch trao đổi về khu đất.",
-      "h1": "Thiết kế nhà ở Hà Nội, giải thích rõ từng lựa chọn"
-    }
+  "breadcrumb": {
+    "label": "Đường dẫn trang"
+  },
+  "compare": {
+    "before": "TRƯỚC",
+    "after": "SAU",
+    "aria": "So sánh hiện trạng và phương án minh họa. Dùng phím mũi tên trái phải để chọn phần hiển thị.",
+    "valueText": "Ảnh SAU hiển thị {n}%",
+    "showBefore": "Xem TRƯỚC",
+    "showAfter": "Xem SAU",
+    "drag": "Kéo"
   },
   "alt": {
     "ex01Before": "Hành lang nhà ống hiện trạng có vòm cổng, cầu thang cong và quạt trần cũ",
@@ -159,119 +64,10 @@
     "ex08Composite": "Phòng khách nhà ống trước và sau cải tạo, ảnh ghép hai nửa",
     "ex09Before": "Nhà cấp 4 mái ngói có sân rộng và cây lớn, hiện trạng",
     "ex08Before": "Phòng khách nhà ống hiện trạng: tường ố, sàn gạch hoa, cầu thang và bộ bàn ghế cũ",
-    "ex08After": "Phương án minh họa phòng khách nhà ống: tường sáng, đèn âm trần, vách lam gỗ, ghế dài có ngăn chứa"
-  },
-  "nav": {
-    "services": "Dịch vụ",
-    "concepts": "Phương án",
-    "process": "Quy trình",
-    "insights": "Kiến thức",
-    "about": "Giới thiệu",
-    "faq": "Hỏi đáp",
-    "contact": "Liên hệ",
-    "privacy": "Chính sách bảo mật",
-    "book": "Đặt lịch"
-  },
-  "hero": {
-    "eyebrow": "Tư vấn thiết kế nhà ở tại Hà Nội",
-    "body": "ECO ARCH tư vấn thiết kế kiến trúc, nội thất và cải tạo nhà ở. Chúng tôi đọc nắng, gió và khu đất trước khi vẽ mặt bằng, rồi giải thích từng lựa chọn bằng hồ sơ rõ phạm vi. Chúng tôi không thi công."
-  },
-  "compare": {
-    "before": "TRƯỚC",
-    "after": "SAU",
-    "aria": "So sánh hiện trạng và phương án minh họa. Dùng phím mũi tên trái phải để chọn phần hiển thị.",
-    "valueText": "Ảnh SAU hiển thị {n}%",
-    "showBefore": "Xem TRƯỚC",
-    "showAfter": "Xem SAU",
-    "drag": "Kéo"
-  },
-  "home": {
-    "concepts": {
-      "h2": "Xem cách một ngôi nhà thay đổi (hình minh họa)",
-      "lead": "Bốn phương án minh họa do ECO ARCH dựng làm concept. Kéo thanh trượt để so sánh hiện trạng với hướng thiết kế.",
-      "all": "Xem tất cả phương án",
-      "pairLabel": "Nhà phố, mặt tiền: hiện trạng và phương án minh họa",
-      "card": {
-        "tubeHouse": "Giữ vòm cổng và cầu thang cong, đổi trần gỗ ấm và ánh sáng.",
-        "townhouse": "Lam đứng màu gạch cho cây leo, cổng xanh chàm, giữ ban công cũ.",
-        "villa": "Giữ cột và cửa gỗ, nội thất sáng màu và sàn terrazzo.",
-        "apartment": "Bếp gỗ được bố trí lại với ghế dài có ngăn chứa, bàn ăn gấp và vách trượt."
-      }
-    },
-    "plot": {
-      "h2": "Nhà dễ ở bắt đầu từ việc đọc đúng khu đất",
-      "lead": "Trước khi vẽ mặt bằng, ECO ARCH đọc nắng, gió và ánh sáng của khu đất. Phân tích nắng gió có trong cả ba gói.",
-      "p1t": "Nắng và gió",
-      "p1": "Hướng nắng, hướng gió và thông gió tự nhiên được đọc trước khi bố trí phòng.",
-      "p2t": "Ánh sáng tự nhiên",
-      "p2": "Chiếu sáng tự nhiên và chống nóng là cơ sở để chọn vị trí cửa, giếng trời và lam che.",
-      "p3t": "Vật liệu bền, dễ bảo trì",
-      "p3": "Vật liệu được chọn để bền và dễ bảo trì, kèm bảng giải thích vì sao chọn phương án đó.",
-      "diagLabel": "Sơ đồ minh họa cách đọc nắng và gió trên một mặt bằng nhà ống",
-      "sun": "Nắng chiều",
-      "wind": "Gió",
-      "well": "Giếng trời",
-      "front": "Mặt tiền",
-      "back": "Phía sau"
-    },
-    "packages": {
-      "h2": "Ba gói, mỗi gói nói rõ bạn nhận gì",
-      "lead": "Giá tính theo m² diện tích thiết kế. Tư vấn ban đầu miễn phí.",
-      "caption": "Ảnh minh họa cho từng gói, không phải công trình thực tế.",
-      "separate": "Thi công, vật tư và đồ nội thất báo giá riêng.",
-      "perM2": "đ/m²",
-      "prelim": "Một phương án mặt bằng 2D bố trí lại nhà hiện hữu, kèm ghi chú công năng, nắng và thông gió.",
-      "ideas": "Mặt bằng, mặt đứng, mặt cắt và phối cảnh kiến trúc giúp hình dung không gian sau cải tạo.",
-      "complete": "Kiến trúc và nội thất đồng bộ: bố trí, vật liệu, ánh sáng, phối cảnh và hồ sơ chi tiết theo hợp đồng.",
-      "artPrelim": "Hình minh họa mặt bằng 2D của một căn hộ nhỏ",
-      "artIdeas": "Hình minh họa mô hình 3D cắt lớp của một ngôi nhà hai tầng",
-      "artComplete": "Hình minh họa phòng khách và ăn với sofa cong, ghế đẩu gỗ và rèm mỏng"
-    },
-    "process": {
-      "h2": "Biết trước từng bước làm việc",
-      "lead": "Mười bước làm việc được gom thành bốn chặng.",
-      "all": "Xem quy trình 10 bước",
-      "steps": "Bước",
-      "s1t": "Gửi nhu cầu",
-      "s1": "Bạn gửi địa điểm, loại công trình và thời điểm. Buổi trao đổi đầu tiên miễn phí.",
-      "s2t": "Khảo sát và báo giá",
-      "s2": "ECO ARCH khảo sát hiện trạng, báo giá theo diện tích thiết kế và hai bên ký hợp đồng.",
-      "s3t": "Thiết kế",
-      "s3": "Đọc nắng gió, lập phương án, giải thích từng lựa chọn và hoàn thiện hồ sơ theo gói.",
-      "s4t": "Bàn giao",
-      "s4": "Bàn giao hồ sơ và nghiệm thu. Không mặc nhiên coi im lặng là đã nghiệm thu."
-    },
-    "scope": {
-      "h2": "Biết trước bạn nhận hồ sơ nào, và đâu là ranh giới",
-      "lead": "ECO ARCH là đơn vị tư vấn thiết kế. Phạm vi và hồ sơ được nói rõ trước khi ký hợp đồng.",
-      "getT": "Bạn nhận",
-      "get1": "Biên bản khảo sát hiện trạng",
-      "get2": "Bảng giải thích vì sao chọn phương án",
-      "get3": "Danh mục hồ sơ theo gói bạn chọn",
-      "limitT": "Ranh giới",
-      "limit1": "ECO ARCH không thi công.",
-      "limit2": "Thi công, vật tư và đồ nội thất báo giá riêng.",
-      "limit3": "Thay đổi trong quá trình làm việc được xử lý theo hợp đồng.",
-      "all": "Xem phạm vi và hồ sơ bàn giao"
-    },
-    "faq": {
-      "h2": "Câu hỏi thường gặp",
-      "all": "Xem tất cả hỏi đáp",
-      "q1": "ECO ARCH làm những gì?",
-      "a1": "ECO ARCH tư vấn thiết kế kiến trúc, nội thất và cải tạo nhà ở tại Hà Nội theo ba gói: thiết kế sơ bộ 2D, thiết kế ý tưởng 3D, và thiết kế kiến trúc và nội thất hoàn chỉnh.",
-      "q2": "ECO ARCH có thi công không?",
-      "a2": "Không. ECO ARCH chỉ tư vấn và thiết kế. Thi công, vật tư và đồ nội thất báo giá riêng.",
-      "q3": "Chi phí tính thế nào?",
-      "a3": "Phí thiết kế tính theo m² diện tích thiết kế ghi trong hợp đồng: Gói 1 là 100.000 đ/m², Gói 2 là 220.000 đ/m², Gói 3 là 340.000 đ/m². Tư vấn ban đầu miễn phí. Thi công, vật tư và đồ nội thất báo giá riêng.",
-      "q4": "Bao lâu thì tôi nhận được phản hồi?",
-      "a4": "Sau khi bạn gửi yêu cầu đặt lịch, ECO ARCH phản hồi trong 24 giờ để xếp lịch trao đổi.",
-      "q5": "Tôi cần chuẩn bị gì trước buổi trao đổi?",
-      "a5": "Địa điểm khu đất, loại công trình, thời điểm bạn muốn bắt đầu và vài ảnh hiện trạng nếu có. Bạn chưa cần có bản vẽ."
-    },
-    "cta": {
-      "h2": "Gửi khu đất, chúng tôi phản hồi trong 24 giờ",
-      "lead": "Chỉ cần địa điểm, loại công trình và cách liên hệ. Bạn chưa cần có bản vẽ."
-    }
+    "ex08After": "Phương án minh họa phòng khách nhà ống: tường sáng, đèn âm trần, vách lam gỗ, ghế dài có ngăn chứa",
+    "artPlan": "Hình minh họa mặt bằng 2D của một căn hộ nhỏ",
+    "artCutaway": "Hình minh họa mô hình 3D cắt lớp của một ngôi nhà hai tầng",
+    "artInterior": "Hình minh họa phòng khách và ăn với sofa cong, ghế đẩu gỗ và rèm mỏng"
   },
   "form": {
     "plot": "Địa điểm khu đất (quận, phường hoặc địa chỉ)",
@@ -307,352 +103,15 @@
     "errConsent": "Vui lòng xác nhận bạn đã đọc Chính sách bảo mật.",
     "errSummary": "Vui lòng kiểm tra {n} mục bên dưới.",
     "errNetwork": "Chưa gửi được yêu cầu. Dữ liệu bạn nhập vẫn còn, hãy thử lại sau ít phút.",
-    "okSent": "Đã gửi yêu cầu. Đang chuyển sang trang cảm ơn."
-  },
-  "breadcrumb": {
-    "label": "Đường dẫn trang"
-  },
-  "ctaBand": {
-    "h2": "Gửi khu đất, chúng tôi phản hồi trong 24 giờ"
-  },
-  "services": {
-    "lead": "ECO ARCH có đúng ba gói thiết kế. Phân tích nắng gió có trong cả ba gói. Giá tính theo m² diện tích thiết kế, tư vấn ban đầu miễn phí.",
-    "pkgLabel": "Gói",
-    "tableT": "Bảng giá theo m²",
-    "colPkg": "Gói",
-    "colPrice": "Giá",
-    "colGets": "Bạn nhận",
-    "g1": "Một phương án mặt bằng 2D; ghi chú công năng, nắng và thông gió",
-    "g2": "Mặt bằng, mặt đứng, mặt cắt; phối cảnh kiến trúc",
-    "g3": "Kiến trúc và nội thất đồng bộ; bố trí, vật liệu, ánh sáng và phối cảnh",
-    "feeT": "Cách tính phí",
-    "fee1": "Phí thiết kế bằng đơn giá của gói nhân với diện tích thiết kế ghi trong hợp đồng.",
-    "fee2": "Tư vấn ban đầu miễn phí.",
-    "fee3": "Thi công, vật tư và đồ nội thất báo giá riêng. ECO ARCH không thi công.",
-    "compareT": "So sánh ba gói",
-    "colFeature": "Hạng mục",
-    "f1": "Phân tích nắng gió",
-    "f2": "Mặt bằng",
-    "f3": "Mặt đứng và mặt cắt",
-    "f4": "Phối cảnh kiến trúc",
-    "f5": "Kiến trúc và nội thất đồng bộ",
-    "f6": "Hồ sơ chi tiết theo hợp đồng (kết cấu, điện, cấp thoát nước)",
-    "f7": "MEP chuyên sâu",
-    "f8": "Thi công, vật tư, đồ nội thất",
-    "v": {
-      "yes": "Có",
-      "no": "Không",
-      "one": "Có, một phương án 2D",
-      "custom": "Theo yêu cầu riêng",
-      "quote": "Không, báo giá riêng"
-    },
-    "chooseT": "Chọn gói nào?",
-    "c1q": "Tôi muốn bố trí lại mặt bằng nhà hiện hữu",
-    "c1a": "Gói 1 phù hợp: một phương án mặt bằng 2D kèm ghi chú nắng và thông gió.",
-    "c2q": "Tôi muốn hình dung ngôi nhà sau cải tạo",
-    "c2a": "Gói 2 phù hợp: mặt bằng, mặt đứng, mặt cắt và phối cảnh kiến trúc.",
-    "c3q": "Tôi cần kiến trúc, nội thất và hồ sơ để chuẩn bị thi công",
-    "c3a": "Gói 3 phù hợp: trọn Gói 1 và Gói 2, cộng kiến trúc và nội thất đồng bộ cùng hồ sơ chi tiết theo hợp đồng.",
-    "faqT": "Hỏi nhanh",
-    "faq": {
-      "q1": "Chi phí tính thế nào?",
-      "a1": "Theo m² diện tích thiết kế ghi trong hợp đồng: Gói 1 là 100.000 đ/m², Gói 2 là 220.000 đ/m², Gói 3 là 340.000 đ/m². Tư vấn ban đầu miễn phí.",
-      "q2": "ECO ARCH có thi công không?",
-      "a2": "Không. ECO ARCH chỉ tư vấn và thiết kế. Thi công, vật tư và đồ nội thất báo giá riêng.",
-      "q3": "Nếu chưa chắc chọn gói nào?",
-      "a3": "Hãy đặt lịch trao đổi. Buổi trao đổi đầu tiên miễn phí và giúp bạn chọn gói phù hợp."
-    }
-  },
-  "pkg": {
-    "getT": "Bạn nhận",
-    "fitT": "Phù hợp khi",
-    "notT": "Không gồm",
-    "workT": "Cách làm việc",
-    "workP": "Mọi gói đi theo cùng một quy trình làm việc. Xem các bước và hồ sơ bàn giao ở trang Quy trình.",
-    "workLink": "Xem quy trình 10 bước",
-    "priceNote": "Giá tính theo m² diện tích thiết kế ghi trong hợp đồng. Tư vấn ban đầu miễn phí.",
-    "conceptT": "Ví dụ minh họa trước và sau",
-    "othersT": "Các gói khác",
-    "faqT": "Hỏi nhanh",
-    "prelim": {
-      "lead": "Một phương án mặt bằng 2D bố trí lại nhà hiện hữu, kèm ghi chú về công năng, nắng và thông gió.",
-      "g1": "Một phương án mặt bằng 2D cho nhà hiện hữu",
-      "g2": "Ghi chú công năng của từng khu vực",
-      "g3": "Ghi chú về nắng và thông gió",
-      "fit": "Bạn muốn bố trí lại mặt bằng trước và chưa cần phối cảnh 3D.",
-      "n1": "Mặt đứng, mặt cắt và phối cảnh (có trong Gói 2)",
-      "n2": "Thiết kế nội thất và hồ sơ chi tiết (có trong Gói 3)",
-      "n3": "Thi công, vật tư và đồ nội thất: báo giá riêng",
-      "pairLabel": "Nhà ống: hiện trạng và phương án minh họa",
-      "q1": "Gói 1 có phối cảnh 3D không?",
-      "a1": "Không. Gói 1 gồm một phương án mặt bằng 2D. Nếu cần mặt đứng, mặt cắt và phối cảnh, xem Gói 2.",
-      "q2": "Giá Gói 1 tính thế nào?",
-      "a2": "100.000 đ/m² diện tích thiết kế ghi trong hợp đồng. Tư vấn ban đầu miễn phí.",
-      "q3": "ECO ARCH có thi công không?",
-      "a3": "Không. ECO ARCH chỉ tư vấn và thiết kế. Thi công, vật tư và đồ nội thất báo giá riêng."
-    },
-    "ideas": {
-      "lead": "Mặt bằng, mặt đứng, mặt cắt và phối cảnh kiến trúc giúp bạn hình dung không gian sau cải tạo.",
-      "g1": "Mặt bằng",
-      "g2": "Mặt đứng và mặt cắt",
-      "g3": "Phối cảnh kiến trúc",
-      "g4": "Phân tích nắng gió",
-      "fit": "Bạn muốn nhìn thấy ngôi nhà sau cải tạo trước khi quyết định hướng thiết kế.",
-      "ai": "Hình ý tưởng có thể được tạo với sự hỗ trợ của AI. Người có chuyên môn kiểm tra tính hợp lý. Đây là hình concept, chưa phải công trình thực tế.",
-      "n1": "Kiến trúc và nội thất đồng bộ cùng hồ sơ chi tiết (có trong Gói 3)",
-      "n2": "Thi công, vật tư và đồ nội thất: báo giá riêng",
-      "pairLabel": "Căn hộ: hiện trạng và phương án minh họa",
-      "q1": "Hình ý tưởng 3D được tạo thế nào?",
-      "a1": "Hình ý tưởng có thể được tạo với sự hỗ trợ của AI. Người có chuyên môn kiểm tra tính hợp lý. Đây là hình concept, chưa phải công trình thực tế.",
-      "q2": "Giá Gói 2 tính thế nào?",
-      "a2": "220.000 đ/m² diện tích thiết kế ghi trong hợp đồng. Tư vấn ban đầu miễn phí.",
-      "q3": "ECO ARCH có thi công không?",
-      "a3": "Không. ECO ARCH chỉ tư vấn và thiết kế. Thi công, vật tư và đồ nội thất báo giá riêng."
-    },
-    "complete": {
-      "lead": "Kiến trúc và nội thất đồng bộ: bố trí, vật liệu, ánh sáng và phối cảnh, kèm hồ sơ chi tiết theo hợp đồng để chuẩn bị thi công.",
-      "g1": "Trọn Gói 1 và Gói 2",
-      "g2": "Kiến trúc và nội thất đồng bộ",
-      "g3": "Bố trí, vật liệu, ánh sáng và phối cảnh",
-      "g4": "Hồ sơ chi tiết theo hợp đồng, gồm kết cấu, điện, cấp thoát nước",
-      "fit": "Bạn cần một bộ thiết kế đầy đủ để chuẩn bị thi công.",
-      "n1": "Thi công, vật tư và đồ nội thất: ECO ARCH không thi công, báo giá riêng",
-      "n2": "MEP chuyên sâu: nhận theo yêu cầu riêng",
-      "pairLabel": "Biệt thự: hiện trạng và phương án minh họa",
-      "q1": "Gói 3 có gồm Gói 1 và Gói 2 không?",
-      "a1": "Có. Gói 3 gồm trọn Gói 1 và Gói 2, cộng kiến trúc và nội thất đồng bộ cùng hồ sơ chi tiết theo hợp đồng.",
-      "q2": "MEP chuyên sâu có trong giá không?",
-      "a2": "Kết cấu, điện, cấp thoát nước nằm trong hồ sơ chi tiết của Gói 3. MEP chuyên sâu nhận theo yêu cầu riêng.",
-      "q3": "Giá Gói 3 tính thế nào?",
-      "a3": "340.000 đ/m² diện tích thiết kế ghi trong hợp đồng. Tư vấn ban đầu miễn phí."
-    }
-  },
-  "concepts": {
-    "lead": "Bốn loại nhà, mỗi loại có cặp hình trước và sau. Đây là phương án minh họa do ECO ARCH dựng làm concept để bạn hình dung hướng thiết kế.",
-    "noteT": "Khác biệt giữa phương án và công trình thực tế",
-    "note": "Các hình thể hiện hướng thiết kế, không phải công trình đã thi công. ECO ARCH không thi công.",
-    "typesT": "Bốn loại nhà",
-    "galleryT": "Thư viện hình minh họa",
-    "open": "Xem ảnh lớn",
-    "lbLabel": "Xem ảnh minh họa",
-    "lbClose": "Đóng",
-    "lbPrev": "Ảnh trước",
-    "lbNext": "Ảnh kế tiếp",
-    "lbCount": "{n} trên {total}"
-  },
-  "concept": {
-    "pairsT": "Hình trước và sau",
-    "pairLabel": "Cặp ảnh {n}: hiện trạng và phương án minh họa",
-    "keepT": "Giữ gì",
-    "changeT": "Đổi gì",
-    "whyT": "Vì sao",
-    "fitT": "Gói phù hợp",
-    "moreT": "Phương án khác",
-    "tubeHouse": {
-      "lead": "Nhà ống thường dài, hẹp và dễ thiếu sáng ở giữa nhà. Phương án giữ vòm cổng và cầu thang cong, đổi trần gỗ ấm, đồ nội thất và ánh sáng.",
-      "keep": "Vòm cổng, cầu thang và bố cục dài của nhà ống.",
-      "change": "Trần gỗ ấm, đèn hắt trần, sofa và thảm; ở một phương án có thêm giếng trời.",
-      "why": "Để giữ nét quen thuộc của ngôi nhà, đồng thời đưa ánh sáng tự nhiên và cảm giác ấm vào không gian ở.",
-      "fit": "Gói 2 để xem phương án trước khi quyết định. Gói 3 khi cần nội thất đồng bộ và hồ sơ chi tiết theo hợp đồng."
-    },
-    "townhouse": {
-      "lead": "Mặt tiền nhà phố hiện trạng màu vàng cũ. Phương án dùng lam đứng màu gạch cho cây leo, cổng xanh chàm và giữ ban công cũ.",
-      "keep": "Ban công cũ và bố cục mặt tiền.",
-      "change": "Lam đứng màu gạch cho cây leo và cổng xanh chàm.",
-      "why": "Để mặt tiền có lớp che nắng và cây xanh, đổi diện mạo trong khi vẫn giữ ban công cũ.",
-      "fit": "Gói 2 để xem phương án trước khi quyết định. Gói 3 khi cần nội thất đồng bộ và hồ sơ chi tiết theo hợp đồng."
-    },
-    "villa": {
-      "lead": "Phòng khách biệt thự có cột, tủ gỗ tối và đèn chùm. Phương án giữ cột và cửa, đổi sang nội thất sáng màu và sàn terrazzo, mở phòng khách ra vườn.",
-      "keep": "Cột và cửa gỗ.",
-      "change": "Nội thất sáng màu, sàn terrazzo và bố cục mở ra vườn.",
-      "why": "Để phòng khách sáng hơn và nhìn ra vườn rõ hơn.",
-      "fit": "Gói 2 để xem phương án trước khi quyết định. Gói 3 khi cần nội thất đồng bộ và hồ sơ chi tiết theo hợp đồng."
-    },
-    "apartment": {
-      "lead": "Căn hộ có bếp gỗ cũ và tủ lạnh đặt sát lối đi. Phương án bố trí lại với ghế dài có ngăn chứa, bàn ăn gấp và vách trượt.",
-      "keep": "Gỗ ấm của bếp và tủ.",
-      "change": "Bố trí lại với ghế dài có ngăn chứa, bàn ăn gấp và vách trượt.",
-      "why": "Để căn hộ nhỏ có thêm chỗ chứa đồ và dùng linh hoạt hơn.",
-      "fit": "Gói 2 để xem phương án trước khi quyết định. Gói 3 khi cần nội thất đồng bộ và hồ sơ chi tiết theo hợp đồng."
-    }
-  },
-  "about": {
-    "lead": "ECO ARCH là đơn vị tư vấn thiết kế kiến trúc, nội thất và cải tạo nhà ở tại Hà Nội, theo hướng sinh thái. Chúng tôi không thi công.",
-    "doT": "Chúng tôi làm gì",
-    "doP": "Chúng tôi tư vấn và thiết kế cho nhà phố, nhà ống, nhà mặt đất, biệt thự, căn hộ chung cư, dãy trọ và văn phòng nhỏ, theo ba gói rõ phạm vi và rõ giá theo m².",
-    "howT": "Cách chúng tôi làm việc",
-    "h1t": "Đọc khu đất trước khi vẽ",
-    "h1": "Nắng, gió và ánh sáng tự nhiên được phân tích trước khi bố trí mặt bằng. Việc này có trong cả ba gói.",
-    "h2t": "Giải thích từng lựa chọn",
-    "h2": "Mỗi quyết định thiết kế đi kèm một bảng giải thích vì sao chọn phương án đó, để bạn quyết định có căn cứ.",
-    "h3t": "Vật liệu bền, dễ bảo trì",
-    "h3": "Vật liệu được chọn để bền và dễ bảo trì, thay vì chỉ để đẹp trên hình.",
-    "h4t": "Phạm vi rõ ràng",
-    "h4": "Bạn biết trước mình nhận hồ sơ nào, và đâu là ranh giới của ECO ARCH.",
-    "limitT": "Ranh giới",
-    "limitP": "ECO ARCH không thi công. Thi công, vật tư và đồ nội thất báo giá riêng."
-  },
-  "process": {
-    "lead": "Mười bước từ lúc bạn gửi nhu cầu đến khi nhận hồ sơ. Mỗi bước ghi rõ bạn làm gì và nhận gì.",
-    "planLabel": "Sơ đồ mặt bằng được vẽ dần theo từng bước",
-    "youDo": "Bạn làm",
-    "youGet": "Bạn nhận",
-    "step": "Bước",
-    "s1t": "Gửi nhu cầu",
-    "s1d": "Gửi địa điểm, loại công trình và thời điểm dự kiến.",
-    "s1g": "Xác nhận đã nhận yêu cầu; ECO ARCH phản hồi trong 24 giờ.",
-    "s2t": "Trao đổi ban đầu",
-    "s2d": "Kể về ngôi nhà, cách bạn sống và điều bạn lo ngại.",
-    "s2g": "Buổi trao đổi miễn phí và gợi ý gói phù hợp.",
-    "s3t": "Khảo sát hiện trạng",
-    "s3d": "Cho phép khảo sát và gửi thông tin, ảnh bạn đang có.",
-    "s3g": "Biên bản khảo sát hiện trạng.",
-    "s4t": "Báo giá",
-    "s4d": "Xác nhận gói và diện tích thiết kế.",
-    "s4g": "Báo giá theo m² diện tích thiết kế.",
-    "s5t": "Ký hợp đồng",
-    "s5d": "Đọc và ký hợp đồng.",
-    "s5g": "Hợp đồng ghi rõ gói, diện tích thiết kế và hồ sơ bàn giao.",
-    "s6t": "Đọc khu đất",
-    "s6d": "Trả lời các câu hỏi về cách bạn ở và dùng nhà.",
-    "s6g": "Phân tích nắng, gió và ánh sáng tự nhiên, có trong cả ba gói.",
-    "s7t": "Lập phương án",
-    "s7d": "Xem phương án và góp ý theo hướng thiết kế.",
-    "s7g": "Phương án theo gói bạn chọn.",
-    "s8t": "Giải thích lựa chọn",
-    "s8d": "Đọc bảng giải thích và hỏi lại điều chưa rõ.",
-    "s8g": "Bảng giải thích vì sao chọn phương án.",
-    "s9t": "Hoàn thiện và bàn giao hồ sơ",
-    "s9d": "Kiểm tra hồ sơ được bàn giao.",
-    "s9g": "Danh mục hồ sơ theo gói bạn chọn.",
-    "s10t": "Nghiệm thu",
-    "s10d": "Xác nhận nghiệm thu bằng văn bản.",
-    "s10g": "Biên bản nghiệm thu. Im lặng không mặc nhiên được coi là đã nghiệm thu."
-  },
-  "scopePage": {
-    "lead": "Biết trước bạn nhận hồ sơ nào, và đâu là ranh giới của ECO ARCH, trước khi ký hợp đồng.",
-    "getT": "Hồ sơ bạn nhận",
-    "g1": "Biên bản khảo sát hiện trạng",
-    "g2": "Bảng giải thích vì sao chọn phương án",
-    "g3": "Danh mục hồ sơ theo gói bạn chọn, ghi trong hợp đồng",
-    "pkgT": "Theo từng gói",
-    "p1": "Gói 1: một phương án mặt bằng 2D, ghi chú công năng, nắng và thông gió.",
-    "p2": "Gói 2: mặt bằng, mặt đứng, mặt cắt và phối cảnh kiến trúc.",
-    "p3": "Gói 3: trọn Gói 1 và Gói 2, kiến trúc và nội thất đồng bộ, hồ sơ chi tiết theo hợp đồng gồm kết cấu, điện, cấp thoát nước.",
-    "pkgLink": "So sánh ba gói",
-    "changeT": "Khi có thay đổi",
-    "changeP": "Thay đổi trong quá trình làm việc được xử lý theo hợp đồng đã ký.",
-    "acceptT": "Nghiệm thu",
-    "acceptP": "Nghiệm thu được xác nhận bằng văn bản. Im lặng không mặc nhiên được coi là đã nghiệm thu.",
-    "limitT": "Ranh giới",
-    "l1": "ECO ARCH không thi công.",
-    "l2": "Thi công, vật tư và đồ nội thất báo giá riêng.",
-    "l3": "MEP chuyên sâu nhận theo yêu cầu riêng."
-  },
-  "insights": {
-    "lead": "Hai bài viết thực tế giúp bạn hiểu nhà mình trước khi nói chuyện với người thiết kế.",
-    "read": "Đọc bài viết",
-    "a1": "Đọc hướng nắng, gió trước khi vẽ mặt bằng",
-    "a1s": "Cách quan sát nắng và gió trên khu đất trước khi bố trí phòng.",
-    "a2": "Chuẩn bị gì trước buổi trao đổi thiết kế đầu tiên",
-    "a2s": "Danh sách thông tin và hình ảnh nên chuẩn bị. Bạn chưa cần có bản vẽ."
-  },
-  "article": {
-    "back": "Tất cả bài viết",
-    "nextT": "Bài viết khác",
-    "sun": {
-      "lead": "Nhà nóng, bí hoặc thiếu sáng thường bắt đầu từ mặt bằng. Đọc nắng và gió của khu đất trước khi vẽ giúp đặt đúng phòng, cửa và lớp che.",
-      "s1t": "1. Xác định hướng của khu đất",
-      "s1p": "Biết mặt tiền quay về hướng nào, và các mặt còn lại tiếp giáp với gì: nhà bên cạnh, hẻm, khoảng trống hay cây lớn.",
-      "s2t": "2. Quan sát nắng ở nhiều thời điểm",
-      "s2p": "Đến khu đất vào buổi sáng, trưa và chiều. Ghi lại chỗ nào có nắng, chỗ nào bị che bởi nhà bên cạnh hoặc cây, và nắng chiều đi vào nhà ở đâu.",
-      "s3t": "3. Tìm đường gió vào và ra",
-      "s3p": "Nhà thông thoáng cần chỗ gió vào và chỗ gió ra. Thường là cửa trước, giếng trời hoặc khoảng thông tầng và cửa phía sau. Nhà ống dài đặc biệt cần điều này.",
-      "s4t": "4. Đặt phòng theo nắng và gió",
-      "s4p": "Phòng ở lâu nên có ánh sáng tự nhiên và thông gió. Khu phụ, kho, cầu thang có thể nằm ở phía chịu nắng gắt.",
-      "s5t": "5. Chọn lớp che nắng",
-      "s5p": "Lam đứng, mái hiên, cây xanh hoặc vách đặc có thể che nắng mà vẫn cho gió đi qua. Chọn theo từng mặt nhà, không dùng một giải pháp cho cả nhà.",
-      "noteT": "Bài viết này không hứa gì về con số",
-      "noteP": "Chúng tôi không đưa ra con số tiết kiệm hay một mức nhiệt cụ thể. Đây là cách quan sát để thiết kế có căn cứ. Phân tích nắng gió có trong cả ba gói của ECO ARCH."
-    },
-    "call": {
-      "lead": "Buổi trao đổi đầu tiên miễn phí và ngắn gọn hơn khi bạn chuẩn bị vài thông tin. Bạn chưa cần có bản vẽ.",
-      "s1t": "Địa điểm khu đất",
-      "s1p": "Quận, phường hoặc địa chỉ. Chưa cần địa chỉ đầy đủ.",
-      "s2t": "Ảnh khu đất hoặc ngôi nhà",
-      "s2p": "Vài ảnh chụp từ ngoài vào trong và các mặt tiếp giáp nếu có.",
-      "s3t": "Nhu cầu của bạn",
-      "s3p": "Loại công trình, ai ở, bao nhiêu người, bạn thích và chưa thích gì ở ngôi nhà hiện tại.",
-      "s4t": "Thời điểm dự kiến",
-      "s4p": "Khi nào bạn muốn bắt đầu. Chưa chắc cũng không sao.",
-      "s5t": "Sau khi gửi yêu cầu",
-      "s5p": "ECO ARCH phản hồi trong 24 giờ để xếp lịch trao đổi."
-    }
-  },
-  "faqPage": {
-    "lead": "Câu trả lời về phạm vi, hồ sơ, chi phí, thi công và cách làm việc với ECO ARCH.",
-    "scopeT": "Phạm vi",
-    "costT": "Chi phí",
-    "flowT": "Quy trình và thời gian",
-    "docsT": "Hồ sơ",
-    "prepT": "Chuẩn bị",
-    "scope": {
-      "q1": "ECO ARCH làm những gì?",
-      "a1": "ECO ARCH tư vấn thiết kế kiến trúc, nội thất và cải tạo nhà ở tại Hà Nội theo ba gói: thiết kế sơ bộ 2D, thiết kế ý tưởng 3D, và thiết kế kiến trúc và nội thất hoàn chỉnh.",
-      "q2": "ECO ARCH có thi công không?",
-      "a2": "Không. ECO ARCH chỉ tư vấn và thiết kế. Thi công, vật tư và đồ nội thất báo giá riêng.",
-      "q3": "ECO ARCH nhận những loại công trình nào?",
-      "a3": "Nhà phố, nhà ống, nhà mặt đất, biệt thự, căn hộ chung cư, dãy trọ và văn phòng nhỏ. Bảng giá hiện công bố cho thiết kế cải tạo nhà ở; với nhà xây mới, hãy đặt lịch trao đổi để được tư vấn."
-    },
-    "cost": {
-      "q1": "Chi phí thiết kế tính thế nào?",
-      "a1": "Theo m² diện tích thiết kế ghi trong hợp đồng: Gói 1 là 100.000 đ/m², Gói 2 là 220.000 đ/m², Gói 3 là 340.000 đ/m².",
-      "q2": "Tư vấn ban đầu có mất phí không?",
-      "a2": "Không. Tư vấn ban đầu miễn phí.",
-      "q3": "Thi công và vật tư có trong giá thiết kế không?",
-      "a3": "Không. Thi công, vật tư và đồ nội thất báo giá riêng."
-    },
-    "flow": {
-      "q1": "Bao lâu thì tôi nhận được phản hồi?",
-      "a1": "Sau khi bạn gửi yêu cầu đặt lịch, ECO ARCH phản hồi trong 24 giờ để xếp lịch trao đổi.",
-      "q2": "Quy trình gồm những bước nào?",
-      "a2": "Mười bước, từ gửi nhu cầu, trao đổi, khảo sát, báo giá, ký hợp đồng, thiết kế đến bàn giao và nghiệm thu. Xem chi tiết ở trang Quy trình.",
-      "q3": "Khi nào hồ sơ được coi là đã nghiệm thu?",
-      "a3": "Khi bạn xác nhận bằng văn bản. Im lặng không mặc nhiên được coi là đã nghiệm thu."
-    },
-    "docs": {
-      "q1": "Tôi nhận được những hồ sơ nào?",
-      "a1": "Biên bản khảo sát hiện trạng, bảng giải thích vì sao chọn phương án và danh mục hồ sơ theo gói bạn chọn, ghi trong hợp đồng.",
-      "q2": "Gói 3 có hồ sơ kết cấu, điện, cấp thoát nước không?",
-      "a2": "Có, nằm trong hồ sơ chi tiết của Gói 3. MEP chuyên sâu nhận theo yêu cầu riêng.",
-      "q3": "Hình trên website có phải công trình ECO ARCH đã làm không?",
-      "a3": "Không. Đó là hình minh họa, concept của ECO ARCH, chưa phải công trình thực tế."
-    },
-    "prep": {
-      "q1": "Tôi cần chuẩn bị gì trước buổi trao đổi?",
-      "a1": "Địa điểm khu đất, loại công trình, thời điểm bạn muốn bắt đầu và vài ảnh hiện trạng nếu có.",
-      "q2": "Tôi có cần bản vẽ không?",
-      "a2": "Không. Bạn chưa cần có bản vẽ để đặt lịch."
-    }
-  },
-  "book": {
-    "lead": "Gửi địa điểm, loại công trình và thời điểm dự kiến. Bạn chưa cần có bản vẽ. ECO ARCH phản hồi trong 24 giờ.",
-    "nextT": "Điều gì xảy ra tiếp theo",
-    "n1": "ECO ARCH nhận yêu cầu của bạn.",
-    "n2": "Chúng tôi phản hồi trong 24 giờ để xếp lịch trao đổi.",
-    "n3": "Buổi trao đổi đầu tiên miễn phí.",
-    "prepare": "Chuẩn bị gì trước buổi trao đổi?",
-    "privacy": "Dữ liệu bạn gửi được xử lý theo Chính sách bảo mật."
-  },
-  "contactPage": {
-    "lead": "Cách nhanh nhất để liên hệ ECO ARCH là gửi yêu cầu đặt lịch. Chúng tôi phản hồi trong 24 giờ.",
-    "formT": "Gửi yêu cầu",
-    "detailsT": "Thông tin liên hệ",
-    "phone": "Điện thoại",
-    "email": "Email",
-    "address": "Địa chỉ",
-    "hours": "Giờ làm việc"
+    "okSent": "Đã gửi yêu cầu. Đang chuyển sang trang cảm ơn.",
+    "area": "Diện tích gần đúng",
+    "pkg": "Gói quan tâm",
+    "pkgPick": "Chưa chắc",
+    "pkg1": "Gói 1",
+    "pkg2": "Gói 2",
+    "pkg3": "Gói 3",
+    "consent": "Đồng ý để ECO ARCH liên hệ lại",
+    "typeNames": "Nhà ống;Nhà phố;Biệt thự;Căn hộ;Khác"
   },
   "thanks": {
     "lead": "ECO ARCH đã nhận yêu cầu của bạn và sẽ phản hồi trong 24 giờ để xếp lịch trao đổi.",
@@ -662,25 +121,140 @@
     "p3": "Thời điểm bạn muốn bắt đầu.",
     "read": "Xem Kiến thức"
   },
-  "privacyPage": {
-    "lead": "Cách ECO ARCH thu thập, sử dụng và bảo vệ dữ liệu cá nhân khi bạn gửi yêu cầu đặt lịch, và các quyền của bạn.",
-    "s1t": "Ai xử lý dữ liệu",
-    "s1": "ECO ARCH là bên thu thập và xử lý dữ liệu cá nhân bạn gửi qua website này.",
-    "s2t": "Dữ liệu chúng tôi thu thập",
-    "s2": "Khi bạn gửi yêu cầu đặt lịch: địa điểm khu đất, loại công trình, thời điểm dự kiến, họ tên, số điện thoại hoặc email, và ghi chú bạn tự nhập.",
-    "s3t": "Mục đích sử dụng",
-    "s3": "Để phản hồi yêu cầu, xếp lịch trao đổi và chuẩn bị tư vấn. Chúng tôi không dùng dữ liệu cho mục đích khác khi chưa được bạn đồng ý.",
-    "s4t": "Cơ sở xử lý",
-    "s4": "Sự đồng ý của bạn, thể hiện bằng ô xác nhận khi gửi form. Bạn có thể rút lại đồng ý bất cứ lúc nào.",
-    "s5t": "Chia sẻ dữ liệu",
-    "s5": "Chúng tôi không bán dữ liệu cá nhân. Dữ liệu chỉ được chuyển cho bên cung cấp dịch vụ nhận form khi cần để chuyển yêu cầu của bạn tới ECO ARCH.",
-    "s6t": "Thời gian lưu",
-    "s6": "Dữ liệu được lưu trong thời gian cần thiết để thực hiện các mục đích nêu trên.",
-    "s7t": "Quyền của bạn",
-    "s7": "Theo quy định pháp luật, bạn có quyền được biết, truy cập, chỉnh sửa, xóa dữ liệu, rút lại đồng ý và phản đối việc xử lý. Để thực hiện, hãy liên hệ ECO ARCH qua trang Liên hệ.",
-    "s8t": "Cookie và lưu trữ trên trình duyệt",
-    "s8": "Website không dùng cookie quảng cáo hoặc theo dõi. Website chỉ ghi nhớ lựa chọn giảm chuyển động của bạn trên trình duyệt (localStorage).",
-    "s9t": "Căn cứ pháp lý",
-    "s9": "Chính sách này được xây dựng theo Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 và Nghị định 356/2025/NĐ-CP, có hiệu lực từ 01/01/2026."
+  "notFoundPage": {
+    "lead": "Trang này chưa tồn tại hoặc đã được chuyển.",
+    "home": "Về trang chủ",
+    "services": "Xem 3 gói dịch vụ",
+    "book": "Đặt lịch trao đổi về khu đất"
+  },
+  "concepts": {
+    "open": "Xem ảnh lớn",
+    "lbLabel": "Xem ảnh minh họa",
+    "lbClose": "Đóng",
+    "lbPrev": "Ảnh trước",
+    "lbNext": "Ảnh kế tiếp",
+    "lbCount": "{n} trên {total}"
+  },
+  "pages": {
+    "home": {
+      "title": "ECO ARCH | Thiết kế và cải tạo nhà ở tại Hà Nội",
+      "description": "ECO ARCH tư vấn thiết kế kiến trúc và cải tạo nhà ở tại Hà Nội. Phương án giải thích rõ nắng gió, vật liệu, phạm vi hồ sơ. Đặt lịch trao đổi về khu đất.",
+      "h1": "Thiết kế nhà ở Hà Nội, giải thích rõ từng lựa chọn"
+    },
+    "services": {
+      "title": "Ba gói thiết kế nhà ở rõ phạm vi | ECO ARCH",
+      "description": "Chọn giữa thiết kế sơ bộ 2D, thiết kế kiến trúc và thiết kế kiến trúc, nội thất đồng bộ. Xem từng gói gồm gì rồi đặt lịch trao đổi với ECO ARCH.",
+      "h1": "Ba gói thiết kế nhà ở"
+    },
+    "prelim": {
+      "title": "Thiết kế sơ bộ 2D cho nhà hiện hữu | ECO ARCH",
+      "description": "Gói thiết kế sơ bộ: một phương án mặt bằng 2D cho nhà hiện hữu, kèm ghi chú công năng, nắng và thông gió. Phù hợp khi chưa cần phối cảnh.",
+      "h1": "Thiết kế sơ bộ (2D)"
+    },
+    "architectural": {
+      "title": "Thiết kế kiến trúc cho nhà cải tạo | ECO ARCH",
+      "description": "Gói thiết kế kiến trúc: mặt bằng, mặt đứng, mặt cắt và phối cảnh kiến trúc để hình dung nhà sau cải tạo. AI hỗ trợ hình ảnh, kiến trúc sư kiểm tra.",
+      "h1": "Thiết kế kiến trúc"
+    },
+    "integrated": {
+      "title": "Thiết kế kiến trúc và nội thất đồng bộ | ECO ARCH",
+      "description": "Gói đồng bộ: phương án thiết kế, phối cảnh kiến trúc và nội thất cùng hồ sơ chi tiết theo hợp đồng, phục vụ chuẩn bị thi công. Đặt lịch trao đổi.",
+      "h1": "Thiết kế kiến trúc và nội thất đồng bộ"
+    },
+    "concepts": {
+      "title": "Phương án thiết kế nhà Hà Nội (minh họa) | ECO ARCH",
+      "description": "Các phương án minh họa cho nhà ống, nhà phố, biệt thự và căn hộ tại Hà Nội, có ảnh trước và sau. Là concept của ECO ARCH, chưa phải công trình thực tế.",
+      "h1": "Phương án thiết kế (hình minh họa)"
+    },
+    "tubeHouse": {
+      "title": "Nhà ống Hà Nội: giữ vòm, đổi ánh sáng | ECO ARCH",
+      "description": "Phương án minh họa cho nhà ống Hà Nội: giữ vòm cổng và cầu thang cong, thay cách bố trí và ánh sáng. Concept của ECO ARCH, chưa phải công trình thực tế.",
+      "h1": "Nhà ống: giữ vòm, đổi ánh sáng"
+    },
+    "townhouse": {
+      "title": "Nhà phố Hà Nội: lam đứng và cửa xanh chàm | ECO ARCH",
+      "description": "Phương án minh họa cho mặt tiền nhà phố Hà Nội: lam đứng màu gạch cho cây leo, cổng xanh chàm, giữ ban công cũ. Concept của ECO ARCH.",
+      "h1": "Nhà phố: lam đứng và cửa xanh chàm"
+    },
+    "villa": {
+      "title": "Biệt thự: phòng khách mở ra vườn | ECO ARCH",
+      "description": "Phương án minh họa cho phòng khách biệt thự: giữ cột và cửa kính chia ô, đổi nội thất, rèm và sàn terrazzo để đón vườn. Concept của ECO ARCH.",
+      "h1": "Biệt thự: phòng khách mở ra vườn"
+    },
+    "apartment": {
+      "title": "Căn hộ: gỗ ấm, bố trí lại | ECO ARCH",
+      "description": "Phương án minh họa cho căn hộ: bếp gỗ, ghế dài có ngăn chứa, bàn ăn gấp và vách trượt dùng linh hoạt. Concept của ECO ARCH, chưa phải công trình thực tế.",
+      "h1": "Căn hộ: gỗ ấm, bố trí lại"
+    },
+    "about": {
+      "title": "Giới thiệu ECO ARCH | Thiết kế nhà ở tại Hà Nội",
+      "description": "ECO ARCH là đơn vị tư vấn thiết kế kiến trúc và cải tạo nhà ở tại Hà Nội. Tìm hiểu cách chúng tôi làm việc và người phụ trách chuyên môn.",
+      "h1": "Vì sao mỗi lựa chọn thiết kế đều được giải thích"
+    },
+    "process": {
+      "title": "Quy trình thiết kế nhà 10 bước | ECO ARCH",
+      "description": "Từ gửi nhu cầu, khảo sát, báo giá đến nghiệm thu và bàn giao: 10 bước làm việc với ECO ARCH, mỗi bước ghi rõ bạn làm gì và nhận gì.",
+      "h1": "Mười bước từ nhu cầu đến bàn giao"
+    },
+    "scope": {
+      "title": "Phạm vi và hồ sơ bàn giao | ECO ARCH",
+      "description": "Biết trước bạn nhận biên bản khảo sát, bảng giải thích lựa chọn và danh mục hồ sơ nào, cùng cách xử lý thay đổi và nghiệm thu.",
+      "h1": "Biết trước phạm vi và hồ sơ bàn giao"
+    },
+    "insights": {
+      "title": "Kiến thức thiết kế nhà ở Hà Nội | ECO ARCH",
+      "description": "Bài viết giải thích các quyết định thiết kế nhà ở: nắng, gió, bố trí, hồ sơ. Viết để chủ nhà hiểu và chuẩn bị trước khi làm việc với đơn vị thiết kế.",
+      "h1": "Kiến thức cho chủ nhà trước khi thiết kế"
+    },
+    "readSunWind": {
+      "title": "Đọc hướng nắng, gió trước khi vẽ mặt bằng | ECO ARCH",
+      "description": "Nhà Hà Nội nóng, bí hay thiếu sáng thường bắt đầu từ mặt bằng. Cách đọc nắng và gió của khu đất trước khi quyết định bố trí không gian.",
+      "h1": "Đọc hướng nắng và gió trước khi thiết kế"
+    },
+    "prepareCall": {
+      "title": "Chuẩn bị gì trước buổi trao đổi thiết kế đầu tiên",
+      "description": "Danh sách những thông tin và hình ảnh nên chuẩn bị trước khi trao đổi với đơn vị thiết kế, để buổi đầu tiên đi thẳng vào khu đất và nhu cầu của bạn.",
+      "h1": "Chuẩn bị gì cho buổi trao đổi đầu tiên"
+    },
+    "faq": {
+      "title": "Hỏi đáp về thiết kế nhà ở | ECO ARCH",
+      "description": "Câu trả lời về phạm vi, hồ sơ, chi phí, thi công và cách làm việc với ECO ARCH. Một nơi duy nhất để bạn kiểm tra trước khi đặt lịch trao đổi.",
+      "h1": "Hỏi đáp trước khi bắt đầu"
+    },
+    "book": {
+      "title": "Đặt lịch trao đổi về khu đất | ECO ARCH",
+      "description": "Gửi địa điểm, loại công trình và thời điểm dự kiến. ECO ARCH phản hồi trong vòng 24 giờ để xếp lịch trao đổi. Bạn chưa cần có bản vẽ.",
+      "h1": "Đặt lịch trao đổi về khu đất"
+    },
+    "contact": {
+      "title": "Liên hệ ECO ARCH | Thiết kế nhà ở Hà Nội",
+      "description": "Thông tin liên hệ ECO ARCH. Cách nhanh nhất là gửi yêu cầu đặt lịch trao đổi, chúng tôi phản hồi trong vòng 24 giờ.",
+      "h1": "Liên hệ ECO ARCH"
+    },
+    "privacy": {
+      "title": "Chính sách bảo mật | ECO ARCH",
+      "description": "Cách ECO ARCH thu thập, sử dụng và bảo vệ dữ liệu cá nhân khi bạn gửi yêu cầu đặt lịch, và các quyền của bạn đối với dữ liệu.",
+      "h1": "Chính sách bảo mật"
+    },
+    "thanks": {
+      "h1": "Cảm ơn bạn đã gửi yêu cầu",
+      "title": "Cảm ơn bạn đã gửi yêu cầu | ECO ARCH",
+      "description": "Cảm ơn bạn đã gửi yêu cầu"
+    },
+    "notFound": {
+      "h1": "Không tìm thấy trang",
+      "title": "Không tìm thấy trang | ECO ARCH",
+      "description": "Không tìm thấy trang"
+    }
+  },
+  "sec": {
+    "step": "Bước",
+    "stepsNav": "Các bước",
+    "railProgress": "Tiến độ cuộn",
+    "pairN": "Cặp ảnh {n}: hiện trạng và phương án minh họa",
+    "drag": "Kéo",
+    "view": "Xem",
+    "open": "Mở",
+    "pending": "Thông tin chính thức sẽ được cập nhật."
   }
 }

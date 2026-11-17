@@ -1,0 +1,37 @@
+---
+// SPLIT: text and list beside an image (A1 R3 A5 R9 B2). P03 section 3 uses two groups ("fits when" and "not included").
+import Section from './Section.astro';
+import SecHead from './SecHead.astro';
+import Media from './Media.astro';
+import Gallery from '../Gallery.astro';
+import Btn from './Btn.astro';
+import { mediaOf } from '../../data/images';
+import { clean, type SectionData } from '../../content/pages';
+import type { Lang } from '../../i18n/routes';
+interface Props { lang: Lang; pid: string; sec: SectionData; href: string | null }
+const { lang, pid, sec, href } = Astro.props;
+const c = sec[lang];
+const m = mediaOf(sec.imagesNote)[0];
+const grouped = ['P03', 'P04', 'P05'].includes(pid) && sec.n === 3 && c.items.length === 2 && c.items.every((i) => i.includes(', '));
+const groups = grouped ? c.items.map((i) => { const p = clean(i).split(', '); return { head: p[0], list: p.slice(1) }; }) : [];
+const flat = grouped ? [] : c.items.map(clean);
+const gallery = pid === 'P06' ? ['ex-01-after', 'ex-02-after', 'ex-03-after', 'ex-04-after', 'ex-05-after', 'ex-06-after', 'ex-08-after'] : null;
+const tick = '<svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" data-tick><path pathLength="1" d="M4 10.5l4 4L16 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+---
+<Section {pid} n={sec.n} type={sec.type} fx={sec.effects}>
+  <div class:list={['container-eco', 'cols-2', { 'no-media': !m && !gallery }]}>
+    <div>
+      <SecHead cell={c} {pid} n={sec.n} />
+      {groups.map((g) => (
+        <div class="grp"><h3>{g.head}</h3><ul class="tick-list" data-reveal-group>{g.list.map((x) => <li data-reveal><Fragment set:html={tick} />{x}</li>)}</ul></div>
+      ))}
+      {flat.length > 0 && (
+        <ul class="tick-list" data-reveal-group>
+          {flat.map((x) => { const k = x.indexOf(': '); return <li data-reveal><Fragment set:html={tick} />{k > 0 && k < 24 ? <span><strong>{x.slice(0, k)}</strong>{x.slice(k)}</span> : x}</li>; })}
+        </ul>
+      )}
+      {href && <p class="s-actions"><Btn {href} label={c.button ?? ''} /></p>}
+    </div>
+    {gallery ? <div data-s="media" data-reveal><Gallery {lang} stems={gallery} /></div> : m ? <Media {m} {lang} frame="louver" parallax sizes="(min-width: 1024px) 44vw, 100vw" /> : null}
+  </div>
+</Section>

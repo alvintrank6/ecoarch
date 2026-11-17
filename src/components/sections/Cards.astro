@@ -1,0 +1,43 @@
+---
+// CARDS: P01 three package cards (name, price, one line, link) and P14 two article cards.
+import Section from './Section.astro';
+import SecHead from './SecHead.astro';
+import PackageArt from '../PackageArt.astro';
+import Btn from './Btn.astro';
+import { t } from '../../i18n/t';
+import { path, type Lang, type PageId } from '../../i18n/routes';
+import { clean, splitN, type SectionData } from '../../content/pages';
+const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+interface Props { lang: Lang; pid: string; sec: SectionData; href: string | null }
+const { lang, pid, sec, href } = Astro.props;
+const c = sec[lang];
+const pkg = pid === 'P01';
+const targets: PageId[] = pkg ? ['prelim', 'architectural', 'integrated'] : ['readSunWind', 'prepareCall'];
+const arts = ['plan', 'cutaway', 'interior'] as const;
+const artKeys = ['artPlan', 'artCutaway', 'artInterior'] as const;
+const cards = c.items.map((it) => {
+  if (pkg) { const [label, name, price, desc] = splitN(it, 3); return { label, name, price, desc: clean(desc) }; }
+  const [name, desc] = splitN(it, 1); return { label: '', name, price: '', desc: clean(desc) };
+});
+---
+<Section {pid} n={sec.n} type={sec.type} fx={sec.effects}>
+  <div class="container-eco">
+    <SecHead cell={c} {pid} n={sec.n} />
+    <ul class:list={['cards', pkg ? 'cards-3' : 'cards-2']} data-reveal-group>
+      {cards.map((k, i) => (
+        <li data-reveal>
+          <a class="card lift" href={path(lang, targets[i])}>
+            {pkg && <div class="card-art" style={`view-transition-name:vt-${targets[i]}`}><PackageArt kind={arts[i]} label={t(lang, `alt.${artKeys[i]}`)} /></div>}
+            {k.label && <p class="card-label">{k.label}</p>}
+            <h3 data-vt-title={targets[i]}>{k.name}</h3>
+            {k.price && <p class="price"><span class="mask" data-price><strong>{k.price}</strong></span></p>}
+            <p class="card-desc">{cap(k.desc)}</p>
+            <span class="has-arrow card-more">{c.button && !pkg ? c.button : t(lang, 'common.learnMore')} <span class="arr" aria-hidden="true">→</span></span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    {pkg && <p class="caption"><span class="illus-label">{t(lang, 'common.illustration')}</span> <span class="note">{t(lang, 'common.conceptNote')}</span></p>}
+    {pkg && href && <p class="s-actions"><Btn {href} label={c.button ?? ''} /></p>}
+  </div>
+</Section>

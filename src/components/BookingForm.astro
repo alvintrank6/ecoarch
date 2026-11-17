@@ -2,55 +2,48 @@
 // Booking form markup (H-09 short, P18 full). Real POST form; JS enhancement lands in S8.
 import { t } from '../i18n/t';
 import { path, type Lang } from '../i18n/routes';
-interface Props { lang: Lang; variant?: 'short' | 'full'; idp?: string }
-const { lang, variant = 'short', idp = 'bf' } = Astro.props;
+interface Props { lang: Lang; variant?: 'short' | 'page'; idp?: string; items?: string[]; submitLabel?: string }
+const { lang, variant = 'short', idp = 'bf', items = [], submitLabel = '' } = Astro.props;
+// 'page' variant: fields are driven by the FORM section items of docs/11-PAGES P18 (order: name, contact, plot, area, type, package, note, consent).
+const strip = (x: string) => x.replace(/\s*\((?:bắt buộc|required)\)\.?\s*$/i, '').replace(/\.$/, '');
+const opts = (x: string) => (x.includes(': ') ? x.slice(x.indexOf(': ') + 2).replace(/\.$/, '').split(', ') : []);
+const lab = (i: number) => strip(items[i] ?? '');
 const endpoint: string = import.meta.env.PUBLIC_FORM_ENDPOINT || '';
 const action = endpoint || path(lang, 'thanks'); // no endpoint: plain POST falls back to the thank-you page (see OPEN-ITEMS)
 const msgs = JSON.stringify(Object.fromEntries(['errRequired', 'errType', 'errContact', 'errConsent', 'errSummary', 'errNetwork', 'okSent'].map((k) => [k, t(lang, `form.${k}`)])));
-const types = [1, 2, 3, 4, 5, 6, 7, 8], timings = [1, 2, 3, 4];
+const types = [1, 2, 3, 4, 5, 6, 7, 8];
 const f = (k: string) => t(lang, `form.${k}`);
 ---
 <form class="form" method="post" action={action} data-form data-endpoint={endpoint} data-thanks={path(lang, 'thanks')} data-msgs={msgs} data-sending-label={f('sending')}>
   <input type="hidden" name="lang" value={lang} />
   <div class="trap" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
-  <div class="field">
-    <label for={`${idp}-plot`}>{f('plot')} <span class="req">({f('required')})</span></label>
-    <input id={`${idp}-plot`} name="plot" type="text" required autocomplete="off" />
-  </div>
-  <div class="field">
-    <label for={`${idp}-type`}>{f('type')} <span class="req">({f('required')})</span></label>
-    <select id={`${idp}-type`} name="type" required>
-      <option value="">{f('typePick')}</option>
-      {types.map((n) => <option value={`t${n}`}>{f(`t${n}`)}</option>)}
-    </select>
-  </div>
-  <div class="field">
-    <label for={`${idp}-timing`}>{f('timing')} <span class="opt">({f('optional')})</span></label>
-    <select id={`${idp}-timing`} name="timing">
-      <option value="">{f('timingPick')}</option>
-      {timings.map((n) => <option value={`w${n}`}>{f(`w${n}`)}</option>)}
-    </select>
-  </div>
-  <div class="field">
-    <label for={`${idp}-name`}>{f('name')} <span class="req">({f('required')})</span></label>
-    <input id={`${idp}-name`} name="name" type="text" required autocomplete="name" />
-  </div>
-  <div class="field">
-    <label for={`${idp}-contact`}>{f('contact')} <span class="req">({f('required')})</span></label>
-    <input id={`${idp}-contact`} name="contact" type="text" required autocomplete="email" />
-  </div>
-  {variant === 'full' && (
-    <div class="field">
-      <label for={`${idp}-note`}>{f('note')} <span class="opt">({f('optional')})</span></label>
-      <textarea id={`${idp}-note`} name="note" rows="4"></textarea>
-    </div>
+  {variant === 'short' ? (
+    <>
+      <div class="field"><label for={`${idp}-plot`}>{f('plot')} <span class="req">({f('required')})</span></label><input id={`${idp}-plot`} name="plot" type="text" required autocomplete="off" /></div>
+      <div class="field"><label for={`${idp}-type`}>{f('type')} <span class="req">({f('required')})</span></label>
+        <select id={`${idp}-type`} name="type" required><option value="">{f('typePick')}</option>{types.map((n) => <option value={`t${n}`}>{f(`t${n}`)}</option>)}</select></div>
+      <div class="field"><label for={`${idp}-name`}>{f('name')} <span class="req">({f('required')})</span></label><input id={`${idp}-name`} name="name" type="text" required autocomplete="name" /></div>
+      <div class="field"><label for={`${idp}-contact`}>{f('contact')} <span class="req">({f('required')})</span></label><input id={`${idp}-contact`} name="contact" type="text" required autocomplete="email" /></div>
+    </>
+  ) : (
+    <>
+      <div class="field"><label for={`${idp}-name`}>{lab(0)} <span class="req">({f('required')})</span></label><input id={`${idp}-name`} name="name" type="text" required autocomplete="name" /></div>
+      <div class="field"><label for={`${idp}-contact`}>{lab(1)} <span class="req">({f('required')})</span></label><input id={`${idp}-contact`} name="contact" type="text" required autocomplete="email" /></div>
+      <div class="field"><label for={`${idp}-plot`}>{lab(2)} <span class="req">({f('required')})</span></label><input id={`${idp}-plot`} name="plot" type="text" required autocomplete="off" /></div>
+      <div class="field"><label for={`${idp}-area`}>{lab(3)} <span class="opt">({f('optional')})</span></label><input id={`${idp}-area`} name="area" type="text" inputmode="decimal" autocomplete="off" /></div>
+      <div class="field"><label for={`${idp}-type`}>{strip(items[4] ?? '').split(':')[0]} <span class="opt">({f('optional')})</span></label>
+        <select id={`${idp}-type`} name="type"><option value="">{f('timingPick')}</option>{opts(items[4] ?? '').map((o, i) => <option value={`t${i + 1}`}>{o}</option>)}</select></div>
+      <div class="field"><label for={`${idp}-pkg`}>{strip(items[5] ?? '').split(':')[0]} <span class="opt">({f('optional')})</span></label>
+        <select id={`${idp}-pkg`} name="pkg"><option value="">{f('timingPick')}</option>{opts(items[5] ?? '').map((o, i) => <option value={`p${i}`}>{o}</option>)}</select></div>
+      <div class="field"><label for={`${idp}-note`}>{lab(6)} <span class="opt">({f('optional')})</span></label><textarea id={`${idp}-note`} name="note" rows="4"></textarea></div>
+    </>
   )}
   <div class="consent">
     <input id={`${idp}-consent`} name="consent" type="checkbox" required />
-    <label for={`${idp}-consent`}>{f('consentPre')} <a class="link" href={path(lang, 'privacy')}>{f('consentLink')}</a> <span class="req">({f('required')})</span></label>
+    <label for={`${idp}-consent`}>{variant === 'page' ? lab(7) : `${f('consentPre')}`} <a class="link" href={path(lang, 'privacy')}>{f('consentLink')}</a> <span class="req">({f('required')})</span></label>
   </div>
   <p class="status" role="status" aria-live="polite" data-form-status></p>
-  <button class="btn btn-primary" type="submit" data-form-submit>{f('submit')}</button>
+  <button class="btn btn-primary" type="submit" data-form-submit>{variant === 'page' && submitLabel ? submitLabel : f('submit')}</button>
   <p class="reply">{f('reply24')}</p>
 </form>
 <script>import '../scripts/form';</script>

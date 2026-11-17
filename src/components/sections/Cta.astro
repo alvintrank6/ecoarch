@@ -1,0 +1,30 @@
+---
+// CTA and CTA-FORM: closing band (dark). Items are short prompts that link to a package when they name one; CTA-FORM adds the stages and the short form.
+import Section from './Section.astro';
+import SecHead from './SecHead.astro';
+import BookingForm from '../BookingForm.astro';
+import Btn from './Btn.astro';
+import { path, type Lang, type PageId } from '../../i18n/routes';
+import { clean, type SectionData } from '../../content/pages';
+interface Props { lang: Lang; pid: string; sec: SectionData; href: string | null }
+const { lang, pid, sec, href } = Astro.props;
+const c = sec[lang];
+const form = sec.type === 'CTA-FORM';
+const pkg: Record<string, PageId> = { '1': 'prelim', '2': 'architectural', '3': 'integrated' };
+const stage = (x: string) => /^\d\s/.test(x);
+---
+<Section {pid} n={sec.n} type={sec.type} fx={sec.effects} dark id={form ? 'dat-lich-nhanh' : undefined}>
+  <div class:list={['container-eco', form ? 'cta-grid' : 'cta-stack']}>
+    <div class="cta-copy">
+      <SecHead cell={c} {pid} n={sec.n} />
+      {c.items.length > 0 && (
+        <ul class:list={['cta-items', { stages: form }]} data-reveal-group>
+          {c.items.map((x) => { const s = clean(x); const m = s.match(/(?:Gói|Package) ([123])/); const link = !form && m ? path(lang, pkg[m[1]]) : null;
+            return <li data-reveal>{stage(s) ? <><span class="stage-n" aria-hidden="true">{s.slice(0, 1)}</span><span>{s.slice(2)}</span></> : link ? <a href={link}>{s}</a> : <span>{s}</span>}</li>; })}
+        </ul>
+      )}
+      {href && <p class="s-actions"><Btn {href} label={c.button ?? ''} primary wipe /></p>}
+    </div>
+    {form && <div class="card on-light" data-reveal data-s="media"><BookingForm {lang} variant="short" idp="cta" /></div>}
+  </div>
+</Section>

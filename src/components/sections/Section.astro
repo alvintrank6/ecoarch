@@ -1,0 +1,8 @@
+---
+// One content section. Exactly one element per section carries data-section (check-structure counts them).
+interface Props { pid: string; n: number; type: string; fx?: string[]; dark?: boolean; class?: string; id?: string }
+const { pid, n, type, fx = [], dark = false, class: cls = '', id } = Astro.props;
+---
+<section class:list={['sec', `sec-${type.toLowerCase()}`, { 'on-dark': dark }, cls]} data-section={type} data-type={type} data-scene data-fx={fx.join(' ')} aria-labelledby={`h-${pid}-${n}`} id={id}>
+  <slot />
+</section>

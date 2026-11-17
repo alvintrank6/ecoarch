@@ -1,0 +1,55 @@
+---
+// Renders any content page (P01 to P20) from src/content/pages.json: 5 sections for home, 4 for the rest.
+import Hero from '../components/sections/Hero.astro';
+import SunWind from '../components/sections/SunWind.astro';
+import Cards from '../components/sections/Cards.astro';
+import Ladder from '../components/sections/Ladder.astro';
+import Fee from '../components/sections/Fee.astro';
+import CompareSec from '../components/sections/CompareSec.astro';
+import Rail from '../components/sections/Rail.astro';
+import Split from '../components/sections/Split.astro';
+import Trio from '../components/sections/Trio.astro';
+import Steps from '../components/sections/Steps.astro';
+import List from '../components/sections/List.astro';
+import FaqSec from '../components/sections/FaqSec.astro';
+import FormSec from '../components/sections/FormSec.astro';
+import Plain from '../components/sections/Plain.astro';
+import Cta from '../components/sections/Cta.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { getPage } from '../content/pages';
+import { hrefKey } from '../data/links';
+import { parents } from '../i18n/breadcrumb';
+import { path, pidOf, type Lang, type PageId } from '../i18n/routes';
+interface Props { lang: Lang; id: Exclude<PageId, 'thanks'> }
+const { lang, id } = Astro.props;
+const pid = pidOf[id];
+const page = getPage(pid);
+const hrefOf = (vi: string | null) => { const k = hrefKey(vi); return k ? (k.startsWith('#') ? k : path(lang, k as PageId)) : null; };
+// Shared-element morph (T2): cards on overview pages and the hero of their target page share a view-transition-name.
+const morph = ['prelim', 'architectural', 'integrated', 'tubeHouse', 'townhouse', 'villa', 'apartment'].includes(id) ? `vt-${id}` : undefined;
+const trail = (parents[id] ?? []) as PageId[];
+const crumbs = id !== 'home' && id !== 'privacy';
+---
+{crumbs && <div class="container-eco crumbs"><Breadcrumb {lang} {trail} current={page.sections[0][lang].title} /></div>}
+{page.sections.map((sec) => {
+  const href = hrefOf(sec.vi.button);
+  const p = { lang, pid, sec, href };
+  switch (sec.type) {
+    case 'HERO-HOME': case 'HERO-PAGE': return <Hero {...p} vt={sec.n === 1 ? morph : undefined} />;
+    case 'SUNWIND': return <SunWind {...p} />;
+    case 'CARDS': return <Cards {...p} />;
+    case 'LADDER': return <Ladder {...p} />;
+    case 'FEE': return <Fee {...p} />;
+    case 'COMPARE': return <CompareSec {...p} />;
+    case 'RAIL': return <Rail {...p} />;
+    case 'SPLIT': return <Split {...p} />;
+    case 'TRIO': return <Trio {...p} />;
+    case 'STEPS': return <Steps {...p} isBook={href === path(lang, 'book')} />;
+    case 'LIST': return <List {...p} />;
+    case 'FAQ': return <FaqSec {...p} />;
+    case 'FORM': return <FormSec lang={lang} pid={pid} sec={sec} />;
+    case 'CONTACT': case 'NOTE': case 'LEGAL': return <Plain {...p} />;
+    case 'CTA': case 'CTA-FORM': return <Cta {...p} />;
+    default: throw new Error(`unknown section type ${sec.type} in ${pid}`);
+  }
+})}

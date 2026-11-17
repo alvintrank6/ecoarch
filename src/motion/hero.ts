@@ -14,13 +14,14 @@ export function initHero(): () => void {
   const title = qs('[data-hero-title]', root)!;
   const body = qs('[data-hero-body]', root)!;
   const cta = qs('[data-hero-cta]', root)!;
+  const chips = qs('[data-hero-chips]', root);
   const media = qs('[data-hero-media]', root)!;
   const text = qs('[data-hero-text]', root)!;
   const cue = qs('[data-scroll-cue]', root);
   const frame = qs('.hero-frame', root)!;
 
   // Reduced motion (OS or toggle): CSS already shows everything; nothing to run.
-  if (isReduced()) { show([eyebrow, title, body, cta]); return () => {}; }
+  if (isReduced()) { show([eyebrow, title, body, cta, ...(chips ? [chips] : [])]); return () => {}; }
 
   const mobile = isMobile();
   let killed = false;
@@ -54,6 +55,7 @@ export function initHero(): () => void {
 
     // H3: body and CTA follow right behind the title; CTA lags at most 120ms. No pointer-events changes.
     tl.fromTo(body, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: ease.out }, 0.3);
+    if (chips) tl.fromTo(chips, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: ease.out }, 0.36);
     tl.fromTo(cta, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: ease.out }, 0.4);
 
     if (!mobile) {
@@ -90,7 +92,7 @@ export function initHero(): () => void {
     triggers.forEach((t) => t.kill());
     split.forEach((s) => s.revert());
     light?.remove();
-    gsap.set([media, text, eyebrow, title, body, cta, ...(cue ? [cue] : [])], { clearProps: 'all' });
-    show([eyebrow, title, body, cta]);
+    gsap.set([media, text, eyebrow, title, body, cta, ...(chips ? [chips] : []), ...(cue ? [cue] : [])], { clearProps: 'all' });
+    show([eyebrow, title, body, cta, ...(chips ? [chips] : [])]);
   };
 }

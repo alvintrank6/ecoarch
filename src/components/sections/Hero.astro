@@ -1,0 +1,39 @@
+---
+// HERO-HOME (P01 section 1) and HERO-PAGE (first section of every other page). The only h1 of the page.
+import Section from './Section.astro';
+import Media from './Media.astro';
+import Btn from './Btn.astro';
+import { t } from '../../i18n/t';
+import { path, type Lang } from '../../i18n/routes';
+import { mediaOf } from '../../data/images';
+import { clean, type SectionData } from '../../content/pages';
+interface Props { lang: Lang; pid: string; sec: SectionData; href: string | null; vt?: string }
+const { lang, pid, sec, href, vt } = Astro.props;
+const c = sec[lang];
+const home = sec.type === 'HERO-HOME';
+const m = mediaOf(sec.imagesNote)[0];
+const isBook = href === path(lang, 'book');
+---
+<Section {pid} n={sec.n} type={sec.type} fx={sec.effects} class={home ? 'hero hero-home' : 'hero hero-page'}>
+  <div class:list={['container-eco', 'hero-grid', { 'no-media': !m }]} data-hero={home ? '' : undefined} data-hero-page={home ? undefined : ''}>
+    <div class="hero-text" data-hero-text>
+      {c.eyebrow && <p class="eyebrow" data-reveal data-s="eyebrow" data-hero-eyebrow>{c.eyebrow}</p>}
+      <h1 id={`h-${pid}-${sec.n}`} data-reveal data-s="title" data-hero-title data-a1>{c.title}</h1>
+      <p class="hero-body text-lead" data-reveal data-s="body" data-hero-body>{c.body}</p>
+      {c.items.length > 0 && <ul class="chips" data-reveal data-s="chips" data-hero-chips>{c.items.map((i) => <li><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4L16 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{clean(i)}</li>)}</ul>}
+      <div class="hero-cta" data-reveal data-s="cta" data-hero-cta>
+        {href && <Btn {href} label={c.button ?? ''} primary={isBook} wipe={isBook} />}
+        {home && <a class="btn btn-secondary" href={path(lang, 'services')}>{t(lang, 'common.ctaSecondary')}</a>}
+      </div>
+    </div>
+    {m && (
+      <div class="hero-frame" data-hero-frame>
+        <div class="hero-media" data-hero-media>
+          <Media {m} {lang} eager={home} frame={home ? 'none' : 'open'} parallax={!home} sizes="(min-width: 1024px) 58vw, 100vw" {vt} ratio={home ? '' : undefined} noLabel />
+        </div>
+        {m.kind !== 'diagram' && <span class="illus-label media-label" data-caption>{t(lang, 'common.illustration')}</span>}
+      </div>
+    )}
+  </div>
+  {home && <div class="scroll-cue" aria-hidden="true" data-scroll-cue><svg width="20" height="28" viewBox="0 0 20 28"><path d="M10 2v22M3 17l7 7 7-7" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></div>}
+</Section>

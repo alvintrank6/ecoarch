@@ -1,0 +1,27 @@
+---
+// Inline SVG diagrams from src/assets/diagrams (real text, VI and EN files). Strokes carry pathLength=1 so draw.ts can draw them (R6).
+// sun-wind: the sun arrow gets class .sun-line and the wind strokes .wind (A2 and A3). plan-line: .draw elements get data-step 1..10 (R7).
+import type { Lang } from '../i18n/routes';
+interface Props { name: 'sun-wind' | 'handover' | 'plan-line'; lang: Lang; focus?: 'sun' | 'wind' | 'both'; class?: string; plain?: boolean }
+const { name, lang, focus = 'both', class: cls = '', plain = false } = Astro.props;
+const files = import.meta.glob('../assets/diagrams/*.svg', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
+let svg = files[`../assets/diagrams/diag-${name}-${lang}.svg`];
+if (!svg) throw new Error(`diagram missing: ${name} ${lang}`);
+const pl = (tag: string, extra = '') => tag.replace(/\s*\/?>$/, (m) => `${extra}${/pathLength/.test(tag) ? '' : ' pathLength="1"'}${m.trim().startsWith('/') ? ' /' : ''}>`);
+if (name === 'sun-wind') {
+  svg = svg.replace(/<path d="M560 70[^>]*>/, (t) => pl(t, ' class="sun-line"'));
+  svg = svg.replace(/<path d="M4\d\d 3\d\d[^>]*>/g, (t) => pl(t, ' class="wind"'));
+  svg = svg.replace(/<\/svg>\s*$/, '<circle class="sun-dot" r="9" cx="560" cy="70" fill="#B88A68" /></svg>');
+}
+if (name === 'plan-line') {
+  let i = 0;
+  const total = (svg.match(/class="draw"/g) || []).length;
+  svg = svg.replace(/<(line|rect|path)\b[^>]*class="draw"[^>]*>/g, (t) => { i++; return t.replace('class="draw"', `class="draw" data-step-from="${Math.ceil(((i - 1) * 10) / total) + 1}"`); });
+}
+if (name === 'handover') svg = svg.replace(/<line\b[^>]*>/g, (t) => (/pathLength/.test(t) ? t : t.replace(/\s*\/?>$/, ' pathLength="1" class="draw" />')));
+---
+<figure class:list={["diagram", cls]} data-draw={name === "handover" ? "" : undefined} data-plan={name === "plan-line" && !plain ? "" : undefined} data-sunwind={name === "sun-wind" ? "" : undefined} data-diagram={name} data-focus={focus}><Fragment set:html={svg} /></figure>
+<style>
+  .diagram { margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; background: #F7F4EE; }
+  .diagram :global(svg) { display: block; width: 100%; height: auto; }
+</style>
