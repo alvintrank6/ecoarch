@@ -300,7 +300,14 @@
     "consentLink": "Chính sách bảo mật",
     "submit": "Gửi yêu cầu",
     "sending": "Đang gửi",
-    "reply24": "ECO ARCH phản hồi trong 24 giờ."
+    "reply24": "ECO ARCH phản hồi trong 24 giờ.",
+    "errRequired": "Vui lòng điền thông tin này.",
+    "errType": "Vui lòng chọn loại công trình.",
+    "errContact": "Nhập số điện thoại hoặc email hợp lệ.",
+    "errConsent": "Vui lòng xác nhận bạn đã đọc Chính sách bảo mật.",
+    "errSummary": "Vui lòng kiểm tra {n} mục bên dưới.",
+    "errNetwork": "Chưa gửi được yêu cầu. Dữ liệu bạn nhập vẫn còn, hãy thử lại sau ít phút.",
+    "okSent": "Đã gửi yêu cầu. Đang chuyển sang trang cảm ơn."
   },
   "breadcrumb": {
     "label": "Đường dẫn trang"
@@ -628,5 +635,52 @@
       "q2": "Tôi có cần bản vẽ không?",
       "a2": "Không. Bạn chưa cần có bản vẽ để đặt lịch."
     }
+  },
+  "book": {
+    "lead": "Gửi địa điểm, loại công trình và thời điểm dự kiến. Bạn chưa cần có bản vẽ. ECO ARCH phản hồi trong 24 giờ.",
+    "nextT": "Điều gì xảy ra tiếp theo",
+    "n1": "ECO ARCH nhận yêu cầu của bạn.",
+    "n2": "Chúng tôi phản hồi trong 24 giờ để xếp lịch trao đổi.",
+    "n3": "Buổi trao đổi đầu tiên miễn phí.",
+    "prepare": "Chuẩn bị gì trước buổi trao đổi?",
+    "privacy": "Dữ liệu bạn gửi được xử lý theo Chính sách bảo mật."
+  },
+  "contactPage": {
+    "lead": "Cách nhanh nhất để liên hệ ECO ARCH là gửi yêu cầu đặt lịch. Chúng tôi phản hồi trong 24 giờ.",
+    "formT": "Gửi yêu cầu",
+    "detailsT": "Thông tin liên hệ",
+    "phone": "Điện thoại",
+    "email": "Email",
+    "address": "Địa chỉ",
+    "hours": "Giờ làm việc"
+  },
+  "thanks": {
+    "lead": "ECO ARCH đã nhận yêu cầu của bạn và sẽ phản hồi trong 24 giờ để xếp lịch trao đổi.",
+    "prepT": "Trong lúc chờ, bạn có thể chuẩn bị",
+    "p1": "Địa điểm khu đất và vài ảnh hiện trạng nếu có.",
+    "p2": "Điều bạn thích và chưa thích ở ngôi nhà hiện tại.",
+    "p3": "Thời điểm bạn muốn bắt đầu.",
+    "read": "Xem Kiến thức"
+  },
+  "privacyPage": {
+    "lead": "Cách ECO ARCH thu thập, sử dụng và bảo vệ dữ liệu cá nhân khi bạn gửi yêu cầu đặt lịch, và các quyền của bạn.",
+    "s1t": "Ai xử lý dữ liệu",
+    "s1": "ECO ARCH là bên thu thập và xử lý dữ liệu cá nhân bạn gửi qua website này.",
+    "s2t": "Dữ liệu chúng tôi thu thập",
+    "s2": "Khi bạn gửi yêu cầu đặt lịch: địa điểm khu đất, loại công trình, thời điểm dự kiến, họ tên, số điện thoại hoặc email, và ghi chú bạn tự nhập.",
+    "s3t": "Mục đích sử dụng",
+    "s3": "Để phản hồi yêu cầu, xếp lịch trao đổi và chuẩn bị tư vấn. Chúng tôi không dùng dữ liệu cho mục đích khác khi chưa được bạn đồng ý.",
+    "s4t": "Cơ sở xử lý",
+    "s4": "Sự đồng ý của bạn, thể hiện bằng ô xác nhận khi gửi form. Bạn có thể rút lại đồng ý bất cứ lúc nào.",
+    "s5t": "Chia sẻ dữ liệu",
+    "s5": "Chúng tôi không bán dữ liệu cá nhân. Dữ liệu chỉ được chuyển cho bên cung cấp dịch vụ nhận form khi cần để chuyển yêu cầu của bạn tới ECO ARCH.",
+    "s6t": "Thời gian lưu",
+    "s6": "Dữ liệu được lưu trong thời gian cần thiết để thực hiện các mục đích nêu trên.",
+    "s7t": "Quyền của bạn",
+    "s7": "Theo quy định pháp luật, bạn có quyền được biết, truy cập, chỉnh sửa, xóa dữ liệu, rút lại đồng ý và phản đối việc xử lý. Để thực hiện, hãy liên hệ ECO ARCH qua trang Liên hệ.",
+    "s8t": "Cookie và lưu trữ trên trình duyệt",
+    "s8": "Website không dùng cookie quảng cáo hoặc theo dõi. Website chỉ ghi nhớ lựa chọn giảm chuyển động của bạn trên trình duyệt (localStorage).",
+    "s9t": "Căn cứ pháp lý",
+    "s9": "Chính sách này được xây dựng theo Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 và Nghị định 356/2025/NĐ-CP, có hiệu lực từ 01/01/2026."
   }
 }

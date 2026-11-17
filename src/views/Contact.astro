@@ -1,0 +1,26 @@
+---
+// P19 /lien-he. Phone, email, address, hours stay hidden until real data exists (keys contact.* absent).
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { has, t } from '../i18n/t';
+import { path, type Lang } from '../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const fields = ['phone', 'email', 'address', 'hours'].filter((k) => has(lang, `contact.${k}`));
+---
+<section class="head container-eco">
+  <Breadcrumb {lang} trail={[]} current={t(lang, 'pages.contact.h1')} />
+  <h1>{t(lang, 'pages.contact.h1')}</h1>
+  <p class="text-lead">{t(lang, 'contactPage.lead')}</p>
+  <p><a class="btn btn-primary" href={path(lang, 'book')}>{t(lang, 'common.ctaPrimary')}</a></p>
+</section>
+{fields.length > 0 && (
+  <section class="section container-eco" aria-labelledby="det-title">
+    <h2 id="det-title">{t(lang, 'contactPage.detailsT')}</h2>
+    <dl>{fields.map((k) => <div><dt>{t(lang, `contactPage.${k}`)}</dt><dd>{t(lang, `contact.${k}`)}</dd></div>)}</dl>
+  </section>
+)}
+<style>
+  .head { padding-top: 12px; padding-bottom: var(--section-y); display: grid; gap: 16px; justify-items: start; }
+  .head h1, .head p { margin: 0; }
+  dl { display: grid; gap: 12px; margin: 0; } dt { font-weight: 600; } dd { margin: 0; }
+</style>

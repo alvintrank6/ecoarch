@@ -1,0 +1,22 @@
+---
+// P21 /cam-on (noindex)
+import { t } from '../i18n/t';
+import { path, type Lang } from '../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const k = (s: string) => t(lang, `thanks.${s}`);
+---
+<section class="section container-eco wrap">
+  <svg width="40" height="40" viewBox="0 0 20 20" aria-hidden="true" class="ok"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.3l2.8 2.8L14 7.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <h1>{t(lang, 'pages.thanks.h1')}</h1>
+  <p class="text-lead">{k('lead')}</p>
+  <h2>{k('prepT')}</h2>
+  <ul><li>{k('p1')}</li><li>{k('p2')}</li><li>{k('p3')}</li></ul>
+  <p><a class="btn btn-secondary" href={path(lang, 'insights')}>{k('read')}</a></p>
+</section>
+<style>
+  .wrap { display: grid; gap: 16px; justify-items: start; }
+  .ok { color: var(--color-success); }
+  h1, h2, p { margin: 0; } h2 { font-size: 1.5rem; margin-top: 8px; }
+  ul { margin: 0; padding-left: 1.25rem; display: grid; gap: 6px; }
+</style>

@@ -300,7 +300,14 @@
     "consentLink": "Privacy policy",
     "submit": "Send request",
     "sending": "Sending",
-    "reply24": "ECO ARCH replies within 24 hours."
+    "reply24": "ECO ARCH replies within 24 hours.",
+    "errRequired": "Please fill in this field.",
+    "errType": "Please choose a building type.",
+    "errContact": "Enter a valid phone number or email.",
+    "errConsent": "Please confirm you have read the Privacy policy.",
+    "errSummary": "Please check the {n} item(s) below.",
+    "errNetwork": "Your request was not sent. What you typed is still here; please try again in a few minutes.",
+    "okSent": "Request sent. Taking you to the thank-you page."
   },
   "breadcrumb": {
     "label": "Breadcrumb"
@@ -628,5 +635,52 @@
       "q2": "Do I need drawings?",
       "a2": "No. You do not need drawings to book a call."
     }
+  },
+  "book": {
+    "lead": "Send the location, building type and expected timing. You do not need drawings yet. ECO ARCH replies within 24 hours.",
+    "nextT": "What happens next",
+    "n1": "ECO ARCH receives your request.",
+    "n2": "We reply within 24 hours to arrange a call.",
+    "n3": "The first conversation is free.",
+    "prepare": "What to prepare before the call",
+    "privacy": "The data you send is handled under the Privacy policy."
+  },
+  "contactPage": {
+    "lead": "The fastest way to reach ECO ARCH is to send a booking request. We reply within 24 hours.",
+    "formT": "Send a request",
+    "detailsT": "Contact details",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "hours": "Opening hours"
+  },
+  "thanks": {
+    "lead": "ECO ARCH has received your request and will reply within 24 hours to arrange a call.",
+    "prepT": "While you wait, you can prepare",
+    "p1": "The plot location and a few photos of the existing home, if you have them.",
+    "p2": "What you like and dislike about the current home.",
+    "p3": "When you would like to start.",
+    "read": "Read our insights"
+  },
+  "privacyPage": {
+    "lead": "How ECO ARCH collects, uses and protects personal data when you send a booking request, and your rights.",
+    "s1t": "Who handles the data",
+    "s1": "ECO ARCH collects and handles the personal data you send through this website.",
+    "s2t": "Data we collect",
+    "s2": "When you send a booking request: the plot location, building type, expected timing, your name, phone or email, and any note you write.",
+    "s3t": "Why we use it",
+    "s3": "To reply to your request, arrange a call and prepare our advice. We do not use the data for other purposes without your consent.",
+    "s4t": "Basis for handling",
+    "s4": "Your consent, given by the tick box when you send the form. You can withdraw consent at any time.",
+    "s5t": "Sharing data",
+    "s5": "We do not sell personal data. Data is passed only to the form service provider when needed to deliver your request to ECO ARCH.",
+    "s6t": "How long we keep it",
+    "s6": "Data is kept for as long as needed for the purposes above.",
+    "s7t": "Your rights",
+    "s7": "Under the law you have the right to know, access, correct and delete your data, withdraw consent and object to handling. To exercise them, contact ECO ARCH through the Contact page.",
+    "s8t": "Cookies and browser storage",
+    "s8": "This website uses no advertising or tracking cookies. It only remembers your reduce-motion choice in your browser (localStorage).",
+    "s9t": "Legal basis",
+    "s9": "This policy is based on the Personal Data Protection Law No. 91/2025/QH15 and Decree No. 356/2025/ND-CP, effective from 1 January 2026."
   }
 }

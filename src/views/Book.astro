@@ -1,0 +1,34 @@
+---
+// P18 /dat-lich
+import Breadcrumb from '../components/Breadcrumb.astro';
+import BookingForm from '../components/BookingForm.astro';
+import { t } from '../i18n/t';
+import { path, type Lang } from '../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const b = (k: string) => t(lang, `book.${k}`);
+---
+<section class="head container-eco">
+  <Breadcrumb {lang} trail={[]} current={t(lang, 'pages.book.h1')} />
+  <h1>{t(lang, 'pages.book.h1')}</h1>
+  <p class="text-lead">{b('lead')}</p>
+</section>
+<section class="section container-eco wrap">
+  <div class="card"><BookingForm {lang} variant="full" idp="book" /></div>
+  <aside class="side">
+    <h2>{b('nextT')}</h2>
+    <ol><li>{b('n1')}</li><li>{b('n2')}</li><li>{b('n3')}</li></ol>
+    <p><a class="link" href={path(lang, 'prepareCall')}>{b('prepare')}</a></p>
+    <p class="muted">{b('privacy')} <a class="link" href={path(lang, 'privacy')}>{t(lang, 'form.consentLink')}</a></p>
+  </aside>
+</section>
+<style>
+  .head { padding-top: 12px; display: grid; gap: 12px; padding-bottom: 8px; }
+  .head h1, .head p { margin: 0; }
+  .wrap { display: grid; gap: 2.5rem; padding-top: 1.5rem; }
+  .card { padding: 24px; background: rgba(255,255,255,.45); border: 1px solid var(--color-border); border-radius: var(--radius-md); }
+  .side h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .side ol { margin: 0 0 1rem; padding-left: 1.25rem; display: grid; gap: 8px; }
+  .muted { color: var(--color-muted); font-size: 0.9375rem; }
+  @media (min-width: 1024px) { .wrap { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 4rem; align-items: start; } .side { position: sticky; top: calc(var(--nav-h) + 24px); } }
+</style>

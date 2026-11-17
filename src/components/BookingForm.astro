@@ -4,11 +4,13 @@ import { t } from '../i18n/t';
 import { path, type Lang } from '../i18n/routes';
 interface Props { lang: Lang; variant?: 'short' | 'full'; idp?: string }
 const { lang, variant = 'short', idp = 'bf' } = Astro.props;
-const action = import.meta.env.PUBLIC_FORM_ENDPOINT || path(lang, 'thanks');
+const endpoint: string = import.meta.env.PUBLIC_FORM_ENDPOINT || '';
+const action = endpoint || path(lang, 'thanks'); // no endpoint: plain POST falls back to the thank-you page (see OPEN-ITEMS)
+const msgs = JSON.stringify(Object.fromEntries(['errRequired', 'errType', 'errContact', 'errConsent', 'errSummary', 'errNetwork', 'okSent'].map((k) => [k, t(lang, `form.${k}`)])));
 const types = [1, 2, 3, 4, 5, 6, 7, 8], timings = [1, 2, 3, 4];
 const f = (k: string) => t(lang, `form.${k}`);
 ---
-<form class="form" method="post" action={action} data-form data-sending-label={f('sending')} novalidate>
+<form class="form" method="post" action={action} data-form data-endpoint={endpoint} data-thanks={path(lang, 'thanks')} data-msgs={msgs} data-sending-label={f('sending')}>
   <input type="hidden" name="lang" value={lang} />
   <div class="trap" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
   <div class="field">
@@ -51,6 +53,7 @@ const f = (k: string) => t(lang, `form.${k}`);
   <button class="btn btn-primary" type="submit" data-form-submit>{f('submit')}</button>
   <p class="reply">{f('reply24')}</p>
 </form>
+<script>import '../scripts/form';</script>
 <style>
   .form { display: grid; gap: 16px; }
   .trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
@@ -62,7 +65,18 @@ const f = (k: string) => t(lang, `form.${k}`);
   input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-color: var(--color-accent); }
   .consent { display: flex; gap: 12px; align-items: flex-start; }
   .consent input { flex: none; width: 24px; height: 24px; margin-top: 2px; accent-color: var(--color-brand); }
-  .status { margin: 0; min-height: 0; }
+  .status { margin: 0; min-height: 0; display: flex; align-items: center; gap: 8px; font-weight: 500; }
+  .status:empty { display: none; }
+  .status[data-state='error'] { color: var(--color-error); }
+  .status[data-state='success'] { color: var(--color-success); }
+  .form :global(.err) { display: flex; align-items: flex-start; gap: 8px; margin: 0; color: var(--color-error); font-size: 0.9375rem; font-weight: 500; }
+  .form :global(.err svg), .status :global(svg) { flex: none; margin-top: 1px; }
+  .form :global([aria-invalid='true']) { border-color: var(--color-error); box-shadow: 0 0 0 1px var(--color-error); }
+  .status :global(.spin) { width: 16px; height: 16px; border: 2px solid var(--color-muted); border-right-color: transparent; border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .status :global(.spin) { animation: none; border-right-color: var(--color-muted); } }
+  html[data-motion='reduced'] .status :global(.spin) { animation: none; }
+  .form .btn:disabled { opacity: 0.7; cursor: progress; }
   .reply { margin: 0; color: var(--color-muted); font-size: 0.9375rem; }
   .form .btn { justify-self: start; min-width: 12rem; }
 </style>

@@ -17,3 +17,6 @@ OI-15 | pkg.*, services.* | Package 3 "hồ sơ chi tiết cho chuẩn bị thi 
 OI-16 | concept images | EX-07 (baked Vietnamese TRƯỚC/SAU labels) and EX-09 (no after image) not used; EX-08 split into halves for slider
 OI-17 | about page | no ABOUT-01/ART1-01/ART2-01 images (not generated); About and articles are text only, article 1 uses the SVG sun/wind diagram
 OI-18 | faqPage.scope.a3 | new-build scope stated as "book a call"; price list says renovation only (docs/02 [CẦN XÁC NHẬN])
+OI-19 | privacy page | legal review required before publishing (A16); text built from docs/04 note, cites 91/2025/QH15 and 356/2025/NĐ-CP as written there; data recipient, retention period, controller details unknown
+OI-20 | contact page | phone, email, address, hours hidden (add contact.* keys in vi.json/en.json when known)
+OI-21 | BookingForm | without PUBLIC_FORM_ENDPOINT the JS flow logs a warning and goes to thank-you WITHOUT sending data: must set endpoint before launch

@@ -91,6 +91,49 @@ for (const [lang, before, after] of [['vi', 'TRƯỚC', 'SAU'], ['en', 'BEFORE',
   await ctx.close();
 }
 
+{ // booking form: validation, aria-live errors, data kept on network error, success redirect, no-JS POST
+  const fill = async (p) => {
+    await p.fill('#book-plot', 'Cầu Giấy');
+    await p.selectOption('#book-type', 't2');
+    await p.fill('#book-name', 'Test');
+    await p.fill('#book-contact', 'test@example.com');
+    await p.check('#book-consent');
+  };
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  const p = await ctx.newPage();
+  await p.goto(`${BASE}/vi/dat-lich/`);
+  await p.waitForTimeout(400);
+  await p.click('[data-form-submit]');
+  ok(await p.locator('.err').count() >= 4, 'form: empty submit should show field errors');
+  ok((await p.locator('#book-plot').getAttribute('aria-invalid')) === 'true', 'form: aria-invalid missing');
+  ok(await p.evaluate(() => document.activeElement?.id === 'book-plot'), 'form: first invalid field not focused');
+  ok((await p.locator('[data-form-status]').getAttribute('data-state')) === 'error', 'form: status not in error state');
+  await fill(p);
+  await p.fill('#book-contact', 'abc');
+  await p.click('[data-form-submit]');
+  ok(await p.locator('#book-contact-err').count() === 1, 'form: invalid contact not flagged');
+  await p.fill('#book-contact', 'test@example.com');
+  // network error keeps data
+  await p.evaluate(() => document.querySelector('form[data-form]').setAttribute('data-endpoint', 'http://localhost:9/nope'));
+  await p.route('http://localhost:9/**', (r) => r.abort());
+  await p.click('[data-form-submit]');
+  await p.waitForTimeout(600);
+  ok((await p.locator('[data-form-status]').getAttribute('data-state')) === 'error', 'form: network error state missing');
+  ok((await p.inputValue('#book-plot')) === 'Cầu Giấy', 'form: data lost after network error');
+  // success path (no endpoint configured here): redirect to thank-you
+  await p.evaluate(() => document.querySelector('form[data-form]').setAttribute('data-endpoint', ''));
+  await p.click('[data-form-submit]');
+  await p.waitForURL(/\/vi\/cam-on\//, { timeout: 4000 }).catch(() => {});
+  ok(/\/vi\/cam-on\//.test(p.url()), 'form: did not redirect to thank-you');
+  await ctx.close();
+  const nj = await browser.newContext({ javaScriptEnabled: false });
+  const q = await nj.newPage();
+  await q.goto(`${BASE}/vi/dat-lich/`);
+  await fill(q).catch(() => {});
+  ok(await q.locator('form[data-form]').getAttribute('method') === 'post' && !!(await q.locator('form[data-form]').getAttribute('action')), 'form: no real POST action for no-JS');
+  await nj.close();
+}
+
 await browser.close();
 server?.kill();
 report('interact', fails, n);
