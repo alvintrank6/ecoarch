@@ -1,5 +1,6 @@
 ---
 import { t } from '../i18n/t';
+import Logo from './Logo.astro';
 import { path, altPath, routes, type Lang, type PageId } from '../i18n/routes';
 interface Props { lang: Lang; id: PageId | 'notFound' }
 const { lang, id } = Astro.props;
@@ -11,10 +12,7 @@ const switchHref = id === 'notFound' ? `/${other}/` : altPath(lang, id);
 ---
 <header class="site-header" data-nav>
   <div class="container-eco bar">
-    <a class="logo" href={path(lang, 'home')} aria-label={t(lang, 'common.homeLabel')}>
-      <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="4" fill="#22395B"/><path d="M6 25V13l10-7 10 7v12h-6v-8h-8v8z" fill="#F4EBDD"/></svg>
-      <span>ECO ARCH</span>
-    </a>
+    <a class="logo-link" href={path(lang, 'home')} aria-label={t(lang, 'common.homeLabel')}><Logo /></a>
     <nav class="desktop-nav" aria-label={t(lang, 'common.mainNav')}>
       <ul>
         {items.map((i) => (
@@ -37,7 +35,7 @@ const switchHref = id === 'notFound' ? `/${other}/` : altPath(lang, id);
 <div id="mobile-nav" class="mobile-panel" data-menu-panel role="dialog" aria-modal="true" aria-label={t(lang, 'common.menu')}>
   <div class="container-eco panel-inner">
     <div class="panel-top">
-      <span class="logo-text">ECO ARCH</span>
+      <Logo />
       <button type="button" class="close-btn" data-menu-close><span class="visually-hidden">{t(lang, 'common.close')}</span>
         <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
     </div>
@@ -61,11 +59,11 @@ const switchHref = id === 'notFound' ? `/${other}/` : altPath(lang, id);
 <style>
   .site-header { position: sticky; top: 0; z-index: var(--z-nav); min-height: var(--nav-h); }
   .site-header::before, .site-header::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity 260ms var(--ease-out); }
-  .site-header::before { background: rgba(244, 235, 221, 0.92); }
+  .site-header::before { background: rgba(247,244,238, 0.92); }
   .site-header::after { inset: auto 0 0 0; height: 1px; background: var(--color-border); }
   .site-header[data-scrolled]::before, .site-header[data-scrolled]::after { opacity: 1; }
   .bar { position: relative; z-index: 1; display: flex; align-items: center; gap: 16px; min-height: var(--nav-h); }
-  .logo { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; color: var(--color-brand); text-decoration: none; letter-spacing: 0.02em; }
+  .logo-link { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
   .desktop-nav, .cta { display: none; }
   .desktop-nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
   .desktop-nav .nav-link { font-size: 0.9375rem; font-weight: 500; color: var(--color-text); }
@@ -73,7 +71,7 @@ const switchHref = id === 'notFound' ? `/${other}/` : altPath(lang, id);
   .lang { display: inline-flex; align-items: center; gap: 4px; margin-left: auto; font-size: 0.875rem; font-weight: 600; }
   .lang > * { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; border-radius: var(--radius-sm); text-decoration: none; color: var(--color-muted); }
   .lang a:hover { color: var(--color-accent); text-decoration: underline; text-underline-offset: 4px; }
-  .lang [aria-current='true'] { color: var(--color-brand); background: rgba(34, 57, 91, 0.08); }
+  .lang [aria-current='true'] { color: var(--color-brand); background: rgba(78,94,55, 0.08); }
   .cta { padding: 10px 18px; font-size: 0.9375rem; min-height: 44px; white-space: nowrap; }
   .menu-btn { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; background: none; border: 0; color: var(--color-brand); cursor: pointer; border-radius: var(--radius-sm); }
   .bars { display: grid; gap: 5px; width: 22px; }
@@ -82,7 +80,6 @@ const switchHref = id === 'notFound' ? `/${other}/` : altPath(lang, id);
   .mobile-panel { background: var(--color-bg); }
   .panel-inner { display: grid; gap: 24px; padding-block: 16px 32px; }
   .panel-top { display: none; align-items: center; justify-content: space-between; min-height: 48px; }
-  .logo-text { font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; color: var(--color-brand); }
   .close-btn { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; background: none; border: 0; color: var(--color-brand); cursor: pointer; }
   .mobile-panel ul { list-style: none; margin: 0; padding: 0; display: grid; }
   .panel-link { display: flex; align-items: center; min-height: 56px; font-family: var(--font-display); font-size: 1.5rem; color: var(--color-brand); text-decoration: none; border-bottom: 1px solid var(--color-border); }

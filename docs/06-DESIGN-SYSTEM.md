@@ -1,5 +1,26 @@
 ## 06 Design System
 
+## Brand update (supersedes the colour and type tables below)
+
+Source: the owner's "Brand concept board" (olive palette, logo directions, Montserrat and Inter). Roles and checked contrast on Warm White #F7F4EE:
+
+| Token | Colour | HEX | Use | Contrast |
+|---|---|---|---|---|
+| --bg | Warm White | #F7F4EE | page background | n/a |
+| --text | Charcoal | #2F2F2F | body text | 12.2:1 |
+| --muted | derived neutral | #5C5C57 | captions | 6.1:1 |
+| --olive | Olive Green | #6E7F52 | logo, large type, graphics | 4.0:1 (large and graphics only) |
+| --brand, --accent | Deep Olive (derived) | #4E5E37 | headings, buttons, links, focus | 6.4:1; Warm White on it 6.4:1 |
+| --ink | dark olive (derived) | #36432A | CTA band, footer | Warm White on it 9.6:1 |
+| --sand | Sand Beige | #D8C3A5 | labels, panels (Charcoal text only) | Charcoal 7.8:1 |
+| --sage | Muted Sage | #A8B39E | accents on dark | 4.8:1 on ink |
+| --terracotta | Terracotta | #B88A68 | illustrations only | 2.8:1, never text |
+| --error | terracotta-derived | #8F4A2C | errors with icon and text | 6.0:1 |
+| --gray | Soft Gray | #D9D9D9 | decorative | n/a |
+
+Type: Montserrat variable for headings (600 and 700), Inter variable for body (400, 500). Logo: direction 02, mark (house, leaf, airflow) plus ECO ARCH wordmark. Deep Olive on Sand is 4.1:1, so headings on Sand panels use Charcoal.
+
+
 Hướng thiết kế đã chọn là Phương án B: nền kem ấm, chữ nâu óc chó, xanh chàm làm màu thương hiệu, gạch nâu đỏ làm màu hành động. Phong cách lấy cảm hứng từ nhịp bố cục và độ thoáng của icco.com.vn, không sao chép. Mọi tỷ lệ tương phản dưới đây đã tính bằng code (WCAG 2.x). Token màu theo vai trò
 
 | Token | Màu | HEX | Dùng cho | Tương phản |

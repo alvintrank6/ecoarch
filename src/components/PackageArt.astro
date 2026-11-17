@@ -4,32 +4,32 @@ interface Props { kind: 'plan' | 'cutaway' | 'interior'; label: string }
 const { kind, label } = Astro.props;
 ---
 <svg viewBox="0 0 400 300" role="img" aria-label={label} class="art" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="300" fill="#F8F1E6" />
+  <rect width="400" height="300" fill="#FBF9F5" />
   {kind === 'plan' && (
-    <g fill="none" stroke="#22395B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <g fill="none" stroke="#4E5E37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <rect x="60" y="50" width="280" height="190" stroke-width="6" />
       <path d="M60 140h110M210 140h130M170 50v90M250 140v100" stroke-width="4" />
       <path d="M170 110a30 30 0 0 1 30 30" stroke-width="1.5" /><path d="M250 195a30 30 0 0 0 -30 -30" stroke-width="1.5" />
       <rect x="78" y="62" width="70" height="46" /><path d="M78 80h70" />
       <rect x="190" y="66" width="60" height="30" rx="4" /><rect x="268" y="66" width="52" height="52" />
       <rect x="86" y="176" width="90" height="36" rx="10" /><circle cx="294" cy="196" r="22" />
-      <path d="M60 262h280M60 256v12M340 256v12M30 50v190M24 50h12M24 240h12" stroke="#9C4530" stroke-width="1.5" />
+      <path d="M60 262h280M60 256v12M340 256v12M30 50v190M24 50h12M24 240h12" stroke="#B88A68" stroke-width="1.5" />
     </g>)}
   {kind === 'cutaway' && (
-    <g fill="none" stroke="#22395B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
-      <path d="M200 250 80 190V100l120 60 120-60v90z" fill="#E6C3B1" />
+    <g fill="none" stroke="#4E5E37" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M200 250 80 190V100l120 60 120-60v90z" fill="#D8C3A5" />
       <path d="M200 160v90M80 100l120-60 120 60M80 145l120 60 120-60" />
-      <path d="M200 40 80 100l120 60 120-60z" fill="#F4EBDD" />
-      <path d="M110 170l45 22M110 120l45 22M245 192l45-22M245 142l45-22" stroke="#9C4530" />
+      <path d="M200 40 80 100l120 60 120-60z" fill="#F7F4EE" />
+      <path d="M110 170l45 22M110 120l45 22M245 192l45-22M245 142l45-22" stroke="#B88A68" />
       <path d="M130 105l35 17v18l-35-17z M235 122l35-17v18l-35 17z" />
       <path d="M200 160l-50-25 M200 160l50-25" stroke-width="1" />
     </g>)}
   {kind === 'interior' && (
-    <g fill="none" stroke="#22395B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+    <g fill="none" stroke="#4E5E37" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
       <path d="M30 230h340" stroke-width="3" />
       <rect x="230" y="50" width="120" height="130" /><path d="M290 50v130M230 115h120" />
-      <path d="M222 44v150M250 44c-6 50-6 100 0 150M358 44v150M330 44c6 50 6 100 0 150" stroke="#9C4530" stroke-width="1.5" />
-      <path d="M50 200c0-34 20-42 52-42h70c32 0 52 8 52 42v30H50z" fill="#E6C3B1" /><path d="M64 176c10-16 38-18 64-18s54 2 64 18" />
+      <path d="M222 44v150M250 44c-6 50-6 100 0 150M358 44v150M330 44c6 50 6 100 0 150" stroke="#B88A68" stroke-width="1.5" />
+      <path d="M50 200c0-34 20-42 52-42h70c32 0 52 8 52 42v30H50z" fill="#D8C3A5" /><path d="M64 176c10-16 38-18 64-18s54 2 64 18" />
       <path d="M52 230v14M200 230v14" />
       <path d="M300 230v-34M286 196h28" /><rect x="272" y="204" width="56" height="12" rx="3" />
       <path d="M120 60v50M105 110h30l-8-20h-14z" />

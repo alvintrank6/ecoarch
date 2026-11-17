@@ -20,12 +20,12 @@ Truth = docs/*.md (decided). Priority: SOP > company facts > docs > creativity. 
 - No em dash or en dash in any copy. CTA primary VI "Đặt lịch trao đổi về khu đất", EN "Book a call about your plot". Secondary VI "Xem 3 gói dịch vụ", EN "See the 3 packages".
 - All text lives in src/content/vi.json and en.json by key; both locales complete; routes /vi and /en with the slug map in docs/04. Write body copy yourself from each section's stated intent: short, concrete, VI first, EN faithful not literal, nothing beyond docs.
 
-## Design (details docs/06)
-cream #F4EBDD bg, walnut #2E1D15 text, muted #6B5648, indigo #22395B brand, Brick #9C4530 accent/error/focus, terracotta #B4533A large text and graphics only and never on indigo, moss #5D6B45 success. Fraunces variable for headings, Be Vietnam Pro 400/500/600 for body. Fluid type by clamp as in docs/06. Focus ring 2px Brick, offset 2px. Touch targets ≥44px. Mobile-first; verify 360, 390, 768, 1024, 1440.
+## Design (brand board supersedes docs/06 colours and fonts; see docs/06 "Brand update")
+Warm White #F7F4EE bg, Charcoal #2F2F2F text, muted #5C5C57, Olive Green #6E7F52 (logo, large type and graphics only), Deep Olive #4E5E37 brand/actions/links/buttons, ink #36432A dark sections, Sand Beige #D8C3A5 labels and panels, Muted Sage #A8B39E on dark, Terracotta #B88A68 illustrations only, error #8F4A2C. Montserrat variable for headings (600/700), Inter variable for body. Logo = direction 02 (mark + ECO ARCH wordmark) in src/components/Logo.astro. Focus ring 2px Deep Olive, offset 2px (Warm White on dark). Touch targets >=44px. Mobile-first; verify 360, 390, 768, 1024, 1440. Do not use the board's "Energy-Saving Spaces" value: no energy claims.
 
 ## Motion (details docs/07)
 GSAP only in src/motion/*; CSS for micro-interactions. Motifs: Rise, Unmask, Wipe. Use only tokens from src/motion/tokens.ts. Per page: ≤1 cinematic moment, ≤1 loop, ≤3 concurrent effect groups, ≤12 tweens. Animate transform and opacity only. No scroll-jacking, no smooth-scroll library. Hidden initial state only via CSS `html.js [data-reveal]` (never inline), so no-JS and reduced-motion show everything. Hero LCP image is never hidden. Every init returns kill(); refresh ScrollTrigger after fonts and on resize. prefers-reduced-motion and `html[data-motion="reduced"]` disable all motion. No effect outside the docs/07 library.
 
 ## Stack (exact pins)
-astro 7.4.12, tailwindcss and @tailwindcss/vite 4.3.5, gsap 3.15.1, @astrojs/sitemap 3.7.5, sharp 0.35.5, @fontsource-variable/fraunces 5.3.0, @fontsource/be-vietnam-pro 5.3.0. Node ≥22.23.4. Images in src/assets (astro:assets); public/ only for favicon, og image, robots.
+astro 7.4.12, tailwindcss and @tailwindcss/vite 4.3.5, gsap 3.15.1, @astrojs/sitemap 3.7.5, sharp 0.35.5, @fontsource-variable/montserrat 5.3.0, @fontsource-variable/inter 5.3.0. Node ≥22.23.4. Images in src/assets (astro:assets); public/ only for favicon, og image, robots.
 Commands: npm run dev | build | check | verify | verify:ui

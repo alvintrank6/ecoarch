@@ -1,5 +1,6 @@
 ---
 import { t } from '../i18n/t';
+import Logo from './Logo.astro';
 import { path, type Lang, type PageId } from '../i18n/routes';
 interface Props { lang: Lang; id: PageId | 'notFound' }
 const { lang, id } = Astro.props;
@@ -9,7 +10,7 @@ const labelOf = (i: PageId) => (['services', 'concepts', 'process', 'insights', 
 <footer class="foot on-dark">
   <div class="container-eco inner">
     <div class="brand">
-      <p class="name">ECO ARCH</p>
+      <p class="name"><Logo tone="dark" size="lg" tagline /></p>
       <p>{t(lang, 'common.tagline')}</p>
       <p>{t(lang, 'common.footerNote')}</p>
     </div>
@@ -23,16 +24,16 @@ const labelOf = (i: PageId) => (['services', 'concepts', 'process', 'insights', 
   <div class="container-eco legal"><p>{t(lang, 'common.copyright')}</p></div>
 </footer>
 <style>
-  .foot { background: var(--color-brand); color: var(--color-bg); padding-block: 48px 24px; }
+  .foot { background: var(--color-ink); color: var(--color-bg); padding-block: 48px 24px; }
   .foot p { margin: 0 0 8px; }
   .inner { display: grid; gap: 32px; }
-  .name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; }
+  .name { margin-bottom: 16px; }
   ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; }
   nav a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; color: var(--color-bg); text-underline-offset: 4px; }
   nav a:hover { text-decoration: underline; }
   .motion { display: none; min-height: 44px; padding: 8px 16px; background: transparent; color: var(--color-bg); border: 1px solid var(--color-bg); border-radius: var(--radius-sm); font: inherit; cursor: pointer; }
   html.js .motion { display: inline-flex; align-items: center; }
   .motion[aria-pressed='true'] { background: var(--color-bg); color: var(--color-brand); }
-  .legal { margin-top: 32px; padding-top: 16px; border-top: 1px solid rgba(244,235,221,.25); font-size: 0.875rem; }
+  .legal { margin-top: 32px; padding-top: 16px; border-top: 1px solid rgba(247,244,238,.25); font-size: 0.875rem; }
   @media (min-width: 768px) { .inner { grid-template-columns: 1.4fr 1.2fr auto; align-items: start; } }
 </style>

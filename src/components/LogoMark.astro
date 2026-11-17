@@ -1,0 +1,16 @@
+---
+// ECO ARCH mark (direction 02): house outline, leaf and airflow. Olive on light, sand and sage on dark.
+interface Props { size?: number; tone?: 'light' | 'dark' }
+const { size = 40, tone = 'light' } = Astro.props;
+const roof = tone === 'dark' ? '#F7F4EE' : '#6E7F52';
+const leaf = tone === 'dark' ? '#A8B39E' : '#6E7F52';
+const air = tone === 'dark' ? '#A8B39E' : '#6E7F52';
+const vein = tone === 'dark' ? '#36432A' : '#F7F4EE';
+---
+<svg width={size} height={size * 0.89} viewBox="0 0 72 64" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 31 36 7l28 24" fill="none" stroke={roof} stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M17 27v28" fill="none" stroke={roof} stroke-width="5" stroke-linecap="round" />
+  <path d="M24 56C23 41 32 32 47 31c0 15-9 25-23 25z" fill={leaf} />
+  <path d="M27 53c5-8 11-14 17-18" fill="none" stroke={vein} stroke-width="1.8" stroke-linecap="round" />
+  <path d="M47 41c4-5 8-5 12 0s8 5 12 0M47 50c4-5 8-5 12 0s8 5 12 0" fill="none" stroke={air} stroke-width="3" stroke-linecap="round" />
+</svg>

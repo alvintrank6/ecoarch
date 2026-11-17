@@ -33,10 +33,10 @@ const items = await Promise.all(stems.map(async (stem) => {
   .thumb { display: block; aspect-ratio: 3 / 2; border-radius: var(--radius-sm); }
   .thumb :global(.concept-figure), .thumb :global(.frame) { height: 100%; }
   .lb { border: 0; padding: 0; width: min(96vw, 1200px); max-height: 94vh; background: var(--color-text); color: var(--color-bg); border-radius: var(--radius-md); }
-  .lb::backdrop { background: rgba(46, 29, 21, 0.82); }
+  .lb::backdrop { background: rgba(47,47,47, 0.82); }
   .lb-inner { position: relative; display: grid; gap: 12px; padding: 12px 12px 72px; }
   .lb figure { margin: 0; display: grid; gap: 10px; }
-  .lb img { display: block; width: 100%; max-height: 74vh; object-fit: contain; background: #1d120c; border-radius: var(--radius-sm); }
+  .lb img { display: block; width: 100%; max-height: 74vh; object-fit: contain; background: #232323; border-radius: var(--radius-sm); }
   .lb figcaption { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; font-size: 0.9375rem; }
   .count { margin-left: auto; opacity: 0.85; }
   .lb-btn { position: absolute; bottom: 12px; min-height: 48px; padding: 8px 18px; background: var(--color-bg); color: var(--color-text); border: 0; border-radius: var(--radius-sm); font: inherit; font-weight: 600; cursor: pointer; }

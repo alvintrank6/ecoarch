@@ -16,6 +16,9 @@ Every concept image shows "Hình minh họa" / "Illustration" (checked by `check
 `ex-08` was split into halves by `scripts/derive-images.mjs`. OG image and touch icon come from `scripts/make-og.mjs`. Replace the interim hero (`ex-04-after`) and the SVG package art with owner originals when they exist (OPEN-ITEMS OI-07, OI-08).
 Image manifest: `docs/asset-manifest.csv`.
 
+## Brand
+Palette, fonts and logo follow the owner's brand concept board (docs/06 "Brand update"). Tokens live in the `@theme` block of `src/styles/global.css`; the logo is `src/components/Logo.astro` and `LogoMark.astro` (direction 02), favicon `public/favicon.svg`. To switch to logo direction 01 (wordmark only) or 03 (EA monogram), change those two components and the favicon. Not used: the board's "Energy-Saving Spaces" value (no energy claims allowed).
+
 ## Motion
 Tokens: `src/motion/tokens.ts` (JS) and `:root` in `src/styles/global.css` (CSS). Modules: `hero.ts, nav.ts, reveal.ts, draw.ts, louver.ts, compare.ts, process.ts, page-wipe.ts, toggle.ts, lightbox.ts, faq.ts`, entry `index.ts`.
 Hidden initial states exist only in CSS under `html.js`; no JS, reduced motion (OS) and the footer "Reduce motion" switch (`html[data-motion="reduced"]`) show everything. A 3 s failsafe (`html.reveal-failsafe`) shows content if the motion script never starts.

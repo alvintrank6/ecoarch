@@ -5,7 +5,7 @@ Source of truth for decisions: `docs/*.md` (the design document split into files
 
 ## Requirements
 Node >= 22.23.4, npm. Pinned versions: astro 7.4.12, tailwindcss and @tailwindcss/vite 4.3.5, gsap 3.15.1, @astrojs/sitemap 3.7.5, sharp 0.35.5,
-@fontsource-variable/fraunces 5.3.0, @fontsource/be-vietnam-pro 5.3.0. Dev tools: @astrojs/check 0.9.12, typescript 6.x, playwright 1.63.0, @axe-core/playwright.
+@fontsource-variable/montserrat 5.3.0, @fontsource-variable/inter 5.3.0. Dev tools: @astrojs/check 0.9.12, typescript 6.x, playwright 1.63.0, @axe-core/playwright.
 
 ## Commands
 ```bash

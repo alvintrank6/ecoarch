@@ -61,7 +61,7 @@ export function initHero(): () => void {
       light = document.createElement('div');
       light.setAttribute('aria-hidden', 'true');
       Object.assign(light.style, { position: 'absolute', inset: '0', pointerEvents: 'none', zIndex: '1',
-        background: 'linear-gradient(105deg, transparent 35%, rgba(244,235,221,.18) 50%, transparent 65%)' });
+        background: 'linear-gradient(105deg, transparent 35%, rgba(247,244,238,.18) 50%, transparent 65%)' });
       frame.appendChild(light);
       tl.fromTo(light, { xPercent: -120 }, { xPercent: 120, duration: 1.4, ease: ease.inOut, onComplete: () => { light?.remove(); light = null; } }, 0.7);
 
